@@ -1,0 +1,27 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: New Stuff
+    chapters:
+    - file: temp.md
+  - caption: Old Stuff
+    chapters:
+    - file: originals/overview
+      sections:
+      - file: originals/PythonNotebook1
+      - file: originals/PythonNotebook2
+      - file: originals/PythonNotebook3
+      - file: originals/PythonNotebook4
+      - file: originals/PythonNotebook5
+      - file: originals/PythonNotebook6
+    - file: originals/installations
+    - file: originals/mude/overview.md
+      sections:
+      - file: originals/mude/1-1-student.ipynb
+      - file: originals/mude/1-1-solution.ipynb
+      - file: originals/mude/1-2-student.ipynb
+      - file: originals/mude/1-2-solution.ipynb
+      - file: originals/mude/1-2-Golden_Rules.ipynb
