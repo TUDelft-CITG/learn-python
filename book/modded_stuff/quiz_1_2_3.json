@@ -1,0 +1,57 @@
+[
+    {
+        "question": "TGEWhat is the probability of the event $\\mathrm{B1}$, i.e, $P(\\mathrm{B1})$ ",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "23/60",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "8/60",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "60/60",
+                "correct": false,
+                "feedback": ""
+            }
+        ]
+    },
+    {
+        "question": "What is the probability of the event \(\mathrm{A}\) given the event $\\mathrm{B2}$, i.e, $P(\\mathrm{A} |\\mathrm{B2})$ ?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "0",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "22/23",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "19/25",
+                "correct": false,
+                "feedback": ""
+            }
+        ]
+    },
+    {
+        "question": "What is the value of the bending momment at the point p of the beam caused by the Maximum truck? Please round the answer to one decimal place.",
+        "type": "numeric",
+        "precision": 1,
+        "answers": [
+            {
+                "type": "value",
+                "value": 486.9,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    }
+]
