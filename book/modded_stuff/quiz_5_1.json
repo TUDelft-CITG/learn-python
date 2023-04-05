@@ -1,0 +1,28 @@
+[
+    {
+        "question": "What is the value of last axle load $A_3$ of the Maximum truck? Please round the answer to one decimal place.",
+        "type": "numeric",
+        "precision": 3,
+        "answers": [
+            {
+                "type": "value",
+                "value": 107.2,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the value of the bending momment at the point $p$ of the beam caused by the Maximum truck? Please round the answer to one decimal place.",
+        "type": "numeric",
+        "precision": 3,
+        "answers": [
+            {
+                "type": "value",
+                "value": 486.9,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    }
+]

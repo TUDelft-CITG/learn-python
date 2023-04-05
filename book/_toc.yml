@@ -7,6 +7,13 @@ parts:
   - caption: New Stuff
     chapters:
     - file: temp.md
+      sections:
+      - file: modded_stuff/PythonNotebook1
+      - file: modded_stuff/PythonNotebook2
+      - file: modded_stuff/PythonNotebook3
+      - file: modded_stuff/PythonNotebook4
+      - file: modded_stuff/PythonNotebook5
+      - file: modded_stuff/PythonNotebook6
   - caption: Old Stuff
     chapters:
     - file: originals/overview

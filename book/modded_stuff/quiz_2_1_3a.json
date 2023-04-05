@@ -1,0 +1,28 @@
+[
+    {
+        "question": "If the number of international master's students has a Bernoulli distribution. What is the value of the parameter p? Please round the answer to three decimal places.",
+        "type": "numeric",
+        "precision": 3,
+        "answers": [
+            {
+                "type": "value",
+                "value": 0.334,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the probability that we do not get one international master's student? Please round the answer to three decimal places.",
+        "type": "numeric",
+        "precision": 3,
+        "answers": [
+            {
+                "type": "value",
+                "value": 0.666,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    }
+]
