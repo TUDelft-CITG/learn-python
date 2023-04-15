@@ -14,6 +14,10 @@ parts:
       - file: modded_stuff/PythonNotebook4
       - file: modded_stuff/PythonNotebook5
       - file: modded_stuff/PythonNotebook6
+    - file: modded_stuff/Numpy_theory.ipynb
+      sections: 
+      - file: modded_stuff/Numpy_Bending_moment.ipynb
+
   - caption: Old Stuff
     chapters:
     - file: originals/overview
