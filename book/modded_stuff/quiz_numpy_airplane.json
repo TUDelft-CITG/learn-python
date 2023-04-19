@@ -1,0 +1,28 @@
+[
+    {
+        "question": "What is the acceleration of the plane at 30 seconds?.Please round the answer to two decimal places.",
+        "type": "numeric",
+        "precision": 2,
+        "answers": [
+            {
+                "type": "value",
+                "value": 0.29,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the velocity of the plane at 29 seconds?.Please round the answer to two decimal places.",
+        "type": "numeric",
+        "precision": 2,
+        "answers": [
+            {
+                "type": "value",
+                "value": 116.04,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    }
+]
