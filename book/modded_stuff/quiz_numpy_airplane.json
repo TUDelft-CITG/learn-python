@@ -1,6 +1,6 @@
 [
     {
-        "question": "What is the acceleration of the plane at 30 seconds?.Please round the answer to two decimal places.",
+        "question": "What is the acceleration of the plane at 30 seconds? Please round the answer to two decimal places.",
         "type": "numeric",
         "precision": 2,
         "answers": [
@@ -13,7 +13,7 @@
         ]
     },
     {
-        "question": "What is the velocity of the plane at 29 seconds?.Please round the answer to two decimal places.",
+        "question": "What is the velocity of the plane at 29 seconds? Please round the answer to two decimal places.",
         "type": "numeric",
         "precision": 2,
         "answers": [
