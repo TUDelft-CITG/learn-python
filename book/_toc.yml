@@ -7,16 +7,29 @@ parts:
   - caption: New Stuff
     chapters:
     - file: temp.md
+    - file: documents/Theory/PythonNotebook1
+    - file: documents/Theory/PythonNotebook1_1
       sections:
-      - file: modded_stuff/PythonNotebook1
-      - file: modded_stuff/PythonNotebook2
-      - file: modded_stuff/PythonNotebook3
-      - file: modded_stuff/PythonNotebook4
-      - file: modded_stuff/PythonNotebook5
-      - file: modded_stuff/PythonNotebook6
-    - file: modded_stuff/Numpy_theory.ipynb
+      - file: documents/Exercises/PythonNotebook1_01
+    - file: documents/Theory/PythonNotebook2
+      sections:
+      - file: documents/Exercises/PythonNotebook2_01    
+    - file: documents/Theory/PythonNotebook3
+      sections:
+      - file: documents/Exercises/PythonNotebook3_01    
+    - file: documents/Theory/PythonNotebook4
+      sections:
+      - file: documents/Exercises/PythonNotebook4_01    
+    - file: documents/Theory/PythonNotebook5 
       sections: 
-      - file: modded_stuff/Numpy_Bending_moment.ipynb
+      - file: documents/Exercises/PythonNotebook5_01 
+      - file: documents/Exercises/PythonNotebook5_02
+    - file: documents/Theory/PythonNotebook6
+      sections:
+      - file: documents/Exercises/PythonNotebook6_01
+    - file: documents/Theory/PythonNotebook7
+      sections:
+      - file: documents/Exercises/PythonNotebook7_01
 
   - caption: Old Stuff
     chapters:
