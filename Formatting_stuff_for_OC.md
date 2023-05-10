@@ -23,6 +23,8 @@ Here's a step-by-step explanation of the code:
 
 * The **Toolbox** admonition can be used to provide the steps to answer an exercise and the functions that students could use. **Toolbox**  (``class: tip``) example: 
 
+
+
 `````{admonition} Toolbox
 :class: tip
 
@@ -36,3 +38,19 @@ You can use the following numpy functions (but not limited to):
 
 `````
 
+
+
+* This an example of **notes** 
+```
+::: {note}
+* The notation $[40,50)$ means every value between $40$ and $50$, including $40$ but excluding $50$; similar to $(40 \leq value < 50)$.
+:::
+```
+
+
+* This an example of **warnings**
+```
+::: {warning}
+Your endpoint is <b>not</b> included in the array. If you want to include the endpoint in the array, you have to specify the stop to be <b>endpoint + step</b>. This will be clearer in the following examples.
+:::
+```
