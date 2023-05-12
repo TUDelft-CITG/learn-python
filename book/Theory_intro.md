@@ -2,16 +2,16 @@
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 
-# Python Course 
 
-## Introduction to the Course
-### Why do you need Python? 
+# Introduction to the Course
+
+## Why do you need Python? 
     
 Python is a computer programming language that is widely used in both academia and industries related to Civil Engineering, Environmental Engineering and Applied Earth Sciences. Being skilled in Python will help you on multiple occasions, including in your master courses. With this set of notebooks we will guide you through the basics of Python programming. As an additional study material for learning Python basics, we advise the open source book <a href="https://greenteapress.com/wp/think-python-2e/">"Think Python 2nd Edition" by Allen B. Downey</a>. It describes in more detail what is covered in the Notebooks of this course.
 <br>
 Don't worry if you some concepts are not (completely) clear, you'll improve your skills along the way and can always use these notebooks to look things up later.
 
-### What can computers do for us?
+## What can computers do for us?
 As an engineer or scientist, you will deal with units of information which are called <b>data</b>. The most important tasks that a computer can do for us are:
 
 1. Reading data
@@ -29,7 +29,7 @@ Data processing is the manipulation of the stored data in a system. After proces
 _3. Visualizing data_
 We map data (original or found) to graphic elements to communicate clearly and efficiently the information contained in the data. A graphic element is an element of a chart, such as a line or a point in the chart.
 
-### What is programming?
+## What is programming?
 
 Programming is giving your computer a list of instructions for computations in a language it can understand. In your case, this language is Python. A computation is a series of arithmetical ("math") and non-arithmetical ("non-math") steps that transform input to output (result).
 There are five different kinds of instructions for computations you use. By ordering and combining them, the computer can achieve results that fulfill the three tasks described earlier. The five kinds of instructions are:

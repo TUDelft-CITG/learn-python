@@ -28,7 +28,7 @@ Here's a step-by-step explanation of the code:
 `````{admonition} Toolbox
 :class: tip
 
-Here is your toolbox to solve this exercise:
+These are your tools to solve this exercise:
 
 * Import numpy and load the data set. 
 * Define the input variables and check if the conditions are satisfied.
@@ -54,3 +54,7 @@ You can use the following numpy functions (but not limited to):
 Your endpoint is <b>not</b> included in the array. If you want to include the endpoint in the array, you have to specify the stop to be <b>endpoint + step</b>. This will be clearer in the following examples.
 :::
 ```
+
+# 1. Section title
+## 1.1 Subsection
+### Sub-subsection

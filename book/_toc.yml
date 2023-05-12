@@ -4,33 +4,35 @@
 format: jb-book
 root: intro
 parts:
-  - caption: New Stuff
+  - caption: Python Course
     chapters:
-    - file: temp.md
-    - file: documents/Theory/PythonNotebook1
-    - file: documents/Theory/PythonNotebook1_1
+    - file: Theory_intro.md
+    - file: 01/Theory/01.ipynb
       sections:
-      - file: documents/Exercises/PythonNotebook1_01
-    - file: documents/Theory/PythonNotebook2
+      - file: 01/Exercises/01.ipynb
+    - file: 02/Theory/01.ipynb
       sections:
-      - file: documents/Exercises/PythonNotebook2_01    
-    - file: documents/Theory/PythonNotebook3
+      - file: 02/Exercises/01.ipynb      
+    - file: 03/Theory/01.ipynb
       sections:
-      - file: documents/Exercises/PythonNotebook3_01    
-    - file: documents/Theory/PythonNotebook4
+      - file: 03/Exercises/01.ipynb          
+    - file: 04/Theory/01.ipynb
       sections:
-      - file: documents/Exercises/PythonNotebook4_01    
-    - file: documents/Theory/PythonNotebook5 
-      sections: 
-      - file: documents/Exercises/PythonNotebook5_01 
-      - file: documents/Exercises/PythonNotebook5_02
-    - file: documents/Theory/PythonNotebook6
+      - file: 04/Exercises/01.ipynb
+    - file: 05/Theory/01.ipynb
       sections:
-      - file: documents/Exercises/PythonNotebook6_01
-    - file: documents/Theory/PythonNotebook7
+      - file: 05/Exercises/01.ipynb
+      - file: 05/Exercises/02.ipynb
+    - file: 06/Theory/01.ipynb
       sections:
-      - file: documents/Exercises/PythonNotebook7_01
-
+      - file: 06/Exercises/01.ipynb
+    - file: 07/Theory/01.ipynb
+      sections:
+      - file: 07/Exercises/01.ipynb
+  - caption: In a Nutshell
+    chapters:
+    - file: In_a_nutshell_intro.md
+    - file: 01/In_a_Nutshell/01.ipynb
   - caption: Old Stuff
     chapters:
     - file: originals/overview
