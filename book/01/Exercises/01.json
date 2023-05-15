@@ -1,0 +1,145 @@
+
+[
+    {
+        "question": "What is the type of the result of the following expression:<br> <code> 3 + 1.5 + 4</code>?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "<code>str</code> ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": " <code>int</code> ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": " <code>float</code> ",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the index of the letter <code> `r' </code> of the sentence <code> `Hello engineer!'</code>?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "<code>0</code> ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": " <code>13</code> ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": " <code>12</code> ",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What is the error? ",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The name of the dataset is wrong.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "The error_id argument must be type integer. ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "The function is wrong, Python has not a zero-based indexing. ",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What is the correct <code>my_complex_number</code> variable?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "<code>my_complex_number = 3 + 2i </code>",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "<code>my_complex_number = 3 + 2j </code> ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "<code>my_complex_number = 3 + 2J </code>",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the mistake?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The value of pi is incorrect.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "The exponent operator is incorrect. ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "The formula of the rectangle area is incorrect. ",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What will the remainder area of the rectangle be? Round your answer to 2 decimal places.",
+        "type": "numeric",
+        "precision": 2,
+        "answers": [
+            {
+                "type": "value",
+                "value": 13.87,
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "How many pizza slices each engineer will get and how many slices  will be left untouched?. Use <code>//</code> and <code>%</code> operators.",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "4 pizza slices per engineer and 4 untouched slices.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "6.4 pizza slices per engineer and 0 untouched slices. ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "6 pizza slices per engineer and 2 untouched slices. ",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    }
+]
+
+
+
