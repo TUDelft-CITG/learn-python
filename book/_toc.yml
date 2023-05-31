@@ -33,6 +33,9 @@ parts:
     chapters:
     - file: In_a_nutshell_intro.md
     - file: 01/In_a_Nutshell/01.ipynb
+    - file: 02/In_a_Nutshell/02.ipynb
+    - file: 03/In_a_Nutshell/03.ipynb
+    - file: 04/In_a_Nutshell/04.ipynb
   - caption: Old Stuff
     chapters:
     - file: originals/overview
