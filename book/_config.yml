@@ -20,10 +20,16 @@ bibtex_bibfiles:
   - references.bib
 
 # Information about where the book exists on the web
+# repository:
+#   url: https://github.com/executablebooks/jupyter-book # Online location of your book
+#   path_to_book: docs  # Optional path to your book, relative to the repository root
+#   branch: master  # Which branch of the repository should be used when creating links (optional)
+
 repository:
-  url: https://github.com/executablebooks/jupyter-book # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/TUDelft-CITG/learn-python # Online location of your book
+  path_to_book: book  # Optional path to your book, relative to the repository root
+  branch: mike  # Which branch of the repository should be used when creating links (optional)
+
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository

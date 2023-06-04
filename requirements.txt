@@ -1,3 +1,6 @@
+#
+# thebe-binder-requirements
+#
 numpy
 scipy
 tqdm
