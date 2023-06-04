@@ -4,11 +4,9 @@ folium
 ipywidgets
 jupytext
 jupyterlab
-math
 matplotlib
 nbclient
 numpy
-os
 pandas
 plotly
 sphinx-click
