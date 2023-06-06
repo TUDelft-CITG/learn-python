@@ -36,8 +36,10 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  announcement: "⚠️ This is not the final version of the book! ⚠️"
 
 # Add thebe binder buttons to your book
 launch_buttons:
-  thebe                  : true
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
   binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  thebe : true
