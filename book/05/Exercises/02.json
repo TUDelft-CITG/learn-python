@@ -13,7 +13,7 @@
         ]
     },
     {
-        "question": "What is the value of the bending momment at the point $p$ of the beam caused by the Maximum truck? Please round the answer to one decimal place.",
+        "question": "What is the value of the bending moment at the point $p$ of the beam caused by the Maximum truck? Please round the answer to one decimal place.",
         "type": "numeric",
         "precision": 3,
         "answers": [
