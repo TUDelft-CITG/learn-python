@@ -36,7 +36,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  announcement: "⚠️ This is not the final version of the book! ⚠️"
+  announcement: "⚠️ This is not the final version of the book!⚠️"
 
 # Add thebe binder buttons to your book
 launch_buttons:
