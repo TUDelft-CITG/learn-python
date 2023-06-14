@@ -36,6 +36,9 @@ parts:
     - file: 02/In_a_Nutshell/02.ipynb
     - file: 03/In_a_Nutshell/03.ipynb
     - file: 04/In_a_Nutshell/04.ipynb
+    - file: 05/In_a_Nutshell/05.ipynb
+    - file: 06/In_a_Nutshell/06.ipynb
+    - file: 07/In_a_Nutshell/07.ipynb
   - caption: Old Stuff
     chapters:
     - file: originals/overview
