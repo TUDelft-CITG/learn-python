@@ -1,0 +1,56 @@
+name: deploy
+
+on:
+  pull_request:
+    branches:
+      - publish
+    types:
+      - closed
+    paths:
+      - "book/**"
+      - ".github/workflows/**"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-book:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.10"
+
+      # Setup virtualenv with caching
+      - name: Setup venv
+        uses: syphar/restore-virtualenv@v1
+        with:
+          requirement_files: requirements.txt
+    
+      # Pip download cache
+      - name: Setup pip cache
+        uses: syphar/restore-pip-download-cache@v1
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+
+      # Install dependencies
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements.txt
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+
+      # Build the Jupyter Book
+      - name: Build book
+        run: |
+          jupyter book build book/
+
+      - name: GitHub Pages actions
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: book/_build/html/
