@@ -24,7 +24,7 @@ jobs:
             - name: Setup Anaconda
               uses: conda-incubator/setup-miniconda@v2
               with:
-                acitvate-environment: jupyter-book-env
+                activate-environment: jupyter-book-env
                 environment-file: environment.yml
                 python-version: 3.10
                 auto-activate-base: false
