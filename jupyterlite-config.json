@@ -1,0 +1,10 @@
+{
+    "XeusPythonEnv": {
+        "packages": [
+            "numpy",
+            "matplotlib",
+            "ipywidgets",
+            "scipy"
+        ]
+    }
+}

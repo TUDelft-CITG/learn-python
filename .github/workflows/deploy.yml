@@ -15,7 +15,7 @@ defaults:
     shell: bash
 
 jobs:
-  build-book:
+  release-book:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,28 +27,16 @@ jobs:
         with:
           python-version: "3.10"
 
-      # Setup virtualenv with caching
-      - name: Setup venv
-        uses: syphar/restore-virtualenv@v1
+      - name: Install mamba
+        uses: mamba-org/provision-with-micromamba@main
         with:
-          requirement_files: requirements.txt
-    
-      # Pip download cache
-      - name: Setup pip cache
-        uses: syphar/restore-pip-download-cache@v1
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+          micromamba-version: '1.4.2'
+          environment-file: 'environment.yml'
 
-      # Install dependencies
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip setuptools wheel
-          pip install -r requirements.txt
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-      # Build the Jupyter Book
       - name: Build book
+        shell: bash -el {0}
         run: |
-          jupyter book build book/
+          jupyter-book build book/
 
       - name: GitHub Pages actions
         uses: JamesIves/github-pages-deploy-action@v4
