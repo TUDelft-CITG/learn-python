@@ -6,7 +6,4 @@ dependencies:
   - scipy
   - pip
   - pip:
-    - jupyterlite-sphinx==0.8.0
-    - jupyterlite-xeus-python==0.8.1
-    - jupyter-book==0.15.1
-    - sphinx-inline-tabs
+    - -r requirements.txt
