@@ -9,7 +9,7 @@ dependencies:
   - scipy
   - pip
   - jupyterlite-sphinx
-  - jupyterquiz
   - jupyter-book
   - pip:
     - jupyterlite-xeus-python
+    - jupyterquiz
