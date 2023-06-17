@@ -4,5 +4,6 @@ scipy
 numpy
 matplotlib
 ipython
+empack
 jupyterlite-sphinx
 jupyterlite-xeus-python
