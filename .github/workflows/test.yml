@@ -33,5 +33,6 @@ jobs:
                 environment-file: 'environment.yml'
             
             - name: Build book
+              shell: bash -el {0}
               run: |
                 jupyter-book build book/
