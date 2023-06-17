@@ -1,0 +1,1314 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python data analysis with Pandas (and Matplotlib) &#8212; Learn Python for Civil Engineering and Geosciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'originals/mude/1-2-student';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python data analysis with Pandas (and Matplotlib): Solutions" href="1-2-solution.html" />
+    <link rel="prev" title="Computations using Numpy: Solutions" href="1-1-solution.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/learn-python-logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/learn-python-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    UNDER CONSTRUCTION
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">In a Nutshell</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook1.html">Python Notebook #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook2.html">Python Notebook #2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook3.html">Python Notebook #3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook4.html">Python Notebook #4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook5.html">Python Notebook #5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook6.html">Python Notebook #6</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installations.html">Installations (MUDE)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">MUDE Materials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-1-student.html">Computations using Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-1-solution.html">Computations using Numpy: Solutions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python data analysis with Pandas (and Matplotlib)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-2-Golden_Rules.html">Golden Rules</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Foriginals/mude/1-2-student.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/originals/mude/1-2-student.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python data analysis with Pandas (and Matplotlib)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-loading-data-in-a-pandas-dataframe-selection-and-indexing">Part 1: Loading data in a Pandas DataFrame, selection and indexing.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataframe">The DataFrame</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dataframe-from-scratch">Creating a DataFrame from scratch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-the-dataframe-to-gather-information-and-reloading-it-properly">Summarizing the DataFrame to gather information and reloading it properly</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-data-entries-rows">Selecting data entries (rows):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-columns">Selecting Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-subset-of-the-data-with-rows-and-columns">Selecting a subset of the data with rows and columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#font-color-red-exercise-font"><font color="red">Exercise</font></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-tidying-and-manipulating-the-data-set">Part 2: Tidying and manipulating the data set</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data">Missing data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-missing-values">Finding missing values</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><font color="red">Exercise</font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-unnecessary-columns">Removing unnecessary columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-a-column-using-the-apply-method-and-lambda-functions-optional">Modifying a column using the <code class="docutils literal notranslate"><span class="pre">.apply</span></code> method and <code class="docutils literal notranslate"><span class="pre">lambda</span></code> functions (Optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-visualising-the-data-set">Part 3: Visualising the data set</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplot">Boxplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barchart">Barchart</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><font color="red">Exercise</font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplots">Scatterplots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><font color="red">Exercise</font></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-data-analysis-with-pandas-and-matplotlib">
+<h1>Python data analysis with Pandas (and Matplotlib)<a class="headerlink" href="#python-data-analysis-with-pandas-and-matplotlib" title="Permalink to this heading">#</a></h1>
+<p>This notebook is a self-study workshop for basic analysis of a dataset in Python. This will be done by exploring the functionalities of <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, a fast, powerful, flexible and easy to use open source data analysis and manipulation tool. We will also use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to modify some of the plots generated by <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<p>For demonstrative purposes, we will use a modified version of the <a href="https://www.kaggle.com/somesnm/partynyc">”2016 Parties in New York”</a> dataset, which is derived from the <a href="https://opendata.cityofnewyork.us/">NYC Open Data portal</a>.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/West_side_of_Manhattan_from_Hudson_Commons_%2895103p%29.jpg/2560px-West_side_of_Manhattan_from_Hudson_Commons_%2895103p%29.jpg" alt="drawing" width="600"/><section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="xref myst">Introduction</span></p></li>
+<li><p><span class="xref myst">Part 1: Loading data in a Pandas DataFrame, selection and indexing</span></p></li>
+<li><p><span class="xref myst">Part 2: Tyding and manipulating the data set</span></p>
+<ul>
+<li><p><span class="xref myst">Missing data</span></p></li>
+<li><p><span class="xref myst">Modifying a column using the <code class="docutils literal notranslate"><span class="pre">.apply</span></code> method and <code class="docutils literal notranslate"><span class="pre">lambda</span></code> functions (Optional)</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">Part 3: Visualising the data set</span></p></li>
+</ul>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>This dataset contains the complaints calls that were received by the city police with complaint type “Loud music/Party” in 2016. The New York city hotline receives non-urgent community concerns, made public by the city through the NYC Open Data portal. The full database contains a variety of complaints including illegal parking and generic customer complaints. This subset only contains noise-related complaints that were collected in 2016 and indicate ongoing parties in a given neighborhood.</p>
+<p>The data contains the following columns:</p>
+<ul class="simple">
+<li><p>Call Id: the unique alphanumerical identifier of the complaint;</p></li>
+<li><p>Created Date: when was the complaint call recorded;</p></li>
+<li><p>Closed Date: when was the issue closed (solved);</p></li>
+<li><p>Location Type: type of the signaled location;</p></li>
+<li><p>Incident Zip: zip code of the location;</p></li>
+<li><p>Neighborhood: same as Borough (see below), apart from Queens;</p></li>
+<li><p>Borough: administrative division of the city (Manhattan, Brooklyn, Bronx, Queens and Staten Island)	;</p></li>
+<li><p>Latitude: latitude of the location (with some approximation);</p></li>
+<li><p>Longitude: longitude of the location (with some approximation).</p></li>
+</ul>
+<p>The packages used in this notebook are:</p>
+<ul class="simple">
+<li><p>Pandas (see <a class="reference external" href="https://pandas.pydata.org/docs/reference/index.html">Documentation</a>)</p></li>
+<li><p>Numpy (see <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#reference">Documentation</a>)</p></li>
+<li><p>Matplotlib (pyplot) (see <a class="reference external" href="https://matplotlib.org/2.0.2/contents.html">Documentation</a>)</p></li>
+</ul>
+<p>Let’s import these Packages:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id='part1'></a></p>
+</section>
+<section id="part-1-loading-data-in-a-pandas-dataframe-selection-and-indexing">
+<h2>Part 1: Loading data in a Pandas DataFrame, selection and indexing.<a class="headerlink" href="#part-1-loading-data-in-a-pandas-dataframe-selection-and-indexing" title="Permalink to this heading">#</a></h2>
+<section id="loading-the-data">
+<h3>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this heading">#</a></h3>
+<p>We start by loading the data set. Pandas allows a variety of input data sources, including comma-separated values (CSV) files (e.g., <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files), excel spreadhsheets, and relational databases. Here we gather the data from a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file hosted in a server, using a specific address (e.g., url). Alternatively, we could have first downloaded the data, and then loaded from our local hard disk.</p>
+<p>Since we are fetching data from a server, running the cell below may take some time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_url</span> <span class="o">=</span> <span class="s1">&#39;https://surfdrive.surf.nl/files/index.php/s/DCtctCUajQky4Gb/download&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we use the <code class="docutils literal notranslate"><span class="pre">.head()</span></code> function of our newly created Pandas object to get a sneak peek of the data. This function displays the first five rows of the dataframe by default. We can specify how many rows to display by inputting the number of rows ourselves, that is the only argument of <code class="docutils literal notranslate"><span class="pre">.head()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># sneak peek</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, the DataFrame object we just created (e.g., <code class="docutils literal notranslate"><span class="pre">df</span></code>) is a 2-dimensional data structure that can store data of different types in columns. It is similar to a spreadsheet or an SQL table, or the <code class="docutils literal notranslate"><span class="pre">data.frame</span></code> in R, in case you are familiar with the latter programming environment.</p>
+</section>
+<section id="the-dataframe">
+<h3>The DataFrame<a class="headerlink" href="#the-dataframe" title="Permalink to this heading">#</a></h3>
+<p>A DataFrame always has a “vertical” index (i.e., the very first column in the table displayed above) and a “horizontal” one, the columns themselves. You can access them as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data in the table is instead stored in the <code class="docutils literal notranslate"><span class="pre">values</span></code> property of the DataFrame</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Noticing something familiar? The values of the DataFrame look like a NumPy array! Indeed, Pandas is built on top of NumPy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-a-dataframe-from-scratch">
+<h3>Creating a DataFrame from scratch<a class="headerlink" href="#creating-a-dataframe-from-scratch" title="Permalink to this heading">#</a></h3>
+<p>Before we created a dataframe from an existing data source, which is extremely common. You can create DataFrames in many other ways, for instance from a numpy array and a list of columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>       <span class="c1"># create a 5x3 table of random numbers</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;column 1&#39;</span><span class="p">,</span><span class="s1">&#39;column 2&#39;</span><span class="p">,</span><span class="s1">&#39;column 3&#39;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">random_data</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Of course, we should make sure the number of columns matches the dimensionality of the underlying data; otherwise we get an error. See it for yourself by uncommenting the line of code below and running the cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.DataFrame(data=random_data,columns=[&#39;column 1&#39;,&#39;column 2&#39;])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summarizing-the-dataframe-to-gather-information-and-reloading-it-properly">
+<h3>Summarizing the DataFrame to gather information and reloading it properly<a class="headerlink" href="#summarizing-the-dataframe-to-gather-information-and-reloading-it-properly" title="Permalink to this heading">#</a></h3>
+<p>When loading an unkonown dataset into a pandas dataframe, it is important to check its concise summary with the <code class="docutils literal notranslate"><span class="pre">.info()</span></code> method. The method prints information such as its length (number of entries in the index), the name of the columns, their datatypes, the non-null values, and overall memory usage. A <code class="docutils literal notranslate"><span class="pre">null</span></code> value in a database usually identifies values which are unknown or missing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>From these previous explorations, we see that the dataset has a column with the unique caller ID (“Call Id”) and two columns that contain dates and times (“Created Date” and “Closed Date”).</p>
+<p>It makes sense to employ “Call Id” as the index of our DataFrame. Similarly, we would like to parse the datetime columns into <code class="docutils literal notranslate"><span class="pre">datetime</span></code> format, rather than the generic <code class="docutils literal notranslate"><span class="pre">object</span></code> format (e.g., a string of characters) we are currently using (see the output of <code class="docutils literal notranslate"><span class="pre">.info</span></code> in the cell above). Lastly, the “Incident Zip” column should be loaded as an integer field rather than a float.</p>
+<p>Let’s reload the dataset by using the “Call Id” as the index, parsing datetime columns, and specify the correct datatype for the zip code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reload dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://surfdrive.surf.nl/files/index.php/s/DCtctCUajQky4Gb/download&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                 <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Created Date&#39;</span><span class="p">,</span><span class="s1">&#39;Closed Date&#39;</span><span class="p">],</span>
+                 <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">})</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see the change in the information above. We now have another Index instead of the original (0-based) RangeIndex and different data types (Dtype) for the “Created Date”,”Closed Date”, and “Incident Zip” columns.</p>
+<p>Now that we loaded our data in a more suitable way, we can start analysing it. For instance, we can check the number of unique values in the categorical columns: [‘Location Type’,’Incident Zip’,’Neighborhood’,’Borough’]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">categorical_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Location Type&#39;</span><span class="p">,</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">,</span><span class="s1">&#39;Neighborhood&#39;</span><span class="p">,</span><span class="s1">&#39;Borough&#39;</span><span class="p">]</span> 
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">categorical_columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> has </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s1"> unique values&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>On the other hand, a summary of the statistics of a continuous variable in the data set can be obtained using the <code class="docutils literal notranslate"><span class="pre">.describe()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="selecting-data-entries-rows">
+<h3>Selecting data entries (rows):<a class="headerlink" href="#selecting-data-entries-rows" title="Permalink to this heading">#</a></h3>
+<p>While we changed our index to better reflect the nature of the dataset, we can always select an entry in the DataFrame via its underlying 0-based index. This because, as we mentioned before, the Pandas DataFrame stores the data in a NumPy ndarray. We do this by using the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method; the command below selects the first entry (e.g., row) of the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The last complaint in the data set can be selected instead using:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>As you can see, whenever we select an entry, Python returns an interesting data structure with multiple fields known as a <strong>Series</strong>. A pandas Series is a one-dimensional labelled data structure which can hold data such as strings, integers and even other Python objects. Like the DataFrame, it is built on top of numpy array and is the primary data structure to hold one-dimensional data in pandas.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To select multiple entries, you can provide a range of indexes or a list of indexes similar to the numpy syntax:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Whenever we select more than one row, Python returns a DataFrame, rather than a Series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So far you selected items using the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method, following the 0-based integer approach of NumPy. There is a different method called <code class="docutils literal notranslate"><span class="pre">loc</span></code> which operates in a <em>label-based</em> fashion. This which means that you have to specify rows based on their labels, these are the elements in the <code class="docutils literal notranslate"><span class="pre">index</span></code> column (“Call Id”, in our case).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Jr6StvFVsqvHUaHU&#39;</span><span class="p">,</span><span class="s1">&#39;xxuw16uOWNKpemGe&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will discuss other differences between these two indexing approaches later in this notebook.</p>
+</section>
+<hr class="docutils" />
+<section id="selecting-columns">
+<h3>Selecting Columns<a class="headerlink" href="#selecting-columns" title="Permalink to this heading">#</a></h3>
+<p>We can select a column (usually corresponding to a single variable in the data set) by providing the column name with the following syntax:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location Type&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you may have expected, Python returns a one-dimensional Series when selecting a single column</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location Type&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Multiple columns can be selected by providing a list of column names:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Location Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Neighborhood&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternatively, you can select values in one or multiple columns using the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method like illustrated in the cell below. We use also the <code class="docutils literal notranslate"><span class="pre">.tail</span></code> method to only show the last 5 entries of the selection (the “opposite” of <code class="docutils literal notranslate"><span class="pre">head</span></code>). Notice the difference in the indexing used with respect to the row indexing we saw before.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="selecting-a-subset-of-the-data-with-rows-and-columns">
+<h3>Selecting a subset of the data with rows and columns<a class="headerlink" href="#selecting-a-subset-of-the-data-with-rows-and-columns" title="Permalink to this heading">#</a></h3>
+<p>We can select a subset our data by specifying both rows and columns. We can do this in many ways, common ones include:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the Created Date, Closed Date and Location Type of the first four data entries using .iloc</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the latitude and longitude the first data entry using loc</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Jr6StvFVsqvHUaHU&#39;</span><span class="p">,[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the latitude and longitude of the first data entry using iloc for row indexing, and column names</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="font-color-red-exercise-font">
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#font-color-red-exercise-font" title="Permalink to this heading">#</a></h3>
+<p>Print the following values:</p>
+<ul class="simple">
+<li><p>The neighborhood of the second complaint in the data set</p></li>
+<li><p>The longitude and latitude of the last two complaints in the data set</p></li>
+<li><p>The location type of the second, fourth and fifth complaints</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># neighborhood of the second complaint in the data set</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your code here:&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># longitude and latitude of the last two complaints in the data set</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your code here:&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># location type of the second, fourth and fifth complaints</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your code here:&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="part-2-tidying-and-manipulating-the-data-set">
+<h2>Part 2: Tidying and manipulating the data set<a class="headerlink" href="#part-2-tidying-and-manipulating-the-data-set" title="Permalink to this heading">#</a></h2>
+<p>Now that we know how to select entries and columns in the data set, it is time to make sure the data set is <a class="reference external" href="https://www.jeannicholashould.com/tidy-data-in-python.html">tidy</a>. In our case, this means getting rid of incomplete observations, and replacing any missing variables.</p>
+<section id="missing-data">
+<h3>Missing data<a class="headerlink" href="#missing-data" title="Permalink to this heading">#</a></h3>
+<p>Most datasets come with missing (<em>null</em> or NaN, i.e. Not-a-Number) data points, for various reasons. It is important to address these missing values by either removing rows/columns containing them, or finding a suitable way to substitute them.</p>
+<section id="finding-missing-values">
+<h4>Finding missing values<a class="headerlink" href="#finding-missing-values" title="Permalink to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">.isnull()</span></code> method is used to identify missing values for array-like objects in pandas. The <code class="docutils literal notranslate"><span class="pre">.isnull()</span></code> method returns a dataframe where every item in the original dataframe is replaced with either <code class="docutils literal notranslate"><span class="pre">True</span></code>, if the value is missing, or <code class="docutils literal notranslate"><span class="pre">False</span></code> when it is not missing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to compute how many <em>null</em> values there are in each column. This can be done with the <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> method, which sums all the values in a column (where <code class="docutils literal notranslate"><span class="pre">True</span></code> is equal to one and <code class="docutils literal notranslate"><span class="pre">False</span></code> is equal to zero). Therefore, chaining <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> with <code class="docutils literal notranslate"><span class="pre">.sum()</span></code>, returns the summary of missing values. Note that the returned value is a a pandas Series object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are some missing values for 4 columns/variables. A reasonable approach to deal with the missing values in this dataset is to proceeed like this:</p>
+<ol class="arabic simple">
+<li><p>Remove all records for which we don’t have a ‘Neighborhood’ entry.</p></li>
+<li><p>Replace the missing ‘Closed Date’ values by the ‘Created Date’ plus the average time period between ‘Closed Date’ and ‘Created Date’ as computed from all the other calls.</p></li>
+<li><p>Fill missing ‘Latitude’ and ‘Longitude’ datapoints with the average coordinates computed from all other calls within the same ‘Neighborhood’.</p></li>
+</ol>
+<p><em>1. Remove missing ‘Neighborhood’ entries</em></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">.dropna()</span></code> method can be used to “drop” all rows for which the ‘Neighborhood’ field is missing. We use the <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> argument for brevity. This assigns the result to the original dataframe, so that you don’t have to write <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">df.dropna(subset=['Neighborhood'])</span></code>. Note that there are some restrictions on using <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code>, as discussed <a class="reference external" href="https://stackoverflow.com/questions/43893457/understanding-inplace-true">here</a> for instance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Neighborhood&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It can be seen that the data entries removed due to the missing neighborhood often missed “Latitude”, “Longitude” and “Closed Date” information as well.</p>
+<p><em>2. Replace the missing ‘Closed Date’ values</em></p>
+<p>Our next task is to substitute missing values for ‘Closed Date’ by adding an average ‘Duration’ to the <code class="docutils literal notranslate"><span class="pre">Created</span> <span class="pre">Date</span></code> entry. We proceed like this:</p>
+<ol class="arabic simple">
+<li><p>Add a ‘Duration’ column to the DataFrame by subtracting ‘Closed Date’ and ‘Created Date’. We can do this operation since both columns are of <code class="docutils literal notranslate"><span class="pre">datetime</span></code> type. This will return a <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>column (see <span class="xref myst">here</span> for more information on the <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> datatype). A NaN value is automatically entered for rows that don’t have a ‘Closed Date’ value.</p></li>
+<li><p>Replace the NaN values in the columnt ‘Duration’ with the mean value of the ‘Duration’ column using the <code class="docutils literal notranslate"><span class="pre">.fillna</span></code> method.</p></li>
+<li><p>Identify the rows with a missing ‘Closed Date’, and substitute them with ‘Created Date’ + ‘Duration’.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Closed Date&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Created Date&#39;</span><span class="p">]</span>      <span class="c1"># compute duration (timedelta field)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># substitute average duration to missing duration</span>
+<span class="n">ixes_nan_time</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Closed Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>                   <span class="c1"># find missing </span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ixes_nan_time</span><span class="p">,</span> <span class="s1">&#39;Closed Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ixes_nan_time</span><span class="p">,</span> <span class="s1">&#39;Created Date&#39;</span><span class="p">]</span> <span class="o">+</span> \
+                                       <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ixes_nan_time</span><span class="p">,</span> <span class="s1">&#39;Duration&#39;</span><span class="p">]</span> <span class="c1"># substitute</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the previous cell, we updated the values of the table using <code class="docutils literal notranslate"><span class="pre">.loc</span></code> for indexing and a <code class="docutils literal notranslate"><span class="pre">boolean</span></code> index (ixes_nan_time).</p>
+<p>You <strong>cannot</strong> use <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> to assign new values to elements of the DataFrame. See the example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Closed Date&#39;</span><span class="p">])</span>   <span class="c1"># print original value </span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Closed Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>      <span class="c1"># try to change it using .iloc </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Closed Date&#39;</span><span class="p">])</span>   <span class="c1"># verify if the change occurred</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The change did not occurr, and Python also raises a <em>warning</em> to signal that.</p>
+<p><em>3. Fill missing ‘Latitude’ and ‘Longitude’ values</em></p>
+<p>This is a more involved task that requires computing the mean coordinate points for each ‘Neighborhood’ and fill the gaps in the DataFrame accordingly. There are many ways on how this can be done using Python and Pandas. Some are more optimized than others, meaning that they are faster to run but usually require more in-depth knowledge.</p>
+<p>The method proposed below cycles through all the neighborhoods in a for loop, computes the mean coordinates for each of them, and fills the gaps. Remember that substituting values in a Pandas dataframe requires the use of <code class="docutils literal notranslate"><span class="pre">.loc</span></code>. We employ boolean indexing to perform our selections.</p>
+<p>First, let’s select some entries with missing coordinates. We will use them to check if our code performed as expected.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select control entries</span>
+<span class="n">control_call_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uWYAqPBcfz308cxT&#39;</span><span class="p">,</span><span class="s1">&#39;GEtAE8xsKd7MjZyO&#39;</span><span class="p">,</span><span class="s1">&#39;zde2L2EB1RpRR274&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">control_call_ids</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we extract all unique neighborhood names in the dataset, after sorting them in alphabetical order.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighborhoods</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Neighborhood</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Note how it easy to chain multiple commands in a single line of code with Pandas.</p>
+</div></blockquote>
+<p>We can now perform our substitutions by cycling through neighborhoods. To increase the readability of the output, we use <em>f-strings</em>, fixing the length of each neighborhoods to 20 characters, and limiting the mean coordinates to the sixth decimal point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">neighborhood</span> <span class="ow">in</span> <span class="n">neighborhoods</span><span class="p">:</span>   
+    <span class="n">selection</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Neighborhood</span><span class="o">==</span><span class="n">neighborhood</span><span class="p">)</span>         <span class="c1"># select all entries belonging to neighborhood</span>
+    <span class="n">mean_lat</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">selection</span><span class="p">][</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>         <span class="c1"># compute average coordinates</span>
+    <span class="n">mean_lon</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">selection</span><span class="p">][</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="n">selection</span> <span class="o">=</span> <span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">Neighborhood</span><span class="o">==</span><span class="n">neighborhood</span><span class="p">)</span>        <span class="c1"># select all entries belonging to neighborhood... </span>
+                 <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Latitude</span><span class="o">.</span><span class="n">isnull</span><span class="p">()))</span>              <span class="c1"># ...with missing latitude</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selection</span><span class="p">,</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_lat</span>
+    
+    <span class="n">selection</span> <span class="o">=</span> <span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">Neighborhood</span><span class="o">==</span><span class="n">neighborhood</span><span class="p">)</span>        <span class="c1"># select all entries belonging to neighborhood... </span>
+                 <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Longitude</span><span class="o">.</span><span class="n">isnull</span><span class="p">()))</span>              <span class="c1"># ...with missing longitude</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selection</span><span class="p">,</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_lon</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">neighborhood</span><span class="si">:</span><span class="s1">20s</span><span class="si">}</span><span class="s1">: mean Lat = </span><span class="si">{</span><span class="n">mean_lat</span><span class="si">:</span><span class="s1">.6f</span><span class="si">}</span><span class="s1">, mean Lon = </span><span class="si">{</span><span class="n">mean_lon</span><span class="si">:</span><span class="s1">.6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>      <span class="c1"># echo on screen for control</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see if we perform the right substitutions, by checking the overall number of <em>null</em> values in the DataFrame and comparing the values inserted in the control entries with the printout above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select control entries</span>
+<span class="n">control_call_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uWYAqPBcfz308cxT&#39;</span><span class="p">,</span><span class="s1">&#39;GEtAE8xsKd7MjZyO&#39;</span><span class="p">,</span><span class="s1">&#39;zde2L2EB1RpRR274&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">control_call_ids</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>The following lines create a copy of the original cleaned dataset, and substitute the “Location Type” of 10 entries with <code class="docutils literal notranslate"><span class="pre">null</span></code> values. These entries are randomly selected with the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html"><code class="docutils literal notranslate"><span class="pre">.sample</span></code></a>  method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exercise</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">corrupted_entries</span> <span class="o">=</span> <span class="n">df_exercise</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+<span class="n">df_exercise</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">corrupted_entries</span><span class="p">,</span><span class="s2">&quot;Location Type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_exercise</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Your task is to change all these values back by using the <em>most common</em> (e.g., the mode) “Location Type” of the dataset. You can retrieve this value using the <code class="docutils literal notranslate"><span class="pre">.mode()</span></code> or <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code> methods of the Series object. The latter method returns a Series containing counts of unique values in descending order, so that the first element is the most frequently-occurring element.</p>
+<p><em>Can you solve this problem using a single line of code?</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Your code here:&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_exercise</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="removing-unnecessary-columns">
+<h3>Removing unnecessary columns<a class="headerlink" href="#removing-unnecessary-columns" title="Permalink to this heading">#</a></h3>
+<p>While manipulating your dataset or performing data analysis, you may need to remove or <em>drop</em> columns in the Pandas dataframe. You can drop column in using the <code class="docutils literal notranslate"><span class="pre">.drop</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since the ‘Neighborhood’ and ‘Borough’ columns of the DataFrame are essentially the same (see the <span class="xref myst">Introduction</span>), we decide to drop the latter. We do so by specifying the name of the column, <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> to indicate we are looking at a column, and <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> to update the dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Borough&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="modifying-a-column-using-the-apply-method-and-lambda-functions-optional">
+<h3>Modifying a column using the <code class="docutils literal notranslate"><span class="pre">.apply</span></code> method and <code class="docutils literal notranslate"><span class="pre">lambda</span></code> functions (Optional)<a class="headerlink" href="#modifying-a-column-using-the-apply-method-and-lambda-functions-optional" title="Permalink to this heading">#</a></h3>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">.apply</span></code> to <em>send</em> a single column to a function. This is useful when cleaning up data, converting formats, altering values etc. In the following lines, we modify the somewhate criptic ‘Duration’ column, which contains values in <code class="docutils literal notranslate"><span class="pre">timedelta64</span></code> format to minutes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">days_hours_minutes</span><span class="p">(</span><span class="n">td</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">days_hours_minutes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When the function to apply is simple, you can usually resort to Python <a class="reference external" href="https://www.w3schools.com/python/python_lambda.asp"><em>lambda</em></a> functions. A lambda function is a small anonymous function, expressed with this syntax <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">arguments</span> <span class="pre">:</span> <span class="pre">expression</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">td</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="part-3-visualising-the-data-set">
+<h2>Part 3: Visualising the data set<a class="headerlink" href="#part-3-visualising-the-data-set" title="Permalink to this heading">#</a></h2>
+<p>After tyding up the dataset, let’s visualise it with <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. Depending on the type of data and the scope of our analysis, we can use different options. First, let’s adjust the “Duration” columns as shown in the Optional section above (you don’t need to go through it, if you don’t want; just run the cell below!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">td</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="boxplot">
+<h3>Boxplot<a class="headerlink" href="#boxplot" title="Permalink to this heading">#</a></h3>
+<p>For instance, <code class="docutils literal notranslate"><span class="pre">boxplots</span></code> are very useful to gather basic information on the distribution of a particular continuous variable. They provide a visual summary of the data enabling the quick identification of average values, dispersion of the data set, and signs of skewness.</p>
+<p>Let’s visualize the boxplot of the recently modified ‘Duration’ column. Since <code class="docutils literal notranslate"><span class="pre">pandas</span></code> plotting functionalities are based on <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, we can use the latter to “prettify” the figures. For instance we can add the <em>y</em> axis label to specify the unit (e.g., minutes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;minutes&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data has many outliers, visualized as empty circles above. Let’s remove them from the graph by specifying <code class="docutils literal notranslate"><span class="pre">showfliers=False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;minutes&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="histograms">
+<h3>Histograms<a class="headerlink" href="#histograms" title="Permalink to this heading">#</a></h3>
+<p>We can also make a histogram of the <code class="docutils literal notranslate"><span class="pre">Incident</span> <span class="pre">Zip</span></code> column using the <code class="docutils literal notranslate"><span class="pre">DataFrame.hist()</span></code> function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_zip_codes</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">n_zip_codes</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Complaints&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Zip code&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of complaints per zip code&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is difficult to read the histogram above since some zip codes are largely more present than others. We can use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functionalities to show the histogram using a logarithmic scale.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_zip_codes</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">n_zip_codes</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Complaints&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Zip code&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of complaints per zip code&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We now notice there is an “anomalous” Zip code, outside of the range (e.g., [10000,12000]) of typical NYC neighborhoods. Further analysis reveal that the “anomalous” Zip code is actually that of “Central Park”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Incident Zip&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="barchart">
+<h3>Barchart<a class="headerlink" href="#barchart" title="Permalink to this heading">#</a></h3>
+<p>Barcharts are very useful to represent categorical data with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. Below we use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> barcharts, in combination with <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions to 1) summarise the absolute and relative number of complaints divided by ‘Location Type’ and 2) save the results locally. Please check if the image has been created locally!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of complaints&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;barh&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fraction of total complaints&#39;</span><span class="p">)</span>
+
+
+<span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;barcharts.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Given what you have seen so far, draw a <em>piechart</em> of the distribution of complaints for ‘Location Type’. Use a figure size of (8,8) for clarity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your code here:&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scatterplots">
+<h3>Scatterplots<a class="headerlink" href="#scatterplots" title="Permalink to this heading">#</a></h3>
+<p>To create a scatterplot in pandas, one can use the <code class="docutils literal notranslate"><span class="pre">DataFrame.plot.scatter()</span></code> function (See <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.scatter.html?highlight=scatter#pandas.DataFrame.plot.scatter">documentation</a>).</p>
+<p>We can use the scatterplot function to outline the map of New York City by creating a dot for each entry, somewhat mapping the spatial distribution of complaints.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try changing and adding new parameters in the function to create a better visualization</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Spatial distribution of complaints&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>As a final exercise, use scatterplot to create another map like the one above where:</p>
+<ul class="simple">
+<li><p>There is a dot of a different color for each ‘Location Type’</p></li>
+<li><p>There is a legend showing which color belongs to which ‘Location Type’</p></li>
+<li><p>Use colors and dot sizes which facilitate readability (e.g., diverse colors, sufficient size, …)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your code here:&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./originals/mude"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1-1-solution.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Computations using Numpy: Solutions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1-2-solution.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python data analysis with Pandas (and Matplotlib): Solutions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-loading-data-in-a-pandas-dataframe-selection-and-indexing">Part 1: Loading data in a Pandas DataFrame, selection and indexing.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataframe">The DataFrame</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dataframe-from-scratch">Creating a DataFrame from scratch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-the-dataframe-to-gather-information-and-reloading-it-properly">Summarizing the DataFrame to gather information and reloading it properly</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-data-entries-rows">Selecting data entries (rows):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-columns">Selecting Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-subset-of-the-data-with-rows-and-columns">Selecting a subset of the data with rows and columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#font-color-red-exercise-font"><font color="red">Exercise</font></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-tidying-and-manipulating-the-data-set">Part 2: Tidying and manipulating the data set</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data">Missing data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-missing-values">Finding missing values</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><font color="red">Exercise</font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-unnecessary-columns">Removing unnecessary columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-a-column-using-the-apply-method-and-lambda-functions-optional">Modifying a column using the <code class="docutils literal notranslate"><span class="pre">.apply</span></code> method and <code class="docutils literal notranslate"><span class="pre">lambda</span></code> functions (Optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-visualising-the-data-set">Part 3: Visualising the data set</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplot">Boxplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barchart">Barchart</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><font color="red">Exercise</font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplots">Scatterplots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><font color="red">Exercise</font></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Magic Mike!
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

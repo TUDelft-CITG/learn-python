@@ -1,0 +1,946 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Golden Rules &#8212; Learn Python for Civil Engineering and Geosciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'originals/mude/1-2-Golden_Rules';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Python data analysis with Pandas (and Matplotlib): Solutions" href="1-2-solution.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/learn-python-logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/learn-python-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    UNDER CONSTRUCTION
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">In a Nutshell</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook1.html">Python Notebook #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook2.html">Python Notebook #2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook3.html">Python Notebook #3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook4.html">Python Notebook #4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook5.html">Python Notebook #5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonNotebook6.html">Python Notebook #6</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installations.html">Installations (MUDE)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">MUDE Materials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-1-student.html">Computations using Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-1-solution.html">Computations using Numpy: Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Golden Rules</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Foriginals/mude/1-2-Golden_Rules.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/originals/mude/1-2-Golden_Rules.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Golden Rules</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-the-golden-rules-for-documentation-and-communication-exist">Why do the Golden Rules for Documentation and Communication exist?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-of-encouragement">A note of encouragement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-communication">Documentation and Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-golden-rules">The Golden Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#style-guide-for-python-pep-8">Style Guide for Python (PEP 8)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-pep-8-automatically-with-autopep8">Checking PEP 8 automatically with <code class="docutils literal notranslate"><span class="pre">autopep8</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-optional-but-reccommended">Installation (Optional, but reccommended)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-1-use-descriptive-names">Rule 1: Use descriptive names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-2-make-readable-code">Rule 2: Make readable code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-3-make-readable-results">Rule 3: Make readable results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-digits">Significant digits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-4-write-simple-functions-then-use-them">Rule 4: Write simple functions, then use them</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-5-document-your-code">Rule 5: Document your code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-bad-and-good-documentation">Comparison of bad and good documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-bad-documentation">Example with bad documentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-good-documentation">Example with good documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-6-test-your-code">Rule 6: Test your code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-7-learn-to-collaborate">Rule 7: Learn to collaborate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-resources">References and resources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="golden-rules">
+<span id="code-1-2"></span><h1>Golden Rules<a class="headerlink" href="#golden-rules" title="Permalink to this heading">#</a></h1>
+<p><em>This is the first document presenting the MUDE Golden Rules of Code, a series of guidelines and reccommendations that are focused on promoting good habits related to coding and programming. We expect to periodically update this document and perhaps share other topics in the ‘Golden Rules’ series. Whether you are a student, teacher or practitioner, we encourage you to refer back to this document often and feel free to share.</em></p>
+<p><em>We greatly appreciate feedback from anyone, especially students (send to <a class="reference external" href="mailto:R&#46;C&#46;Lanzafame&#37;&#52;&#48;tudelft&#46;nl">R<span>&#46;</span>C<span>&#46;</span>Lanzafame<span>&#64;</span>tudelft<span>&#46;</span>nl</a>).</em></p>
+<p>Contributors: Robert Lanzafame, Kiril Vasilev and a list of reviewers, too long to name.</p>
+<div class="alert alert-block alert-success">
+<b> Note to MUDE Students </b>
+<p>For the September 13 workshop, you should read the entire document, but if short on time focus on Rules 1, 2, 3 and 5 (but only the one-line docstrings for 5). Some topics will be revisited or extended in later workshops. You are not required to install <code class="docutils literal notranslate"><span class="pre">autopep8</span></code>, but we reccommend it since it is easy to use. You are expected to incorporate the guidelins in this document progressively throughout the semester, so we suggest you refer to it often.</p>
+</div><section id="why-do-the-golden-rules-for-documentation-and-communication-exist">
+<h2>Why do the Golden Rules for Documentation and Communication exist?<a class="headerlink" href="#why-do-the-golden-rules-for-documentation-and-communication-exist" title="Permalink to this heading">#</a></h2>
+<p>You will spend a lot of your study hours in the MUDE module writing, reading and debugging Python code, regardless of your prior programming experience. Your time is valuable, especially once you start working after graduation! Yet it is all too common that most code is never re-used because it is poorly <em>documented</em>, making it not understandable to others, or even to yourself at a later moment. In addition, as a young practicing engineer or researcher it is critical that you are able to use your code to effectively <em>communicate</em> your results, otherwise the effort put into your analysis is wasted. Good code writing, code documentation and presentation of results such as figures, tables and numbers are all essential for effective collaboration. Even when working individually, it is important to preserve your work such that you can easily understand and re-use in the future. This document will provide and explain a number of reccommendations to help you accomplish that.</p>
+<p>The following quote summarizes the philosophy of this document concisely:</p>
+<div style="text-align: right"><em>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</em></div>  
+<div style="text-align: right"><em> ― Martin Fowler </em></div> 
+<section id="a-note-of-encouragement">
+<h3>A note of encouragement<a class="headerlink" href="#a-note-of-encouragement" title="Permalink to this heading">#</a></h3>
+<p>This document contains a lot of information that might not appear to be useful to you…<em>yet</em>. Keep in mind that the content here was created in collaboration with many colleagues who are working in industry and will be looking to hire you after you graduate from TU Delft: they will appreciate good coding documentation and communication skills! Our primary advice in MUDE, and for the rest of your MSc program, is that you take a look at this material now, but also keep the Golden Rules in mind and refer back to them often. If you can incorporate them into your work in MUDE, you will have made good habits for yourself that we know will serve you well in the future.</p>
+<p>We focused on illustrating good coding practice in a format and language that is approachable to engineers with a varied programming background. As such, specific fundamental programming and computer science concepts are avoided. If you would like to learn more about theses concepts, specifically related to Python, the textbook by Guttag (2021) is an excellent reference.</p>
+</section>
+</section>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="xref myst">Documentation and Communication</span></p></li>
+<li><p><span class="xref myst">The Golden Rules</span></p></li>
+<li><p><span class="xref myst">References and resources</span></p></li>
+</ul>
+</section>
+<section id="documentation-and-communication">
+<h2>Documentation and Communication<a class="headerlink" href="#documentation-and-communication" title="Permalink to this heading">#</a></h2>
+<p>The words in the title of this lesson were chosen very carefully. <em>Documentation</em> refers to all the work related to a problem you are working on. In MUDE, documentation is not limited to describing the purpose and function of your code only. Clearly documented code is important, but in CEG it is also critical to describe all the steps in your analysis, for example: data and data sources, assumptions, results, discussion and recommendations. Jupyter notebooks provide the ideal platform for combining documentation and analysis in one file, which is why we rely on them heavily in MUDE and the focus of this lesson. However, remember there are many other options available to you for proper documentation of your work, and the topics we cover here always apply.</p>
+<p><em>Communication</em> refers to how you use your code, the analysis you run and the format by which you share it. Rarely are you running a piece of code purely for yourself, but often to share with others—perhaps for a homework assignment, to include in a thesis, a scientific publication, a design at a consultancy, et cetera. Why go through all the trouble of writing and using code if no one can understand what you did with it? It may be clear to you right now, but what if someone wants to use it in the future, or ask about your results, when you are not there? Will the audience understand your work if you have unreadable or overly complex tables and figures in a MSc thesis or conference presentation? Good communication is therefore critical, and there are many aspects, for example: visual formatting (visual appearance of code, text output, figures, tables); transparency and understadability (what did you do? is it repeatable? will someone understand it in the future, perhaps out of context?); and, for code explicitly: readability. This lesson provides a number of useful guidelines that will help your communication improve.</p>
+<p>In summary, the title of this document is a bit simplistic. In reality, it should be: <em>the Golden Rules: a non-exhaustive list of highly recommended habits to build into your life to make sure you can easily and consistently document your work in a way that ensures effective communication with others, as well as your future self.</em> But that doesn’t roll off the tongue like our current title does. And it doesn’t fit in 79 characters either 😉.</p>
+</section>
+<section id="the-golden-rules">
+<h2>The Golden Rules<a class="headerlink" href="#the-golden-rules" title="Permalink to this heading">#</a></h2>
+<p>These are the Golden rules:</p>
+<ol class="arabic simple">
+<li><p><span class="xref myst">Use descriptive names</span></p></li>
+<li><p><span class="xref myst">Make readable code</span></p></li>
+<li><p><span class="xref myst">Make readable results</span></p></li>
+<li><p><span class="xref myst">Write simple functions, then use them</span></p></li>
+<li><p><span class="xref myst">Document your code</span></p></li>
+<li><p><span class="xref myst">Test your code</span></p></li>
+<li><p><span class="xref myst">Learn to collaborate</span></p></li>
+</ol>
+<p>The sections below will provide explanations and examples of each Golden Rule, but first we need to introduce something that may seem like it belongs in a Computer Science course. However, we will see that it contains a number of useful guidelines and insight into how one can write readable Python code: the PEP-8 Style Guide.</p>
+</section>
+<section id="style-guide-for-python-pep-8">
+<h2>Style Guide for Python (PEP 8)<a class="headerlink" href="#style-guide-for-python-pep-8" title="Permalink to this heading">#</a></h2>
+<p>PEP stands for Python Enhancement Proposals, which is how the Python community describes new features and guidelines related to the development and (reccommended) use of the programming language. Although there are many <a class="reference external" href="https://peps.python.org/">PEPs</a>, the MUDE Golden Rules are in part inspired by one in particular: <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8 - Style Guide for Python Code</a>. PEP 8 is important because it directly addresses the readability of Python code and is thus directly aligned with the objectives of our Golden Rules. Unfortunately, PEP 8 can also seem boring, tedious and unimportant to engineers who are learning to use Python. The Golden Rules are created in part to help with this, so for now, we ask that you read carefully the <a class="reference external" href="https://peps.python.org/pep-0008/#introduction">first</a> and <a class="reference external" href="https://peps.python.org/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds">second</a> sections of PEP 8 to help understand the general motivation, then scan through PEP 8 to get an idea of the structure. You may want to use the website <a class="reference external" href="https://pep8.org/">pep8.org</a>, which uses text formatting and is (visually) much easier to read. Don’t just open the website; you should devote at least 15 minutes reading the text and example code and consider how this might influence the way you write code. You don’t need to read every word, but rather focus on the background, justification and examples for the sections that are most relevant to us:</p>
+<ul class="simple">
+<li><p>Code lay-out: indentation, line length, line breaks, blank lines</p></li>
+<li><p>Whitespace</p></li>
+<li><p>Comments</p></li>
+<li><p>Naming conventions</p></li>
+</ul>
+<p>After around 15 minutes of reading, you should have a good idea of the general philosophy and specific ways to change the way you write Python code. Many of these guidelines are incorporated into the Golden Rules, but sometimes PEP 8 will provide more detail or background, and most importantly: example code. Therefore, you should bookmark the website and refer back to it often.</p>
+<p>You may have noticed that checking some of the PEP 8 guidelines could be quite tedious, like counting 4 spaces on indentation or checking to make sure there are no spaces at the end of a line. This is just the type of thing that computers are good at! Fortunately there are a number of tools available to autocheck (and even autocorrect) Python code based on some (but not all!) of the reccommendations in PEP 8. The elements of PEP 8 that are most relevant to us are summarized here:</p>
+<ul class="simple">
+<li><p>Indentation</p></li>
+<li><p>Whitespace and blank lines</p></li>
+<li><p>Line length and line break location</p></li>
+<li><p>Import statements</p></li>
+</ul>
+<p>Compliance with PEP 8 is carried out by the package <a class="reference external" href="https://pycodestyle.pycqa.org/"><code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code></a>, and you can see a detailed list of what is being checked in your code by looking at the the <a class="reference external" href="https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes">list of error codes</a>. There are a few other PEP 8 guidelines that are not included in the list above or in our Golden Rules (specifically, issues in the statement and runtime groups in <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>). If these come up as warnings or errors when reviewing your code with an autochecker you can read more about what the problem is in the PEP 8 documentation.</p>
+<p>The next section covers PEP 8 autocheckers, but you should <strong>always remember: only a subset the PEP 8 guidelines can be evaluated by automatic PEP 8 checkers and fixers.</strong> For example, a computer cannot tell you whether or not your variable name is descriptive enough, or consider what variable name length is appropriate for the specific piece of code you are writing—this is something that you must determine on your own or with your team that may be hard at first, but becomes easier with a bit of practice. To convey this perspective, we adapt the quote by Martin Fowler given above:</p>
+<div style="text-align: right"><em>Any fool can use </em><code>autopep8</code><em> to comply with PEP 8 guidelines. Good engineers use PEP 8 carefully to write code that humans can understand.</em></div>  
+<div style="text-align: right"><em> ― MUDE Golden Rules, adapted from Martin Fowler </em></div> <section id="checking-pep-8-automatically-with-autopep8">
+<h3>Checking PEP 8 automatically with <code class="docutils literal notranslate"><span class="pre">autopep8</span></code><a class="headerlink" href="#checking-pep-8-automatically-with-autopep8" title="Permalink to this heading">#</a></h3>
+<p>Although PEP 8 may look quite complicated and tedious at first glance, automatic PEP 8 formatters exist. The one we recommend you to use is <code class="docutils literal notranslate"><span class="pre">autopep8</span></code>, which can be applied on both <code class="docutils literal notranslate"><span class="pre">.py</span></code> files and <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> jupyter notebooks. A full explanation about the capabilities of this tool can be found at the <a class="reference external" href="https://pypi.org/project/autopep8/">Python Package Index page</a>.</p>
+<p><em>Bonus tip: the Python Package Index, PyPI, is the official website for Python software, where most publicly available packages can be found, and is the default source when you install packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</em></p>
+<section id="installation-optional-but-reccommended">
+<h4>Installation (Optional, but reccommended)<a class="headerlink" href="#installation-optional-but-reccommended" title="Permalink to this heading">#</a></h4>
+<p>In order to install <code class="docutils literal notranslate"><span class="pre">autopep8</span></code>, you can simply run the following <code class="docutils literal notranslate"><span class="pre">pip</span></code> command in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>autopep8
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h4>
+<p>You can run the following command to auto-format python files and jupyter notebooks in-place. After the command execution has finished, your files will have been autoformatted. Make sure you replace <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code> with the name and extension of the file you wish to auto-format.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>autopep8<span class="w"> </span>--in-place<span class="w"> </span>&lt;filename&gt;
+</pre></div>
+</div>
+</section>
+<section id="additional-resources">
+<h4>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">autopep8</span></code> can be added as an extension to JupyterHub, which allows you to interact with the tool through a Jupyter Notebook rather than the terminal. This can be achieved with the help of a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Nbextensions</span> <span class="pre">Configurator</span></code>, which you may need to install first, before setting up <code class="docutils literal notranslate"><span class="pre">autopep8</span></code> as an extension.</p>
+<p>Many of the IDEs such as Spyder and PyCharm contain add-ons that can be installed to automate the PEP 8 checks. Rather than providing a long list of installation instructions here, we’d encourage you to already get started with Rule X: using Google and Stack Overflow to help you identify and install a PEP 8 tool that will work for you. If you are using the JupyterHub, you can always copy and paste text into <a class="reference external" href="http://pep8online.com/">PEP8 Online</a>, as done in the first example above.</p>
+</section>
+</section>
+</section>
+<section id="rule-1-use-descriptive-names">
+<h2>Rule 1: Use descriptive names<a class="headerlink" href="#rule-1-use-descriptive-names" title="Permalink to this heading">#</a></h2>
+<p><em>My colleague/student constantly shares code with me but the variables are acronyms and are overwritten, which makes it difficult to read and use.</em></p>
+<p><em>X1, X2, X3… oh, again X1 (overwrite). Was the previous X1 important?</em></p>
+<p>Often when you work, you will be sharing your code with other people and you need make sure that they understand what each variable is doing and how it relates to the other variables. However, this may difficult or even impossible when the variable names do not represent the purpose they have.</p>
+<p>For example, variable names such as <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">a1</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">plot</span></code>, <code class="docutils literal notranslate"><span class="pre">plot1</span></code> may not be descriptive enough to use in your code. Additionally, <code class="docutils literal notranslate"><span class="pre">kruidnoten</span></code> may not be a good variable name for a weather time series plot.</p>
+<p>Coming up with descriptive names requires practice, but when in doubt don’t be afraid to use longer names to be specific. It’s easy to change names in a script later with find and replace. The only downside if your names are too long is that you have to add a few more line breaks (we give you a few tips for this in <em><strong>Golden Role</strong></em>), however, the downside of names that are too short is that you or a colleague has to spend hours in the future interpreting, or even rewriting your code.</p>
+<p>However, there are some names to avoid. Namely, never use the characters <code class="docutils literal notranslate"><span class="pre">l</span></code> (lowercase letter el), <code class="docutils literal notranslate"><span class="pre">O</span></code> (uppercase letter oh), or <code class="docutils literal notranslate"><span class="pre">I</span></code> (uppercase letter eye) as single character variable names. In some fonts, these characters are indistinguishable from the numerals one and zero. When tempted to use <code class="docutils literal notranslate"><span class="pre">l</span></code>, use <code class="docutils literal notranslate"><span class="pre">L</span></code> instead. Better yet: consider a variable name that is longer than one character.</p>
+<p>Function names should be lowercase, with words separated by underscores as necessary to improve readability:<br />
+<code class="docutils literal notranslate"><span class="pre">this_is_a_properly_formatted_function_name_its_too_long_but_very_readable</span></code></p>
+<p>Variable names follow the same convention as function names. We will cover some of the other naming guidelines in later tutorials. <em><strong>For now, remember: functions and variables should be written in all lower case and underscores.</strong></em> That makes it easy to remember! For everything else, you can refer to PEP 8.</p>
+</section>
+<section id="rule-2-make-readable-code">
+<h2>Rule 2: Make readable code<a class="headerlink" href="#rule-2-make-readable-code" title="Permalink to this heading">#</a></h2>
+<p><em>I hate it when a piece of code is passed to me that I cannot understand on itself.</em></p>
+<p>This rule pretty much speaks for itself, and is also the Golden Rule most closely linked to PEP 8. So rather than rewrite it, we reccommend that at the start you focus on the four aspects of PEP 8 listed here. And don’t forget to read the document every once in a while to refresh your memory and see examples.</p>
+<ul class="simple">
+<li><p>blank lines are great for making space, but don’t overuse them</p></li>
+<li><p>use indentation to make your line breaks readable</p></li>
+<li><p>space around operators, especially =, +, -, and after function arguments</p></li>
+<li><p>incorporate a maximum line length</p></li>
+</ul>
+<p>The 79 character maximum line length reccommendation in PEP 8 is often a contentious one. It’s important to limit line length because not all documentation software, word processers, text viewers, etc, know how to present long lines of code. Line breaks may introduced in a way that makes the code completely unreadable, or worse, large portions of your code may not be visible when printed. However, you will find that in practice it is very difficult to limit your lines to 79 characters, especially if you are using descriptive variable and function names (Golden Rule 1). On the other hand, once you learn a few tricks for making easy line breaks (below), it becomes much easier. So, our advice is to <em>definitely</em> incorporate a maximum line length in your code, but start with 79 and feel free to increase it doesn’t work for a certain project. It’s generally not a problem to increase the maximum length to 100 or even 120 characters, and autoformatters can be set up to help enforce this. Whatever you do, just make sure that your lines don’t get cut off or broken in a way that makes your code unreadable. To help, we provide a few tips for adding line breaks to your code. Can you find the PEP 8 violations in this example? Try copying this code into <a class="reference external" href="http://pep8online.com/">pep8online.com</a> to test yourself.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can always break items inside brackets wherever you like</span>
+<span class="n">my_sum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span>
+              <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">bad_bracket_alignment</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="mi">2</span>
+                            <span class="p">])</span> 
+
+<span class="c1"># When you split function arguments use indentation to make sure</span>
+<span class="c1"># the entire function can be easily read with breaks</span>
+<span class="n">OK</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>
+          <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="n">not_good</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+           <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+               <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="n">much_better</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span>
+                   <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>
+                   <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="c1"># Line breaks with strings</span>
+<span class="n">this_is_one_string_in_two_parts</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;This string has to be split in two. &quot;</span>
+                                   <span class="s2">&quot;Notice how this line is aligned above.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">this_is_one_string_in_two_parts</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="rule-3-make-readable-results">
+<h2>Rule 3: Make readable results<a class="headerlink" href="#rule-3-make-readable-results" title="Permalink to this heading">#</a></h2>
+<p><em>Your professors are old and their eyes are bad—why torture them with thin lines and tiny text on your figures?</em></p>
+<p>There are courses and books devoted to this Golden Rule, not to mention professional editors and typesetters. While you should aways make sure your results are readable, there are three main categories where it is easy to make significant improvements to readability and communication: figures, tables and numbers.</p>
+<section id="figures">
+<h3>Figures<a class="headerlink" href="#figures" title="Permalink to this heading">#</a></h3>
+<p>You’ve gone through all the work to write code, run analyses, collect results and present them in figures. Why not spend a little extra effort to make the figure easy for your reader or audience to interpret? You should always make sure a figure contains enough information for a viewer to understand the main variables even if taken out of context, which can be done easily by including axis labels and a title, both with units, as well as a legend. Use of high contrast colors, symbols and line types is important if a lot of curves or data types are included. Finally, depending on the importance and use consider: setting good axis limits and increments (e.g., tics every 5 instead of 7), equal scale axes, grid lines, etc.</p>
+<p>Our advice is to get in the habit of always adding a few simple commands to format to make it easy to repeat when it matters. Rather than take up space here with examples, keep an eye out for nicely formatted figures in MUDE notebooks.</p>
+</section>
+<section id="tables">
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">#</a></h3>
+<p>Similar to figures, make sure key information about the contents such as variable name, type and units are included. Limiting the number of significant figures to 3, adding more only when needed, can significantly improve the readability of a table. There are a number of tools available for creating tables, so we encourage you to use Google to find a few that work for your working method.</p>
+</section>
+<section id="significant-digits">
+<h3>Significant digits<a class="headerlink" href="#significant-digits" title="Permalink to this heading">#</a></h3>
+<p>Did you know that computers can store decimals up to 16 digits? If you let it, Python will try to return as many of these digits as possible. When you present results of your calculation with 6 or 8 decimal values, you give a false (and at times silly) impression of precision. For example, is that wind speed <em>really</em> 14.4613587 m/s? Especially when the accuracy of the sensor is +/-10% and the wind is gusting significantly? For most engineering purposes, 3 significant digits is plenty and can be considered a default. You can always add more if you have a good reason to do so.</p>
+<p>Fortunately Python has a great tool to help you use an appropriate number of significant digits: <code class="docutils literal notranslate"><span class="pre">f-strings</span></code>. A few quick examples are provided below, and you can <a class="reference external" href="https://realpython.com/python-f-strings/">read more about f-strings here</a>, or any of the other good resources online.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="c1"># Easiest f-string:</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Add f before string, use curly braces to round pi = </span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Different formats are possible, pi = </span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s1">.3e</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">three_things</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.21581651</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">3.43454</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unpack all numbers using the same format:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">three_things</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Now list each on a separate line:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">three_things</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="rule-4-write-simple-functions-then-use-them">
+<h2>Rule 4: Write simple functions, then use them<a class="headerlink" href="#rule-4-write-simple-functions-then-use-them" title="Permalink to this heading">#</a></h2>
+<p><em>I hate it when students/colleagues copy-paste their code with small modifications instead of using functions or classes</em></p>
+<p>Often in our code, it may be necessary to do the same thing multiple times. Without the use of functions, the code may become unreadable and there is also high risk of making errors. Take as an example the calculation of daily water use for a residential house as a function of time. You would also like to consider how this demand changes throughout the day depending on who is living in the house, specifically, the number and ages of the residents. based on the number and age of the residents as well as time of day. The following example illustrates how this is commonly evaluated when you don’t think in advance about your code structure, or the use of functions.</p>
+<p><em>Note that in reality each line described below may be multiple lines in the ‘real’ file.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">calculate</span> <span class="n">water</span> <span class="n">use</span> <span class="k">for</span> <span class="mi">1</span> <span class="n">adult</span> <span class="n">resident</span>
+<span class="mi">2</span> <span class="n">plot</span> <span class="n">result</span>
+  
+<span class="mi">3</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">line</span> <span class="mi">1</span><span class="p">:</span> <span class="n">modified</span> <span class="n">to</span> <span class="n">consider</span> <span class="n">teenager</span>
+<span class="mi">4</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">line</span> <span class="mi">1</span><span class="p">:</span> <span class="n">modified</span> <span class="n">to</span> <span class="n">consider</span> <span class="n">child</span>
+  
+<span class="mi">5</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">line</span> <span class="mi">2</span><span class="p">:</span> <span class="n">plot</span> <span class="n">redrawn</span> <span class="k">with</span> <span class="mi">3</span> <span class="n">lines</span>
+  
+<span class="mi">6</span> <span class="n">copy</span> <span class="n">lines</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="n">to</span> <span class="nb">sum</span> <span class="n">water</span> <span class="n">use</span> <span class="k">for</span> <span class="n">several</span> <span class="n">users</span>
+</pre></div>
+</div>
+<p>Here are a few examples of how this style of code-writing can go wrong (numbers correspond to the line in the example):</p>
+<ul class="simple">
+<li><p>The code calculating water use as a function of time of day (1) may be wrong. Thus, the mistake will be repeated in multiple places (4, 5, 6). Extracting that code in a separate function and calling it multiple times is beneficial.</p></li>
+<li><p>The code becomes too long. As the calculations of water use (1) and plotting functions (2) in reality span multiple lines, the code can grow significantly. Therefore, using a separate function will reduce code duplication (3, 4, 5, 6).</p></li>
+<li><p>Functions (with descriptive names!) can increase code readability. Suppose you have water use calculations for different types of water users inside your code (e.g., industrial, commercial, residential). Making new functions for each will reduce the complexity of your code because the logic behind them will be placed somewhere else.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">define</span> <span class="n">function</span> <span class="k">for</span> <span class="n">water</span> <span class="n">use</span> <span class="k">with</span> <span class="n">resident</span> <span class="k">as</span> <span class="nb">input</span>
+<span class="mi">2</span> <span class="n">define</span> <span class="n">function</span> <span class="n">to</span> <span class="n">plot</span> <span class="n">water</span> <span class="n">use</span> <span class="p">(</span><span class="n">uses</span> <span class="n">function</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">1</span><span class="p">)</span>
+ 
+<span class="mi">3</span> <span class="n">plot</span> <span class="n">water</span> <span class="n">use</span> <span class="k">for</span> <span class="n">one</span> <span class="n">resident</span>               <span class="p">(</span><span class="n">uses</span> <span class="n">line</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">4</span> <span class="n">plot</span> <span class="n">water</span> <span class="n">use</span> <span class="k">for</span> <span class="n">multiple</span> <span class="n">residents</span>         <span class="p">(</span><span class="n">uses</span> <span class="n">line</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">5</span> <span class="nb">sum</span> <span class="n">water</span> <span class="n">use</span> <span class="k">for</span> <span class="n">several</span> <span class="n">users</span>               <span class="p">(</span><span class="n">uses</span> <span class="n">line</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is clear that lines 1 and 2 are used repeatedly, not duplicated. If we had written out these steps entirely, rather than outlining with pseudocode, the total number of lines would be significantly less because the steps to calculate water use (1) are written once. In addition, the instructions for formatting the figure can be included in the plotting function (2).</p>
+<p>This illustrates the concept of <strong>modularity</strong>: using functions to decompose the code into smaller pieces that minimize repetition and the chance of including errors. <strong>Modules</strong> and modular code are important general programming concepts, but also have particular significance for the Python language. This topic will be explained in a later workshop, so for now we encourage you to use functions and modularise your code. Simply taking a few moments to think about: 1) which part(s) of your analysis can be defined in a function, 2) write the functions at the top of your notebook or script (after importing your packages), then using them below, hence the name of this rule: <strong>write simple functions, then use them.</strong> It looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Python</span> <span class="n">packages</span>
+<span class="n">define</span> <span class="n">your</span> <span class="n">new</span> <span class="n">functions</span>
+<span class="n">use</span>    <span class="n">your</span> <span class="n">new</span> <span class="n">functions</span>
+</pre></div>
+</div>
+<p>Would you like to learn more about this? In more general programming or computer science fields, modularity is a result of applying the concepts of <em>decomposition</em> and <em>abstraction.</em> See Guttag (2021).</p>
+<p><em>The next version of this document will also discuss hardcoding, and why it is better to pass fixed values into your function as arguments to keep the functions simple and easy to use.</em></p>
+</section>
+<section id="rule-5-document-your-code">
+<h2>Rule 5: Document your code<a class="headerlink" href="#rule-5-document-your-code" title="Permalink to this heading">#</a></h2>
+<p><em>I had to hand over my code (semi-english, semi-dutch, unreadable and a complete mess) to real programmers about a year ago and I am still embarrassed by it.</em></p>
+<p>Do you remember what you had for dinner 2 weeks ago? If the answer is <strong>no</strong>, then documenting your code could be useful not only for others, but also for you.</p>
+<p>Document what your functions and classes are doing. In addition, if you have many nested for loops or some very complex code, do not hesitate to put some in-line comments to describe what your code is doing. Overall, do not overdo it by commenting every single line, but rather try to elaborate in the way you structure your code and give names to your objects. This is why <em><strong>Golden Rule</strong></em> is closely tied to <em><strong>Rule 1: Use descriptive names</strong></em>: if you do the latter, the use of the former is much less needed. Here are a few examples to illustrate unnecessary comments or poorly documented code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">x</span> <span class="o">=</span> <span class="n">case</span><span class="o">.</span><span class="n">one</span> <span class="o">+</span> <span class="n">case</span><span class="o">.</span><span class="n">too</span> <span class="c1">#sum</span>
+
+<span class="mi">2</span> <span class="n">f</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">second</span><span class="o">.</span><span class="n">third</span><span class="o">.</span><span class="n">fourth</span><span class="p">()</span> <span class="c1">#gets the data</span>
+
+<span class="mi">3</span> <span class="n">engineeringConcept</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">thisAwesomeVariable</span> <span class="c1">#multiplication by 2</span>
+
+<span class="mi">4</span> <span class="k">global</span> <span class="n">globalVariable</span> <span class="c1">## define global variable globalVar</span>
+
+<span class="mi">5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span> 
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">300</span><span class="p">):</span>
+          <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+              <span class="n">answer</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span><span class="o">**</span><span class="n">k</span>
+
+<span class="mi">6</span> <span class="k">if</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> <span class="ow">or</span> <span class="n">c</span> <span class="ow">and</span> <span class="n">d</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">c</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Did you notice in example 4 that the variable name in the comment didn’t match the code? Clearly the variable name changed after the comment was written. To quote PEP 8: <em>comments that contradict the code are worse than no comments. Always make a priority of keeping the comments up-to-date when the code changes!</em> Relying too much on comments to document your code can easily result in a lot of extra work; use of descriptive object names can help minimize the number of comments necessary to provide sufficient documentation.</p>
+<section id="comparison-of-bad-and-good-documentation">
+<h3>Comparison of bad and good documentation<a class="headerlink" href="#comparison-of-bad-and-good-documentation" title="Permalink to this heading">#</a></h3>
+<p>The following functions are the same, the only difference is the documentation and object names, can you tell what the function does from the bad example?</p>
+<section id="example-with-bad-documentation">
+<h4>Example with bad documentation<a class="headerlink" href="#example-with-bad-documentation" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">HF</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">p</span><span class="o">*</span><span class="mf">9.81</span><span class="o">*</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;HF(10,1) = &#39;</span><span class="p">,</span><span class="n">HP</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-with-good-documentation">
+<h4>Example with good documentation<a class="headerlink" href="#example-with-good-documentation" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">force_on_wall</span><span class="p">(</span><span class="n">wall_height</span><span class="p">,</span> <span class="n">density_water</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Calculate hydrostatic force on a vertical wall.&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">density_water</span><span class="o">*</span><span class="mf">9.81</span><span class="o">*</span><span class="n">wall_height</span><span class="o">**</span><span class="mi">2</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;force_on_wall(wall_height=10, density_water=1) = </span><span class="si">{</span><span class="n">force_on_wall</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> N&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It seems pretty obvious that the second example is more clear, and even if you understood what was happening in the first function, the second one probably would have brought you to the same conclusion much faster. And it didn’t take much longer to write the second function.</p>
+<p>The example above includes a string immediately after the function definition line (<code class="docutils literal notranslate"><span class="pre">def</span></code>), except it uses three quote symbols. This is a <em><strong>documentation string</strong></em>, also known as  a “<em><strong>docstring</strong></em>” a key tool for documenting your code. It actually has it’s own PEP guideline (<span class="xref myst">PEP 257</span> if  you are curious), but we will cover this more during a future week in MUDE. <em><strong>For now, our advice is to get in the habit of at least using a one-line docstring whenever you create function.</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_well_documented_function</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Illustrate a simple one-line docstring---that&#39;s it!&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You should use the imperative verb tense, a command, for example: return, integrate or compute. This helps keep the docstring compact. Compare the following one–liners with the non-imperative equivalents:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Compute</span> <span class="pre">area</span> <span class="pre">of</span> <span class="pre">circle</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Computes</span> <span class="pre">the</span> <span class="pre">area</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">circle</span></code></p></li>
+</ul>
+<p>And:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Return</span> <span class="pre">int</span> <span class="pre">number_of_PSOR_coins</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Returns</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">PSOR</span> <span class="pre">coins</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">integer</span></code></p></li>
+</ul>
+<p>If told us that it seems silly to write a one-line docstring for such a simple function, especially with such descriptive object names, we’d actually agree with you, especially if you were working in a small group of CEG colleagues, or by yourself. However, there is another benefit of adding a docstring: Python automatically knows to include the first line of a docsting in its built-in help functionality. Try it out here by adding a <code class="docutils literal notranslate"><span class="pre">?</span></code> after the function name (this is a handy trick that works in Jupyter notebooks).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_well_documented_function<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">my_well_documented_function</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="rule-6-test-your-code">
+<h2>Rule 6: Test your code<a class="headerlink" href="#rule-6-test-your-code" title="Permalink to this heading">#</a></h2>
+<p><em>A team member once sent me a script that predicts X for the next 5 weeks. Unfortunately, the script gave me the exact same predictions every time I used it.</em></p>
+<p>Testing that your code works properly is very important to mitigate such problems. Testing can be done in many ways, but the most simple of all is by manually running your code with different values and verifying that the final result is indeed correct.</p>
+<p>In one of the next workshops, we are going to teach you how to debug and test your code, however, for now the recommendation for you would be to test if your code is doing its job correctly by trying different variable values.</p>
+<p>For example, suppose you have a method that calculates the volume of a pyramid given its height and base width and length. Testing the method can be done by trying different values for each of the 3 inputs and manually checking if the final volume matches your hand calculations.</p>
+</section>
+<section id="rule-7-learn-to-collaborate">
+<h2>Rule 7: Learn to collaborate<a class="headerlink" href="#rule-7-learn-to-collaborate" title="Permalink to this heading">#</a></h2>
+<p><em>Let me just make a new zip file of the 200MB project and send it to you via Google Drive…</em></p>
+<p>Exchanging project archives and lack of version control are key problems in project collaborations. First, the changes made are not explicitly visible, unless you go over the entire project and compare new and old versions. Second, such exchanges of files is dangerous because one may confuse which is the final version. This is especially common with file names, for example, “Document-1”, “Document-2”, “Document-2-Draft”, “Document-2-DraftFinal”, “Document-2-DraftFinal2”, et cetera. Third, it hardly allows working in parallel as merging work requires manual copy-pasting of each member’s progress.</p>
+<p>In one of the coming coding workshops, we will cover version control systems, namely collaborating using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitLab. Although it may seem complicated at first, we are confident that once you learn about the capabilities of these systems, you will not regret it. 😉</p>
+</section>
+<section id="references-and-resources">
+<h2>References and resources<a class="headerlink" href="#references-and-resources" title="Permalink to this heading">#</a></h2>
+<p>Guttag, J. V. (2021). <em>Introduction to Computation and Programming Using Python: With Application to Computational Modeling and Understanding Data.</em> MIT Press.</p>
+<p>PEP 8 - Style Guide for Python code - <a class="reference external" href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a></p>
+<p>Python 3’s f-Strings: An Improved String Formatting Syntax (Guide) - <a class="reference external" href="https://realpython.com/python-f-strings/">https://realpython.com/python-f-strings/</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./originals/mude"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1-2-solution.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python data analysis with Pandas (and Matplotlib): Solutions</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-the-golden-rules-for-documentation-and-communication-exist">Why do the Golden Rules for Documentation and Communication exist?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-of-encouragement">A note of encouragement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-communication">Documentation and Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-golden-rules">The Golden Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#style-guide-for-python-pep-8">Style Guide for Python (PEP 8)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-pep-8-automatically-with-autopep8">Checking PEP 8 automatically with <code class="docutils literal notranslate"><span class="pre">autopep8</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-optional-but-reccommended">Installation (Optional, but reccommended)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-1-use-descriptive-names">Rule 1: Use descriptive names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-2-make-readable-code">Rule 2: Make readable code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-3-make-readable-results">Rule 3: Make readable results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significant-digits">Significant digits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-4-write-simple-functions-then-use-them">Rule 4: Write simple functions, then use them</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-5-document-your-code">Rule 5: Document your code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-bad-and-good-documentation">Comparison of bad and good documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-bad-documentation">Example with bad documentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-good-documentation">Example with good documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-6-test-your-code">Rule 6: Test your code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-7-learn-to-collaborate">Rule 7: Learn to collaborate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-resources">References and resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Magic Mike!
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
