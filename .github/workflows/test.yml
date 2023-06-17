@@ -36,5 +36,5 @@ jobs:
 
             - name: Build book
               run: |
-                pip install -r requirement.txt
+                pip install -r requirements.txt
                 jupyter-book build book/
