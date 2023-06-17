@@ -1,0 +1,6 @@
+jupyter-book
+jupyterquiz
+scipy
+numpy
+matplotlib
+ipython
