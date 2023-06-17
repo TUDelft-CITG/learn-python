@@ -26,6 +26,8 @@ jobs:
               with:
                 activate-environment: jupyter-book-env
                 environment-file: environment.yml
+                miniforge-variant: Mambaforge
+                miniforge-version: latest
                 python-version: "3.10"
                 auto-activate-base: false
 
@@ -36,5 +38,4 @@ jobs:
 
             - name: Build book
               run: |
-                pip install -r requirements.txt
                 jupyter-book build book/

@@ -1,9 +1,14 @@
 name: jupyter-book-env
 
+channels:
+  - conda-forge
+
 dependencies:
   - numpy
   - matplotlib
   - scipy
   - pip
-  - pip:
-    - -r requirements.txt
+  - jupyterlite-sphinx
+  - jupyterlite-xeus-python
+  - jupyterquiz
+  - jupyter-book
