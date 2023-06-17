@@ -28,6 +28,7 @@ jobs:
                 environment-file: environment.yml
                 python-version: "3.10"
                 auto-activate-base: false
+
             - name: Show Anaconda info
               run: |
                 conda info
@@ -35,4 +36,5 @@ jobs:
 
             - name: Build book
               run: |
+                pip install -r requirement.txt
                 jupyter-book build book/
