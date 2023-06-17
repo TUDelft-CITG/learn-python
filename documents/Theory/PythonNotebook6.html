@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>6. Pandas &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -65,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -443,9 +445,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right"></IMG>
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="pandas">
-<h1>6. Pandas<a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h1>
+<h1>6. Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h1>
 <section id="introduction">
-<h2>6.1 Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>6.1 Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>With the standard Python functions and the <b><code>numpy</code></b> library, you already have access to powerful tools to process data. However, you’ll find that organizing data using them might still be confusing and messy… so let us introduce you to <b><code>pandas</code></b>: a Python library specialized in data organization. Its functions are simple to use, and they achieve a lot. Furthermore, <b><code>pandas</code></b> was built on top of the <b><code>numpy</code></b> library, using some of their functions and data structures. This makes <b><code>pandas</code></b> fast. The <b><code>pandas</code></b> library is often used in Data Science and Machine Learning to organize data that are used as input in other functions, of other libraries. For example, you store and organize an Excel file using <b><code>pandas</code></b> data structures, apply statistical analysis using <b><code>SciPy</code></b>, and then plot the result using <b><code>matplotlib</code></b>.<br><br> In this section, we’ll introduce you to the basic <b><code>pandas</code></b> data structures: the <b><code>Series</code></b> and <b><code>DataFrame</code></b> objects; and how to store data in them. In <b><code>pandas</code></b>, a <b><code>Series</code></b> represents a list, and <b><code>DataFrame</code></b> represents a table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -458,7 +460,7 @@ document.write(`
 </div>
 </section>
 <section id="series">
-<h2>6.2 <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#series" title="Permalink to this heading">#</a></h2>
+<h2>6.2 <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#series" title="Permalink to this headline">#</a></h2>
 <p>We start with <b><code>pandas Series</code></b>, since a <b><code>DataFrame</code></b> is made out of <b><code>Series</code></b>; retrieving a row or a column from a <b><code>DataFrame</code></b> results in a <b><code>Series</code></b>. A <b><code>Series</code></b> object is a <b><code>numpy</code></b> ndarray used to hold one-dimensional data, like a list.  We create a <b><code>Series</code></b> object using its constructor <b><code>pd.Series()</code></b>. It can be called by using a list that you want to convert into a <b><code>pandas series</code></b>. Unlike <b><code>numpy</code></b> arrays, a <b><code>Series</code></b> may hold data of different types.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -551,7 +553,7 @@ dtype: object
 </div>
 </div>
 <section id="labeling-series">
-<h3>Labeling <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#labeling-series" title="Permalink to this heading">#</a></h3>
+<h3>Labeling <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#labeling-series" title="Permalink to this headline">#</a></h3>
 <p>So far we have referred to values within a list or array using indexing, but that might be confusing. With <b><code>pandas Series</code></b>, you can refer to your values by labeling their indices. Labels allow you to access the values in a more informative way, similar to dictionaries; depicted in Section 2.3, in Notebook 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -614,7 +616,7 @@ dtype: object
 </section>
 </section>
 <section id="dataframe">
-<h2>6.3 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#dataframe" title="Permalink to this heading">#</a></h2>
+<h2>6.3 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#dataframe" title="Permalink to this headline">#</a></h2>
 <p>A <b><code>DataFrame</code></b> is a data structure used to represent two-dimensional data. A common example of data organized in two dimensions are tables or two-dimensional arrays.</p>
 <p>Usually, <b><code>DataFrames</code></b> are made out of <b><code>Series</code></b>. However, its constructor accepts other types.</p>
 <div class="cell docutils container">
@@ -955,7 +957,7 @@ dtype: object
 </div></div></div>
 </div>
 <section id="labeling-dataframes">
-<h3>Labeling <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#labeling-dataframes" title="Permalink to this heading">#</a></h3>
+<h3>Labeling <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#labeling-dataframes" title="Permalink to this headline">#</a></h3>
 <p>You can also rename your columns’ and rows’ index names by changing your DataFrame’s <b><code>columns</code></b> and <b><code>index</code></b> attributes, respectively. Recall our <b><code>df2</code></b>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1104,7 +1106,7 @@ dtype: object
 </div>
 </section>
 <section id="concatenating-dataframes">
-<h3>Concatenating <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#concatenating-dataframes" title="Permalink to this heading">#</a></h3>
+<h3>Concatenating <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#concatenating-dataframes" title="Permalink to this headline">#</a></h3>
 <p>We can also concatenate <b><code>DataFrames</code></b> to each other, even if they are of different sizes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1131,7 +1133,7 @@ row3       test      bad   False  asdf         NaN     @#$%^
 <p>In the resulting table, we notice that <b><code>pandas</code></b> automatically added <b><code>NaN</code></b> <i>(“Not a Number”)</i> values to the missing entries of either table. Very convenient!</p>
 </section>
 <section id="removing-rows-and-columns">
-<h3>Removing rows and columns<a class="headerlink" href="#removing-rows-and-columns" title="Permalink to this heading">#</a></h3>
+<h3>Removing rows and columns<a class="headerlink" href="#removing-rows-and-columns" title="Permalink to this headline">#</a></h3>
 <p>Our table looks a bit messy though… let’s make it better by removing the <i>’test’</i> row and column. We can drop them by using the <b><code>pd.drop()</code></b> function.  By default, the <b><code>pd.drop()</code></b> function outputs a copy of the inserted <b><code>DataFrame</code></b> without the dropped items. The original data will then be preserved if you give a new name to the dataframe (i.e., the copy) with dropped items.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1432,7 +1434,7 @@ row2    Kyanite        6    4.01         NaN       One
 </div>
 </section>
 <section id="accessing-and-modifying-code-dataframe-code-values">
-<h3>Accessing and modifying <code>DataFrame</code> values<a class="headerlink" href="#accessing-and-modifying-code-dataframe-code-values" title="Permalink to this heading">#</a></h3>
+<h3>Accessing and modifying <code>DataFrame</code> values<a class="headerlink" href="#accessing-and-modifying-code-dataframe-code-values" title="Permalink to this headline">#</a></h3>
 <p>Now that we created our table, we want to be able to access and modify the individual values within it. This way we could add the missing values to the <i>’cleavage’</i> column. There are many ways to do this because <b><code>numpy</code></b> and standard Python functions are often still applicable on <b><code>pandas</code></b> data structures. However, there is a difference in processing speed. Therefore, when accessing or modifying data, try to use <b><code>pandas</code></b> functions, such as: <b><code>.iat()</code></b>, <b><code>.at()</code></b>, <b><code>.iloc()</code></b>, and <b><code>.loc()</code></b> instead of using the common <b><code>[]</code></b> square bracket syntax, as they might raise some warnings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1546,7 +1548,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </section>
 <section id="code-iat-code-vs-code-at-code-vs-code-iloc-code-vs-code-loc-code">
-<h3><code>.iat()</code> vs <code>.at()</code> vs <code>.iloc()</code> vs <code>.loc()</code><a class="headerlink" href="#code-iat-code-vs-code-at-code-vs-code-iloc-code-vs-code-loc-code" title="Permalink to this heading">#</a></h3>
+<h3><code>.iat()</code> vs <code>.at()</code> vs <code>.iloc()</code> vs <code>.loc()</code><a class="headerlink" href="#code-iat-code-vs-code-at-code-vs-code-iloc-code-vs-code-loc-code" title="Permalink to this headline">#</a></h3>
 <p>In <a href = "https://stackoverflow.com/questions/28757389/pandas-loc-vs-iloc-vs-at-vs-iat">this discussion in stackoverflow</a>, they point out some differences between these methods. To keep in mind, <b><code>.iat()</code></b> and <b><code>.at()</code></b> are the fastest ones, but they only return scalars (one element), while <b><code>.loc()</code></b> and <b><code>.iloc()</code></b> can access several elements at the same time. Lastly, <b><code>.iat()</code></b> and <b><code>.iloc</code></b> use indexes (numbers), while <b><code>.at()</code></b> and <b><code>.loc()</code></b> use labels. For more information, check the stackoverflow discussion.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2073,7 +2075,7 @@ Name: hardness, dtype: object
 </section>
 </section>
 <section id="importing-data-into-code-dataframes-code-and-exploring-its-attributes">
-<h2>6.4 Importing data into <code>DataFrames</code> and exploring its attributes<a class="headerlink" href="#importing-data-into-code-dataframes-code-and-exploring-its-attributes" title="Permalink to this heading">#</a></h2>
+<h2>6.4 Importing data into <code>DataFrames</code> and exploring its attributes<a class="headerlink" href="#importing-data-into-code-dataframes-code-and-exploring-its-attributes" title="Permalink to this headline">#</a></h2>
 <p><b><code>pandas</code></b> provides many functions to import data into <b><code>dataframes</code></b>, such as <b><code>read_csv()</code></b> to read delimited text files, or <b><code>read_excel()</code></b> for Excel or OpenDocument spreadsheets. <b><code>read_csv()</code></b> provides options that allow you to filter the data, such as specifying the separator/delimiter, the lines that form the headers, which rows to skip, etc. Let’s analyze the <b><code>mineral_properties.txt</code></b>. Below a screenshot of it:<br><br></p>
 <p><img alt="image.png" src="documents/Theory/attachment:image.png" /></div></p>
 <div class="cell docutils container">
@@ -2211,7 +2213,7 @@ Name: hardness, dtype: object
 <p>Ok, much better!</p>
 </section>
 <section id="statistics-with-b-code-pandas-code-b-h3-br-div-style-text-align-justify">
-<h2>6.5 Statistics with <b><code>pandas</code></b></h3><br><div style="text-align: justify"><a class="headerlink" href="#statistics-with-b-code-pandas-code-b-h3-br-div-style-text-align-justify" title="Permalink to this heading">#</a></h2>
+<h2>6.5 Statistics with <b><code>pandas</code></b></h3><br><div style="text-align: justify"><a class="headerlink" href="#statistics-with-b-code-pandas-code-b-h3-br-div-style-text-align-justify" title="Permalink to this headline">#</a></h2>
 <p>Recall some functions such as <b><code>np.mean()</code></b> and <b><code>np.max()</code></b>; these functions can be used to calculate a row’s or column’s statistics. Say you want to know what’s the average <i>hardness</i> of the different minerals:</div></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2239,7 +2241,7 @@ Name: hardness, dtype: object
 </div>
 </div>
 <section id="deep-copying-a-code-dataframe-code">
-<h3>Deep copying a <code>DataFrame</code><a class="headerlink" href="#deep-copying-a-code-dataframe-code" title="Permalink to this heading">#</a></h3>
+<h3>Deep copying a <code>DataFrame</code><a class="headerlink" href="#deep-copying-a-code-dataframe-code" title="Permalink to this headline">#</a></h3>
 <p>As you have seen in Notebook 4, shallow copies can be troublesome if you’re not aware of it. In <b><code>pandas</code></b>, it’s the same story.<br><br>To make a deep copy use the <b><code>DataFrame.copy(deep=True)</code></b> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2252,7 +2254,7 @@ Name: hardness, dtype: object
 </section>
 </section>
 <section id="additional-study-material">
-<h2>Additional study material:<a class="headerlink" href="#additional-study-material" title="Permalink to this heading">#</a></h2>
+<h2>Additional study material:<a class="headerlink" href="#additional-study-material" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series">Official pandas Documentation (Series)</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame">Official pandas Documentation (DataFrame)</a></p></li>

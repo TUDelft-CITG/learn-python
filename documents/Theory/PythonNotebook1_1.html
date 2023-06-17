@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>1. Python basics &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -439,13 +441,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-basics">
-<h1>1. Python basics<a class="headerlink" href="#python-basics" title="Permalink to this heading">#</a></h1>
+<h1>1. Python basics<a class="headerlink" href="#python-basics" title="Permalink to this headline">#</a></h1>
 <section id="excuting-a-cell-in-python">
-<h2>Excuting a cell in python<a class="headerlink" href="#excuting-a-cell-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Excuting a cell in python<a class="headerlink" href="#excuting-a-cell-in-python" title="Permalink to this headline">#</a></h2>
 <p>The print() function in Python is used to output or display text or other information on the screen. It can be used to display a string of text, the value of a variable, or the result of a calculation. The text or information that you want to display is passed as an argument inside the parenthesis of the print() function.</p>
 </section>
 <section id="print-command">
-<h2>Print () command<a class="headerlink" href="#print-command" title="Permalink to this heading">#</a></h2>
+<h2>Print () command<a class="headerlink" href="#print-command" title="Permalink to this headline">#</a></h2>
 <p>To execute a cell in Python, you can use the run command in Jupyter Notebook or press the “Run” button in the toolbar. You can also use the keyboard shortcut <strong>Shift + Enter</strong> to execute the cell.</p>
 <p>Lets start by excecuting our first code by printing the words ‘Hello world’. Press <strong>Shift+Enter</strong> to run the cell below. You should see the output “Hello, World!” displayed below the cell. Notice that we have to write the sentence inside the quotation marks to indicate that the data is of string type.</p>
 <p>Alternatively, You can also execute the code by clicking on the Run button in the toolbar or by using the run command in the Jupyter Notebook.</p>
@@ -476,9 +478,9 @@ document.write(`
 </div>
 </section>
 <section id="basic-input-and-out-definitions-in-python">
-<h2>Basic input and out definitions in python<a class="headerlink" href="#basic-input-and-out-definitions-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Basic input and out definitions in python<a class="headerlink" href="#basic-input-and-out-definitions-in-python" title="Permalink to this headline">#</a></h2>
 <section id="value">
-<h3>Value<a class="headerlink" href="#value" title="Permalink to this heading">#</a></h3>
+<h3>Value<a class="headerlink" href="#value" title="Permalink to this headline">#</a></h3>
 <p>In Python, a <strong>value</strong> is any data that can be stored in a variable. It can be a number (such as an integer or a float), a string (a sequence of characters), a Boolean (True or False), or other types of data. For example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -491,7 +493,7 @@ document.write(`
 </div>
 </section>
 <section id="variable">
-<h3>Variable<a class="headerlink" href="#variable" title="Permalink to this heading">#</a></h3>
+<h3>Variable<a class="headerlink" href="#variable" title="Permalink to this headline">#</a></h3>
 <p>A <strong>variable</strong> is a container that holds a value, which is like a label or a name given to the value that is stored inside it. You can use variables to store values and then use them later in your code. You can also change the value of a variable at any time. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -503,7 +505,7 @@ document.write(`
 </div>
 </section>
 <section id="string">
-<h3>String<a class="headerlink" href="#string" title="Permalink to this heading">#</a></h3>
+<h3>String<a class="headerlink" href="#string" title="Permalink to this headline">#</a></h3>
 <p>A string is a sequence of characters, enclosed in quotation marks. You can use strings to store text, such as words and sentences. You can also use them to display messages to the user or to create strings that hold specific data, like a name or an address. Strings are a very important data type in python and you will use it very frequently. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -519,7 +521,7 @@ document.write(`
 </div>
 </section>
 <section id="list">
-<h3>List<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h3>
+<h3>List<a class="headerlink" href="#list" title="Permalink to this headline">#</a></h3>
 <p>A list in Python is a collection of values stored in a single object, similar to arrays in other programming languages. Lists can contain elements of any type, including numbers, strings, and other objects.</p>
 <p>To create a list in Python, you can use square bracket [ ] notation and include the values you want to store in the list, separated by commas.</p>
 <p>For a beginner, it’s important to remember the following when creating lists in Python:</p>
@@ -565,7 +567,7 @@ Hello
 </section>
 </section>
 <section id="type-of-data-in-python">
-<h2>type () of data in python<a class="headerlink" href="#type-of-data-in-python" title="Permalink to this heading">#</a></h2>
+<h2>type () of data in python<a class="headerlink" href="#type-of-data-in-python" title="Permalink to this headline">#</a></h2>
 <p>In Python, you can use the built-in type() function to determine the type of an object. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -630,12 +632,12 @@ Hello
 </div>
 </section>
 <section id="arithmetic-operators">
-<h2>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this heading">#</a></h2>
-<table class="table">
+<h2>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>Math sign</p></th>
-<th class="head text-center"><p>Python sign</p></th>
-<th class="head text-center"><p>name</p></th>
+<tr class="row-odd"><th class="text-center head"><p>Math sign</p></th>
+<th class="text-center head"><p>Python sign</p></th>
+<th class="text-center head"><p>name</p></th>
 </tr>
 </thead>
 <tbody>
@@ -695,7 +697,7 @@ Hello
 </div>
 </section>
 <section id="error-codes-in-python">
-<h2>Error codes in python<a class="headerlink" href="#error-codes-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Error codes in python<a class="headerlink" href="#error-codes-in-python" title="Permalink to this headline">#</a></h2>
 <p>When you run a Python script or code in a cell, the code is executed line by line, starting from the first line and moving down the code.</p>
 <p>If an error occurs, Python will stop executing the code at the line where the error occurs and will display an error message. The first line of the error will indicating the line number where the error occurred. This is often the most informative as it tells you where in your code the problem is. The last line in the error message will tell you what the problem in this line is.</p>
 <p>The code results in a TypeError because you are trying to add a variable of type integer (a) to a variable of type string (b). In python, you can only add two variables of the same type. You can’t add an int to a string.
@@ -753,12 +755,12 @@ If you want to concatenate the string and the int you can convert the int to str
 </div>
 </section>
 <section id="comparison-operators-h1-br-div-style-text-align-justify-in-python-you-often-want-to-compare-a-value-with-another-for-that-you-use-comparison-operators">
-<h2>Comparison Operators</h1><br><div style="text-align: justify">In Python, you often want to compare a value with another. For that, you use comparison operators.<a class="headerlink" href="#comparison-operators-h1-br-div-style-text-align-justify-in-python-you-often-want-to-compare-a-value-with-another-for-that-you-use-comparison-operators" title="Permalink to this heading">#</a></h2>
-<table class="table">
+<h2>Comparison Operators</h1><br><div style="text-align: justify">In Python, you often want to compare a value with another. For that, you use comparison operators.<a class="headerlink" href="#comparison-operators-h1-br-div-style-text-align-justify-in-python-you-often-want-to-compare-a-value-with-another-for-that-you-use-comparison-operators" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>Math sign</p></th>
-<th class="head text-center"><p>Python sign</p></th>
-<th class="head text-center"><p>Meaning</p></th>
+<tr class="row-odd"><th class="text-center head"><p>Math sign</p></th>
+<th class="text-center head"><p>Python sign</p></th>
+<th class="text-center head"><p>Meaning</p></th>
 </tr>
 </thead>
 <tbody>
@@ -815,7 +817,7 @@ False
 </div>
 </section>
 <section id="control-flow-statements-in-python">
-<h2>Control flow statements in Python<a class="headerlink" href="#control-flow-statements-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Control flow statements in Python<a class="headerlink" href="#control-flow-statements-in-python" title="Permalink to this headline">#</a></h2>
 <p>There are several control flow statements in Python that are used to control the flow of execution of a program. The most important ones are:</p>
 <p><strong>if</strong> statement: The if statement is used to check a certain condition, and if the condition is true, the code within the if block will be executed. If the condition is false, the code within the if block will be skipped. For example:</p>
 <div class="cell docutils container">
@@ -880,11 +882,11 @@ x2 is negative
 </div>
 </section>
 <section id="indexing">
-<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h2>
+<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">#</a></h2>
 <p>Indexing is a method in Python to access individual elements in a list by their position. This is a fundamental feature of Python’s list data structure, allowing you to retrieve specific elements from the list. Elements are stored in a sequential manner and can be accessed using their index (integer value indicating their position).</p>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
 <p>In Python, a function is a block of code that can be reused multiple times throughout a program. Functions are useful for organizing and structuring code, and for breaking down complex tasks into smaller, more manageable pieces.</p>
 <p>Below are some examples of common built-in Python functions and what they do:</p>
 <ul class="simple">

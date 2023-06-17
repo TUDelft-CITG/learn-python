@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Advanced strings and functions. Files and debugging Exercises. &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -434,9 +436,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="advanced-strings-and-functions-files-and-debugging-exercises">
-<h1>Advanced strings and functions. Files and debugging Exercises.<a class="headerlink" href="#advanced-strings-and-functions-files-and-debugging-exercises" title="Permalink to this heading">#</a></h1>
+<h1>Advanced strings and functions. Files and debugging Exercises.<a class="headerlink" href="#advanced-strings-and-functions-files-and-debugging-exercises" title="Permalink to this headline">#</a></h1>
 <section id="exercise-3-1-1">
-<h2>Exercise 3.1.1<a class="headerlink" href="#exercise-3-1-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 3.1.1<a class="headerlink" href="#exercise-3-1-1" title="Permalink to this headline">#</a></h2>
 <p>Use the <code>print()</code> function and an f-string to make a statement about some car using all variables stored in the <code>car_info</code> dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -475,7 +477,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-3-1-2">
-<h2>Exercise 3.1.2<a class="headerlink" href="#exercise-3-1-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 3.1.2<a class="headerlink" href="#exercise-3-1-2" title="Permalink to this headline">#</a></h2>
 <p>Print the value of <b>π</b> using <span class="math notranslate nohighlight">\(4\)</span> decimal places.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -501,7 +503,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-3-2-1">
-<h2>Exercise 3.2.1<a class="headerlink" href="#exercise-3-2-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 3.2.1<a class="headerlink" href="#exercise-3-2-1" title="Permalink to this headline">#</a></h2>
 <p>Write a lambda function that converts a number from degrees to radians.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -528,7 +530,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-3-2-2">
-<h2>Exercise 3.2.2<a class="headerlink" href="#exercise-3-2-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 3.2.2<a class="headerlink" href="#exercise-3-2-2" title="Permalink to this headline">#</a></h2>
 <p>Write a lambda function that takes four inputs: <span class="math notranslate nohighlight">\((x_1, y_1, x_2, y_2)\)</span> and computes the <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidian distance</a> between point 1 <span class="math notranslate nohighlight">\((x_1,y_1)\)</span> and point 2 <span class="math notranslate nohighlight">\((x_2,y_2)\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -557,7 +559,7 @@ document.write(`
 </div>
 </section>
 <section id="fixing-exercise-3-3-1">
-<h2>(Fixing) Exercise 3.3.1<a class="headerlink" href="#fixing-exercise-3-3-1" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 3.3.1<a class="headerlink" href="#fixing-exercise-3-3-1" title="Permalink to this headline">#</a></h2>
 <p>An engineer from Shell wrote a piece of code to find the file with updated logs. The file has a <code>*.txt</code> extension. It is located in the Vocareum environment and can be accessed using a relative or absolute path. The engineer wrote a piece of code to read the file and print its contents but something went wrong.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -588,7 +590,7 @@ document.write(`
 </div>
 </section>
 <section id="fixing-exercise-3-4-1">
-<h2>(Fixing) Exercise 3.4.1<a class="headerlink" href="#fixing-exercise-3-4-1" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 3.4.1<a class="headerlink" href="#fixing-exercise-3-4-1" title="Permalink to this headline">#</a></h2>
 <p>Fix the syntax errors so it prints “AES” without removing the variable that holds it. You’ll need to fix 2 errors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -618,7 +620,7 @@ document.write(`
 </div>
 </section>
 <section id="fixing-exercise-3-4-2">
-<h2>(Fixing) Exercise 3.4.2<a class="headerlink" href="#fixing-exercise-3-4-2" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 3.4.2<a class="headerlink" href="#fixing-exercise-3-4-2" title="Permalink to this headline">#</a></h2>
 <p>Solve the runtime error so all values of <span class="math notranslate nohighlight">\(B\)</span> are printed. The output after running <code>create_string_from_lists()</code> should be the following:<br>
 <code>
 A[0] = 2
@@ -673,7 +675,7 @@ B[3] = 8
 </div>
 </section>
 <section id="fixing-exercise-3-4-3">
-<h2>(Fixing) Exercise 3.4.3<a class="headerlink" href="#fixing-exercise-3-4-3" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 3.4.3<a class="headerlink" href="#fixing-exercise-3-4-3" title="Permalink to this headline">#</a></h2>
 <p>Find the semantic error in this function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>3. Advanced strings and functions. &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Advanced strings and functions. Files and debugging Exercises." href="../Exercises/01.html" />
     <link rel="prev" title="Modules, conditions, data structures and loops Exercises" href="../../02/Exercises/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -446,7 +448,7 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="advanced-strings-and-functions">
-<h1>3. Advanced strings and functions.<a class="headerlink" href="#advanced-strings-and-functions" title="Permalink to this heading">#</a></h1>
+<h1>3. Advanced strings and functions.<a class="headerlink" href="#advanced-strings-and-functions" title="Permalink to this headline">#</a></h1>
 <p>It is common to have the first cell in a Notebook with all imports needed.</p>
 <p>We start to impor <code class="docutils literal notranslate"><span class="pre">pi</span></code> function from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module and  <code class="docutils literal notranslate"><span class="pre">os</span></code> module that we will use later.</p>
 <div class="cell docutils container">
@@ -458,7 +460,7 @@ document.write(`
 </div>
 </div>
 <section id="advanced-strings">
-<h2>3.1 Advanced Strings<a class="headerlink" href="#advanced-strings" title="Permalink to this heading">#</a></h2>
+<h2>3.1 Advanced Strings<a class="headerlink" href="#advanced-strings" title="Permalink to this headline">#</a></h2>
 <p>Welcome to the third Notebook. In this Notebook we are going to learn some advanced Python. Let’s first start with strings. Run the code below and see what it prints out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -497,9 +499,9 @@ Data1: 1 ,Data2: 2 ,Data3: 3 ,Data4: 4
 </div>
 <p>As you can see from the above code, it is much easier to insert variables in a string by using an f-string (formatted string).</p>
 <section id="formatting-numbers">
-<h3>Formatting numbers<a class="headerlink" href="#formatting-numbers" title="Permalink to this heading">#</a></h3>
+<h3>Formatting numbers<a class="headerlink" href="#formatting-numbers" title="Permalink to this headline">#</a></h3>
 <p>Using f-strings makes formatting numbers really easy. Just add a colon character after a number value and specify how you want to format the number. The following table demonstrates a couple of examples with the number <span class="math notranslate nohighlight">\(1\)</span>:<br><br></p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
 <th class="head"><p>Result</p></th>
@@ -556,7 +558,7 @@ Loading: 100%
 </div>
 <p>This works! Though it is not that pretty to look at. It would look nicer to not have it print a new line each time. This is where <b>escape characters</b> come in. These characters can do some special things in strings. Below an example of some escape characters:</p>
 <h3>Escape characters</h3>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
 <th class="head"><p>Result</p></th>
@@ -618,7 +620,7 @@ Loading: 100%
 </section>
 </section>
 <section id="advanced-functions">
-<h2>3.2 Advanced Functions<a class="headerlink" href="#advanced-functions" title="Permalink to this heading">#</a></h2>
+<h2>3.2 Advanced Functions<a class="headerlink" href="#advanced-functions" title="Permalink to this headline">#</a></h2>
 <p>Sometimes you want to use the same code multiple times, so you could embed this code into a function. However, sometimes the code you want to use is so short that putting it into a function feels a bit over the top. This is where <b>lambda functions</b> are useful. <br><br>Lambda functions are functions that can take any number of arguments but can only have one expression in their function body. To demonstrate, see the code below. Here we have two functions that do exactly the same, but one is a lambda function and the other one is a normal function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -643,7 +645,7 @@ The square root of 16 is equal to 4
 <div style="text-align: justify">
 As you can see, the lambda version is much more concise. It automatically returns the computed value for you as well.</section>
 <section id="working-with-files">
-<h2>3.3 Working with files<a class="headerlink" href="#working-with-files" title="Permalink to this heading">#</a></h2>
+<h2>3.3 Working with files<a class="headerlink" href="#working-with-files" title="Permalink to this headline">#</a></h2>
 <p>A lot of the work you’ll do in Python will have the following structure:</p>
 <ol class="arabic simple">
 <li><p>Read data from a file</p></li>
@@ -652,7 +654,7 @@ As you can see, the lambda version is much more concise. It automatically return
 </ol>
 <p>So far, we have only learned about computations. So let’s learn a bit about how to manage files. Actually, opening or saving files is usually done with the help of modules which you will learn in more detail in Notebook 4 and 6. What we’ll discuss here is how to manage file paths.</p>
 <section id="file-paths">
-<h3>File paths<a class="headerlink" href="#file-paths" title="Permalink to this heading">#</a></h3>
+<h3>File paths<a class="headerlink" href="#file-paths" title="Permalink to this headline">#</a></h3>
 <p>To learn how to use files we need to learn how file paths in computers work. If you are tech-savvy and know how file paths work you can skip this part.</p>
 <p>File paths in computers work like a tree. They start at the <b>root</b> directory, which is often the <b><code>C:</code></b> drive (in Windows). This is the name of the hard drive that stores your Operating System. From the <b><code>C:</code></b> drive you can navigate into other directories. This is done using the <strong><code class="docutils literal notranslate"><span class="pre">\</span></code></strong> character, however in other Operating Systems often the <b><code>/</code></b> delimiter is used.</p>
 <p>If a file is in the folder <b><code>Users</code></b>, which is stored in the <b><code>C:</code></b> directory, the file path would be <b><code>C:\Users</code></b>. These types of file paths are called <b>absolute paths</b>. This file path is valid for most computers that run Windows, but some other Operating Systems may have different folder setups. This is why it is useful to use <b>relative paths</b>. Relative paths do not start from the root directory. Instead, they start from the directory you are currently in. By default, Jupyter Notebooks are stored in <b><code>C:\Users\CurrentUser</code></b> (where <b><code>CurrentUser</code></b> is your Windows username). To move into a directory using a relative path, for example, to the desktop folder, you would just write <b><code>.\Desktop</code></b>. To move back a directory, using a relative path, you would type <b><code>..</code></b></p>
@@ -686,7 +688,7 @@ As you can see, the lambda version is much more concise. It automatically return
 </div>
 </section>
 <section id="pathlib-and-code-os-code-modules">
-<h3><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> and <code>os</code> modules<a class="headerlink" href="#pathlib-and-code-os-code-modules" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> and <code>os</code> modules<a class="headerlink" href="#pathlib-and-code-os-code-modules" title="Permalink to this headline">#</a></h3>
 <p>These modules are very useful in managing and navigating your file paths. The function <b><code>path.expanduser(‘~’)</code></b>, from the <b><code>os</code></b> module, allows you to find your root directory, independent of your Operating System. Try the below cell to see it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -759,12 +761,12 @@ Contents of current directory (after creating the new directory):
 </section>
 </section>
 <section id="debugging">
-<h2>3.4 Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">#</a></h2>
+<h2>3.4 Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">#</a></h2>
 <p>It is very easy (and common) to make mistakes when programming. We call these errors <i>bugs</i>. Finding these <i>bugs</i> in your program and resolving them is what we call <i>debugging</i>.</p>
 <p>Errors
 According to <a href="https://greenteapress.com/wp/think-python-2e/"><i>Think Python</i></a> — <i>Appendix A</i>, there are three different types of errors:</p>
 <section id="syntax-errors">
-<h3>1. Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this heading">#</a></h3>
+<h3>1. Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">#</a></h3>
 <p><i>”In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language.”</i><br><br>Therefore, a syntax error is an error that does not obey the rules of the programming language. For example, parenthesis always comes in pairs… so <b><code>(1+2)</code></b> is OK, but <b><code>1+2)</code></b> is not. Below another example of a syntax error.  As you will see — this error is caught by the interpreter before running the code (hence, the <code>print</code> statements do not result in anything being printed).</p>
 <p>For example if I want to raise 2 to the 3rd power applying the wrong syntax, it will cause a syntax error.</p>
 <div class="cell docutils container">
@@ -786,7 +788,7 @@ According to <a href="https://greenteapress.com/wp/think-python-2e/"><i>Think Py
 </div>
 </section>
 <section id="runtime-errors">
-<h3>2. Runtime errors<a class="headerlink" href="#runtime-errors" title="Permalink to this heading">#</a></h3>
+<h3>2. Runtime errors<a class="headerlink" href="#runtime-errors" title="Permalink to this headline">#</a></h3>
 <p><i>”The second type of error is a runtime error. This type of error does not appear until after the program has started running. These errors are also called <b>exceptions</b>, as they usually indicate that something exceptional (and bad) has happened.”</i></p>
 <p>Below an example of a small script to express fractions as decimals that will cause a runtime error. The error will appear, since you cannot divide by 0.</p>
 <div class="cell docutils container">
@@ -828,7 +830,7 @@ New fraction was added from 5and -1!
 </div>
 </section>
 <section id="semantic-errors">
-<h3>3. Semantic errors<a class="headerlink" href="#semantic-errors" title="Permalink to this heading">#</a></h3>
+<h3>3. Semantic errors<a class="headerlink" href="#semantic-errors" title="Permalink to this headline">#</a></h3>
 <p>According to the Oxford Dictionary, ‘semantic’ is an adjective relating to meaning. Therefore, a ‘semantic error’ is an error in the meaning of your code. Your code will still run without giving any error back, but it will not result in what you expected (or desired). For that reason, semantic errors are the hardest to identify. Below an example:</p>
 <p>I want to raise 2 to the 3rd power. However, I apply the wrong syntax that does not represent “pow()”.</p>
 <p>No error message is created, because this syntax is used for another function in Python. However, this results in an output I did not expect nor desire.</p>
@@ -847,7 +849,7 @@ New fraction was added from 5and -1!
 </div>
 </section>
 <section id="debugging-strategies">
-<h3>Debugging strategies<a class="headerlink" href="#debugging-strategies" title="Permalink to this heading">#</a></h3>
+<h3>Debugging strategies<a class="headerlink" href="#debugging-strategies" title="Permalink to this headline">#</a></h3>
 <p>There are a few ways to debug a program. A simple one is to debug by tracking your values using print statements. By printing the values of the variables in between, we can find where the program does something unwanted. For example, the code block below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -920,7 +922,7 @@ The sum of the elements of the list A is 3.
 </section>
 </section>
 <section id="additional-study-material">
-<h2>Additional study material<a class="headerlink" href="#additional-study-material" title="Permalink to this heading">#</a></h2>
+<h2>Additional study material<a class="headerlink" href="#additional-study-material" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Official Python Documentation - <a class="reference external" href="https://docs.python.org/3/tutorial/inputoutput.html">https://docs.python.org/3/tutorial/inputoutput.html</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/python-f-strings/">https://realpython.com/python-f-strings/</a></p></li>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Objects and References Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -65,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -426,9 +428,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="objects-and-references-exercises">
-<h1>Objects and References Exercises<a class="headerlink" href="#objects-and-references-exercises" title="Permalink to this heading">#</a></h1>
+<h1>Objects and References Exercises<a class="headerlink" href="#objects-and-references-exercises" title="Permalink to this headline">#</a></h1>
 <section id="fixing-exercise-4-1-1">
-<h2>(Fixing) Exercise 4.1.1<a class="headerlink" href="#fixing-exercise-4-1-1" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 4.1.1<a class="headerlink" href="#fixing-exercise-4-1-1" title="Permalink to this headline">#</a></h2>
 <p>Let’s assume that you develop a login interface for an international oil company; which, as the title international suggests, works internationally. Thus, a lot of clients worldwide expect to see data in their favorite units. The company has hired an intern to output temperatures in Celsius and Fahrenheit, from the provided temperature in Kelvin. But something went wrong, the code doesn’t work and now the intern is gone. So, the burden of fixing the code is, yet again, put on your shoulders.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -506,7 +508,7 @@ document.write(`
 </div>
 </section>
 <section id="fixing-exercise-4-1-2">
-<h2>(Fixing) Exercise 4.1.2<a class="headerlink" href="#fixing-exercise-4-1-2" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 4.1.2<a class="headerlink" href="#fixing-exercise-4-1-2" title="Permalink to this headline">#</a></h2>
 <p>The main philosophy of programming is avoiding redundancy — you shouldn’t write the same batch code two or more times if you can just create a function out of it. The same can be applied to many other things — don’t start a new assignment from scratch, if you can re-use a formatting template from your previous assignments. In the cell with code below, you see an example of preparing a template for observation of some satellite, which can work in 2 different modes, and thus will have a slightly different template for each of the modes. The code below is supposed to do that and it was even tested!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

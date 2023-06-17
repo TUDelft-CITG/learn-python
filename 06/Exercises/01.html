@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Pandas Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="7. Matplotlib" href="../../07/Theory/01.html" />
     <link rel="prev" title="6. Pandas" href="../Theory/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -432,9 +434,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pandas-exercises">
-<h1>Pandas Exercises<a class="headerlink" href="#pandas-exercises" title="Permalink to this heading">#</a></h1>
+<h1>Pandas Exercises<a class="headerlink" href="#pandas-exercises" title="Permalink to this headline">#</a></h1>
 <section id="exercise-6-2-1">
-<h2>Exercise 6.2.1<a class="headerlink" href="#exercise-6-2-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 6.2.1<a class="headerlink" href="#exercise-6-2-1" title="Permalink to this headline">#</a></h2>
 <p>Finish a function, which with a <code>for</code> loop will get all types saved in series <code>my_series</code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -490,7 +492,7 @@ document.write(`
 </div>
 </section>
 <section id="searching-exercise-6-3-1">
-<h2>(Searching) Exercise 6.3.1<a class="headerlink" href="#searching-exercise-6-3-1" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 6.3.1<a class="headerlink" href="#searching-exercise-6-3-1" title="Permalink to this headline">#</a></h2>
 <p>Complete the code below to print the total number of <i>’NaN’</i> values in <code>df3</code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -523,7 +525,7 @@ document.write(`
 </div>
 </section>
 <section id="searching-exercise-6-3-2">
-<h2>(Searching) Exercise 6.3.2<a class="headerlink" href="#searching-exercise-6-3-2" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 6.3.2<a class="headerlink" href="#searching-exercise-6-3-2" title="Permalink to this headline">#</a></h2>
 <p>Alter <code>df_632</code> as follows:<br>1) Change the index of the rows to be the column ‘name’;<br>2) drop the column ‘name’;<br>3) drop the columns ‘test’ and ‘new_column’;<br>4) drop the row named ‘test’;<br>5) add a new column ‘% of Earth’s crust’ with values ‘TBD’.<br><br>For your easy reference, your final <code>df_632</code> should look like this:</p>
 <p><img alt="image.png" src="06/Exercises/attachment:image.png" /></p>
 <div class="cell docutils container">
@@ -568,7 +570,7 @@ document.write(`
 </div>
 </section>
 <section id="searching-fixing-exercise-6-3-3">
-<h2>(Searching/Fixing) Exercise 6.3.3<a class="headerlink" href="#searching-fixing-exercise-6-3-3" title="Permalink to this heading">#</a></h2>
+<h2>(Searching/Fixing) Exercise 6.3.3<a class="headerlink" href="#searching-fixing-exercise-6-3-3" title="Permalink to this headline">#</a></h2>
 <p>A geologist wrote a line of code to know how many of the listed minerals have a hardness greater than or equal to <span class="math notranslate nohighlight">\(3\)</span>. However, something is not correct in his code… could you maybe fix it? There is a syntax error as well as a semantic error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,7 +602,7 @@ document.write(`
 <p>The above exercise might look like a silly one, but take some time to analyze it carefully… what is happening there? Break down each part of that line of code to understand it properly.</p>
 </section>
 <section id="searching-exercise-6-5-1">
-<h2>(Searching) Exercise 6.5.1<a class="headerlink" href="#searching-exercise-6-5-1" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 6.5.1<a class="headerlink" href="#searching-exercise-6-5-1" title="Permalink to this headline">#</a></h2>
 <p>A geologist is interested in the tallest mountain chains around Earth. For that, he created the <code>tallest_mountains.csv</code> table, containing information on all mountains above <span class="math notranslate nohighlight">\(8000\)</span> meters. Your task is to do the following <span class="math notranslate nohighlight">\(5\)</span> assignments.<br><br>1) Read the <code>tallest_mountains.csv</code> file.<br>2) What are the names of the columns?<br>3) What is the height of the tallest mountain?<br>4) What is the row number (or index) of this mountain?<br>5) What is the name of the tallest mountain in the dataset?<br><br><b>Hard-coded answers won’t be accepted. Use <code>pandas</code> functions to answer the questions.</b><br><br><i>Source for this and next exercises: <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">Wikipedia</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -644,7 +646,7 @@ document.write(`
 </div>
 </section>
 <section id="searching-exercise-6-5-2">
-<h2>(Searching) Exercise 6.5.2<a class="headerlink" href="#searching-exercise-6-5-2" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 6.5.2<a class="headerlink" href="#searching-exercise-6-5-2" title="Permalink to this headline">#</a></h2>
 <p>Now, our geologist friend got another table with all mountains above <span class="math notranslate nohighlight">\(7000\)</span> meters, it’s in the <code>mountains_above_7000m_copy.csv</code> file. Your task is to do the following <span class="math notranslate nohighlight">\(6\)</span> assignments.<br><br>1) Read the <code>mountains_above_7000m_copy.csv</code> file.<br>2) Remove the column describing the mountain range they belong.<br>3) Append <code>df8000</code> to this.<br>4) Fix the row-indexing issue.<br>5) Create a <code>Series</code> indicating which entries of ‘Feet’ are missing.<br><i>Hint: Use the <code>.isnull()</code> function</i><br>6) Add the values that are missing in the ‘Feet’ column, use <span class="math notranslate nohighlight">\(1\)</span> mtr = <span class="math notranslate nohighlight">\(3.28084\)</span> feet.<br><i>Hint2: Use the <code>.mask()</code> function, more info <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mask.html">here</a>, or the <code>.fillna()</code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -710,7 +712,7 @@ document.write(`
 </div>
 </section>
 <section id="searching-exercise-6-5-3">
-<h2>(Searching) Exercise 6.5.3<a class="headerlink" href="#searching-exercise-6-5-3" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 6.5.3<a class="headerlink" href="#searching-exercise-6-5-3" title="Permalink to this headline">#</a></h2>
 <p>Now that our geologist friend has all this information, he wants to know how many of these mountains are claimed by China. Can you help him out? <i><br><br>Hint: you need to find out which elements in the appropriate column contains the string ‘China’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

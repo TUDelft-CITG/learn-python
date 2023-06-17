@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Computations using Numpy: Solutions &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Python data analysis with Pandas (and Matplotlib)" href="1-2-student.html" />
     <link rel="prev" title="Computations using Numpy" href="1-1-student.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -463,10 +465,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="computations-using-numpy-solutions">
-<h1>Computations using Numpy: Solutions<a class="headerlink" href="#computations-using-numpy-solutions" title="Permalink to this heading">#</a></h1>
+<h1>Computations using Numpy: Solutions<a class="headerlink" href="#computations-using-numpy-solutions" title="Permalink to this headline">#</a></h1>
 <p>This notebook is based on the Numpy lesson from <a class="reference external" href="https://github.com/AaltoSciComp/python-for-scicomp/">Aalto Scientific Computing: Python for Scientific Computing</a> and <a class="reference external" href="https://www.w3schools.com/python/numpy/">W3Schools</a>.</p>
 <section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><span class="xref myst">What is an array?</span></p>
 <ul>
@@ -493,7 +495,7 @@ document.write(`
 </ul>
 </section>
 <section id="what-is-an-array">
-<h2>What is an array?<a class="headerlink" href="#what-is-an-array" title="Permalink to this heading">#</a></h2>
+<h2>What is an array?<a class="headerlink" href="#what-is-an-array" title="Permalink to this headline">#</a></h2>
 <p>For example, consider <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2.5,</span> <span class="pre">'asdf',</span> <span class="pre">False,</span> <span class="pre">[1.5,</span> <span class="pre">True]]</span></code> - this is a Python list but it has different types for every element. When you do math on this, every element has to be handled separately.</p>
 <p>Lists may serve the purpose of arrays, but they are slow to process. Numpy aims to provide an array object that is up to 50x faster than traditional Python lists. Numpy is the most used library for scientific computing. Even if you are not using it directly, chances are high that some library uses it in the background.</p>
 <p>The array data structure in numpy is called <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, it provides a lot of supporting functions that make working with <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> very easy.</p>
@@ -505,7 +507,7 @@ document.write(`
 </ul>
 </section>
 <section id="performance-check">
-<h2>Performance check<a class="headerlink" href="#performance-check" title="Permalink to this heading">#</a></h2>
+<h2>Performance check<a class="headerlink" href="#performance-check" title="Permalink to this headline">#</a></h2>
 <p>To quickly show the fast performances of NumPy arrays, we can compare the results of a basic operations using lists and array. In particular we will compute the square of 10000 elements.</p>
 <p>We first do this using Python lists, by creating a list with values from 0 to 9999, and one ‘empty’ list, to store the result in.</p>
 <div class="cell docutils container">
@@ -559,7 +561,7 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="creating-arrays">
-<h2>Creating arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Creating arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">#</a></h2>
 <p>Arrays can be created using many different functions, this section will provide an overview in the many useful ways in which arrays can be created.</p>
 <p>You can create an array from a Python list by using <code class="docutils literal notranslate"><span class="pre">np.array</span></code> and passing a Python list:</p>
 <blockquote>
@@ -656,7 +658,7 @@ c:
 </section>
 <hr class="docutils" />
 <section id="array-data-types">
-<h2>Array Data types<a class="headerlink" href="#array-data-types" title="Permalink to this heading">#</a></h2>
+<h2>Array Data types<a class="headerlink" href="#array-data-types" title="Permalink to this headline">#</a></h2>
 <p>What exactly is the difference between <code class="docutils literal notranslate"><span class="pre">np.arange(10)</span></code> and <code class="docutils literal notranslate"><span class="pre">np.linspace(0,9,10)</span></code>?</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">np.arange(10)</span></code> results in <code class="docutils literal notranslate"><span class="pre">array([0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9])</span></code> with dtype <strong>int64</strong>,</p></li>
@@ -748,10 +750,10 @@ nums as integer:
 </div>
 <p>Did you notice anything in the previous two cells?</p>
 <p>Right! We called the <code class="docutils literal notranslate"><span class="pre">astype</span></code> function not from the <code class="docutils literal notranslate"><span class="pre">np</span></code> module, but from the <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> objects themselves. These are indeed <em>methods</em>, rather than <em>functions</em>. The main differences are highlighted in the table below.</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
-<th class="head text-left"><p>Function</p></th>
+<tr class="row-odd"><th class="text-left head"><p>Method</p></th>
+<th class="text-left head"><p>Function</p></th>
 </tr>
 </thead>
 <tbody>
@@ -766,7 +768,7 @@ nums as integer:
 <p>Nearly all the method versions do the same thing as the function versions. Choosing the method or the function will usually depend on which one is easier to type or read. Some examples will be provided later in this notebook.</p>
 <hr class="docutils" />
 <section id="font-color-red-exercise-font">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#font-color-red-exercise-font" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#font-color-red-exercise-font" title="Permalink to this headline">#</a></h3>
 <p>Create an array with elements ranging from 10 up to 15 (inclusive), with data type=unsigned 8 bit integer.
 Use the following functions:</p>
 <ul class="simple">
@@ -794,7 +796,7 @@ Use the following functions:</p>
 </section>
 <hr class="docutils" />
 <section id="saving-and-loading-arrays">
-<h2>Saving and loading arrays<a class="headerlink" href="#saving-and-loading-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Saving and loading arrays<a class="headerlink" href="#saving-and-loading-arrays" title="Permalink to this headline">#</a></h2>
 <p>When working with arrays, it might be useful to save or load an array to a file on your computer. This can be done using the <code class="docutils literal notranslate"><span class="pre">np.save()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.load()</span></code> functions respectively:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -862,7 +864,7 @@ array from txt file:
 </div>
 <hr class="docutils" />
 <section id="id1">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Load the provided csv <code class="docutils literal notranslate"><span class="pre">taxi_duration.txt</span></code> using the <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code> function. The text file contains two columns: one representing the day of the year, and the other representing the daily total duration of taxi rides corresponding to the day of the year. Check the number of days in your loaded dataset. You can preview the file in a text editor if you want.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -893,7 +895,7 @@ array from txt file:
 </section>
 <hr class="docutils" />
 <section id="array-reshaping">
-<h2>Array reshaping<a class="headerlink" href="#array-reshaping" title="Permalink to this heading">#</a></h2>
+<h2>Array reshaping<a class="headerlink" href="#array-reshaping" title="Permalink to this headline">#</a></h2>
 <p>Arrays can be <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.reshape.html">reshaped</a> in many different ways, as long as the number of entries in the new shape does not differ from the number of entries in the original array.
 For example, the following array can be reshaped into a 3 by 3 array:</p>
 <img src="./1dim.png" alt="drawing" width="600"/>
@@ -941,7 +943,7 @@ For example, the following array can be reshaped into a 3 by 3 array:</p>
 </div>
 <hr class="docutils" />
 <section id="id2">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Reshape the Taxi array as loaded in the previous exercise such that the array columns represent weekdays and the array rows represent different weeks in the period of the data set. Note that the first day of the year 2016 was a <em>friday</em>, so the week representation in the columns will start at <em>friday</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -966,7 +968,7 @@ For example, the following array can be reshaped into a 3 by 3 array:</p>
 </section>
 <hr class="docutils" />
 <section id="array-maths">
-<h2>Array maths<a class="headerlink" href="#array-maths" title="Permalink to this heading">#</a></h2>
+<h2>Array maths<a class="headerlink" href="#array-maths" title="Permalink to this headline">#</a></h2>
 <p>Clearly, you can do math on arrays.  Math in NumPy is fast because it is implemented in C or Fortran, just like in most other high-level languages such as R and Matlab.</p>
 <p>By default, in NumPy all math is performed element-by-element.</p>
 <div class="cell docutils container">
@@ -1064,7 +1066,7 @@ sum of a per row:
 </div>
 <hr class="docutils" />
 <section id="id3">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>Compute the standard deviation of the trip <em>duration</em> data, using the following functions: <code class="docutils literal notranslate"><span class="pre">np.sqrt()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.size()</span></code>, and the mathematical operators <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 <p>The standard deviation is defined as <span class="math notranslate nohighlight">\(\sqrt{\frac{\sum^{n}_{i=0} \left( x_i - \bar{x} \right)^2}{n}}\)</span> for a vector x with size n. Compare the result with the usage of the <code class="docutils literal notranslate"><span class="pre">np.std()</span></code> function.</p>
 <p>The array to use for this exercise is the <code class="docutils literal notranslate"><span class="pre">durations</span></code> array as defined below, which contains only the Taxi ride durations of the original imported array (no day of the year column)</p>
@@ -1112,7 +1114,7 @@ Standard deviation of the duration: [1188.99627751 1132.54919822  937.38102756  
 </section>
 <hr class="docutils" />
 <section id="dot-product-and-matrix-multiplication">
-<h2>Dot product and matrix multiplication<a class="headerlink" href="#dot-product-and-matrix-multiplication" title="Permalink to this heading">#</a></h2>
+<h2>Dot product and matrix multiplication<a class="headerlink" href="#dot-product-and-matrix-multiplication" title="Permalink to this headline">#</a></h2>
 <p>As we saw in the previous example, the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator or <code class="docutils literal notranslate"><span class="pre">.multiply()</span></code> function performs an element wise multiplication. To perform matrix multiplication, the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator can be used:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1186,7 +1188,7 @@ a.T:
 </div>
 <hr class="docutils" />
 <section id="id4">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p>Create the two matrices A and B as numpy arrays: <span class="math notranslate nohighlight">\(A = \begin{bmatrix} 1&amp;4&amp;2\\0&amp;2&amp;1\\3&amp;7&amp;6 \end{bmatrix}\)</span>, <span class="math notranslate nohighlight">\(B = \begin{bmatrix} 2&amp;0&amp;1\\0&amp;3&amp;0\\1&amp;2&amp;0 \end{bmatrix}\)</span>.</p>
 <p>Next, perform the following operations:</p>
 <ul class="simple">
@@ -1236,7 +1238,7 @@ a.T:
 </section>
 </section>
 <section id="indexing-and-slicing">
-<h2>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this heading">#</a></h2>
+<h2>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">#</a></h2>
 <p>NumPy has many ways to extract values out of arrays:</p>
 <ul class="simple">
 <li><p>You can select a single element</p></li>
@@ -1305,7 +1307,7 @@ a[a &gt; 7]:
 </div>
 <hr class="docutils" />
 <section id="id5">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p>For the reshaped taxi ride duration array <code class="docutils literal notranslate"><span class="pre">taxi_weeks</span></code>, create the following arrays using slicing:</p>
 <ul class="simple">
 <li><p>An array containing only daily total durations of <em>fridays</em></p></li>
@@ -1337,7 +1339,7 @@ a[a &gt; 7]:
 </div>
 </section>
 <section id="id6">
-<h3><font color='red'>Exercise</font><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3><font color='red'>Exercise</font><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <p>The reshaped array <code class="docutils literal notranslate"><span class="pre">taxi_weeks</span></code> currently starts on a friday because this is the first day of the year. People often prefer to have the first column of the array corresponding to a monday instead. Using <em>slicing</em> and <em>reshaping</em>, create a new version of <code class="docutils literal notranslate"><span class="pre">taxi_weeks</span></code> from the <code class="docutils literal notranslate"><span class="pre">durations</span></code> array where the first column represents monday and chronological order is maintained.</p>
 <blockquote>
 <div><p>Hint: It is easier if you remove some observations at the beginning and the end because they are not part of a full week of observations.</p>
@@ -1365,7 +1367,7 @@ a[a &gt; 7]:
 </section>
 <hr class="docutils" />
 <section id="view-vs-copy">
-<h2>View vs copy<a class="headerlink" href="#view-vs-copy" title="Permalink to this heading">#</a></h2>
+<h2>View vs copy<a class="headerlink" href="#view-vs-copy" title="Permalink to this headline">#</a></h2>
 <p>See the cell below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1437,7 +1439,7 @@ a:
 </div>
 </section>
 <section id="types-of-operations">
-<h2>Types of operations<a class="headerlink" href="#types-of-operations" title="Permalink to this heading">#</a></h2>
+<h2>Types of operations<a class="headerlink" href="#types-of-operations" title="Permalink to this headline">#</a></h2>
 <p>There are different types of standard operations in NumPy:</p>
 <p><strong>ufuncs</strong>, or universal functions operats on ndarrays in an element-by-element fashion. They can be <em>unary</em>, operating on a single input, or <em>binary</em>, operating on two inputs.</p>
 <p>They are used to implement vectorization in NumPy which is way faster than iterating over elements. They also provide broadcasting and additional methods like reduce, accumulate etc. that are very helpful for computation.</p>
@@ -1504,7 +1506,7 @@ np.add(a, b):
 </div>
 <p>Broadcasting is smart and consistent about what it does. The basics of broadcasting are <a class="reference external" href="https://numpy.org/doc/stable/user/basics.broadcasting.html">documented here</a>. The basic idea is that it expands dimensions of the smaller array so that they are compatible in shape.</p>
 <section id="array-methods">
-<h3>Array methods<a class="headerlink" href="#array-methods" title="Permalink to this heading">#</a></h3>
+<h3>Array methods<a class="headerlink" href="#array-methods" title="Permalink to this headline">#</a></h3>
 <p>Array methods also implement useful operations, sometimes similar to the ufuncs.</p>
 <p>Remember that array methods are called on the <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> object. You can find the full list of methods <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.ndarray.html">here</a> along with all other important informations on <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
 <div class="cell docutils container">
@@ -1527,7 +1529,7 @@ np.add(a, b):
 </section>
 </section>
 <section id="example-linear-algebra-using-numpy">
-<h2>Example: Linear algebra using Numpy<a class="headerlink" href="#example-linear-algebra-using-numpy" title="Permalink to this heading">#</a></h2>
+<h2>Example: Linear algebra using Numpy<a class="headerlink" href="#example-linear-algebra-using-numpy" title="Permalink to this headline">#</a></h2>
 <p>In this short example, we will solve a linear system of equations using numpy.</p>
 <p>Let’s say we want to fit a polynomial <span class="math notranslate nohighlight">\(y = a_0 x^2 + a_1 x + a_2\)</span> through the points <span class="math notranslate nohighlight">\((1,0)\)</span>, <span class="math notranslate nohighlight">\((2,2)\)</span>, and <span class="math notranslate nohighlight">\((3,1)\)</span>.
 We can obtain the variables <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, and <span class="math notranslate nohighlight">\(a_2\)</span> by solving the folowing linear system of equations:</p>
@@ -1621,7 +1623,7 @@ a0 * 3**2 + a1 * 3 + a2 = 1.00
 <p>This shows that there are always multiple options to tackling a poblem using numpy, and for a lot of scenarios there is likely already a numpy function which can be used to reduce the amount of code needed to perform a task.</p>
 </section>
 <section id="more-linear-algebra-and-other-advanced-math">
-<h2>More linear algebra and other advanced math<a class="headerlink" href="#more-linear-algebra-and-other-advanced-math" title="Permalink to this heading">#</a></h2>
+<h2>More linear algebra and other advanced math<a class="headerlink" href="#more-linear-algebra-and-other-advanced-math" title="Permalink to this headline">#</a></h2>
 <p>In general, you use <code class="docutils literal notranslate"><span class="pre">arrays</span></code> (n-dimensions), not <code class="docutils literal notranslate"><span class="pre">matrixes</span></code>
 (specialized 2-dimensional) in NumPy.</p>
 <p>Internally, NumPy doesn’t invent its own math routines: it relies on
@@ -1638,7 +1640,7 @@ Thus, all the other packages you may want to use are compatible</p></li>
 </ul>
 </section>
 <section id="optional-exercises">
-<h2>Optional Exercises<a class="headerlink" href="#optional-exercises" title="Permalink to this heading">#</a></h2>
+<h2>Optional Exercises<a class="headerlink" href="#optional-exercises" title="Permalink to this headline">#</a></h2>
 <p>If you have extra time, try these out.</p>
 <ol class="arabic simple">
 <li><p>Reverse a vector: given a vector, reverse it such that the last
@@ -1864,7 +1866,7 @@ trunc [-3. -2. -1. -0. -0.  0.  0.  1.  2.  3.]
 </div>
 </section>
 <section id="see-also">
-<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h2>
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>NumPy manual <a class="reference external" href="https://numpy.org/doc/stable/reference/">https://numpy.org/doc/stable/reference/</a>`</p></li>
 <li><p>Basic array class reference <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.html">https://numpy.org/doc/stable/reference/arrays.html</a></p></li>

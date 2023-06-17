@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Matplotlib Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Python Course in a nutshell" href="../../In_a_nutshell_intro.html" />
     <link rel="prev" title="7. Matplotlib" href="../Theory/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -431,9 +433,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="matplotlib-exercises">
-<h1>Matplotlib Exercises<a class="headerlink" href="#matplotlib-exercises" title="Permalink to this heading">#</a></h1>
+<h1>Matplotlib Exercises<a class="headerlink" href="#matplotlib-exercises" title="Permalink to this headline">#</a></h1>
 <section id="exercise-5-2-2">
-<h2>Exercise 5.2.2<a class="headerlink" href="#exercise-5-2-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 5.2.2<a class="headerlink" href="#exercise-5-2-2" title="Permalink to this headline">#</a></h2>
 <p>We will now read in a dataset with eruption data of the Old Faithful geyser in Yellowstone, in which <span class="math notranslate nohighlight">\(T\)</span> is the duration of an eruption, and <span class="math notranslate nohighlight">\(W\)</span> the time until the next eruption. Make a scatterplot of the two data arrays <code>T</code> and <code>W</code>, that are loaded below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -489,7 +491,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-5-2-3">
-<h2>Exercise 5.2.3<a class="headerlink" href="#exercise-5-2-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 5.2.3<a class="headerlink" href="#exercise-5-2-3" title="Permalink to this headline">#</a></h2>
 <p>Create an array <code>x</code> consisting of <span class="math notranslate nohighlight">\(100\)</span> elements within the <span class="math notranslate nohighlight">\([0,20]\)</span> range. Compute <span class="math notranslate nohighlight">\(y = sin(x)\)</span> and plot <span class="math notranslate nohighlight">\(y\)</span> vs. <span class="math notranslate nohighlight">\(x\)</span> with a black line. Next, create a copy of <span class="math notranslate nohighlight">\(y\)</span> called <span class="math notranslate nohighlight">\(y_{copy}\)</span> and replace all values of <span class="math notranslate nohighlight">\(y_{copy}\)</span> that are larger than <span class="math notranslate nohighlight">\(0.5\)</span> to be <span class="math notranslate nohighlight">\(0.5\)</span>, and all values that are smaller than <span class="math notranslate nohighlight">\(-0.5\)</span> to be <span class="math notranslate nohighlight">\(-0.5\)</span>. Then, plot the modified <span class="math notranslate nohighlight">\(y_{copy}\)</span> in the same plot, using a red dotted line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -520,7 +522,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-5-2-4">
-<h2>Exercise 5.2.4<a class="headerlink" href="#exercise-5-2-4" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 5.2.4<a class="headerlink" href="#exercise-5-2-4" title="Permalink to this headline">#</a></h2>
 <p>The file <b>arr.txt</b> contains <span class="math notranslate nohighlight">\(1000\)</span> randomly chosen <span class="math notranslate nohighlight">\(x,y\)</span> locations of points; both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> vary between <span class="math notranslate nohighlight">\(-10\)</span> and <span class="math notranslate nohighlight">\(10\)</span>. Load the data using <code>np.loadtxt()</code>, and store the first row of the array in an array called <code>x</code> and the second row in an array called <code>y</code>. First, plot a red dot for all points. Then, on the same graph, plot a blue dot for all <span class="math notranslate nohighlight">\(x,y\)</span> points where <span class="math notranslate nohighlight">\(x&lt;-2\)</span> and <span class="math notranslate nohighlight">\(-5\le y \le 0\)</span>. Finally, plot a green dot for any point that lies in the circle with center <span class="math notranslate nohighlight">\((x_c,y_c)=(2.5,0)\)</span> and with radius <span class="math notranslate nohighlight">\(R=5.0\)</span>.<br><br><i>Hint: it may be useful to compute a new array for the radial distance <span class="math notranslate nohighlight">\(r\)</span> between any point and the center of the circle using the formula <span class="math notranslate nohighlight">\(r=\sqrt{(x-x_c)^2+(y-y_c)^2}\)</span>. Lastly, use the <code>plt.axis(‘equal’)</code> command to make sure the scales along the two axes are equal and the circular green area looks like a circle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

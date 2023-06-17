@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction to the Course &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="1. Variables, operators and functions." href="01/Theory/01.html" />
     <link rel="prev" title="UNDER CONSTRUCTION" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -430,15 +432,15 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-the-course">
-<h1>Introduction to the Course<a class="headerlink" href="#introduction-to-the-course" title="Permalink to this heading">#</a></h1>
+<h1>Introduction to the Course<a class="headerlink" href="#introduction-to-the-course" title="Permalink to this headline">#</a></h1>
 <section id="why-do-you-need-python">
-<h2>Why do you need Python?<a class="headerlink" href="#why-do-you-need-python" title="Permalink to this heading">#</a></h2>
+<h2>Why do you need Python?<a class="headerlink" href="#why-do-you-need-python" title="Permalink to this headline">#</a></h2>
 <p>Python is a computer programming language that is widely used in both academia and industries related to Civil Engineering, Environmental Engineering and Applied Earth Sciences. Being skilled in Python will help you on multiple occasions, including in your master courses. With this set of notebooks we will guide you through the basics of Python programming. As an additional study material for learning Python basics, we advise the open source book <a href="https://greenteapress.com/wp/think-python-2e/">”Think Python 2nd Edition” by Allen B. Downey</a>. It describes in more detail what is covered in the Notebooks of this course.
 <br>
 Don’t worry if you some concepts are not (completely) clear, you’ll improve your skills along the way and can always use these notebooks to look things up later.</p>
 </section>
 <section id="what-can-computers-do-for-us">
-<h2>What can computers do for us?<a class="headerlink" href="#what-can-computers-do-for-us" title="Permalink to this heading">#</a></h2>
+<h2>What can computers do for us?<a class="headerlink" href="#what-can-computers-do-for-us" title="Permalink to this headline">#</a></h2>
 <p>As an engineer or scientist, you will deal with units of information which are called <b>data</b>. The most important tasks that a computer can do for us are:</p>
 <ol class="arabic simple">
 <li><p>Reading data</p></li>
@@ -454,7 +456,7 @@ Data processing is the manipulation of the stored data in a system. After proces
 We map data (original or found) to graphic elements to communicate clearly and efficiently the information contained in the data. A graphic element is an element of a chart, such as a line or a point in the chart.</p>
 </section>
 <section id="what-is-programming">
-<h2>What is programming?<a class="headerlink" href="#what-is-programming" title="Permalink to this heading">#</a></h2>
+<h2>What is programming?<a class="headerlink" href="#what-is-programming" title="Permalink to this headline">#</a></h2>
 <p>Programming is giving your computer a list of instructions for computations in a language it can understand. In your case, this language is Python. A computation is a series of arithmetical (“math”) and non-arithmetical (“non-math”) steps that transform input to output (result).
 There are five different kinds of instructions for computations you use. By ordering and combining them, the computer can achieve results that fulfill the three tasks described earlier. The five kinds of instructions are:</p>
 <p><b>input:</b>
@@ -469,7 +471,7 @@ Check for certain conditions before further instruction.</p>
 Perform instructions repeatedly, usually with some variation.</p>
 </section>
 <section id="introduction-to-python-and-python-notebooks">
-<h2>Introduction to Python and Python Notebooks<a class="headerlink" href="#introduction-to-python-and-python-notebooks" title="Permalink to this heading">#</a></h2>
+<h2>Introduction to Python and Python Notebooks<a class="headerlink" href="#introduction-to-python-and-python-notebooks" title="Permalink to this headline">#</a></h2>
 <p>The features of Python are what make it so popular. From the definition available on the corresponding Wiki page: <i> “Python is an <b>interpreted</b> <b>high-level</b> <b>general-purpose</b> <b>programming language</b>. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs, as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.”</i>. Quite a simple, yet concise description due to the meaning hidden behind each buzzword:</p>
 <ul>
 <li> <b>Interpreted</b> means that there is an interpreter, a software tool, which reads and performs instructions written in Python. If your laptop, phone, or refrigerator has the interpreter, it can run most of the Python scripts!

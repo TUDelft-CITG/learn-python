@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Modules, conditions, data structures and loops Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -442,9 +444,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="modules-conditions-data-structures-and-loops-exercises">
-<h1>Modules, conditions, data structures and loops Exercises<a class="headerlink" href="#modules-conditions-data-structures-and-loops-exercises" title="Permalink to this heading">#</a></h1>
+<h1>Modules, conditions, data structures and loops Exercises<a class="headerlink" href="#modules-conditions-data-structures-and-loops-exercises" title="Permalink to this headline">#</a></h1>
 <section id="searching-exercise-2-1-1">
-<h2>(Searching) Exercise 2.1.1<a class="headerlink" href="#searching-exercise-2-1-1" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 2.1.1<a class="headerlink" href="#searching-exercise-2-1-1" title="Permalink to this headline">#</a></h2>
 <p>Write a function, using a function from the <code>math</code> module, to find the greatest common divisor of any two numbers. Your function should return one integer number.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -476,7 +478,7 @@ document.write(`
 </div>
 </section>
 <section id="searching-exercise-2-1-2">
-<h2>(Searching) Exercise 2.1.2<a class="headerlink" href="#searching-exercise-2-1-2" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 2.1.2<a class="headerlink" href="#searching-exercise-2-1-2" title="Permalink to this headline">#</a></h2>
 <p>We can only take and store measurements at a limited number of locations and/or times. But what if we are interested in a value in between, i.e., at a location/time where we do not have a measurement? Then we can use interpolation to estimate that value. A popular, and simple, interpolation technique is <a href="https://en.wikipedia.org/wiki/Linear_interpolation">linear interpolation</a>.
 Your task is to use the module <code>scipy</code> to perform a 1D linear interpolation between a set of known points, where <code>x_known</code> and <code>y_known</code> are arrays with the measured <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> values. Use Google to look up the 1D interpolation function in <code>scipy</code>.<br><br>In the code below you have to replace the <code>…</code> with the correct code.</p>
 <div class="cell docutils container">
@@ -512,7 +514,7 @@ Your task is to use the module <code>scipy</code> to perform a 1D linear interpo
 </div>
 </section>
 <section id="searching-exercise-2-1-3">
-<h2>(Searching) Exercise 2.1.3<a class="headerlink" href="#searching-exercise-2-1-3" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 2.1.3<a class="headerlink" href="#searching-exercise-2-1-3" title="Permalink to this headline">#</a></h2>
 <p>Now, let’s try to measure the running time of a function, for that we will need the <code>time</code> module. Use it to measure the working time of the <code>cool_function()</code> below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -565,7 +567,7 @@ Your task is to use the module <code>scipy</code> to perform a 1D linear interpo
 </div>
 </section>
 <section id="exercise-2-2-1">
-<h2>Exercise 2.2.1<a class="headerlink" href="#exercise-2-2-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.2.1<a class="headerlink" href="#exercise-2-2-1" title="Permalink to this headline">#</a></h2>
 <p>One of the most crucial applications of <code>if</code> statements is filtering the data from errors and checking whether an error is within a certain limit.<br><br>For example, checking whether the difference between an estimated value and the actual value are within a certain range.<br><br>
 Mathematically speaking, this can be expressed as<br><br> $<span class="math notranslate nohighlight">\(|\hat{y} - y| &lt; \epsilon\)</span><span class="math notranslate nohighlight">\(&lt;br&gt;where \)</span>\hat{y}<span class="math notranslate nohighlight">\( is your estimated value, \)</span>y<span class="math notranslate nohighlight">\( is the actual value and \)</span>\epsilon$ is a certain error threshold.<br><br><br>The function <code>check_error_size()</code> below must do the same — it should return <code>True</code> if the error is within the acceptable range <code>eps</code> and <code>False</code> if it is not.</p>
 <div class="cell docutils container">
@@ -601,7 +603,7 @@ Mathematically speaking, this can be expressed as<br><br> $<span class="math not
 </div>
 </section>
 <section id="exercise-2-2-2">
-<h2>Exercise 2.2.2<a class="headerlink" href="#exercise-2-2-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.2.2<a class="headerlink" href="#exercise-2-2-2" title="Permalink to this headline">#</a></h2>
 <p>Use the knowledge you have obtained in this Notebook and write your very own function to classify soil samples based on the average grain size. The classification you have to implement is the following:<br></p>
 <ol class="arabic simple">
 <li><p>Clay: avg grain size <span class="math notranslate nohighlight">\(&lt;\)</span> 0.002 mm</p></li>
@@ -646,7 +648,7 @@ Mathematically speaking, this can be expressed as<br><br> $<span class="math not
 </div>
 </section>
 <section id="exercise-2-2-3-triangle-inequality">
-<h2>Exercise 2.2.3 — Triangle Inequality<a class="headerlink" href="#exercise-2-2-3-triangle-inequality" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.2.3 — Triangle Inequality<a class="headerlink" href="#exercise-2-2-3-triangle-inequality" title="Permalink to this headline">#</a></h2>
 <p>Let’s imagine that you received a request to manage a web-application, which provides and visualizes <a href="https://en.wikipedia.org/wiki/Interferometric_synthetic-aperture_radar"><b>InSAR</b></a> data of the estimated displacement in an area.<br><br>The app is already quite cool, however, there is always room for improvement. For example, one might want to look into the statistics over the area of a triangle.<br><br>Your goal is to help implement such functionality by checking whether the user selected a valid triangle. You need to do this by checking that the length of <b>each</b> of the sides is smaller than the sum of the other two.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -680,7 +682,7 @@ Mathematically speaking, this can be expressed as<br><br> $<span class="math not
 </div>
 </section>
 <section id="searching-exercise-2-2-4">
-<h2>(Searching) Exercise 2.2.4<a class="headerlink" href="#searching-exercise-2-2-4" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 2.2.4<a class="headerlink" href="#searching-exercise-2-2-4" title="Permalink to this headline">#</a></h2>
 <p>Conditional expression is a way how one can compress an <code>if</code> statement to a more compact (and logical) statement. Your task is to rewrite the below <code>if</code> statement by using the <i>’conditional expression’</i> technique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -712,7 +714,7 @@ Mathematically speaking, this can be expressed as<br><br> $<span class="math not
 </div>
 </section>
 <section id="exercise-2-3-1">
-<h2>Exercise 2.3.1<a class="headerlink" href="#exercise-2-3-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.3.1<a class="headerlink" href="#exercise-2-3-1" title="Permalink to this headline">#</a></h2>
 <p>Now, let’s get down to practice.<br><br>Your first task is to finish the <code>pack_variables()</code> function — a function which will combine all inputs in one list and return it.<br><br>More precisely, this function will receive <span class="math notranslate nohighlight">\(5\)</span> arguments as input and you have to return a list with these <span class="math notranslate nohighlight">\(5\)</span> elements inside.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -741,7 +743,7 @@ Mathematically speaking, this can be expressed as<br><br> $<span class="math not
 </div>
 </section>
 <section id="exercise-2-3-2">
-<h2>Exercise 2.3.2<a class="headerlink" href="#exercise-2-3-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.3.2<a class="headerlink" href="#exercise-2-3-2" title="Permalink to this headline">#</a></h2>
 <p>Here, you will have to perform a quality assessment on a received list of GNSS measurements. But a simple one.<br><br>You have to check whether the received data has more than <span class="math notranslate nohighlight">\(1000\)</span> measurements, in that case we know the receiver was running for a long time without being interrupted.
 If it is shorter than <span class="math notranslate nohighlight">\(1000\)</span>, we assume there were some interruptions. Hence, your function should return a message whether the data is fine or not.</p>
 <div class="cell docutils container">
@@ -777,7 +779,7 @@ If it is shorter than <span class="math notranslate nohighlight">\(1000\)</span>
 </div>
 </section>
 <section id="exercise-2-3-3">
-<h2>Exercise 2.3.3<a class="headerlink" href="#exercise-2-3-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.3.3<a class="headerlink" href="#exercise-2-3-3" title="Permalink to this headline">#</a></h2>
 <p>In this exercises you need to write something opposite to a packager… an unpacker! Sometimes it is easier to work with the most convenient data type, that is best suited for a specific task. In this example, you have to write a function which accepts data stored in a dictionary and saves some data from it. More precisely, you have to select <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> coordinates saved in the <code>input_dict</code> dictionary, and return them as a tuple, with <span class="math notranslate nohighlight">\(x\)</span> being the first entry.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -820,7 +822,7 @@ If it is shorter than <span class="math notranslate nohighlight">\(1000\)</span>
 </div>
 </section>
 <section id="searching-exercise-2-3-4-list-comprehension">
-<h2>(Searching) Exercise 2.3.4 — List comprehension<a class="headerlink" href="#searching-exercise-2-3-4-list-comprehension" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 2.3.4 — List comprehension<a class="headerlink" href="#searching-exercise-2-3-4-list-comprehension" title="Permalink to this headline">#</a></h2>
 <p>Sometimes you have to create a list of predefined size and fill it with data. This can be done easily using list comprehension.
 Write a function using list comprehension, in order to create a list of a predefined size and fill them with zeros.</p>
 <div class="cell docutils container">
@@ -850,7 +852,7 @@ Write a function using list comprehension, in order to create a list of a predef
 </div>
 </section>
 <section id="exercise-2-4-1">
-<h2>Exercise 2.4.1<a class="headerlink" href="#exercise-2-4-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.4.1<a class="headerlink" href="#exercise-2-4-1" title="Permalink to this headline">#</a></h2>
 <p>In this exercise you will write your own Celsius to Fahrenheit converter! Your task is to write a function, which will accept the list of temperatures <code>temp_c</code>, in Celsius, and will output a list with the same temperatures, but in Fahrenheit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -891,7 +893,7 @@ Write a function using list comprehension, in order to create a list of a predef
 </div>
 </section>
 <section id="exercise-2-4-2">
-<h2>Exercise 2.4.2<a class="headerlink" href="#exercise-2-4-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.4.2<a class="headerlink" href="#exercise-2-4-2" title="Permalink to this headline">#</a></h2>
 <p>Your task here is to write a function which will analyze a broadcasting message of the following format: <b>”satellite_ids;date”</b>, where the first part of the message contains unique lowercase letters, each corresponding to a different satellite ID, and the last part contains the date of the message.<br><br>
 Here are some examples:
 <b>”agf;06062022”</b>,<b> “abcdefgops;03121999” </b>or<b> “xyz;11112011”.</b>
@@ -927,7 +929,7 @@ Here are some examples:
 </div>
 </section>
 <section id="exercise-2-4-3">
-<h2>Exercise 2.4.3<a class="headerlink" href="#exercise-2-4-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.4.3<a class="headerlink" href="#exercise-2-4-3" title="Permalink to this headline">#</a></h2>
 <p>Here you need to write a function that is able to sort any list consisting only of real numbers, in the descending order. For example, the list <span class="math notranslate nohighlight">\([19, 5, 144, 6]\)</span> becomes <span class="math notranslate nohighlight">\([144, 19, 6, 5]\)</span>. Hint: use a built-in function or write your own bubble-sort algorithm to sort the list in ascending order, and then think of a clever way to change the order this list to descending order.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1077,7 +1079,7 @@ Here are some examples:
 <p>Now that you are a bit more familiarized with indexing, let’s hop into the last two exercises of this Notebook.</p>
 </section>
 <section id="exercise-2-4-4">
-<h2>Exercise 2.4.4<a class="headerlink" href="#exercise-2-4-4" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.4.4<a class="headerlink" href="#exercise-2-4-4" title="Permalink to this headline">#</a></h2>
 <p>Quite frequently you will have to work with 2D data, which (in Python) is stored, sometimes, in 2 dimensional lists. Your task is to complete a function, which will count elements in an irregular 2D list (irregular means that the amount of elements within each sub-list is different). For that you will have to write a loop inside a loop (or, in other words, a double loop). The code below is almost complete, you just need finish typing the second <code>for</code> loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1125,7 +1127,7 @@ Here are some examples:
 </div>
 </section>
 <section id="exercise-2-4-5">
-<h2>Exercise 2.4.5<a class="headerlink" href="#exercise-2-4-5" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.4.5<a class="headerlink" href="#exercise-2-4-5" title="Permalink to this headline">#</a></h2>
 <p>In this exercise you will perform <a href="https://en.wikipedia.org/wiki/Downsampling_(signal_processing)">downsampling</a> of a provided ‘regular’ 2D list. Downsampling is a procedure where only a subset of the data is sampled (to reduce its size, for example). Below a visual aid of what downsampling of a 2D list is. Instead of using all the data available, your task is to downsample the 2D list to keep only the data of every <span class="math notranslate nohighlight">\(a\)</span>-th row and every <span class="math notranslate nohighlight">\(b\)</span>-th column, including the first element <span class="math notranslate nohighlight">\((a_{0,0})\)</span>.<br><br>$<span class="math notranslate nohighlight">\(A = \left[\begin{array}{ccccc}
 a_{0,0} &amp; \dots &amp; a_{0,b} &amp; \dots &amp; a_{0,2b} &amp; \dots &amp; \dots &amp; a_{0,nb}	&amp; \dots\\
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\

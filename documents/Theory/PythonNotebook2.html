@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>2. Modules, conditions, data structures and loops &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -460,17 +462,17 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="modules-conditions-data-structures-and-loops">
-<h1>2. Modules, conditions, data structures and loops<a class="headerlink" href="#modules-conditions-data-structures-and-loops" title="Permalink to this heading">#</a></h1>
+<h1>2. Modules, conditions, data structures and loops<a class="headerlink" href="#modules-conditions-data-structures-and-loops" title="Permalink to this headline">#</a></h1>
 <section id="python-modules">
-<h2>2.1 Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this heading">#</a></h2>
+<h2>2.1 Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">#</a></h2>
 <p>Previously, you have learned how to: <br><br>1) initialize variables in Python; <br>2) perform simple actions with them (eg.: adding numbers together, displaying variables content, etc);<br>3) work with functions (have your own code in a function to reuse it many times or use a function, which was written by another person). <br><br>However, the scope of the last Notebook was limited by your Python knowledge and available functions in standard/vanilla Python (so-called <a href="https://docs.python.org/3/library/functions.html">’built-in’ Python functions</a>).
 There are not many Python built-in functions that can be useful for you, such as functions for math, plotting, signal processing, etc. Luckily, there are countless modules/packages written by other people.</p>
 <section id="python-built-in-modules">
-<h3>Python built-in modules<a class="headerlink" href="#python-built-in-modules" title="Permalink to this heading">#</a></h3>
+<h3>Python built-in modules<a class="headerlink" href="#python-built-in-modules" title="Permalink to this headline">#</a></h3>
 <p>By installing any version of Python, you also automatically install its built-in modules.<br><br>One may wonder — why do they provide some functions within built-in modules, but not directly as a built-in function, such as the <b><code>abs()</code></b> or <b><code>print()</code></b>?<br><br>The answers may vary, but, generally, it is to keep your code clean; compact; and, working.<br><br>It keeps your code clean and compact as you only load functions that you need. It keeps your code working as it allows you to define your own functions with (almost) any kind of name, and use them easily, without worrying that you might <i>’break’</i> something if there is a function with the same name that does something completely different.</p>
 </section>
 <section id="math">
-<h3>math<a class="headerlink" href="#math" title="Permalink to this heading">#</a></h3>
+<h3>math<a class="headerlink" href="#math" title="Permalink to this headline">#</a></h3>
 <p>The <code>math</code> module is one of the most popular modules since it contains all implementations of basic math functions (<span class="math notranslate nohighlight">\(sin\)</span>, <span class="math notranslate nohighlight">\(cos\)</span>, <span class="math notranslate nohighlight">\(exp\)</span>, rounding, and other functions — the full list can be found <a href="https://docs.python.org/3/library/math.html">here</a>). <br><br>In order to access it, you just have to import it into your code with an <b><code>import</code></b> statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -536,7 +538,7 @@ There are not many Python built-in functions that can be useful for you, such as
 </div>
 </section>
 <section id="math-pi">
-<h3><code class="docutils literal notranslate"><span class="pre">math.pi</span></code><a class="headerlink" href="#math-pi" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">math.pi</span></code><a class="headerlink" href="#math-pi" title="Permalink to this headline">#</a></h3>
 <p>As you can see, both constants and functions of a module are accessed by using: the module’s name (in this case <b><code>math</code></b>) and a <b><code>.</code></b> followed by the name of the constant/function (in this case <b><code>pi</code></b>).<br><br>We are able to do this since we have loaded all contents of the module by using the <b><code>import</code></b> keyword. If we try to use these functions somehow differently — we will get an error:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -583,7 +585,7 @@ There are not many Python built-in functions that can be useful for you, such as
 </div>
 </section>
 <section id="listing-all-functions">
-<h3>Listing all functions<a class="headerlink" href="#listing-all-functions" title="Permalink to this heading">#</a></h3>
+<h3>Listing all functions<a class="headerlink" href="#listing-all-functions" title="Permalink to this headline">#</a></h3>
 <p>Sometimes, when you use a module for the first time, you may have no clue about the functions inside of it. In order to unveil all the potential a module has to offer, you can either access the documentation on the corresponding web resource or you can use some Python code, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -637,12 +639,12 @@ For example, the hypotenuse of a 3/4/5 right triangle is:
 </div>
 </section>
 <section id="python-third-party-modules">
-<h3>Python third-party modules<a class="headerlink" href="#python-third-party-modules" title="Permalink to this heading">#</a></h3>
+<h3>Python third-party modules<a class="headerlink" href="#python-third-party-modules" title="Permalink to this headline">#</a></h3>
 <p>Besides built-in modules, there are also modules developed by other people and companies, which can be also used in your code.</p>
 <p>These modules are not installed by default in Python, they are usually installed by using the <i>’pip’</i> or <i>’conda’</i> package managers and accessed like any other Python module.<br><br> <a href="https://www.youtube.com/watch?v=Z_Kxg-EYvxM">This YouTube video</a> explains how to install Python Packages with <i>’pip’</i> and <i>’conda’</i>.</p>
 </section>
 <section id="numpy">
-<h3>numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h3>
+<h3>numpy<a class="headerlink" href="#numpy" title="Permalink to this headline">#</a></h3>
 <p>The <b><code>numpy</code></b> module is one of the most popular Python modules for numerical applications. Due to its popularity, developers tend to skip using the whole module name and use a smaller version of it <b>(<code>np</code>)</b>. A different name to access a module can be done by using the <b><code>as</code></b> keyword, as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -695,7 +697,7 @@ y = [ 1.          0.99179001  0.96729486  0.92691676  0.8713187   0.80141362
 <p>You will learn more about this and other packages in separate Notebooks since these packages are frequently used by the scientific programming community.</p>
 </section>
 <section id="matplotlib">
-<h3><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#matplotlib" title="Permalink to this headline">#</a></h3>
 <p>The <b><code>matplotlib</code></b> module is used to plot data. It contains a lot of visualization techniques and, for simplicity, it has many submodules within the main module. Thus, in order to access functions, you have to specify the whole path that you want to import.<br><br>For example, if the function you need is located within the <b><code>matplotlib</code></b> module and <b><code>pyplot</code></b> submodule, you need to <b><code>import matplotlib.pyplot</code></b>;  then, the access command to that function is simply <b><code>pyplot.<b>your_function</b>()</code></b>.<br><br>Below we use the data generated in the previous cell to create a simple plot using the <b><code>pyplot.plot()</code></b> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -738,15 +740,15 @@ y = [ 1.          0.99179001  0.96729486  0.92691676  0.8713187   0.80141362
 </div>
 </section>
 <section id="loading-python-files-as-modules">
-<h3>Loading Python files as modules<a class="headerlink" href="#loading-python-files-as-modules" title="Permalink to this heading">#</a></h3>
+<h3>Loading Python files as modules<a class="headerlink" href="#loading-python-files-as-modules" title="Permalink to this headline">#</a></h3>
 <p>Finally, you can also load your own (or somebody else’s) Python files as modules. This is quite helpful, as it allows you to keep your code projects well-structured without the need to copy and paste everything.<br><br>In order to import another <b>*.py</b> file as a module, you only need to have that file and your Notebook file in the same directory and use the <code>import</code> keyword. More info on this <a href='https://csatlas.com/python-import-file-module/'>here</a>.</p>
 </section>
 </section>
 <section id="conditions-and-code-if-code-statements">
-<h2>2.2 Conditions and <code>if</code> statements<a class="headerlink" href="#conditions-and-code-if-code-statements" title="Permalink to this heading">#</a></h2>
+<h2>2.2 Conditions and <code>if</code> statements<a class="headerlink" href="#conditions-and-code-if-code-statements" title="Permalink to this headline">#</a></h2>
 <p>In previous Sections you have learned how to create variables, alter them with the help of operators and access the code of professional software developers/scientists. With this, you can already do plenty of stuff in Python. However, it still lacks versatility. If you want to apply other processing techniques for other data — you would need to manually rewrite your code and then change it back once the data changes again. Not that handy, right?<br><br>In this Section you will learn how to <i>steer</i> the flow of your code — process data differently based on some conditions. For that you will learn a construction called the <b><code>if</code></b> statement.</p>
 <section id="code-if-code-keyword-h3">
-<h3><code>if </code>keyword</h3><a class="headerlink" href="#code-if-code-keyword-h3" title="Permalink to this heading">#</a></h3>
+<h3><code>if </code>keyword</h3><a class="headerlink" href="#code-if-code-keyword-h3" title="Permalink to this headline">#</a></h3>
 <p>The <b><code>if</code></b> statement in Python is similar to how we use it in English. <i>”If I have apples, I can make an apple pie”</i> — clearly states that an apple pie will exist under the condition of you having apples. Otherwise, no pie. <br><br>
 Well, it is the same in Python:</p>
 <div class="cell docutils container">
@@ -918,7 +920,7 @@ End of the cell block...
 </div>
 </section>
 <section id="code-else-code-keyword">
-<h3><code>else</code> keyword<a class="headerlink" href="#code-else-code-keyword" title="Permalink to this heading">#</a></h3>
+<h3><code>else</code> keyword<a class="headerlink" href="#code-else-code-keyword" title="Permalink to this headline">#</a></h3>
 <p>We can go even further and add an additional scenario to our <b><code>if</code></b> statement with the <b><code>else</code></b> keyword. It runs the code inside of it <b>only</b> when none of the <b><code>if</code></b> and <b><code>elif</code></b> conditions are <b><code>True</code></b>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1103,10 +1105,10 @@ x = 5
 </section>
 </section>
 <section id="data-structures">
-<h2>2.3 Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this heading">#</a></h2>
+<h2>2.3 Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">#</a></h2>
 <p>In this Section you will tackle a data management problem! In the first module you have learned how to create variables, which is cool. But when you populate a lot of variables, or you want to store &amp; access them within one entity, you need to have a data structure.<br><br>There are plenty of them, which differ their use cases and complexity. Today we will tackle some of the standard Python built-in data structures. The most popular of those are: <b><code>list</code></b>, <b><code>dict</code></b> and <b><code>tuple</code></b>.</p>
 <section id="code-list-code">
-<h3><code>list</code><a class="headerlink" href="#code-list-code" title="Permalink to this heading">#</a></h3>
+<h3><code>list</code><a class="headerlink" href="#code-list-code" title="Permalink to this headline">#</a></h3>
 <p>First, the easiest and the most popular data structure in Python: <b><code>list</code></b> (which is similar to a typical array you could have seen in a different programming language).<br><br>
 You can create a list in the following ways:</p>
 <div class="cell docutils container">
@@ -1283,7 +1285,7 @@ Sum of 5 and 37.5 is 42.5
 </div>
 </section>
 <section id="code-tuple-code">
-<h3><code>tuple</code><a class="headerlink" href="#code-tuple-code" title="Permalink to this heading">#</a></h3>
+<h3><code>tuple</code><a class="headerlink" href="#code-tuple-code" title="Permalink to this headline">#</a></h3>
 <p>If you understood how <code>list</code> works, then you already understand 95% of <b><code>tuple</code></b>. Tuples are just like lists, with some small differences.<br><br>1.   In order to create a tuple you need to use <b><code>()</code></b> brackets, comma or a <b><code>tuple</code></b> class constructor.<br>2.   You can change the content of your list, however tuples are immutable (just like strings).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1373,7 +1375,7 @@ You might think that tuple is a useless class. However, there are some reasons f
 </div>
 </section>
 <section id="code-dict-code">
-<h3><code>dict</code><a class="headerlink" href="#code-dict-code" title="Permalink to this heading">#</a></h3>
+<h3><code>dict</code><a class="headerlink" href="#code-dict-code" title="Permalink to this headline">#</a></h3>
 <p>After seeing lists and tuples, you may think: <br><br>”Wow, storing all my variables within another variable is cool and gnarly! But… sometimes it’s boring &amp; inconvenient to access my data by using it’s position within a tuple/list. Is there a way that I can store my object within a data structure but access it via something meaningful, like a keyword…?”<br><br>Don’t worry if you had this exact same thought.. Python had it as well!<br><br>Dictionaries are suited especially for that purpose — to each element you want to store, you give it a nickname (i.e., a key) and use that key to access the value you want.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1566,7 +1568,7 @@ my_dict has a [&#39;name&#39;] key: True
 </div>
 </section>
 <section id="real-life-example">
-<h3>Real life example:<a class="headerlink" href="#real-life-example" title="Permalink to this heading">#</a></h3>
+<h3>Real life example:<a class="headerlink" href="#real-life-example" title="Permalink to this headline">#</a></h3>
 <p>Analyzing satellite metadata<br><br></b>Metadata is a set of data that describes and gives information about other data. For Sentinel-1, the metadata of the satellite is acquired as an <i>.xml</i> file. It is common for Dictionaries to play an important role in classifying this metadata. One could write a function to read and obtain important information from this metadata and store them in a Dictionary. Some examples of keys for the metadata of Sentinel-1 are:</p>
 <p><em>dict_keys([‘azimuthSteeringRate’, ‘dataDcPolynomial’, ‘dcAzimuthtime’, ‘dcT0’, ‘rangePixelSpacing’, ‘azimuthPixelSpacing’, ‘azimuthFmRatePolynomial’, ‘azimuthFmRateTime’, ‘azimuthFmRateT0’, ‘radarFrequency’, ‘velocity’, ‘velocityTime’, ‘linesPerBurst’, ‘azimuthTimeInterval’, ‘rangeSamplingRate’, ‘slantRangeTime’, ‘samplesPerBurst’, ‘no_burst’])</em></p>
 <p>The last important thing for this Notebook are slices. Similar to how you can slice a <b>string</b> (shown in Section 1.4, in Notebook 1). This technique allows you to select a subset of data from an iterable (like a list or a tuple).</p>
@@ -1644,10 +1646,10 @@ Numbers from 5 to 8: [5, 6, 7, 8]
 </section>
 </section>
 <section id="loops">
-<h2>2.4 Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h2>
+<h2>2.4 Loops<a class="headerlink" href="#loops" title="Permalink to this headline">#</a></h2>
 <p>Let’s do another step to automatize things even more! Previous Sections introduced a lot of fundamental concepts, but they still don’t unveil the true power of any programming language — loops!<br><br>If we want to perform the same procedure multiple times, then we would have to take the same code and copy-paste it. This approach would work, however it would require a lot of manual work and it does not look cool.<br><br>This problem is resolved with a <i>loop</i> construction. As the name suggest, this construction allows you to loop (or run) certain piece of code several times at one execution.</p>
 <section id="code-for-code-loop">
-<h3><code>for</code> loop<a class="headerlink" href="#code-for-code-loop" title="Permalink to this heading">#</a></h3>
+<h3><code>for</code> loop<a class="headerlink" href="#code-for-code-loop" title="Permalink to this headline">#</a></h3>
 <p>he first and the most popular looping technique is a <b><code>for</code></b> loop. Let’s see some examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1853,7 +1855,7 @@ My second expense on day 3 is 12
 </div>
 </section>
 <section id="code-while-code-loop">
-<h3><code>while</code> loop<a class="headerlink" href="#code-while-code-loop" title="Permalink to this heading">#</a></h3>
+<h3><code>while</code> loop<a class="headerlink" href="#code-while-code-loop" title="Permalink to this headline">#</a></h3>
 <p>The second popular loop construction is a <b><code>while</code></b> loop. The main difference is that it is suited for code structures that must repeat unless a certain logical condition is satisfied. It looks like this:<br><br><center><code>while logical_condition == True:<br>do something</code></center><br>And here is a working code example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1896,7 +1898,7 @@ sum in the end of the cycle: 5
 </div>
 </section>
 <section id="code-break-code-keyword">
-<h3><code>break</code> keyword<a class="headerlink" href="#code-break-code-keyword" title="Permalink to this heading">#</a></h3>
+<h3><code>break</code> keyword<a class="headerlink" href="#code-break-code-keyword" title="Permalink to this headline">#</a></h3>
 <p>After meeting and understanding the loop constructions, we can add a bit more control to it. For example, it would be nice to exit a loop earlier than it ends — in order to avoid infinite loops or just in case there is no need to run the loop further. This can be achieved by using the <b><code>break</code></b> keyword. The moment this keyword is executed, the code exits from the current loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1973,7 +1975,7 @@ After the loop
 </div>
 </section>
 <section id="code-continue-code-keyword">
-<h3><code>continue</code> keyword<a class="headerlink" href="#code-continue-code-keyword" title="Permalink to this heading">#</a></h3>
+<h3><code>continue</code> keyword<a class="headerlink" href="#code-continue-code-keyword" title="Permalink to this headline">#</a></h3>
 <p>Another possibility to be more flexible when using loops is to use the <b><code>continue</code></b> keyword.<br><br>This will allow you to skip some iterations (more precisely — the moment the keyword is used it will skip the code underneath it and will start the next iteration from the beginning).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2046,7 +2048,7 @@ End altered loop
 </section>
 </section>
 <section id="additional-study-material">
-<h2>Additional study material<a class="headerlink" href="#additional-study-material" title="Permalink to this heading">#</a></h2>
+<h2>Additional study material<a class="headerlink" href="#additional-study-material" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Official Python Documentation - <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html">https://docs.python.org/3/tutorial/modules.html</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/python-modules-packages/">https://realpython.com/python-modules-packages/</a></p></li>
@@ -2062,7 +2064,7 @@ End altered loop
 <li><p>Think Python (2nd ed.) - Section 7</p></li>
 </ul>
 <section id="after-this-notebook-you-should-be-able-to">
-<h3>After this Notebook you should be able to:<a class="headerlink" href="#after-this-notebook-you-should-be-able-to" title="Permalink to this heading">#</a></h3>
+<h3>After this Notebook you should be able to:<a class="headerlink" href="#after-this-notebook-you-should-be-able-to" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>understand the difference between built-in and third-party modules</p></li>
 <li><p>use functions from the <strong><code class="docutils literal notranslate"><span class="pre">math</span></code></strong> module</p></li>

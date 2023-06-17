@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Python Notebook #1 &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Python Notebook #2" href="PythonNotebook2.html" />
     <link rel="prev" title="Original Material" href="overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -440,9 +442,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="python-notebook-1">
-<h1>Python Notebook #1<a class="headerlink" href="#python-notebook-1" title="Permalink to this heading">#</a></h1>
+<h1>Python Notebook #1<a class="headerlink" href="#python-notebook-1" title="Permalink to this headline">#</a></h1>
 <section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
 <ul>
     <li> <a href="#intro_course">1.1 Introduction to the Course</a>
     <li> <a href="#intro">1.2 Introduction to Python and Python Notebooks</a>
@@ -469,7 +471,7 @@ Reading data means the computer acquires data from a source and places it into i
 Data processing is the manipulation of the stored data in a system. After processing data by performing transformations, calculations, and more, you get an output; results.
 <br><br>3. Visualizing data   
 We map data (original or found) to graphic elements to communicate clearly and efficiently the information contained in the data. A graphic element is an element of a chart, such as a line or a point in the chart.</div><section id="what-is-programming">
-<h3>What is programming?<a class="headerlink" href="#what-is-programming" title="Permalink to this heading">#</a></h3>
+<h3>What is programming?<a class="headerlink" href="#what-is-programming" title="Permalink to this headline">#</a></h3>
 <span id='programming'>
 <br>
 <div style="text-align: justify">Programming is giving your computer a list of instructions for computations in a language it can understand. In your case, this language is Python. A computation is a series of arithmetical ("math") and non-arithmetical ("non-math") steps that transform input to output (result).
@@ -520,7 +522,7 @@ Third line: <b><code>print(message)</code></b> calls the <b>function</b><code>pr
 variables. A variable is a labeled storage that refers to a value. They are usually used in a way to make the code more readable, allowing reusability of your code.<br><br>As it was mentioned previously, Python is a high-level programming language. For that, it uses concepts of <b>Class</b> and <b>Object</b>. In short, a <b>Class</b> is a defined model or a data structure, it describes how the data of that class can be described and how it can be manipulated, and an <b>Object</b> or <b>Instance</b> is its realization. In other words, think about your favorite meal: the recipe is the <b>Class</b> of your meal and when you decide to use the recipe and cook it — you create an <b>Object</b> of that <b>Class</b>. Variables are the way how objects are stored and processed.</div>
 </section>
 <section id="rules-for-variable-names">
-<h3>Rules for variable names<a class="headerlink" href="#rules-for-variable-names" title="Permalink to this heading">#</a></h3>
+<h3>Rules for variable names<a class="headerlink" href="#rules-for-variable-names" title="Permalink to this headline">#</a></h3>
 <ul>
 <li><p>names can not start with a number</p></li>
 <li><p>names can not contain spaces, use _ instead</p></li>
@@ -750,16 +752,16 @@ A segment of a string is called a <b>slice</b>. Selecting a slice is similar to 
     where each part means something, S1A means Sentinel-1A, IW means Interferometric Wide Swath<br> 20181205T015821 is a date, 2018 12 05, at 01h58m21s, etc.<br><br> Therefore, being able to manipulate this string is fundamental in order to organize and select satellite data. We'll come back to this in Exercise 1.5.4. </center></div>
 <hr class="docutils" />
 <h3>Dynamic Typing</h3><br><div style="text-align: justify">The way the computer is able to use the stored data becomes an attribute of the stored data. This attribute is called a <b>data type</b>. Python uses <b>dynamic typing</b>, meaning you can also reassign variables to different data types. This makes Python very flexible in assigning data types; it differs from other languages that are <b>statically typed</b>.</div><section id="pros-and-cons-of-dynamic-typing">
-<h4>Pros and Cons of Dynamic Typing<a class="headerlink" href="#pros-and-cons-of-dynamic-typing" title="Permalink to this heading">#</a></h4>
+<h4>Pros and Cons of Dynamic Typing<a class="headerlink" href="#pros-and-cons-of-dynamic-typing" title="Permalink to this headline">#</a></h4>
 <section id="pros-of-dynamic-typing">
-<h5>Pros of Dynamic Typing<a class="headerlink" href="#pros-of-dynamic-typing" title="Permalink to this heading">#</a></h5>
+<h5>Pros of Dynamic Typing<a class="headerlink" href="#pros-of-dynamic-typing" title="Permalink to this headline">#</a></h5>
 <ul class="simple">
 <li><p>very easy to work with</p></li>
 <li><p>faster development time</p></li>
 </ul>
 </section>
 <section id="cons-of-dynamic-typing">
-<h5>Cons of Dynamic Typing<a class="headerlink" href="#cons-of-dynamic-typing" title="Permalink to this heading">#</a></h5>
+<h5>Cons of Dynamic Typing<a class="headerlink" href="#cons-of-dynamic-typing" title="Permalink to this headline">#</a></h5>
 <ul class="simple">
 <li><p>may result in unexpected bugs!</p></li>
 <li><p>you need to be aware of <strong><code class="docutils literal notranslate"><span class="pre">type()</span></code></strong>.</p></li>
@@ -982,11 +984,11 @@ There are also other data types in Python, which were not mentioned in this part
 </ul>
 <div id='oper'></div><h2> 1.5 Python Operators</h2><div style="text-align: justify"><br>Python <b>operators</b> are used to perform operations on variables and values. They are symbols that represent a form of computation; think of addition or multiplication. The value to which this computation is applied to is called the <i>'operand'</i>. Most of the common operators you will recognize from mathematics.
     </div><h3> Arithmetic Operators </h3>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>Math sign</p></th>
-<th class="head text-center"><p>Python sign</p></th>
-<th class="head text-center"><p>name</p></th>
+<tr class="row-odd"><th class="text-center head"><p>Math sign</p></th>
+<th class="text-center head"><p>Python sign</p></th>
+<th class="text-center head"><p>name</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1153,11 +1155,11 @@ Given that we have a rectangle with a height of $3$ cm, width of $5$ cm and a cu
 </div>
 <hr class="docutils" />
 <h3> Comparison Operators</h3><br><div style="text-align: justify">In Python, you often want to compare a value with another. For that, you use comparison operators.<br></div> 
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>Math sign</p></th>
-<th class="head text-center"><p>Python sign</p></th>
-<th class="head text-center"><p>Meaning</p></th>
+<tr class="row-odd"><th class="text-center head"><p>Math sign</p></th>
+<th class="text-center head"><p>Python sign</p></th>
+<th class="text-center head"><p>Meaning</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1237,10 +1239,10 @@ Given that we have a rectangle with a height of $3$ cm, width of $5$ cm and a cu
 </div>
 <hr class="docutils" />
  <h3> Logical & Identity Operators</h3>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>sign</p></th>
-<th class="head text-center"><p>description</p></th>
+<tr class="row-odd"><th class="text-center head"><p>sign</p></th>
+<th class="text-center head"><p>description</p></th>
 </tr>
 </thead>
 <tbody>

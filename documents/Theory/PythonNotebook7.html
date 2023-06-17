@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>7. Matplotlib &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -438,9 +440,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="matplotlib">
-<h1>7. Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h1>
+<h1>7. Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">#</a></h1>
 <section id="introduction">
-<h2>7.1  Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>7.1  Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>Matplotlib is a Python module that allows you to create visualizations. Until now, you have probably used Excel to make graphs, but Python offers much more versatility. In this section, you will learn how to use <b><code>matplotlib</code></b> to make good-looking graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -468,10 +470,10 @@ document.write(`
 </ul>
 </section>
 <section id="examples">
-<h2>7.2 Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<h2>7.2 Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
 <p>Below are some examples to show what <code>matplotlib</code> can do.</p>
 <section id="example-1-fill-between">
-<h3>Example 1 - fill_between<a class="headerlink" href="#example-1-fill-between" title="Permalink to this heading">#</a></h3>
+<h3>Example 1 - fill_between<a class="headerlink" href="#example-1-fill-between" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="c1"># generating x-values</span>
@@ -501,7 +503,7 @@ document.write(`
 </div>
 </section>
 <section id="example-2-scatter-plot">
-<h3>Example 2 - scatter plot<a class="headerlink" href="#example-2-scatter-plot" title="Permalink to this heading">#</a></h3>
+<h3>Example 2 - scatter plot<a class="headerlink" href="#example-2-scatter-plot" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#(showcase - no explanations)</span>
@@ -531,7 +533,7 @@ document.write(`
 </section>
 </section>
 <section id="your-first-graph">
-<h2>Your first graph<a class="headerlink" href="#your-first-graph" title="Permalink to this heading">#</a></h2>
+<h2>Your first graph<a class="headerlink" href="#your-first-graph" title="Permalink to this headline">#</a></h2>
 <p>Let’s create your first graph using <b><code>matplotlib</code></b>. Most of the functions in <b><code>matplotlib</code></b> are located under <b><code>pyplot</code></b>, which we imported as <b><code>plt</code></b> in the first code block of this Section.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -675,7 +677,7 @@ document.write(`
 </div>
 </div>
 <section id="exercise-5-2-1">
-<h3>Exercise 5.2.1<a class="headerlink" href="#exercise-5-2-1" title="Permalink to this heading">#</a></h3>
+<h3>Exercise 5.2.1<a class="headerlink" href="#exercise-5-2-1" title="Permalink to this headline">#</a></h3>
 <p>Plot the function <span class="math notranslate nohighlight">\(y = x^2\)</span> from <span class="math notranslate nohighlight">\(-10 \leq x \leq 10\)</span>. Use proper axes labels, axes limits, and grid.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -705,7 +707,7 @@ document.write(`
 </div>
 </section>
 <section id="common-errors">
-<h3>Common errors<a class="headerlink" href="#common-errors" title="Permalink to this heading">#</a></h3>
+<h3>Common errors<a class="headerlink" href="#common-errors" title="Permalink to this headline">#</a></h3>
 <p>A common error when plotting arrays is the <i>dimension mismatch</i>. This happens when the two arrays that you are trying to plot do not have the same size, see the example below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -825,7 +827,7 @@ document.write(`
 </div>
 </section>
 <section id="d-plots">
-<h3>3D plots<a class="headerlink" href="#d-plots" title="Permalink to this heading">#</a></h3>
+<h3>3D plots<a class="headerlink" href="#d-plots" title="Permalink to this headline">#</a></h3>
 <p>Lastly, <b><code>matplotlib</code></b> can also create 3D plots. Below is a simple example. Play around with it! You can try to plot different functions, larger ranges, or anything you want.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

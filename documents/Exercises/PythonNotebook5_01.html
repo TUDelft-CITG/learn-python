@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Airplane velocity &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -433,13 +435,13 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="airplane-velocity">
-<h1>Airplane velocity<a class="headerlink" href="#airplane-velocity" title="Permalink to this heading">#</a></h1>
+<h1>Airplane velocity<a class="headerlink" href="#airplane-velocity" title="Permalink to this headline">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="example">
-<h1>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h1>
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
 <p>An airplane is initially flying at an initial velocity of <span class="math notranslate nohighlight">\(v_0 = 85 \ m/s\)</span>, when it starts accelerating horizontally by exerting a force of <span class="math notranslate nohighlight">\(3000 \ N\)</span>. An aerospace engineer wants to know its instantaneous velocity, every second, for <span class="math notranslate nohighlight">\(1\)</span> minute. The equation of air resistance is <span class="math notranslate nohighlight">\(F_{\text{air}} = kv^2\)</span> with <span class="math notranslate nohighlight">\(k = 0.24  \ \frac{kg}{m}\)</span>. The mass of the airplane is <span class="math notranslate nohighlight">\(2000 \ kg\)</span>.<br><br>From physics we know that,<br><ol><li><span class="math notranslate nohighlight">\(v_i = v_{i-1} + a_{i-1}(t_i-t_{i-1})\)</span></li><li><span class="math notranslate nohighlight">\(F_{\text{air},i} = k\cdot v_i^2\)</span></li><li><span class="math notranslate nohighlight">\(F_{\text{R},i}=F - F_{\text{air},i} = m\cdot a_i\)</span></li></ol><br>where <span class="math notranslate nohighlight">\(t_i\)</span> refers to the <span class="math notranslate nohighlight">\(i\)</span>-th time instant and in our case <span class="math notranslate nohighlight">\(t_i-t_{i-1}=1\)</span> s. Your task is to return <code>v</code>, a list containing the velocity of the plane at <span class="math notranslate nohighlight">\(t = 0 \ s\)</span>, <span class="math notranslate nohighlight">\(t = 1 \ s\)</span>, …, <span class="math notranslate nohighlight">\(t = 60 \ s\)</span>. (Therefore, <code>v</code> should have <span class="math notranslate nohighlight">\(61\)</span> elements).</p>
 <section id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
+<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>We start by importing numpy and defining the input variables to solve the problem.</p></li>
 </ul>
@@ -505,7 +507,7 @@ document.write(`
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h1>
+<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h1>
 <p>An airplane is initially flying at a speed of <span class="math notranslate nohighlight">\(v_0 = 105\)</span> m/s, when it starts accelerating horizontally by exerting a force of <span class="math notranslate nohighlight">\(4000\)</span> <span class="math notranslate nohighlight">\(N\)</span>. The mass of the airplane is <span class="math notranslate nohighlight">\(2500\)</span> <span class="math notranslate nohighlight">\(kg\)</span>. Compute the instantaneous speed, every second, for half of a minute and answer the following questions.</p>
 <div class="tip admonition">
 <p class="admonition-title">Toolbox</p>

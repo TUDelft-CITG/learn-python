@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Golden Rules &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Python data analysis with Pandas (and Matplotlib): Solutions" href="1-2-solution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -458,7 +460,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="golden-rules">
-<span id="code-1-2"></span><h1>Golden Rules<a class="headerlink" href="#golden-rules" title="Permalink to this heading">#</a></h1>
+<span id="code-1-2"></span><h1>Golden Rules<a class="headerlink" href="#golden-rules" title="Permalink to this headline">#</a></h1>
 <p><em>This is the first document presenting the MUDE Golden Rules of Code, a series of guidelines and reccommendations that are focused on promoting good habits related to coding and programming. We expect to periodically update this document and perhaps share other topics in the ‘Golden Rules’ series. Whether you are a student, teacher or practitioner, we encourage you to refer back to this document often and feel free to share.</em></p>
 <p><em>We greatly appreciate feedback from anyone, especially students (send to <a class="reference external" href="mailto:R&#46;C&#46;Lanzafame&#37;&#52;&#48;tudelft&#46;nl">R<span>&#46;</span>C<span>&#46;</span>Lanzafame<span>&#64;</span>tudelft<span>&#46;</span>nl</a>).</em></p>
 <p>Contributors: Robert Lanzafame, Kiril Vasilev and a list of reviewers, too long to name.</p>
@@ -466,19 +468,19 @@ document.write(`
 <b> Note to MUDE Students </b>
 <p>For the September 13 workshop, you should read the entire document, but if short on time focus on Rules 1, 2, 3 and 5 (but only the one-line docstrings for 5). Some topics will be revisited or extended in later workshops. You are not required to install <code class="docutils literal notranslate"><span class="pre">autopep8</span></code>, but we reccommend it since it is easy to use. You are expected to incorporate the guidelins in this document progressively throughout the semester, so we suggest you refer to it often.</p>
 </div><section id="why-do-the-golden-rules-for-documentation-and-communication-exist">
-<h2>Why do the Golden Rules for Documentation and Communication exist?<a class="headerlink" href="#why-do-the-golden-rules-for-documentation-and-communication-exist" title="Permalink to this heading">#</a></h2>
+<h2>Why do the Golden Rules for Documentation and Communication exist?<a class="headerlink" href="#why-do-the-golden-rules-for-documentation-and-communication-exist" title="Permalink to this headline">#</a></h2>
 <p>You will spend a lot of your study hours in the MUDE module writing, reading and debugging Python code, regardless of your prior programming experience. Your time is valuable, especially once you start working after graduation! Yet it is all too common that most code is never re-used because it is poorly <em>documented</em>, making it not understandable to others, or even to yourself at a later moment. In addition, as a young practicing engineer or researcher it is critical that you are able to use your code to effectively <em>communicate</em> your results, otherwise the effort put into your analysis is wasted. Good code writing, code documentation and presentation of results such as figures, tables and numbers are all essential for effective collaboration. Even when working individually, it is important to preserve your work such that you can easily understand and re-use in the future. This document will provide and explain a number of reccommendations to help you accomplish that.</p>
 <p>The following quote summarizes the philosophy of this document concisely:</p>
 <div style="text-align: right"><em>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</em></div>  
 <div style="text-align: right"><em> ― Martin Fowler </em></div> 
 <section id="a-note-of-encouragement">
-<h3>A note of encouragement<a class="headerlink" href="#a-note-of-encouragement" title="Permalink to this heading">#</a></h3>
+<h3>A note of encouragement<a class="headerlink" href="#a-note-of-encouragement" title="Permalink to this headline">#</a></h3>
 <p>This document contains a lot of information that might not appear to be useful to you…<em>yet</em>. Keep in mind that the content here was created in collaboration with many colleagues who are working in industry and will be looking to hire you after you graduate from TU Delft: they will appreciate good coding documentation and communication skills! Our primary advice in MUDE, and for the rest of your MSc program, is that you take a look at this material now, but also keep the Golden Rules in mind and refer back to them often. If you can incorporate them into your work in MUDE, you will have made good habits for yourself that we know will serve you well in the future.</p>
 <p>We focused on illustrating good coding practice in a format and language that is approachable to engineers with a varied programming background. As such, specific fundamental programming and computer science concepts are avoided. If you would like to learn more about theses concepts, specifically related to Python, the textbook by Guttag (2021) is an excellent reference.</p>
 </section>
 </section>
 <section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><span class="xref myst">Documentation and Communication</span></p></li>
 <li><p><span class="xref myst">The Golden Rules</span></p></li>
@@ -486,13 +488,13 @@ document.write(`
 </ul>
 </section>
 <section id="documentation-and-communication">
-<h2>Documentation and Communication<a class="headerlink" href="#documentation-and-communication" title="Permalink to this heading">#</a></h2>
+<h2>Documentation and Communication<a class="headerlink" href="#documentation-and-communication" title="Permalink to this headline">#</a></h2>
 <p>The words in the title of this lesson were chosen very carefully. <em>Documentation</em> refers to all the work related to a problem you are working on. In MUDE, documentation is not limited to describing the purpose and function of your code only. Clearly documented code is important, but in CEG it is also critical to describe all the steps in your analysis, for example: data and data sources, assumptions, results, discussion and recommendations. Jupyter notebooks provide the ideal platform for combining documentation and analysis in one file, which is why we rely on them heavily in MUDE and the focus of this lesson. However, remember there are many other options available to you for proper documentation of your work, and the topics we cover here always apply.</p>
 <p><em>Communication</em> refers to how you use your code, the analysis you run and the format by which you share it. Rarely are you running a piece of code purely for yourself, but often to share with others—perhaps for a homework assignment, to include in a thesis, a scientific publication, a design at a consultancy, et cetera. Why go through all the trouble of writing and using code if no one can understand what you did with it? It may be clear to you right now, but what if someone wants to use it in the future, or ask about your results, when you are not there? Will the audience understand your work if you have unreadable or overly complex tables and figures in a MSc thesis or conference presentation? Good communication is therefore critical, and there are many aspects, for example: visual formatting (visual appearance of code, text output, figures, tables); transparency and understadability (what did you do? is it repeatable? will someone understand it in the future, perhaps out of context?); and, for code explicitly: readability. This lesson provides a number of useful guidelines that will help your communication improve.</p>
 <p>In summary, the title of this document is a bit simplistic. In reality, it should be: <em>the Golden Rules: a non-exhaustive list of highly recommended habits to build into your life to make sure you can easily and consistently document your work in a way that ensures effective communication with others, as well as your future self.</em> But that doesn’t roll off the tongue like our current title does. And it doesn’t fit in 79 characters either 😉.</p>
 </section>
 <section id="the-golden-rules">
-<h2>The Golden Rules<a class="headerlink" href="#the-golden-rules" title="Permalink to this heading">#</a></h2>
+<h2>The Golden Rules<a class="headerlink" href="#the-golden-rules" title="Permalink to this headline">#</a></h2>
 <p>These are the Golden rules:</p>
 <ol class="arabic simple">
 <li><p><span class="xref myst">Use descriptive names</span></p></li>
@@ -506,7 +508,7 @@ document.write(`
 <p>The sections below will provide explanations and examples of each Golden Rule, but first we need to introduce something that may seem like it belongs in a Computer Science course. However, we will see that it contains a number of useful guidelines and insight into how one can write readable Python code: the PEP-8 Style Guide.</p>
 </section>
 <section id="style-guide-for-python-pep-8">
-<h2>Style Guide for Python (PEP 8)<a class="headerlink" href="#style-guide-for-python-pep-8" title="Permalink to this heading">#</a></h2>
+<h2>Style Guide for Python (PEP 8)<a class="headerlink" href="#style-guide-for-python-pep-8" title="Permalink to this headline">#</a></h2>
 <p>PEP stands for Python Enhancement Proposals, which is how the Python community describes new features and guidelines related to the development and (reccommended) use of the programming language. Although there are many <a class="reference external" href="https://peps.python.org/">PEPs</a>, the MUDE Golden Rules are in part inspired by one in particular: <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8 - Style Guide for Python Code</a>. PEP 8 is important because it directly addresses the readability of Python code and is thus directly aligned with the objectives of our Golden Rules. Unfortunately, PEP 8 can also seem boring, tedious and unimportant to engineers who are learning to use Python. The Golden Rules are created in part to help with this, so for now, we ask that you read carefully the <a class="reference external" href="https://peps.python.org/pep-0008/#introduction">first</a> and <a class="reference external" href="https://peps.python.org/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds">second</a> sections of PEP 8 to help understand the general motivation, then scan through PEP 8 to get an idea of the structure. You may want to use the website <a class="reference external" href="https://pep8.org/">pep8.org</a>, which uses text formatting and is (visually) much easier to read. Don’t just open the website; you should devote at least 15 minutes reading the text and example code and consider how this might influence the way you write code. You don’t need to read every word, but rather focus on the background, justification and examples for the sections that are most relevant to us:</p>
 <ul class="simple">
 <li><p>Code lay-out: indentation, line length, line breaks, blank lines</p></li>
@@ -526,32 +528,32 @@ document.write(`
 <p>The next section covers PEP 8 autocheckers, but you should <strong>always remember: only a subset the PEP 8 guidelines can be evaluated by automatic PEP 8 checkers and fixers.</strong> For example, a computer cannot tell you whether or not your variable name is descriptive enough, or consider what variable name length is appropriate for the specific piece of code you are writing—this is something that you must determine on your own or with your team that may be hard at first, but becomes easier with a bit of practice. To convey this perspective, we adapt the quote by Martin Fowler given above:</p>
 <div style="text-align: right"><em>Any fool can use </em><code>autopep8</code><em> to comply with PEP 8 guidelines. Good engineers use PEP 8 carefully to write code that humans can understand.</em></div>  
 <div style="text-align: right"><em> ― MUDE Golden Rules, adapted from Martin Fowler </em></div> <section id="checking-pep-8-automatically-with-autopep8">
-<h3>Checking PEP 8 automatically with <code class="docutils literal notranslate"><span class="pre">autopep8</span></code><a class="headerlink" href="#checking-pep-8-automatically-with-autopep8" title="Permalink to this heading">#</a></h3>
+<h3>Checking PEP 8 automatically with <code class="docutils literal notranslate"><span class="pre">autopep8</span></code><a class="headerlink" href="#checking-pep-8-automatically-with-autopep8" title="Permalink to this headline">#</a></h3>
 <p>Although PEP 8 may look quite complicated and tedious at first glance, automatic PEP 8 formatters exist. The one we recommend you to use is <code class="docutils literal notranslate"><span class="pre">autopep8</span></code>, which can be applied on both <code class="docutils literal notranslate"><span class="pre">.py</span></code> files and <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> jupyter notebooks. A full explanation about the capabilities of this tool can be found at the <a class="reference external" href="https://pypi.org/project/autopep8/">Python Package Index page</a>.</p>
 <p><em>Bonus tip: the Python Package Index, PyPI, is the official website for Python software, where most publicly available packages can be found, and is the default source when you install packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</em></p>
 <section id="installation-optional-but-reccommended">
-<h4>Installation (Optional, but reccommended)<a class="headerlink" href="#installation-optional-but-reccommended" title="Permalink to this heading">#</a></h4>
+<h4>Installation (Optional, but reccommended)<a class="headerlink" href="#installation-optional-but-reccommended" title="Permalink to this headline">#</a></h4>
 <p>In order to install <code class="docutils literal notranslate"><span class="pre">autopep8</span></code>, you can simply run the following <code class="docutils literal notranslate"><span class="pre">pip</span></code> command in your terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>autopep8
 </pre></div>
 </div>
 </section>
 <section id="usage">
-<h4>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h4>
+<h4>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h4>
 <p>You can run the following command to auto-format python files and jupyter notebooks in-place. After the command execution has finished, your files will have been autoformatted. Make sure you replace <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code> with the name and extension of the file you wish to auto-format.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>autopep8<span class="w"> </span>--in-place<span class="w"> </span>&lt;filename&gt;
 </pre></div>
 </div>
 </section>
 <section id="additional-resources">
-<h4>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h4>
+<h4>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">autopep8</span></code> can be added as an extension to JupyterHub, which allows you to interact with the tool through a Jupyter Notebook rather than the terminal. This can be achieved with the help of a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Nbextensions</span> <span class="pre">Configurator</span></code>, which you may need to install first, before setting up <code class="docutils literal notranslate"><span class="pre">autopep8</span></code> as an extension.</p>
 <p>Many of the IDEs such as Spyder and PyCharm contain add-ons that can be installed to automate the PEP 8 checks. Rather than providing a long list of installation instructions here, we’d encourage you to already get started with Rule X: using Google and Stack Overflow to help you identify and install a PEP 8 tool that will work for you. If you are using the JupyterHub, you can always copy and paste text into <a class="reference external" href="http://pep8online.com/">PEP8 Online</a>, as done in the first example above.</p>
 </section>
 </section>
 </section>
 <section id="rule-1-use-descriptive-names">
-<h2>Rule 1: Use descriptive names<a class="headerlink" href="#rule-1-use-descriptive-names" title="Permalink to this heading">#</a></h2>
+<h2>Rule 1: Use descriptive names<a class="headerlink" href="#rule-1-use-descriptive-names" title="Permalink to this headline">#</a></h2>
 <p><em>My colleague/student constantly shares code with me but the variables are acronyms and are overwritten, which makes it difficult to read and use.</em></p>
 <p><em>X1, X2, X3… oh, again X1 (overwrite). Was the previous X1 important?</em></p>
 <p>Often when you work, you will be sharing your code with other people and you need make sure that they understand what each variable is doing and how it relates to the other variables. However, this may difficult or even impossible when the variable names do not represent the purpose they have.</p>
@@ -563,7 +565,7 @@ document.write(`
 <p>Variable names follow the same convention as function names. We will cover some of the other naming guidelines in later tutorials. <em><strong>For now, remember: functions and variables should be written in all lower case and underscores.</strong></em> That makes it easy to remember! For everything else, you can refer to PEP 8.</p>
 </section>
 <section id="rule-2-make-readable-code">
-<h2>Rule 2: Make readable code<a class="headerlink" href="#rule-2-make-readable-code" title="Permalink to this heading">#</a></h2>
+<h2>Rule 2: Make readable code<a class="headerlink" href="#rule-2-make-readable-code" title="Permalink to this headline">#</a></h2>
 <p><em>I hate it when a piece of code is passed to me that I cannot understand on itself.</em></p>
 <p>This rule pretty much speaks for itself, and is also the Golden Rule most closely linked to PEP 8. So rather than rewrite it, we reccommend that at the start you focus on the four aspects of PEP 8 listed here. And don’t forget to read the document every once in a while to refresh your memory and see examples.</p>
 <ul class="simple">
@@ -607,20 +609,20 @@ document.write(`
 </div>
 </section>
 <section id="rule-3-make-readable-results">
-<h2>Rule 3: Make readable results<a class="headerlink" href="#rule-3-make-readable-results" title="Permalink to this heading">#</a></h2>
+<h2>Rule 3: Make readable results<a class="headerlink" href="#rule-3-make-readable-results" title="Permalink to this headline">#</a></h2>
 <p><em>Your professors are old and their eyes are bad—why torture them with thin lines and tiny text on your figures?</em></p>
 <p>There are courses and books devoted to this Golden Rule, not to mention professional editors and typesetters. While you should aways make sure your results are readable, there are three main categories where it is easy to make significant improvements to readability and communication: figures, tables and numbers.</p>
 <section id="figures">
-<h3>Figures<a class="headerlink" href="#figures" title="Permalink to this heading">#</a></h3>
+<h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">#</a></h3>
 <p>You’ve gone through all the work to write code, run analyses, collect results and present them in figures. Why not spend a little extra effort to make the figure easy for your reader or audience to interpret? You should always make sure a figure contains enough information for a viewer to understand the main variables even if taken out of context, which can be done easily by including axis labels and a title, both with units, as well as a legend. Use of high contrast colors, symbols and line types is important if a lot of curves or data types are included. Finally, depending on the importance and use consider: setting good axis limits and increments (e.g., tics every 5 instead of 7), equal scale axes, grid lines, etc.</p>
 <p>Our advice is to get in the habit of always adding a few simple commands to format to make it easy to repeat when it matters. Rather than take up space here with examples, keep an eye out for nicely formatted figures in MUDE notebooks.</p>
 </section>
 <section id="tables">
-<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">#</a></h3>
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">#</a></h3>
 <p>Similar to figures, make sure key information about the contents such as variable name, type and units are included. Limiting the number of significant figures to 3, adding more only when needed, can significantly improve the readability of a table. There are a number of tools available for creating tables, so we encourage you to use Google to find a few that work for your working method.</p>
 </section>
 <section id="significant-digits">
-<h3>Significant digits<a class="headerlink" href="#significant-digits" title="Permalink to this heading">#</a></h3>
+<h3>Significant digits<a class="headerlink" href="#significant-digits" title="Permalink to this headline">#</a></h3>
 <p>Did you know that computers can store decimals up to 16 digits? If you let it, Python will try to return as many of these digits as possible. When you present results of your calculation with 6 or 8 decimal values, you give a false (and at times silly) impression of precision. For example, is that wind speed <em>really</em> 14.4613587 m/s? Especially when the accuracy of the sensor is +/-10% and the wind is gusting significantly? For most engineering purposes, 3 significant digits is plenty and can be considered a default. You can always add more if you have a good reason to do so.</p>
 <p>Fortunately Python has a great tool to help you use an appropriate number of significant digits: <code class="docutils literal notranslate"><span class="pre">f-strings</span></code>. A few quick examples are provided below, and you can <a class="reference external" href="https://realpython.com/python-f-strings/">read more about f-strings here</a>, or any of the other good resources online.</p>
 <div class="cell docutils container">
@@ -644,7 +646,7 @@ document.write(`
 </section>
 </section>
 <section id="rule-4-write-simple-functions-then-use-them">
-<h2>Rule 4: Write simple functions, then use them<a class="headerlink" href="#rule-4-write-simple-functions-then-use-them" title="Permalink to this heading">#</a></h2>
+<h2>Rule 4: Write simple functions, then use them<a class="headerlink" href="#rule-4-write-simple-functions-then-use-them" title="Permalink to this headline">#</a></h2>
 <p><em>I hate it when students/colleagues copy-paste their code with small modifications instead of using functions or classes</em></p>
 <p>Often in our code, it may be necessary to do the same thing multiple times. Without the use of functions, the code may become unreadable and there is also high risk of making errors. Take as an example the calculation of daily water use for a residential house as a function of time. You would also like to consider how this demand changes throughout the day depending on who is living in the house, specifically, the number and ages of the residents. based on the number and age of the residents as well as time of day. The following example illustrates how this is commonly evaluated when you don’t think in advance about your code structure, or the use of functions.</p>
 <p><em>Note that in reality each line described below may be multiple lines in the ‘real’ file.</em></p>
@@ -684,7 +686,7 @@ document.write(`
 <p><em>The next version of this document will also discuss hardcoding, and why it is better to pass fixed values into your function as arguments to keep the functions simple and easy to use.</em></p>
 </section>
 <section id="rule-5-document-your-code">
-<h2>Rule 5: Document your code<a class="headerlink" href="#rule-5-document-your-code" title="Permalink to this heading">#</a></h2>
+<h2>Rule 5: Document your code<a class="headerlink" href="#rule-5-document-your-code" title="Permalink to this headline">#</a></h2>
 <p><em>I had to hand over my code (semi-english, semi-dutch, unreadable and a complete mess) to real programmers about a year ago and I am still embarrassed by it.</em></p>
 <p>Do you remember what you had for dinner 2 weeks ago? If the answer is <strong>no</strong>, then documenting your code could be useful not only for others, but also for you.</p>
 <p>Document what your functions and classes are doing. In addition, if you have many nested for loops or some very complex code, do not hesitate to put some in-line comments to describe what your code is doing. Overall, do not overdo it by commenting every single line, but rather try to elaborate in the way you structure your code and give names to your objects. This is why <em><strong>Golden Rule</strong></em> is closely tied to <em><strong>Rule 1: Use descriptive names</strong></em>: if you do the latter, the use of the former is much less needed. Here are a few examples to illustrate unnecessary comments or poorly documented code:</p>
@@ -707,10 +709,10 @@ document.write(`
 </div>
 <p>Did you notice in example 4 that the variable name in the comment didn’t match the code? Clearly the variable name changed after the comment was written. To quote PEP 8: <em>comments that contradict the code are worse than no comments. Always make a priority of keeping the comments up-to-date when the code changes!</em> Relying too much on comments to document your code can easily result in a lot of extra work; use of descriptive object names can help minimize the number of comments necessary to provide sufficient documentation.</p>
 <section id="comparison-of-bad-and-good-documentation">
-<h3>Comparison of bad and good documentation<a class="headerlink" href="#comparison-of-bad-and-good-documentation" title="Permalink to this heading">#</a></h3>
+<h3>Comparison of bad and good documentation<a class="headerlink" href="#comparison-of-bad-and-good-documentation" title="Permalink to this headline">#</a></h3>
 <p>The following functions are the same, the only difference is the documentation and object names, can you tell what the function does from the bad example?</p>
 <section id="example-with-bad-documentation">
-<h4>Example with bad documentation<a class="headerlink" href="#example-with-bad-documentation" title="Permalink to this heading">#</a></h4>
+<h4>Example with bad documentation<a class="headerlink" href="#example-with-bad-documentation" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">HF</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
@@ -723,7 +725,7 @@ document.write(`
 </div>
 </section>
 <section id="example-with-good-documentation">
-<h4>Example with good documentation<a class="headerlink" href="#example-with-good-documentation" title="Permalink to this heading">#</a></h4>
+<h4>Example with good documentation<a class="headerlink" href="#example-with-good-documentation" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">force_on_wall</span><span class="p">(</span><span class="n">wall_height</span><span class="p">,</span> <span class="n">density_water</span><span class="p">):</span>
@@ -776,20 +778,20 @@ document.write(`
 </section>
 </section>
 <section id="rule-6-test-your-code">
-<h2>Rule 6: Test your code<a class="headerlink" href="#rule-6-test-your-code" title="Permalink to this heading">#</a></h2>
+<h2>Rule 6: Test your code<a class="headerlink" href="#rule-6-test-your-code" title="Permalink to this headline">#</a></h2>
 <p><em>A team member once sent me a script that predicts X for the next 5 weeks. Unfortunately, the script gave me the exact same predictions every time I used it.</em></p>
 <p>Testing that your code works properly is very important to mitigate such problems. Testing can be done in many ways, but the most simple of all is by manually running your code with different values and verifying that the final result is indeed correct.</p>
 <p>In one of the next workshops, we are going to teach you how to debug and test your code, however, for now the recommendation for you would be to test if your code is doing its job correctly by trying different variable values.</p>
 <p>For example, suppose you have a method that calculates the volume of a pyramid given its height and base width and length. Testing the method can be done by trying different values for each of the 3 inputs and manually checking if the final volume matches your hand calculations.</p>
 </section>
 <section id="rule-7-learn-to-collaborate">
-<h2>Rule 7: Learn to collaborate<a class="headerlink" href="#rule-7-learn-to-collaborate" title="Permalink to this heading">#</a></h2>
+<h2>Rule 7: Learn to collaborate<a class="headerlink" href="#rule-7-learn-to-collaborate" title="Permalink to this headline">#</a></h2>
 <p><em>Let me just make a new zip file of the 200MB project and send it to you via Google Drive…</em></p>
 <p>Exchanging project archives and lack of version control are key problems in project collaborations. First, the changes made are not explicitly visible, unless you go over the entire project and compare new and old versions. Second, such exchanges of files is dangerous because one may confuse which is the final version. This is especially common with file names, for example, “Document-1”, “Document-2”, “Document-2-Draft”, “Document-2-DraftFinal”, “Document-2-DraftFinal2”, et cetera. Third, it hardly allows working in parallel as merging work requires manual copy-pasting of each member’s progress.</p>
 <p>In one of the coming coding workshops, we will cover version control systems, namely collaborating using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitLab. Although it may seem complicated at first, we are confident that once you learn about the capabilities of these systems, you will not regret it. 😉</p>
 </section>
 <section id="references-and-resources">
-<h2>References and resources<a class="headerlink" href="#references-and-resources" title="Permalink to this heading">#</a></h2>
+<h2>References and resources<a class="headerlink" href="#references-and-resources" title="Permalink to this headline">#</a></h2>
 <p>Guttag, J. V. (2021). <em>Introduction to Computation and Programming Using Python: With Application to Computational Modeling and Understanding Data.</em> MIT Press.</p>
 <p>PEP 8 - Style Guide for Python code - <a class="reference external" href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a></p>
 <p>Python 3’s f-Strings: An Improved String Formatting Syntax (Guide) - <a class="reference external" href="https://realpython.com/python-f-strings/">https://realpython.com/python-f-strings/</a></p>

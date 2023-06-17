@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Variables, operators and functions Exercises. &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -67,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -443,9 +445,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="variables-operators-and-functions-exercises">
-<h1>Variables, operators and functions Exercises.<a class="headerlink" href="#variables-operators-and-functions-exercises" title="Permalink to this heading">#</a></h1>
+<h1>Variables, operators and functions Exercises.<a class="headerlink" href="#variables-operators-and-functions-exercises" title="Permalink to this headline">#</a></h1>
 <section id="exercise-1-2-1">
-<h2>Exercise 1.2.1<a class="headerlink" href="#exercise-1-2-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.2.1<a class="headerlink" href="#exercise-1-2-1" title="Permalink to this headline">#</a></h2>
 <p>You know that your taxes is the product of your income and the tax rate. Complete the line below to assign the correct calculation for the <code>my_taxes</code> variable. Use the <code>my_income</code> and <code>tax_rate</code> variables for that.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -481,7 +483,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-1-2-2">
-<h2>Exercise 1.2.2<a class="headerlink" href="#exercise-1-2-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.2.2<a class="headerlink" href="#exercise-1-2-2" title="Permalink to this headline">#</a></h2>
 <p>What is the type of the result of the expression <span class="math notranslate nohighlight">\(3 + 1.5 + 4?\)</span> <br>Assign the type to the variable beneath (e.g. if you think it is an integer then <code>expression_type = int</code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -504,7 +506,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-1-2-3">
-<h2>Exercise 1.2.3<a class="headerlink" href="#exercise-1-2-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.2.3<a class="headerlink" href="#exercise-1-2-3" title="Permalink to this headline">#</a></h2>
 <p>Print the letter <code>’w’</code> of the sentence <code>’Hello world!’</code> using indexing of the variable <code>sentence</code>. <br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -532,7 +534,7 @@ document.write(`
 <p>In order to approach the problem, start from the point of error. If your error cannot be solved there, work your way backwards through the code. Only try to understand the parts that are necessary to fix your problem, and avoid changing parts you know that work.</p>
 </section>
 <section id="fixing-exercise-1-2-4">
-<h2>(Fixing) Exercise 1.2.4<a class="headerlink" href="#fixing-exercise-1-2-4" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 1.2.4<a class="headerlink" href="#fixing-exercise-1-2-4" title="Permalink to this headline">#</a></h2>
 <p></b>There are 2 types of numbers in Python: integer numbers and floating point numbers. Both have overlapping and different applications. For example, counting rocks will require only integers (1 rock, 2 rocks, 3 rocks, etc), while their weight can be expressed in both <i>int</i> and <i>float</i> (depending on the required accuracy). <br><br />
 Beneath you can see a small dataset of the measured daily temperatures and a filter function, which is used to remove incorrect measurements. Just run the cell, you don’t have to change anything there and it is not important to understand it completely for now.</p>
 <div class="cell docutils container">
@@ -577,7 +579,7 @@ Beneath you can see a small dataset of the measured daily temperatures and a fil
 </div>
 </section>
 <section id="searching-exercise-1-2-5">
-<h2>(Searching) Exercise 1.2.5<a class="headerlink" href="#searching-exercise-1-2-5" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 1.2.5<a class="headerlink" href="#searching-exercise-1-2-5" title="Permalink to this headline">#</a></h2>
 <p>There are also other data types in Python, which were not mentioned in this part (in case they are not as useful or will be introduced later). For instance, <b>Complex</b> is one of them. The sad truth is that every software developer Googles a lot. It’s not because she/he is lazy or incompetent. It is because programming languages are constantly updated and some tools are limited to a narrow field of applications. It is impractical to learn everything at once, therefore every coder has learned how to look up the functionality their task requires. Therefore, it is crucial for you to learn how to Google as well. Complex type is used in Python to represent complex numbers. If you haven’t heard about them — a complex number is a number, which has a real and an imaginary part. For example, <span class="math notranslate nohighlight">\(x = 17 + 5i\)</span>. Here, <span class="math notranslate nohighlight">\(x\)</span> is a complex number with a real part of <span class="math notranslate nohighlight">\(17\)</span> and an imaginary part of <span class="math notranslate nohighlight">\(5\)</span>.<br><br> Your task is to create a variable <code>my_complex_num</code> of Complex type and assign a <span class="math notranslate nohighlight">\(3 + 2i\)</span> value to it. For that you will have to Google a bit. Try to look for something like “Python complex variables”. Python is very popular and you will be able to find everything you need. Make sure to filter the information you need — not everything you will find will be useful for this simple exercise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,7 +602,7 @@ Beneath you can see a small dataset of the measured daily temperatures and a fil
 </div>
 </div>
 <section id="exercise-1-3-1">
-<h3>Exercise 1.3.1<a class="headerlink" href="#exercise-1-3-1" title="Permalink to this heading">#</a></h3>
+<h3>Exercise 1.3.1<a class="headerlink" href="#exercise-1-3-1" title="Permalink to this headline">#</a></h3>
 <p>Given that we have a rectangle with a height of <span class="math notranslate nohighlight">\(3\)</span> cm, width of <span class="math notranslate nohighlight">\(5\)</span> cm and a cutout circle of radius <span class="math notranslate nohighlight">\(0.6\)</span> cm, as shown below.</p>
 <p><img alt="image.png" src="01/Exercises/attachment:image.png" /></p>
 <p><br>What will the remainder area of the rectangle be? Hint: <span class="math notranslate nohighlight">\(A_{circle} = \pi r^2\)</span></p>
@@ -646,7 +648,7 @@ Beneath you can see a small dataset of the measured daily temperatures and a fil
 </section>
 </section>
 <section id="exercise-1-3-2">
-<h2>Exercise 1.3.2<a class="headerlink" href="#exercise-1-3-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.3.2<a class="headerlink" href="#exercise-1-3-2" title="Permalink to this headline">#</a></h2>
 <p>Suppose a group of <span class="math notranslate nohighlight">\(5\)</span> engineers ordered <span class="math notranslate nohighlight">\(3\)</span> pizzas with <span class="math notranslate nohighlight">\(8\)</span> slices each. It is known that miners respect engineers and they want to share their meal equally. Your task is to calculate the amount of pizza slices each engineer will get and the amount of slices which will be left untouched. Use <code>//</code> and <code>%</code> operators.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -678,7 +680,7 @@ Beneath you can see a small dataset of the measured daily temperatures and a fil
 </div>
 </section>
 <section id="exercise-1-3-3">
-<h2>Exercise 1.3.3<a class="headerlink" href="#exercise-1-3-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.3.3<a class="headerlink" href="#exercise-1-3-3" title="Permalink to this headline">#</a></h2>
 <p>Assign any numbers to <code>num_a</code> and <code>num_b</code> variables in such a way that their comparison returns a <code>True</code> value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,7 +709,7 @@ Beneath you can see a small dataset of the measured daily temperatures and a fil
 </div>
 </section>
 <section id="fixing-exercise-1-3-4">
-<h2>(Fixing) Exercise 1.3.4<a class="headerlink" href="#fixing-exercise-1-3-4" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 1.3.4<a class="headerlink" href="#fixing-exercise-1-3-4" title="Permalink to this headline">#</a></h2>
 <p>Recall that Sentinel data titles are formatted as:<br><br> <b>S1A_IW_SLC__1SDV_20181205T015821_20181205T015851_024884_02BD8C_8700</b><br><br>
 where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><br>An ESA engineer wrote a piece of code to figure out if the data she has belongs to the Remote Sensing Satellite Sentinel-1; and, if it does, she would like to know the time of overpass… but for some reason she keeps getting an error. Could you maybe help her out?</p>
 <div class="cell docutils container">
@@ -744,7 +746,7 @@ where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><
 </div>
 </section>
 <section id="searching-exercise-1-3-5">
-<h2>(Searching) Exercise 1.3.5<a class="headerlink" href="#searching-exercise-1-3-5" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 1.3.5<a class="headerlink" href="#searching-exercise-1-3-5" title="Permalink to this headline">#</a></h2>
 <p>In Python, there are a lot of shortcuts! There are multiple ways to solve tasks (e.g. reading data, filtering noise, solving systems of equations, etc) and there is, usually, a way to write a “one-liner”. A “one-liner” is a code, which solves the task in one line. Sometimes “one-liners” are not preferred (it usually lowers the readability of your code) but it is still useful to think about them. Think about <i>”How can I solve this problem differently?”</i>, or <i>”How can I use Python most efficiently?”</i>.</p>
 <p>For example, in the cell bellow you can see a small combination of comparison operators.</p>
 <div class="cell docutils container">
@@ -767,7 +769,7 @@ where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><
 </div>
 </section>
 <section id="exercise-1-4-1">
-<h2>Exercise 1.4.1<a class="headerlink" href="#exercise-1-4-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.4.1<a class="headerlink" href="#exercise-1-4-1" title="Permalink to this headline">#</a></h2>
 <p>Calculate the area of a circle with a radius of <span class="math notranslate nohighlight">\(4\)</span> cm in the box below using the <code>calculate_circle_area</code> function.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -796,7 +798,7 @@ where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><
 </div>
 </section>
 <section id="fixing-exercise-1-4-2">
-<h2>(Fixing) Exercise 1.4.2<a class="headerlink" href="#fixing-exercise-1-4-2" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 1.4.2<a class="headerlink" href="#fixing-exercise-1-4-2" title="Permalink to this headline">#</a></h2>
 <p>Below is a function that should calculate the water pressure in the sea, as a function of depth. But it isn’t working. Can you spot the error and fix it? Do not change any other line except the line with the error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -842,7 +844,7 @@ where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><
 </div>
 </section>
 <section id="exercise-1-4-3">
-<h2>Exercise 1.4.3<a class="headerlink" href="#exercise-1-4-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.4.3<a class="headerlink" href="#exercise-1-4-3" title="Permalink to this headline">#</a></h2>
 <p>Write a function called <code>k_e()</code> to calculate the kinetic energy of some object. It should have mass and velocity as its arguments. In case you forgot, the kinetic energy equation is <br><br>$<span class="math notranslate nohighlight">\(E_k = \frac{mv^2}{2}\)</span>$<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -870,7 +872,7 @@ where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><
 </div>
 </section>
 <section id="searching-exercise-1-4-4">
-<h2>(Searching) Exercise 1.4.4<a class="headerlink" href="#searching-exercise-1-4-4" title="Permalink to this heading">#</a></h2>
+<h2>(Searching) Exercise 1.4.4<a class="headerlink" href="#searching-exercise-1-4-4" title="Permalink to this headline">#</a></h2>
 <p>Use the <code>print()</code> and <code>k_e()</code> functions to print a nice formatted output for any arbitrary input. Example of a desired output: <b>The kinetic energy is: 200 J</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -883,7 +885,7 @@ where each part means something, e.g., <b>S1A</b> means <b>Sentinel-1A</b>.<br><
 </div>
 </section>
 <section id="fixing-exercise-1-4-5">
-<h2>(Fixing) Exercise 1.4.5<a class="headerlink" href="#fixing-exercise-1-4-5" title="Permalink to this heading">#</a></h2>
+<h2>(Fixing) Exercise 1.4.5<a class="headerlink" href="#fixing-exercise-1-4-5" title="Permalink to this headline">#</a></h2>
 <p>The function below does not give the right answer. Could you fix it?<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Maximum bending moment on a simply supported bridge &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,11 +46,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="6. Pandas" href="../../06/Theory/01.html" />
     <link rel="prev" title="Airplane velocity" href="01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -435,10 +437,10 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="maximum-bending-moment-on-a-simply-supported-bridge">
-<h1>Maximum bending moment on a simply supported bridge<a class="headerlink" href="#maximum-bending-moment-on-a-simply-supported-bridge" title="Permalink to this heading">#</a></h1>
+<h1>Maximum bending moment on a simply supported bridge<a class="headerlink" href="#maximum-bending-moment-on-a-simply-supported-bridge" title="Permalink to this headline">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="example">
-<h1>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h1>
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
 <p>A 12 m span bridge is modelled as 1D continuous simply supported beam. The bridge is subjected to the axle loads (<span class="math notranslate nohighlight">\(A\)</span>) of 3-axle vehicle, as shown in the figure bellow. The largest axle load will generally cause the maximum bending bending moment (<span class="math notranslate nohighlight">\(M_{max}\)</span>) under its location <span class="math notranslate nohighlight">\(p\)</span>.</p>
 <p><img src="https://raw.githubusercontent.com/mike-mendoza/Bivariate_NPBN_workshop_files/main/files_pyhton_book_test/Bridge.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="330" /></p>
 <p>For this particular vehicle characteristics, i.e., <span class="math notranslate nohighlight">\(A_1 \leq A_3 \leq A_2\)</span> and <span class="math notranslate nohighlight">\( D_2 \leq D_1 \leq a\)</span>. <span class="math notranslate nohighlight">\(M_{max}\)</span> can be computed as follows:</p>
@@ -453,7 +455,7 @@ document.write(`
 <li><p>The characteristics of the vehicle that cause the maximum <span class="math notranslate nohighlight">\(M_{max}\)</span> at the point <span class="math notranslate nohighlight">\(p\)</span> of the beam.</p></li>
 </ul>
 <section id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
+<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>We start by importing numpy and loading the data set.</p></li>
 </ul>
@@ -627,7 +629,7 @@ and inter-axle distances: [4.8 1.2] in m
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h1>
+<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h1>
 <p>Get the largest element of each column of the WIM sample provided above to create the synthetic vehicle <em>3C Magnus</em>. Using the same dimensions of the previous described bridge answer the following questions:</p>
 <div class="tip admonition">
 <p class="admonition-title">Toolbox</p>
