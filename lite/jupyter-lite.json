@@ -23,6 +23,12 @@
       {
         "extension": "./extension",
         "liteExtension": false,
+        "load": "static/remoteEntry.101bc12d4d5cef8f7eb1.js",
+        "name": "jupyter-matplotlib"
+      },
+      {
+        "extension": "./extension",
+        "liteExtension": false,
         "load": "static/remoteEntry.aa1060b2d1221f8e5688.js",
         "name": "jupyterlab_pygments",
         "style": "./style"

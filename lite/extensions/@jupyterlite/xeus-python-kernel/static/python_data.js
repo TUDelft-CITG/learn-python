@@ -116,6 +116,8 @@ importScripts('./ipywidgets-8.0.6-py310h8bed8af_0.0.js')
 await globalThis.Module._wait_run_dependencies()
 importScripts('./xeus-python-0.15.7-h4d17c68_0.0.js')
 await globalThis.Module._wait_run_dependencies()
+importScripts('./ipympl-0.9.3-pyhd8ed1ab.0.js')
+await globalThis.Module._wait_run_dependencies()
 } else {
 await import('./pillow-9.1.0-h5554403_1.0.js')
 await globalThis.Module._wait_run_dependencies()
@@ -232,6 +234,8 @@ await globalThis.Module._wait_run_dependencies()
 await import('./ipywidgets-8.0.6-py310h8bed8af_0.0.js')
 await globalThis.Module._wait_run_dependencies()
 await import('./xeus-python-0.15.7-h4d17c68_0.0.js')
+await globalThis.Module._wait_run_dependencies()
+await import('./ipympl-0.9.3-pyhd8ed1ab.0.js')
 await globalThis.Module._wait_run_dependencies()
 }
             }
