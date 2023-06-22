@@ -1,6 +1,7 @@
-# learn-python
+# learn-python archive
+This is the branch where files of the main branch till 21/06/2023 are available. 
 
-- Caspar: add config files and recipe pages to our book on main
+<s> - Caspar: add config files and recipe pages to our book on main </s>
 
 
 option 1:
