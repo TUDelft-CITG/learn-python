@@ -1,0 +1,195 @@
+
+[
+    {
+        "question": "What is the error? ",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Wrong arguments types when calling the function.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "The module <code>math</code> has no attribute <code>gcds</code> ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "There is no error in the code. ",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What should be the correct missing code for the function?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "<code>f</code> ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": " <code>x_predict</code> ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": " <code>f(x_predict)</code> ",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the correct answer?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Option A",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "Option B",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Option C.",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What is the error? ",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "There is no error in the function.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "A <code>else</code> statement is missing.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "A <code>else</code> and a <code>return: True</code> statements are missing. ",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What will be the outcome of the above code?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Sand",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Silt",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "Error",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What is the correct answer?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "<code>if x % 2 == 0 y = x ** 2 else y = x % 3</code>. ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "<code>y = x ** 2 if x % 2 == 0 else x % 3</code>. ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "<code>x ** 2 if x % 2 == 0 else x % 3</code>.",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question":  "What is the error?.",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "There is no error.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "The argument must be a numpy array.",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "<code>temp_fahrenheit</code> must be a list</code> ",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "What is the correct answer?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "<code>sorted(unsorted_list)[0]</code>. ",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "<code>sorted(unsorted_list)[::-1]</code>. ",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "<code>sorted(unsorted_list)[:-1]</code>.",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    },
+    {
+        "question": "What is the correct answer?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Option A",
+                "correct": false,
+                "feedback": "I hope not."
+            },
+            {
+                "answer": "Option B",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Option C.",
+                "correct": false,
+                "feedback": "I hope not."
+            }
+        ]
+    }
+]
+
+
+

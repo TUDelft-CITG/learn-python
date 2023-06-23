@@ -78,9 +78,9 @@
                 "feedback": "Correct."
             },
             {
-                "answer": "<code>my_complex_number = 3 + 2J </code>",
-                "correct": true,
-                "feedback": "Correct."
+                "answer": "<code>my_complex_number = 3 + 2k </code>",
+                "correct": false,
+                "feedback": "I hope not."
             }
         ]
     },

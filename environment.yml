@@ -1,15 +1,11 @@
 name: jupyter-book-env
 
-channels:
-  - conda-forge
-
 dependencies:
-  - numpy
-  - matplotlib
-  - scipy
   - pip
-  - jupyterlite-sphinx
-  - jupyter-book
   - pip:
-    - jupyterlite-xeus-python
-    - jupyterquiz
+    - jupyterlite-sphinx==0.8.0
+    - jupyterlite-xeus-python==0.8.1
+    - jupyter-book==0.15.1
+    - sphinx-inline-tabs
+    - learn_python_ceg_test
+
