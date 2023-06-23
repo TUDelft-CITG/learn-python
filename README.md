@@ -6,7 +6,7 @@
 
 [![Jupyter Book Badge](https://raw.githubusercontent.com/executablebooks/jupyter-book/47e06598ef05bd429467a7de66a7fb3a83e89c2f/docs/images/badge.svg)](https://jupyterbook.org)
 [![Jupyter lite Badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://github.com/jupyterlite)
-[![TU Delft Badge](https://raw.githubusercontent.com/TUDelft-CITG/learn-python/mike/book/figures/TU_badge.png)](https://www.tudelft.nl/en/ceg/)
+
 
 The course "Learn Python for Civil Engineering and Geosciences" aims to provide freshman master students with essential Python programming skills tailored to their field of study. By the end of the course, students will:
 
