@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -34,8 +34,6 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -45,11 +43,11 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -66,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -108,6 +106,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -151,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -159,36 +163,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -196,27 +196,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -271,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"

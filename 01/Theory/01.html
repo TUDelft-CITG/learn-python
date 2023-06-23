@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Variables, operators and functions. &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -68,10 +66,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '01/Theory/01';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Variables, operators and functions Exercises." href="../Exercises/01.html" />
+    <link rel="next" title="Exercises" href="../Exercises/01.html" />
     <link rel="prev" title="Introduction to the Course" href="../../Theory_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +111,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -156,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -164,36 +168,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Variables, operators and functions.</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -201,27 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -268,6 +253,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/01/Theory/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/01/Theory/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +327,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01/Theory/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F01/Theory/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -473,9 +507,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="variables-operators-and-functions">
-<h1>1. Variables, operators and functions.<a class="headerlink" href="#variables-operators-and-functions" title="Permalink to this headline">#</a></h1>
+<h1>1. Variables, operators and functions.<a class="headerlink" href="#variables-operators-and-functions" title="Permalink to this heading">#</a></h1>
 <section id="first-python-script">
-<h2>1.1 First Python Script<a class="headerlink" href="#first-python-script" title="Permalink to this headline">#</a></h2>
+<h2>1.1 First Python Script<a class="headerlink" href="#first-python-script" title="Permalink to this heading">#</a></h2>
 <p>So, it is time for your first Python script. It is located beneath.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -500,11 +534,11 @@ document.write(`
 </div>
 </section>
 <section id="python-variables">
-<h2>1.2 Python Variables<a class="headerlink" href="#python-variables" title="Permalink to this headline">#</a></h2>
+<h2>1.2 Python Variables<a class="headerlink" href="#python-variables" title="Permalink to this heading">#</a></h2>
 <p>One of the most powerful features of a programming language is the ability to create and manipulate
 variables. A variable is a labeled storage that refers to a value. They are usually used in a way to make the code more readable, allowing reusability of your code.<br><br>As it was mentioned previously, Python is a high-level programming language. For that, it uses concepts of <b>Class</b> and <b>Object</b>. In short, a <b>Class</b> is a defined model or a data structure, it describes how the data of that class can be described and how it can be manipulated, and an <b>Object</b> or <b>Instance</b> is its realization. In other words, think about your favorite meal: the recipe is the <b>Class</b> of your meal and when you decide to use the recipe and cook it — you create an <b>Object</b> of that <b>Class</b>. Variables are the way how objects are stored and processed.</p>
 <section id="rules-for-variable-names">
-<h3>Rules for variable names<a class="headerlink" href="#rules-for-variable-names" title="Permalink to this headline">#</a></h3>
+<h3>Rules for variable names<a class="headerlink" href="#rules-for-variable-names" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>names can not start with a number</p></li>
 <li><p>names can not contain spaces, use _ instead</p></li>
@@ -523,7 +557,7 @@ variables. A variable is a labeled storage that refers to a value. They are usua
 </div>
 </section>
 <section id="assigning-variables">
-<h3>Assigning Variables<a class="headerlink" href="#assigning-variables" title="Permalink to this headline">#</a></h3>
+<h3>Assigning Variables<a class="headerlink" href="#assigning-variables" title="Permalink to this heading">#</a></h3>
 <p>Variable assignment follows <b><code>variable_name = value</code></b>, where a single equal sign <span class="math notranslate nohighlight">\(=\)</span> is an <b>assignment operator</b>. More on operators will be covered in the next section. Let’s see a few examples of how we can do this.</p>
 <p>Let’s create an object called <code class="docutils literal notranslate"><span class="pre">a</span></code> and assign it the number 5</p>
 <div class="cell docutils container">
@@ -621,7 +655,7 @@ variables. A variable is a labeled storage that refers to a value. They are usua
 </div>
 </section>
 <section id="determining-variable-type-with-b-code-type-code-b">
-<h3>Determining variable type with <b><code>type()</code></b><a class="headerlink" href="#determining-variable-type-with-b-code-type-code-b" title="Permalink to this headline">#</a></h3>
+<h3>Determining variable type with <b><code>type()</code></b><a class="headerlink" href="#determining-variable-type-with-b-code-type-code-b" title="Permalink to this heading">#</a></h3>
 <p>You can check what type of object is assigned to a variable using Python’s built-in <b><code>type()</code></b> function. Common data types include:</p>
 <ul class="simple">
 <li><p><strong>int</strong> (for integer numbers)</p></li>
@@ -852,19 +886,19 @@ where each part means something, S1A means Sentinel-1A, IW means Interferometric
 </div>
 </section>
 <section id="dynamic-typing">
-<h3>Dynamic Typing<a class="headerlink" href="#dynamic-typing" title="Permalink to this headline">#</a></h3>
+<h3>Dynamic Typing<a class="headerlink" href="#dynamic-typing" title="Permalink to this heading">#</a></h3>
 <p>The way the computer is able to use the stored data becomes an attribute of the stored data. This attribute is called a <b>data type</b>. Python uses <b>dynamic typing</b>, meaning you can also reassign variables to different data types. This makes Python very flexible in assigning data types; it differs from other languages that are <b>statically typed</b>.</p>
 <section id="pros-and-cons-of-dynamic-typing">
-<h4>Pros and Cons of Dynamic Typing<a class="headerlink" href="#pros-and-cons-of-dynamic-typing" title="Permalink to this headline">#</a></h4>
+<h4>Pros and Cons of Dynamic Typing<a class="headerlink" href="#pros-and-cons-of-dynamic-typing" title="Permalink to this heading">#</a></h4>
 <section id="pros-of-dynamic-typing">
-<h5>Pros of Dynamic Typing<a class="headerlink" href="#pros-of-dynamic-typing" title="Permalink to this headline">#</a></h5>
+<h5>Pros of Dynamic Typing<a class="headerlink" href="#pros-of-dynamic-typing" title="Permalink to this heading">#</a></h5>
 <ul class="simple">
 <li><p>very easy to work with</p></li>
 <li><p>faster development time</p></li>
 </ul>
 </section>
 <section id="cons-of-dynamic-typing">
-<h5>Cons of Dynamic Typing<a class="headerlink" href="#cons-of-dynamic-typing" title="Permalink to this headline">#</a></h5>
+<h5>Cons of Dynamic Typing<a class="headerlink" href="#cons-of-dynamic-typing" title="Permalink to this heading">#</a></h5>
 <ul class="simple">
 <li><p>may result in unexpected bugs!</p></li>
 <li><p>you need to be aware of <strong><code class="docutils literal notranslate"><span class="pre">type()</span></code></strong>.</p></li>
@@ -890,7 +924,7 @@ Type of a is = &lt;class &#39;str&#39;&gt;
 </section>
 </section>
 <section id="casting-types">
-<h3>Casting types<a class="headerlink" href="#casting-types" title="Permalink to this headline">#</a></h3>
+<h3>Casting types<a class="headerlink" href="#casting-types" title="Permalink to this heading">#</a></h3>
 <p>Sometimes you want to change the type of a variable. For example, there is no point in arithmetically adding a number to a string. Or, when estimating the amount of oil wells, those should be integers (how would you build <span class="math notranslate nohighlight">\(2.5\)</span> wells?). These two problems can be sometimes solved with casting.<br><br><b>Casting</b> is a procedure of changing variables type. Actually, you create a new variable with the requested data type using the variable you want to alter.</p>
 <p>Examples are shown below.</p>
 <div class="cell docutils container">
@@ -943,7 +977,7 @@ Type of a is = &lt;class &#39;str&#39;&gt;
 </div>
 </section>
 <section id="how-do-computers-read-variables">
-<h3>How do computers read variables?<a class="headerlink" href="#how-do-computers-read-variables" title="Permalink to this headline">#</a></h3>
+<h3>How do computers read variables?<a class="headerlink" href="#how-do-computers-read-variables" title="Permalink to this heading">#</a></h3>
 <p>Computers and humans have different views on data. We, fellow humans, can easily read poetry and enjoy music. Computers are limited in that sense and they can operate on a really primitive level. They cannot even read normal text, for a computer, everything is represented with numbers. One of the popular text encodings <b>ASCII</b> has a table, where every symbol there is an integer number assigned to it. Letter ‘a’, for instance, has a value of <span class="math notranslate nohighlight">\(97\)</span>, and letter ‘A’ has a value of <span class="math notranslate nohighlight">\(65\)</span>. The value of ‘B’ is <span class="math notranslate nohighlight">\(66\)</span> and if we want to take the letter before ‘B’ we just calculate <span class="math notranslate nohighlight">\(66 - 1\)</span>. You don’t have to open an alphabet and, therefore, it is easier to work with numbers than with letters.<br><br>But even for numbers, computers have their own approach. On a really low level, all numbers are stored and operated in their binary form. Number <span class="math notranslate nohighlight">\(5\)</span> becomes <span class="math notranslate nohighlight">\(101\)</span>, because <span class="math notranslate nohighlight">\(5 = 1\cdot2^2 + 0 \cdot2^1 + 1\cdot2^0\)</span>. And since all symbols are also represented with numbers, it is not hard for computers to operate with them. But what about the floating numbers? How do you represent <span class="math notranslate nohighlight">\(1.5\)</span> or <span class="math notranslate nohighlight">\(\pi\)</span>? Well, computers try to represent them with binary code, which introduces some problems. In order to represent a fraction, they need an infinite amount of bits, to obtain the precision we use in math. But that’s impossible! In other words, small errors will always be present in calculations as simple as <span class="math notranslate nohighlight">\(0.3 - 0.2\)</span>. From your math classes you know that the result of <span class="math notranslate nohighlight">\(0.3 - 0.2 = 0.1\)</span>, not <span class="math notranslate nohighlight">\(0.10001\)</span> or <span class="math notranslate nohighlight">\(0.09999\)</span>. But try to run the cell below and see the result.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -981,14 +1015,14 @@ Fixing exercises are exercises where some piece of code is already written and y
 </section>
 </section>
 <section id="python-operators">
-<h2>1.3 Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this headline">#</a></h2>
+<h2>1.3 Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this heading">#</a></h2>
 <p>Python <b>operators</b> are used to perform operations on variables and values. They are symbols that represent a form of computation; think of addition or multiplication. The value to which this computation is applied to is called the <i>’operand’</i>. Most of the common operators you will recognize from mathematics.</p>
 <h3> Arithmetic Operators </h3>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-center head"><p>Math sign</p></th>
-<th class="text-center head"><p>Python sign</p></th>
-<th class="text-center head"><p>name</p></th>
+<tr class="row-odd"><th class="head text-center"><p>Math sign</p></th>
+<th class="head text-center"><p>Python sign</p></th>
+<th class="head text-center"><p>name</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1115,13 +1149,13 @@ With parenthesis after = 14
 </div>
 </div>
 <section id="comparison-operators">
-<h3>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">#</a></h3>
+<h3>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h3>
 <p>In Python, you often want to compare a value with another. For that, you use comparison operators.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-center head"><p>Math sign</p></th>
-<th class="text-center head"><p>Python sign</p></th>
-<th class="text-center head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head text-center"><p>Math sign</p></th>
+<th class="head text-center"><p>Python sign</p></th>
+<th class="head text-center"><p>Meaning</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1152,7 +1186,7 @@ With parenthesis after = 14
 </tbody>
 </table>
 <section id="checking-if-a-value-corresponds-to-the-set-conditions">
-<h4>Checking if a value corresponds to the set conditions<a class="headerlink" href="#checking-if-a-value-corresponds-to-the-set-conditions" title="Permalink to this headline">#</a></h4>
+<h4>Checking if a value corresponds to the set conditions<a class="headerlink" href="#checking-if-a-value-corresponds-to-the-set-conditions" title="Permalink to this heading">#</a></h4>
 <p>Check if the the variable <strong><code class="docutils literal notranslate"><span class="pre">num</span></code></strong> satisfies the set condition.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1183,11 +1217,11 @@ With parenthesis after = 14
 </section>
 </section>
 <section id="logical-identity-operators">
-<h3>Logical &amp; Identity Operators<a class="headerlink" href="#logical-identity-operators" title="Permalink to this headline">#</a></h3>
-<table class="colwidths-auto table">
+<h3>Logical &amp; Identity Operators<a class="headerlink" href="#logical-identity-operators" title="Permalink to this heading">#</a></h3>
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-center head"><p>sign</p></th>
-<th class="text-center head"><p>description</p></th>
+<tr class="row-odd"><th class="head text-center"><p>sign</p></th>
+<th class="head text-center"><p>description</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1215,7 +1249,7 @@ With parenthesis after = 14
 </tbody>
 </table>
 <section id="code-and-code-b-statement">
-<h4><code>and</code></b> statement<a class="headerlink" href="#code-and-code-b-statement" title="Permalink to this headline">#</a></h4>
+<h4><code>and</code></b> statement<a class="headerlink" href="#code-and-code-b-statement" title="Permalink to this heading">#</a></h4>
 <p>By using the <b><code>and</code></b> statement you can set multiple conditions for the system to return. This can be seen as setting a boundary condition for a mathematical function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1232,7 +1266,7 @@ With parenthesis after = 14
 </div>
 </section>
 <section id="checking-if-a-value-appears-in-an-object">
-<h4>checking if a value appears in an object<a class="headerlink" href="#checking-if-a-value-appears-in-an-object" title="Permalink to this headline">#</a></h4>
+<h4>checking if a value appears in an object<a class="headerlink" href="#checking-if-a-value-appears-in-an-object" title="Permalink to this heading">#</a></h4>
 <p>Suppose we have a string “sandstone”, we can check if a value is present within the string through the following lines of code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1245,7 +1279,7 @@ With parenthesis after = 14
 </section>
 </section>
 <section id="code-is-code-b-and-b-code-code-b-operators">
-<h3><code>is</code></b> and <b><code>==</code></b> operators<a class="headerlink" href="#code-is-code-b-and-b-code-code-b-operators" title="Permalink to this headline">#</a></h3>
+<h3><code>is</code></b> and <b><code>==</code></b> operators<a class="headerlink" href="#code-is-code-b-and-b-code-code-b-operators" title="Permalink to this heading">#</a></h3>
 <p>The <b><code>is</code></b> operator deserves a little more explanation since it can be easily confused with the <b><code>==</code></b> operator. The <b><code>is</code></b> statement does not compare the value of a variable but simply checks if two variables are the same object. On the other hand, <b><code>==</code></b> checks if the values of different variables are the same. In the underneath piece of code this is shown quite clearly. Although the values of the variables are the same, their <b><code>type</code></b> is not. Therefore, when compared using the <b><code>is</code></b> operator, it returns <b><code>False</code></b>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1267,7 +1301,7 @@ True
 </section>
 </section>
 <section id="python-functions">
-<h2>1.4 Python Functions<a class="headerlink" href="#python-functions" title="Permalink to this headline">#</a></h2>
+<h2>1.4 Python Functions<a class="headerlink" href="#python-functions" title="Permalink to this heading">#</a></h2>
 <p>A <b>function</b> is a collection of code that is assigned to a specific name. You have already seen some built-in Python functions, such as <b><code>print()</code></b>. Using functions is useful because it allows you to run the same code again without having to type it a second time.</p>
 <p>Below are some examples of common built-in Python functions and what they do:</p>
 <ul class="simple">
@@ -1280,7 +1314,7 @@ True
 </ul>
 <p>But the story doesn’t end at built-in functions. You can also write your own functions!</p>
 <section id="how-to-write-a-function">
-<h3>How to write a function<a class="headerlink" href="#how-to-write-a-function" title="Permalink to this headline">#</a></h3>
+<h3>How to write a function<a class="headerlink" href="#how-to-write-a-function" title="Permalink to this heading">#</a></h3>
 <p>To write a function, you must first define it. This is done by using the <b><code>def</code></b> statement. Then, you name the function and add, in the parentheses, which variables this function takes as an input, followed by a colon. The colon tells Python you are going to define the <b>function body</b> next (the part of the function that actually does the computation). As shown below:<br><br></p>
 <center><code>def function_name(input1, input2,...):<br>function_body<br>...<br>...</code></center>
 <p>The <b><code>calculate_circle_area(r)</code></b> function below defines <b><code>pi</code></b> as a variable and then computes the area of a circle, which is stored in the variable <b><code>area</code></b>. Finally, it uses the <b><code>return</code></b> statement to output the <b><code>area</code></b> back to you. Once you have defined the function, you can then <b>call</b> it by typing the function name, and  the inputs in the parenthesis. For example, calling: <b><code>print(“Hello World!”)</code></b>, prints the string <b><code>”Hello World!”</code></b>.</p>
@@ -1292,7 +1326,7 @@ True
 </div>
 </section>
 <section id="indentation-of-code-within-functions">
-<h3>indentation of code within functions<a class="headerlink" href="#indentation-of-code-within-functions" title="Permalink to this headline">#</a></h3>
+<h3>indentation of code within functions<a class="headerlink" href="#indentation-of-code-within-functions" title="Permalink to this heading">#</a></h3>
 <p>Let’s say you’d want to compute the area of a circle, but you don’t want to calculate <span class="math notranslate nohighlight">\(\pi r^2\)</span> the entire time. Then you can write a couple lines of code to do it for you, and wrap it up into a function, like the one below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1358,7 +1392,7 @@ the <b>string</b> <b><code>’Area of my rectangle is’</code></b>, the output 
 <p>Where the <b><code>:.5f</code></b> states that you want to print that variable with <span class="math notranslate nohighlight">\(5\)</span> decimal numbers. Similarly, <b><code>:.2f</code></b> rounds the number to <span class="math notranslate nohighlight">\(2\)</span> decimal numbers. More information on this in Section 3.1, in Notebook 3.</p>
 </section>
 <section id="documenting-functions">
-<h3>Documenting functions<a class="headerlink" href="#documenting-functions" title="Permalink to this headline">#</a></h3>
+<h3>Documenting functions<a class="headerlink" href="#documenting-functions" title="Permalink to this heading">#</a></h3>
 <p>We have now successfully created a function that computes the area of a circle and the area of a rectangle. You could send this code to fellow students, but maybe they wouldn’t know how to use them. This is where a <b>docstring</b> comes in handy. This is a string specified in the beginning of the function body which states information about the function. A lot of built-in Python functions also have docstrings, which is really useful when you’re trying to understand how to use a function.</p>
 <p>Add a description to the <code>calculate_circle_area(r)</code> function below, as a docstring.<br></p>
 <div class="cell docutils container">
@@ -1399,7 +1433,7 @@ calculate_circle_area(r)
 <p>Now this isn’t of much use when you work on your own code, unless you are very forgetful or have to write large programs.
 But if you work using other people’s code, this is really useful, as it helps you figure out how to use each function.</p>
 <section id="when-to-write-or-use-a-function">
-<h4>When to write or use a function?<a class="headerlink" href="#when-to-write-or-use-a-function" title="Permalink to this headline">#</a></h4>
+<h4>When to write or use a function?<a class="headerlink" href="#when-to-write-or-use-a-function" title="Permalink to this heading">#</a></h4>
 <p>You can use functions in your code when you have a specific piece of code that you need to use multiple times (e.g.: plotting something).<br><br>Often you will find you want to use an output from a function later on. To do this, you can assign a function to a variable. Let’s say I want to use the area of a circle in a later calculation. Then you can store it in a variable like this:</p>
 <p>We stored the area of a circle that has a radius 4 in the variable <code class="docutils literal notranslate"><span class="pre">Circle_Area</span></code></p>
 <div class="cell docutils container">
@@ -1451,7 +1485,7 @@ The error you get: <i>name ‘pi_circle’ is not defined</i>, means that you tr
 </section>
 </section>
 <section id="additional-study-material">
-<h2>Additional study material:<a class="headerlink" href="#additional-study-material" title="Permalink to this headline">#</a></h2>
+<h2>Additional study material:<a class="headerlink" href="#additional-study-material" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Official Python Documentation - <a class="reference external" href="https://docs.python.org/3/tutorial/introduction.html">https://docs.python.org/3/tutorial/introduction.html</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/python-variables/">https://realpython.com/python-variables/</a></p></li>
@@ -1464,7 +1498,7 @@ The error you get: <i>name ‘pi_circle’ is not defined</i>, means that you tr
 <li><p>Think Python (2nd ed.) - Sections 3, 6 and 16</p></li>
 </ul>
 <section id="after-this-notebook-you-should-be-able-to">
-<h3>After this Notebook you should be able to:<a class="headerlink" href="#after-this-notebook-you-should-be-able-to" title="Permalink to this headline">#</a></h3>
+<h3>After this Notebook you should be able to:<a class="headerlink" href="#after-this-notebook-you-should-be-able-to" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>understand why you need to learn Python</p></li>
 <li><p>create and re-assign new variables</p></li>
@@ -1526,7 +1560,7 @@ The error you get: <i>name ‘pi_circle’ is not defined</i>, means that you tr
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Variables, operators and functions Exercises.</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

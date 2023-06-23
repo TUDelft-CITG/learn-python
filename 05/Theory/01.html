@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5. Numpy &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,9 +67,9 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Airplane velocity" href="../Exercises/01.html" />
-    <link rel="prev" title="Objects and References Exercises" href="../../04/Exercises/01.html" />
+    <link rel="prev" title="Exercises" href="../../04/Exercises/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +111,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -156,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -164,36 +168,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">5. Numpy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -201,27 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -268,6 +253,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/05/Theory/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/05/Theory/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +327,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F05/Theory/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F05/Theory/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -449,9 +483,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="numpy">
-<h1>5. Numpy<a class="headerlink" href="#numpy" title="Permalink to this headline">#</a></h1>
+<h1>5. Numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>5.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>5.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>The <b><code>numpy</code></b> package is one of the main packages when it comes to working with arrays and matrices in Python, making it indispensable to process and visualize scientific data. Its assortment of routines facilitates operations such as mathematical, logical, linear algebra, Fourier transforms, and much more. In this section, you will learn some of the most used <b><code>numpy</code></b> functions to work with multidimensional array objects.</p>
 <p>As always, let’s import the package we will use</p>
 <div class="cell docutils container">
@@ -488,9 +522,9 @@ document.write(`
 <p>In Section 2.3, of Notebook 2, you have already encountered lists, which are created with square brackets <b><code>[]</code></b>. Arrays are the <b><code>numpy</code></b> equivalent of lists, with a few characteristic traits:<br><br>- <b><code>numpy</code></b> arrays can only store one type of element,<br>- <b><code>numpy</code></b> arrays take up much less memory than lists,<br>- <b><code>numpy</code></b> arrays have a much better runtime behavior,<br>- it is easier to work with multi-dimensional <b><code>numpy</code></b> arrays than with multi-dimensional lists<br><br></p>
 </section>
 <section id="one-dimensional-arrays">
-<h2>5.2 One-Dimensional arrays<a class="headerlink" href="#one-dimensional-arrays" title="Permalink to this headline">#</a></h2>
+<h2>5.2 One-Dimensional arrays<a class="headerlink" href="#one-dimensional-arrays" title="Permalink to this heading">#</a></h2>
 <section id="np-array-np-asarray">
-<h3><code class="docutils literal notranslate"><span class="pre">np.array()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.asarray()</span></code><a class="headerlink" href="#np-array-np-asarray" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.array()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.asarray()</span></code><a class="headerlink" href="#np-array-np-asarray" title="Permalink to this heading">#</a></h3>
 <p>So, how do you create a <b><code>numpy</code></b> 1-Dimensional (1D) array? There are a few ways to do it…</p>
 <ul class="simple">
 <li><p>Option 1 - from scratch with <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> similar to a list.</p></li>
@@ -643,7 +677,7 @@ arr_asarray = [100   2   3]
 </div>
 </section>
 <section id="np-zeros">
-<h3><code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code><a class="headerlink" href="#np-zeros" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code><a class="headerlink" href="#np-zeros" title="Permalink to this heading">#</a></h3>
 <p>In case you already know the size of the array you will need, it is common to initialize it with zeros first using the <code>np.zeros()</code> function, as shown below.</p>
 <p>Set a limit when printing the huge arrays we will generate.</p>
 <div class="cell tag_hide-input docutils container">
@@ -691,7 +725,7 @@ my_arr with random numbers
 <p>Note that these arrays still have <span class="math notranslate nohighlight">\(100000\)</span> elements, but due to our first line of code we truncated the print function to not print it completely — otherwise you would have to scroll a lot. :P</p>
 </section>
 <section id="np-min-np-max-and-np-mean">
-<h3><code class="docutils literal notranslate"><span class="pre">np.min()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.max()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code><a class="headerlink" href="#np-min-np-max-and-np-mean" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.min()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.max()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code><a class="headerlink" href="#np-min-np-max-and-np-mean" title="Permalink to this heading">#</a></h3>
 <p>Numpy also provides various packages to help you process your data. You can, for instance, find out what is the minimum value of an array, or its mean. Your task is to find the minimum, maximum, and mean values of an array.</p>
 <p>Find the minimum, maximum and mean values of A_1 and print the results.</p>
 <div class="cell docutils container">
@@ -718,7 +752,7 @@ The mean value of A_1 is 6.0
 </div>
 </section>
 <section id="np-arange">
-<h3><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code><a class="headerlink" href="#np-arange" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code><a class="headerlink" href="#np-arange" title="Permalink to this heading">#</a></h3>
 <p>Another useful function of the <b><code>numpy</code></b> module is <b><code>np.arange()</code></b>. First, let’s see in the documentation what it does.</p>
 <p>It reads:<br><br><i><code>arange([start,] stop[, step,], dtype=None, *, like=None)<br><br>Return evenly spaced values within a given interval.</code></i><br><br>To make a number range you need to choose: <br>1) the starting point,<br>2) the endpoint,<br>3) the interval between each point<br><br>The reason why it reads <b><code>[start,] stop[, step,]</code></b> with square brackets, is that the <b><code>start</code></b> and the <b><code>step</code></b> can be omitted. If not specified, <b><code>start = 0</code></b> and <b><code>step = 1</code></b>, by default.</p>
 <div class="admonition warning">
@@ -797,7 +831,7 @@ The mean value of A_1 is 6.0
 </div>
 </section>
 <section id="np-sort">
-<h3><code class="docutils literal notranslate"><span class="pre">np.sort()</span></code><a class="headerlink" href="#np-sort" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.sort()</span></code><a class="headerlink" href="#np-sort" title="Permalink to this heading">#</a></h3>
 <p>You can also sort an array in the crescent order using <b><code>np.sort()</code></b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -814,7 +848,7 @@ The mean value of A_1 is 6.0
 </div>
 </section>
 <section id="np-sum">
-<h3><code class="docutils literal notranslate"><span class="pre">np.sum()</span></code><a class="headerlink" href="#np-sum" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.sum()</span></code><a class="headerlink" href="#np-sum" title="Permalink to this heading">#</a></h3>
 <p>As the name clearly states, <b><code>np.sum()</code></b> returns the sum of an array. Let’s try it out:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -833,7 +867,7 @@ The mean value of A_1 is 6.0
 </section>
 </section>
 <section id="two-dimensional-arrays-and-matrices">
-<h2>5.3 Two-Dimensional arrays and matrices<a class="headerlink" href="#two-dimensional-arrays-and-matrices" title="Permalink to this headline">#</a></h2>
+<h2>5.3 Two-Dimensional arrays and matrices<a class="headerlink" href="#two-dimensional-arrays-and-matrices" title="Permalink to this heading">#</a></h2>
 <p>As mentioned earlier, <code><b>numpy</b></code> is not solely built for 1D arrays <span class="math notranslate nohighlight">\(-\)</span> it’s built to work with multidimensional arrays! So, let’s hop into 2D arrays and matrices, which you have already encountered in Linear Algebra. You can construct your own matrix using the <b><code>np.array()</code></b> function, as shown below.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -890,7 +924,7 @@ my_mat1 * my_mat2 is:
 </div>
 </div>
 <section id="np-dot">
-<h3><code class="docutils literal notranslate"><span class="pre">np.dot()</span></code><a class="headerlink" href="#np-dot" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.dot()</span></code><a class="headerlink" href="#np-dot" title="Permalink to this heading">#</a></h3>
 <p>Ok, this is not as expected. As you have seen in Linear Algebra, changing the order of the products <b>affects</b> the final result, when multiplying matrices. You may also check the result by calculating the matrix products by hand. What actually happened, is that Python performed an <b>element-wise</b> multiplication… But, what if you would like to apply matrix multiplication? We will show three options for that.</p>
 <ul class="simple">
 <li><p>Option 1 - <code class="docutils literal notranslate"><span class="pre">np.dot(arr1</span> <span class="pre">,</span>&#160; <span class="pre">arr2)</span></code></p></li>
@@ -1010,7 +1044,7 @@ my_mat1 @ my_mat2 is:
 </div>
 </section>
 <section id="np-shape">
-<h3><code class="docutils literal notranslate"><span class="pre">np.shape()</span></code><a class="headerlink" href="#np-shape" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.shape()</span></code><a class="headerlink" href="#np-shape" title="Permalink to this heading">#</a></h3>
 <p>A very useful tool of the <code>numpy</code> package is the <code>np.shape()</code> function. When dealing with very large arrays, you often need to find out how many elements are in there, or how many rows and columns there are. Your task for this exercise is to find out how many elements there are in <code>random_array</code> and how many rows and columns <code>random_matrix</code> has.</p>
 <p>how many elements are in <code class="docutils literal notranslate"><span class="pre">Mat_D</span></code>?</p>
 <p>how many rows and columns there are <code class="docutils literal notranslate"><span class="pre">Mat_D</span></code>?</p>
@@ -1057,7 +1091,7 @@ The shape of Mat_D is (2, 2). Hence, there are 2 rows and 2 columns in Mat_D.
 </div>
 </section>
 <section id="conditions-within-arrays">
-<h3>Conditions within arrays<a class="headerlink" href="#conditions-within-arrays" title="Permalink to this headline">#</a></h3>
+<h3>Conditions within arrays<a class="headerlink" href="#conditions-within-arrays" title="Permalink to this heading">#</a></h3>
 <p>Similar to what you’ve seen in Notebook 2, you can also use conditions to check for values within an array. Let’s say you want to select the elements within <b><code>arr</code></b> that are bigger than <span class="math notranslate nohighlight">\(100\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1146,7 +1180,7 @@ The shape of Mat_D is (2, 2). Hence, there are 2 rows and 2 columns in Mat_D.
 </div>
 </section>
 <section id="np-where-and-np-astype">
-<h3><code class="docutils literal notranslate"><span class="pre">np.where()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.astype()</span></code><a class="headerlink" href="#np-where-and-np-astype" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.where()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.astype()</span></code><a class="headerlink" href="#np-where-and-np-astype" title="Permalink to this heading">#</a></h3>
 <p>Another useful way to modify values within your array is using the <b><code>np.where()</code></b> function. Let’s see how it works.</p>
 <p>Let’s reset <code class="docutils literal notranslate"><span class="pre">arr</span></code> and test <code class="docutils literal notranslate"><span class="pre">np.where</span></code>.</p>
 <div class="cell docutils container">
@@ -1255,7 +1289,7 @@ The shape of Mat_D is (2, 2). Hence, there are 2 rows and 2 columns in Mat_D.
 <p>Well.. apparently it worked, all numbers have been rounded down to their closer integer.</p>
 </section>
 <section id="np-argmax-and-np-argmin">
-<h3><code class="docutils literal notranslate"><span class="pre">np.argmax()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.argmin()</span></code><a class="headerlink" href="#np-argmax-and-np-argmin" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.argmax()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.argmin()</span></code><a class="headerlink" href="#np-argmax-and-np-argmin" title="Permalink to this heading">#</a></h3>
 <p>Other functions that assist you in localizing some values within an array are the <b><code>np.argmax()</code></b> and <b><code>np.argmin()</code></b> functions. As the name states, they return the first index with the max (or min) value. Let’s check some quick examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1298,7 +1332,7 @@ The shape of Mat_D is (2, 2). Hence, there are 2 rows and 2 columns in Mat_D.
 <p>The month with the temperature closest to <span class="math notranslate nohighlight">\(15\)</span> was the month with index <span class="math notranslate nohighlight">\(8\)</span>, which is September. (Recall 0-th based index, therefore index 8 corresponds to the <span class="math notranslate nohighlight">\(9^{th}\)</span> month = September).</p>
 </section>
 <section id="np-transpose">
-<h3><code class="docutils literal notranslate"><span class="pre">np.transpose()</span></code><a class="headerlink" href="#np-transpose" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.transpose()</span></code><a class="headerlink" href="#np-transpose" title="Permalink to this heading">#</a></h3>
 <p>The function <code>np.transpose()</code> is another helpful function. It returns the transpose of an array (or matrix). Below some examples.</p>
 <p>Let’s generate a (1,10) array with random int numbers between 0 and 100.</p>
 <div class="cell docutils container">
@@ -1471,7 +1505,7 @@ The shape of Mat_D is (2, 2). Hence, there are 2 rows and 2 columns in Mat_D.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Objects and References Exercises</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
     </a>
     <a class="right-next"

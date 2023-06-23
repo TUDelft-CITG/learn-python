@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Maximum bending moment on a simply supported bridge &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -71,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="6. Pandas" href="../../06/Theory/01.html" />
     <link rel="prev" title="Airplane velocity" href="01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +111,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -156,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -164,36 +168,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory/01.html">5. Numpy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -201,27 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -268,6 +253,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/05/Exercises/02.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/05/Exercises/02.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +327,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F05/Exercises/02.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F05/Exercises/02.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,14 +449,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Maximum bending moment on a simply supported bridge</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -437,12 +469,11 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="maximum-bending-moment-on-a-simply-supported-bridge">
-<h1>Maximum bending moment on a simply supported bridge<a class="headerlink" href="#maximum-bending-moment-on-a-simply-supported-bridge" title="Permalink to this headline">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="example">
-<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
+<h1>Maximum bending moment on a simply supported bridge<a class="headerlink" href="#maximum-bending-moment-on-a-simply-supported-bridge" title="Permalink to this heading">#</a></h1>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
 <p>A 12 m span bridge is modelled as 1D continuous simply supported beam. The bridge is subjected to the axle loads (<span class="math notranslate nohighlight">\(A\)</span>) of 3-axle vehicle, as shown in the figure bellow. The largest axle load will generally cause the maximum bending bending moment (<span class="math notranslate nohighlight">\(M_{max}\)</span>) under its location <span class="math notranslate nohighlight">\(p\)</span>.</p>
-<p><img src="https://raw.githubusercontent.com/mike-mendoza/Bivariate_NPBN_workshop_files/main/files_pyhton_book_test/Bridge.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="330" /></p>
+<p><img src="https://raw.githubusercontent.com/TUDelft-CITG/learn-python/mike/book/05/Exercises/02_01.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="330" /></p>
 <p>For this particular vehicle characteristics, i.e., <span class="math notranslate nohighlight">\(A_1 \leq A_3 \leq A_2\)</span> and <span class="math notranslate nohighlight">\( D_2 \leq D_1 \leq a\)</span>. <span class="math notranslate nohighlight">\(M_{max}\)</span> can be computed as follows:</p>
 <p><span class="math notranslate nohighlight">\(M_{max} =  R_1 a-A_1D_1\)</span></p>
 <p><span class="math notranslate nohighlight">\(R_1 = \frac{\left ( \sum_{i=1}^{3}A_i \right )a}{L}, \; i=\{1,2,3\}\)</span></p>
@@ -455,7 +486,7 @@ document.write(`
 <li><p>The characteristics of the vehicle that cause the maximum <span class="math notranslate nohighlight">\(M_{max}\)</span> at the point <span class="math notranslate nohighlight">\(p\)</span> of the beam.</p></li>
 </ul>
 <section id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h2>
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>We start by importing numpy and loading the data set.</p></li>
 </ul>
@@ -463,9 +494,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;https://raw.githubusercontent.com/mike-mendoza/Bivariate_NPBN_workshop_files/&quot;</span>
-    <span class="s2">&quot;a991bc3d9391a92437af1c3d69ae9fdfe6baf6da/files_pyhton_book_test/V3AX_WIM_BR.csv&quot;</span><span class="p">,</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/TUDelft-CITG&quot;</span>
+                  <span class="s2">&quot;/learn-python/mike/book/05/Exercises/02_01.csv&quot;</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="p">)</span>
@@ -628,9 +658,13 @@ and inter-axle distances: [4.8 1.2] in m
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h1>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
 <p>Get the largest element of each column of the WIM sample provided above to create the synthetic vehicle <em>3C Magnus</em>. Using the same dimensions of the previous described bridge answer the following questions:</p>
+<ul class="simple">
+<li><p>What is the value of last axle load <span class="math notranslate nohighlight">\(A_3\)</span> of the Maximum truck?</p></li>
+<li><p>What is the value of the bending moment at the point <span class="math notranslate nohighlight">\(p\)</span> of the beam caused by the Maximum truck?</p></li>
+</ul>
 <div class="tip admonition">
 <p class="admonition-title">Toolbox</p>
 <p>Here is your <strong>toolbox</strong> to solve this exercise:</p>
@@ -643,9 +677,16 @@ and inter-axle distances: [4.8 1.2] in m
 <p>You can use the following numpy functions (but not limited to):
 <code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.all()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.max()</span></code></p>
 </div>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Lite session</p>
+<p>Start a Jupiter lite session <a href="https://mike-mendoza.github.io/jupyter-lite-sandbox/repl/index.html?toolbar=1&kernel=python&code=print('You may begin!')" target="_blank">here</a> to open a new tab where you can freely write and run your code.</p>
+<p>Wait until the message “<tt>You may begin!</tt>” is printed.</p>
+<p><em>Note</em>: use the following line to load the data file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">np.loadtxt('/drive/data/02_01.csv',delimiter=',',skiprows=1)</span></code></p>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="MmwQPvuPkJrT" data-shufflequestions="False"
+<div class="output text_html"><div id="JyVBgrysiqJc" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"> <style>:root {
@@ -807,7 +848,7 @@ and inter-axle distances: [4.8 1.2] in m
     100% {
         background-color: var(--correct-green);
     }
-}</style></div><script type="application/javascript">var questionsMmwQPvuPkJrT=[
+}</style></div><script type="application/javascript">var questionsJyVBgrysiqJc=[
     {
         "question": "What is the value of last axle load $A_3$ of the Maximum truck? Please round the answer to one decimal place.",
         "type": "numeric",
@@ -822,7 +863,7 @@ and inter-axle distances: [4.8 1.2] in m
         ]
     },
     {
-        "question": "What is the value of the bending momment at the point $p$ of the beam caused by the Maximum truck? Please round the answer to one decimal place.",
+        "question": "What is the value of the bending moment at the point $p$ of the beam caused by the Maximum truck? Please round the answer to one decimal place.",
         "type": "numeric",
         "precision": 3,
         "answers": [
@@ -1568,35 +1609,11 @@ if (typeof version == 'undefined') {
 }
 
         {
-        show_questions(questionsMmwQPvuPkJrT,  MmwQPvuPkJrT);
+        show_questions(questionsJyVBgrysiqJc,  JyVBgrysiqJc);
         }
         </script></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_truck</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">axle_loads</span> <span class="o">=</span> <span class="n">max_truck</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">inter_axle_distances</span> <span class="o">=</span> <span class="n">max_truck</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># m</span>
-
-<span class="n">resultant</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axle_loads</span><span class="p">)</span>
-
-<span class="n">r_a</span> <span class="o">=</span> <span class="p">(</span><span class="n">resultant</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">l</span>
-
-<span class="n">m</span> <span class="o">=</span> <span class="n">r_a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">-</span> <span class="n">axle_loads</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">inter_axle_distances</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">axle_loads</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">inter_axle_distances</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 74.  122.  107.2]
-[6.  1.4]
-486.9
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1666,14 +1683,12 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Maximum bending moment on a simply supported bridge</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

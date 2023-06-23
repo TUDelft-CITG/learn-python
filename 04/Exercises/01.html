@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Objects and References Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
+    <title>Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
   
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5. Numpy" href="../../05/Theory/01.html" />
     <link rel="prev" title="4. Objects and References" href="../Theory/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -111,6 +109,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -154,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -162,36 +166,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory/01.html">4. Objects and References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Objects and References Exercises</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -199,27 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -266,6 +251,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/04/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/04/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -274,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F04/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F04/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -403,7 +437,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Objects and References Exercises</h1>
+    <h1>Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -429,62 +463,54 @@ document.write(`
   <figure>
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
-<section class="tex2jax_ignore mathjax_ignore" id="objects-and-references-exercises">
-<h1>Objects and References Exercises<a class="headerlink" href="#objects-and-references-exercises" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<p>You can easily start a live Jupyter session in the cloud directly from this book. To do this, just click on the Launch Button (<span class="fa fa-rocket"></span>) located above on this page.</p>
+<p>You have a few options to choose from:</p>
+<ol class="arabic simple">
+<li><p>Launch on Binder: By selecting this option, you can instantly launch a live Jupyter session using Binder.</p></li>
+<li><p>Launch on Google Colab: This option allows you to launch a live Jupyter session using Google Colab.</p></li>
+</ol>
+<p>Alternatively, you can also click on the <em>Jupyter Lite session</em> link, which will open a new tab where you can freely write and run your code.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Lite session</p>
+<p>You can start a Jupiter lite session <a href="https://mike-mendoza.github.io/jupyter-lite-sandbox/repl/index.html?toolbar=1&kernel=python&code=import pandas as pd; import data.check_answers as check; print('You may begin!')" target="_blank">here</a></p>
+<p>Wait until the message “<tt>You may begin!</tt>” is printed.</p>
+</div>
 <section id="fixing-exercise-4-1-1">
-<h2>(Fixing) Exercise 4.1.1<a class="headerlink" href="#fixing-exercise-4-1-1" title="Permalink to this headline">#</a></h2>
+<h2>(Fixing) Exercise 4.1.1<a class="headerlink" href="#fixing-exercise-4-1-1" title="Permalink to this heading">#</a></h2>
 <p>Let’s assume that you develop a login interface for an international oil company; which, as the title international suggests, works internationally. Thus, a lot of clients worldwide expect to see data in their favorite units. The company has hired an intern to output temperatures in Celsius and Fahrenheit, from the provided temperature in Kelvin. But something went wrong, the code doesn’t work and now the intern is gone. So, the burden of fixing the code is, yet again, put on your shoulders.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">get_display_temperature</span><span class="p">(</span><span class="n">temp_k</span><span class="p">):</span>
-    <span class="c1"># copying temporarily temp_k to temp_c</span>
-    <span class="n">temp_c</span> <span class="o">=</span> <span class="n">temp_k</span>
+<span class="k">def</span> <span class="nf">get_display_temperature</span><span class="p">(</span><span class="n">temperature_kelvin</span><span class="p">):</span>
+    <span class="c1"># copying temporarily temperature_kelvin to temperature_celsius</span>
+    <span class="n">temperature_celsius</span> <span class="o">=</span> <span class="n">temperature_kelvin</span>
     
     <span class="c1"># converting kelvin to celsius</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_c</span><span class="p">)):</span>
-        <span class="n">temp_c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temperature_celsius</span><span class="p">)):</span>
+        <span class="n">temperature_celsius</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temperature_celsius</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span>
         
-    <span class="c1"># copying temporarily temp_k to temp_f</span>
-    <span class="n">temp_f</span> <span class="o">=</span> <span class="n">temp_k</span>
+    <span class="c1"># copying temporarily temperature_kelvin to temperature_fahrenheit</span>
+    <span class="n">temperature_fahrenheit</span> <span class="o">=</span> <span class="n">temperature_kelvin</span>
     
     <span class="c1"># converting kelvin to fahrenheit</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)):</span>
-        <span class="n">temp_f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temperature_fahrenheit</span><span class="p">)):</span>
+        <span class="n">temperature_fahrenheit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">temperature_fahrenheit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
     
     <span class="c1"># now, creating display messages from the converted temperatures</span>
     <span class="n">display_messages</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_k</span><span class="p">)):</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temp_c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10.3f</span><span class="si">}</span><span class="s2">°C | </span><span class="si">{</span><span class="n">temp_f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10.3f</span><span class="si">}</span><span class="s2">°F (ID=</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temperature_kelvin</span><span class="p">)):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temperature_celsius</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10.3f</span><span class="si">}</span><span class="s2">°C | </span><span class="si">{</span><span class="n">temperature_fahrenheit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;°F (ID=</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="p">)</span>
         <span class="n">display_messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         
     <span class="k">return</span> <span class="n">display_messages</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">get_display_temperature</span><span class="p">(</span><span class="n">temp_k</span><span class="p">):</span>
-    <span class="c1">#copying temporarily temp_k to temp_c</span>
-    <span class="n">temp_c</span> <span class="o">=</span> <span class="n">temp_k</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    
-    <span class="c1">#converting kelvins to celsius</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_c</span><span class="p">)):</span>
-        <span class="n">temp_c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span>
-        
-    <span class="c1">#copying temporarily temp_k to temp_f</span>
-    <span class="n">temp_f</span> <span class="o">=</span> <span class="n">temp_k</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    
-    <span class="c1">#converting kelvins to farenheits</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)):</span>
-        <span class="n">temp_f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
-    
-    <span class="c1">#now, creating display messages from the converted temperatures</span>
-    <span class="n">display_messages</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_k</span><span class="p">)):</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temp_c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10.3f</span><span class="si">}</span><span class="s2">°C | </span><span class="si">{</span><span class="n">temp_f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10.3f</span><span class="si">}</span><span class="s2">°F (ID=</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">)&quot;</span>
-        <span class="n">display_messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-        
-    <span class="k">return</span> <span class="n">display_messages</span>
-<span class="c1">###END SOLUTION</span>
 
 <span class="k">def</span> <span class="nf">update_screen_text</span><span class="p">(</span><span class="n">messages</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
@@ -492,25 +518,33 @@ document.write(`
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         
 
-<span class="n">temp_k</span> <span class="o">=</span> <span class="p">[</span><span class="mf">300.67</span><span class="p">,</span> <span class="mf">277.56</span><span class="p">,</span> <span class="mf">315.88</span><span class="p">,</span> <span class="mf">307.87</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-<span class="n">messages</span> <span class="o">=</span> <span class="n">get_display_temperature</span><span class="p">(</span><span class="n">temp_k</span><span class="p">)</span>
+<span class="n">temperature_kelvin</span> <span class="o">=</span> <span class="p">[</span><span class="mf">300.67</span><span class="p">,</span> <span class="mf">277.56</span><span class="p">,</span> <span class="mf">315.88</span><span class="p">,</span> <span class="mf">307.87</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">get_display_temperature</span><span class="p">(</span><span class="n">temperature_kelvin</span><span class="p">)</span>
 <span class="n">update_screen_text</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-771.340  °C | -771.340  °F (ID=4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">get_display_temperature</span><span class="p">([</span><span class="mi">100</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;-173.150  °C | -279.670  °F (ID=0)&quot;</span><span class="p">],</span> <span class="s1">&#39;4.1.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_4</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">arguments</span><span class="p">[</span><span class="n">get_display_temperature</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="fixing-exercise-4-1-2">
-<h2>(Fixing) Exercise 4.1.2<a class="headerlink" href="#fixing-exercise-4-1-2" title="Permalink to this headline">#</a></h2>
+<h2>(Fixing) Exercise 4.1.2<a class="headerlink" href="#fixing-exercise-4-1-2" title="Permalink to this heading">#</a></h2>
 <p>The main philosophy of programming is avoiding redundancy — you shouldn’t write the same batch code two or more times if you can just create a function out of it. The same can be applied to many other things — don’t start a new assignment from scratch, if you can re-use a formatting template from your previous assignments. In the cell with code below, you see an example of preparing a template for observation of some satellite, which can work in 2 different modes, and thus will have a slightly different template for each of the modes. The code below is supposed to do that and it was even tested!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -530,88 +564,96 @@ document.write(`
         <span class="n">template</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;B8&#39;</span><span class="p">,</span> <span class="s1">&#39;B8A&#39;</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1">#if the mode is unknonw - raise a RuntimeError</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Failed to identify observation mode: </span><span class="si">{</span><span class="n">observation_mode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s1">&#39;Failed to identify observation mode: </span><span class="si">{</span><span class="n">observation_mode</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="p">)</span>
         
     <span class="k">return</span> <span class="n">template</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="n">observation_mode</span><span class="p">):</span>  
-    <span class="c1">#creating metadata for the upcoming observations</span>
-    <span class="n">template</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()),</span>
-               <span class="s1">&#39;observation_mode&#39;</span><span class="p">:</span> <span class="n">observation_mode</span><span class="p">,</span>
-               <span class="s1">&#39;bands&#39;</span><span class="p">:</span> <span class="n">default_bands</span><span class="o">.</span><span class="n">copy</span><span class="p">()}</span>
-    
-    <span class="c1">#adding additional bands for the extended mode</span>
-    <span class="k">if</span> <span class="n">observation_mode</span> <span class="o">==</span> <span class="s1">&#39;normal&#39;</span><span class="p">:</span>
-        <span class="c1">#no need to add bands</span>
-        <span class="k">pass</span>
-    <span class="k">elif</span> <span class="n">observation_mode</span> <span class="o">==</span> <span class="s1">&#39;extended&#39;</span><span class="p">:</span>
-        <span class="n">template</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;B8&#39;</span><span class="p">,</span> <span class="s1">&#39;B8A&#39;</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1">#if the mode is unknonw - raise a RuntimeError</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Failed to identify observation mode: </span><span class="si">{</span><span class="n">observation_mode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-        
-    <span class="k">return</span> <span class="n">template</span>
-<span class="c1">###END SOLUTION</span>
 
 <span class="k">def</span> <span class="nf">print_dict</span><span class="p">(</span><span class="n">my_dict</span><span class="p">):</span>
-    
     <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1"> -&gt; </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  
-    <span class="c1">#print(&#39;-&#39;*10)</span>
+
 
 <span class="s2">&quot;set of default bands, don&#39;t change!!&quot;</span>
 <span class="n">default_bands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">]</span>
-
-<span class="c1">#testing the function</span>
-<span class="c1">#test 1. - normal mode</span>
-<span class="c1">#Expected behaviour: a dictionary with 3 items and only default bands are inside</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 1&#39;</span><span class="p">)</span>
-<span class="n">temp_norm</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
-<span class="n">print_dict</span><span class="p">(</span><span class="n">temp_norm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 2&#39;</span><span class="p">)</span>
-<span class="c1">#test 2. - extended mode</span>
-<span class="c1">#Expected behaviour: a dictionary with 3 items and extended list of bands</span>
-<span class="n">temp_ext</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;extended&#39;</span><span class="p">)</span>
-<span class="n">print_dict</span><span class="p">(</span><span class="n">temp_ext</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 3&#39;</span><span class="p">)</span>
-<span class="c1">#test 3. - any other observation mode</span>
-<span class="c1">#Expected behaviour - Runtime error</span>
-<span class="n">temp_error</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;should raise an error, right?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets test the the function</p>
+<ul>
+<li><p>Test 1. - normal mode.</p>
+<p>Expected behavior: a dictionary with 3 items and only default bands are inside</p>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test 1&#39;</span><span class="p">)</span>
+<span class="n">template_normal</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+<span class="n">print_dict</span><span class="p">(</span><span class="n">template_normal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-------------------
-test 1
-time -&gt; Tue Jul 12 07:48:28 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test 1
+time -&gt; Thu Jun  8 10:45:40 2023
 observation_mode -&gt; normal
-bands -&gt; [&#39;B1&#39;, &#39;B2&#39;, &#39;B3&#39;, &#39;B4&#39;, &#39;B5&#39;, &#39;B6&#39;, &#39;B7&#39;]
--------------------
-test 2
-time -&gt; Tue Jul 12 07:48:28 2022
-observation_mode -&gt; extended
 bands -&gt; [&#39;B1&#39;, &#39;B2&#39;, &#39;B3&#39;, &#39;B4&#39;, &#39;B5&#39;, &#39;B6&#39;, &#39;B7&#39;, &#39;B8&#39;, &#39;B8A&#39;]
--------------------
-test 3
+</pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Test 2. - extended mode.</p>
+<p>Expected behavior: a dictionary with 3 items and extended list of bands.</p>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test 2&#39;</span><span class="p">)</span>
+<span class="n">template_extended</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;extended&#39;</span><span class="p">)</span>
+<span class="n">print_dict</span><span class="p">(</span><span class="n">template_extended</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test 2
+time -&gt; Thu Jun  8 10:46:18 2023
+observation_mode -&gt; extended
+bands -&gt; [&#39;B1&#39;, &#39;B2&#39;, &#39;B3&#39;, &#39;B4&#39;, &#39;B5&#39;, &#39;B6&#39;, &#39;B7&#39;, &#39;B8&#39;, &#39;B8A&#39;, &#39;B8&#39;, &#39;B8A&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Test 3. - any other observation mode.</p>
+<p>Expected behavior: Runtime error</p>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 3&#39;</span><span class="p">)</span>
+<span class="n">template_error</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;should raise an error, right?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test 3
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">84</span><span class="n">a3fb455652</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="c1">#test 3. - any other observation mode</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="c1">#Expected behaviour - Runtime error</span>
-<span class="ne">---&gt; </span><span class="mi">68</span> <span class="n">temp_error</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;should raise an error, right?&#39;</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 3&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">template_error</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;should raise an error, right?&#39;</span><span class="p">)</span>
 
-<span class="nn">&lt;ipython-input-6-84a3fb455652&gt;</span> in <span class="ni">prepare_template</span><span class="nt">(default_bands, observation_mode)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>         <span class="c1">#if the mode is unknonw - raise a RuntimeError</span>
-<span class="ne">---&gt; </span><span class="mi">37</span>         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Failed to identify observation mode: </span><span class="si">{</span><span class="n">observation_mode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> 
-<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="k">return</span> <span class="n">template</span>
+<span class="nn">Cell In[12], line 17,</span> in <span class="ni">prepare_template</span><span class="nt">(default_bands, observation_mode)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">template</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;B8&#39;</span><span class="p">,</span> <span class="s1">&#39;B8A&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="c1">#if the mode is unknonw - raise a RuntimeError</span>
+<span class="ne">---&gt; </span><span class="mi">17</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Failed to identify observation mode: </span><span class="si">{</span><span class="n">observation_mode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">return</span> <span class="n">template</span>
 
 <span class="ne">RuntimeError</span>: Failed to identify observation mode: should raise an error, right?
 </pre></div>
@@ -624,51 +666,40 @@ test 3
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#set of default bands, don&#39;t change!!!</span>
 <span class="n">default_bands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">]</span>
 
-<span class="c1">#testing the function</span>
-<span class="c1">#test 1. - extended mode</span>
-<span class="c1">#Expected behaviour: a dictionary with 3 items and extended list of bands</span>
-<span class="n">temp_ext</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;extended&#39;</span><span class="p">)</span>
+<span class="n">template_extended</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;extended&#39;</span><span class="p">)</span>
+<span class="n">template_normal</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test 1&#39;</span><span class="p">)</span>
+<span class="n">print_dict</span><span class="p">(</span><span class="n">template_extended</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 1&#39;</span><span class="p">)</span>
-<span class="n">print_dict</span><span class="p">(</span><span class="n">temp_ext</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test 2&#39;</span><span class="p">)</span>
-<span class="c1">#test 2. - normal mode</span>
-<span class="c1">#Expected behaviour: a dictionary with 3 items and only default bands are inside</span>
-<span class="n">temp_norm</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
-<span class="n">print_dict</span><span class="p">(</span><span class="n">temp_norm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test 2&#39;</span><span class="p">)</span>
+<span class="n">print_dict</span><span class="p">(</span><span class="n">template_normal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-------------------
-test 1
-time -&gt; Tue Jul 12 07:49:01 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test 1
+time -&gt; Thu Jun  8 10:50:12 2023
 observation_mode -&gt; extended
 bands -&gt; [&#39;B1&#39;, &#39;B2&#39;, &#39;B3&#39;, &#39;B4&#39;, &#39;B5&#39;, &#39;B6&#39;, &#39;B7&#39;, &#39;B8&#39;, &#39;B8A&#39;]
 -------------------
-test 2
-time -&gt; Tue Jul 12 07:49:01 2022
+Test 2
+time -&gt; Thu Jun  8 10:50:12 2023
 observation_mode -&gt; normal
-bands -&gt; [&#39;B1&#39;, &#39;B2&#39;, &#39;B3&#39;, &#39;B4&#39;, &#39;B5&#39;, &#39;B6&#39;, &#39;B7&#39;]
--------------------
+bands -&gt; [&#39;B1&#39;, &#39;B2&#39;, &#39;B3&#39;, &#39;B4&#39;, &#39;B5&#39;, &#39;B6&#39;, &#39;B7&#39;, &#39;B8&#39;, &#39;B8A&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <p>Obviously, the order of tests shouldn’t matter, so, most likely, the problem is with the function itself. Please fix the function, in the cell above, so that the second set of tests also works (you can comment out the first set of tests if you want).</p>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="n">default_bands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">]</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
-<span class="n">d2</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;extended&#39;</span><span class="p">)</span>
-<span class="n">d3</span> <span class="o">=</span> <span class="n">prepare_template</span><span class="p">(</span><span class="n">default_bands</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
-
-<span class="k">assert</span> <span class="n">d2</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">,</span> <span class="s1">&#39;B8&#39;</span><span class="p">,</span> <span class="s1">&#39;B8A&#39;</span><span class="p">]</span> <span class="ow">and</span> \
-        <span class="n">d3</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">],</span> <span class="s1">&#39;4.1.2 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_4</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">prepare_template</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

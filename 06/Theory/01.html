@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>6. Pandas &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -66,10 +64,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '06/Theory/01';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Pandas Exercises" href="../Exercises/01.html" />
+    <link rel="next" title="Exercises" href="../Exercises/01.html" />
     <link rel="prev" title="Maximum bending moment on a simply supported bridge" href="../../05/Exercises/02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -111,6 +109,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -154,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -162,36 +166,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -199,27 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -266,6 +251,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/06/Theory/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/06/Theory/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -274,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F06/Theory/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F06/Theory/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -447,9 +481,9 @@ document.write(`
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right"></IMG>
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="pandas">
-<h1>6. Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h1>
+<h1>6. Pandas<a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>6.1 Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>6.1 Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>With the standard Python functions and the <b><code>numpy</code></b> library, you already have access to powerful tools to process data. However, you’ll find that organizing data using them might still be confusing and messy… so let us introduce you to <b><code>pandas</code></b>: a Python library specialized in data organization. Its functions are simple to use, and they achieve a lot. Furthermore, <b><code>pandas</code></b> was built on top of the <b><code>numpy</code></b> library, using some of their functions and data structures. This makes <b><code>pandas</code></b> fast. The <b><code>pandas</code></b> library is often used in Data Science and Machine Learning to organize data that are used as input in other functions, of other libraries. For example, you store and organize an Excel file using <b><code>pandas</code></b> data structures, apply statistical analysis using <b><code>SciPy</code></b>, and then plot the result using <b><code>matplotlib</code></b>.<br><br> In this section, we’ll introduce you to the basic <b><code>pandas</code></b> data structures: the <b><code>Series</code></b> and <b><code>DataFrame</code></b> objects; and how to store data in them. In <b><code>pandas</code></b>, a <b><code>Series</code></b> represents a list, and <b><code>DataFrame</code></b> represents a table.</p>
 <p>As always, let’s import some libraries. We’ll use numpy only for comparison.</p>
 <div class="cell docutils container">
@@ -462,7 +496,7 @@ document.write(`
 </div>
 </section>
 <section id="series">
-<h2>6.2 <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#series" title="Permalink to this headline">#</a></h2>
+<h2>6.2 <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#series" title="Permalink to this heading">#</a></h2>
 <p>We start with <b><code>pandas Series</code></b>, since a <b><code>DataFrame</code></b> is made out of <b><code>Series</code></b>; retrieving a row or a column from a <b><code>DataFrame</code></b> results in a <b><code>Series</code></b>. A <b><code>Series</code></b> object is a <b><code>numpy</code></b> ndarray used to hold one-dimensional data, like a list.  We create a <b><code>Series</code></b> object using its constructor <b><code>pd.Series()</code></b>. It can be called by using a list that you want to convert into a <b><code>pandas series</code></b>. Unlike <b><code>numpy</code></b> arrays, a <b><code>Series</code></b> may hold data of different types.</p>
 <p>First we create a list containing elements of various types. Then we construct a <code class="docutils literal notranslate"><span class="pre">Series</span></code> and a <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code> using our list. Finally we compare the type of each element in <code class="docutils literal notranslate"><span class="pre">my_series</span></code> and <code class="docutils literal notranslate"><span class="pre">my_nparray</span></code>.</p>
 <div class="cell docutils container">
@@ -551,7 +585,7 @@ dtype: object
 </div>
 </div>
 <section id="labeling-series">
-<h3>Labeling <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#labeling-series" title="Permalink to this headline">#</a></h3>
+<h3>Labeling <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#labeling-series" title="Permalink to this heading">#</a></h3>
 <p>So far we have referred to values within a list or array using indexing, but that might be confusing. With <b><code>pandas Series</code></b>, you can refer to your values by labeling their indices. Labels allow you to access the values in a more informative way, similar to dictionaries; depicted in Section 2.3, in Notebook 2.</p>
 <p>We create the indices of the same size as the list since we want to construct our Series object with and use the index option in the Series constructor. Note that our entries can be called both ways</p>
 <div class="cell docutils container">
@@ -608,7 +642,7 @@ dtype: object
 </section>
 </section>
 <section id="dataframe">
-<h2>6.3 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#dataframe" title="Permalink to this headline">#</a></h2>
+<h2>6.3 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#dataframe" title="Permalink to this heading">#</a></h2>
 <p>A <b><code>DataFrame</code></b> is a data structure used to represent two-dimensional data. A common example of data organized in two dimensions are tables or two-dimensional arrays.</p>
 <p>Usually, <b><code>DataFrames</code></b> are made out of <b><code>Series</code></b>. However, its constructor accepts other types.</p>
 <p>First, we define a few series to represent individual rows with data from <a class="reference external" href="https://www.researchgate.net/figure/Selected-physical-properties-of-minerals-common-to-NYC-bedrock_tbl1_228544586">here</a>.</p>
@@ -940,7 +974,7 @@ dtype: object
 </div></div></div>
 </div>
 <section id="labeling-dataframes">
-<h3>Labeling <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#labeling-dataframes" title="Permalink to this headline">#</a></h3>
+<h3>Labeling <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#labeling-dataframes" title="Permalink to this heading">#</a></h3>
 <p>You can also rename your columns’ and rows’ index names by changing your DataFrame’s <b><code>columns</code></b> and <b><code>index</code></b> attributes, respectively. Recall our <b><code>df2</code></b>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1086,7 +1120,7 @@ dtype: object
 </div>
 </section>
 <section id="concatenating-dataframes">
-<h3>Concatenating <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#concatenating-dataframes" title="Permalink to this headline">#</a></h3>
+<h3>Concatenating <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code><a class="headerlink" href="#concatenating-dataframes" title="Permalink to this heading">#</a></h3>
 <p>We can also concatenate <b><code>DataFrames</code></b> to each other, even if they are of different sizes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1113,7 +1147,7 @@ row3       test      bad   False  asdf         NaN     @#$%^
 <p>In the resulting table, we notice that <b><code>pandas</code></b> automatically added <b><code>NaN</code></b> <i>(“Not a Number”)</i> values to the missing entries of either table. Very convenient!</p>
 </section>
 <section id="removing-rows-and-columns">
-<h3>Removing rows and columns<a class="headerlink" href="#removing-rows-and-columns" title="Permalink to this headline">#</a></h3>
+<h3>Removing rows and columns<a class="headerlink" href="#removing-rows-and-columns" title="Permalink to this heading">#</a></h3>
 <p>Our table looks a bit messy though… let’s make it better by removing the <i>’test’</i> row and column. We can drop them by using the <b><code>pd.drop()</code></b> function.  By default, the <b><code>pd.drop()</code></b> function outputs a copy of the inserted <b><code>DataFrame</code></b> without the dropped items. The original data will then be preserved if you give a new name to the dataframe (i.e., the copy) with dropped items.</p>
 <p>Example of how you could use <code class="docutils literal notranslate"><span class="pre">pd.drop()</span></code> to remove a row or column. Note that we used that row’s index name and column’s index name.</p>
 <div class="cell docutils container">
@@ -1410,7 +1444,7 @@ row2    Kyanite        6    4.01         NaN       One
 </div>
 </section>
 <section id="accessing-and-modifying-code-dataframe-code-values">
-<h3>Accessing and modifying <code>DataFrame</code> values<a class="headerlink" href="#accessing-and-modifying-code-dataframe-code-values" title="Permalink to this headline">#</a></h3>
+<h3>Accessing and modifying <code>DataFrame</code> values<a class="headerlink" href="#accessing-and-modifying-code-dataframe-code-values" title="Permalink to this heading">#</a></h3>
 <p>Now that we created our table, we want to be able to access and modify the individual values within it. This way we could add the missing values to the <i>’cleavage’</i> column. There are many ways to do this because <b><code>numpy</code></b> and standard Python functions are often still applicable on <b><code>pandas</code></b> data structures. However, there is a difference in processing speed. Therefore, when accessing or modifying data, try to use <b><code>pandas</code></b> functions, such as: <b><code>.iat()</code></b>, <b><code>.at()</code></b>, <b><code>.iloc()</code></b>, and <b><code>.loc()</code></b> instead of using the common <b><code>[]</code></b> square bracket syntax, as they might raise some warnings:</p>
 <p>Note that the value still changed, but avoid doing so.</p>
 <div class="cell docutils container">
@@ -1524,7 +1558,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </section>
 <section id="code-iat-code-vs-code-at-code-vs-code-iloc-code-vs-code-loc-code">
-<h3><code>.iat()</code> vs <code>.at()</code> vs <code>.iloc()</code> vs <code>.loc()</code><a class="headerlink" href="#code-iat-code-vs-code-at-code-vs-code-iloc-code-vs-code-loc-code" title="Permalink to this headline">#</a></h3>
+<h3><code>.iat()</code> vs <code>.at()</code> vs <code>.iloc()</code> vs <code>.loc()</code><a class="headerlink" href="#code-iat-code-vs-code-at-code-vs-code-iloc-code-vs-code-loc-code" title="Permalink to this heading">#</a></h3>
 <p>In <a href = "https://stackoverflow.com/questions/28757389/pandas-loc-vs-iloc-vs-at-vs-iat">this discussion in stackoverflow</a>, they point out some differences between these methods. To keep in mind, <b><code>.iat()</code></b> and <b><code>.at()</code></b> are the fastest ones, but they only return scalars (one element), while <b><code>.loc()</code></b> and <b><code>.iloc()</code></b> can access several elements at the same time. Lastly, <b><code>.iat()</code></b> and <b><code>.iloc</code></b> use indexes (numbers), while <b><code>.at()</code></b> and <b><code>.loc()</code></b> use labels. For more information, check the stackoverflow discussion.</p>
 <p>Acessing values using arrays as index with <code class="docutils literal notranslate"><span class="pre">.iloc()</span></code>, only method that allows arrays in both rows and cols.</p>
 <div class="cell docutils container">
@@ -2037,7 +2071,7 @@ Name: hardness, dtype: object
 </section>
 </section>
 <section id="importing-data-into-code-dataframes-code-and-exploring-its-attributes">
-<h2>6.4 Importing data into <code>DataFrames</code> and exploring its attributes<a class="headerlink" href="#importing-data-into-code-dataframes-code-and-exploring-its-attributes" title="Permalink to this headline">#</a></h2>
+<h2>6.4 Importing data into <code>DataFrames</code> and exploring its attributes<a class="headerlink" href="#importing-data-into-code-dataframes-code-and-exploring-its-attributes" title="Permalink to this heading">#</a></h2>
 <p><b><code>pandas</code></b> provides many functions to import data into <b><code>dataframes</code></b>, such as <b><code>read_csv()</code></b> to read delimited text files, or <b><code>read_excel()</code></b> for Excel or OpenDocument spreadsheets. <b><code>read_csv()</code></b> provides options that allow you to filter the data, such as specifying the separator/delimiter, the lines that form the headers, which rows to skip, etc. Let’s analyze the <b><code>mineral_properties.txt</code></b>. Below a screenshot of it:<br><br></p>
 <p><img alt="image.png" src="https://raw.githubusercontent.com/mike-mendoza/Bivariate_NPBN_workshop_files/main/files_pyhton_book_test/06_01.png" /></p>
 <p>below we import the <code class="docutils literal notranslate"><span class="pre">.txt</span></code>:</p>
@@ -2049,97 +2083,170 @@ Name: hardness, dtype: object
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;../resource/lib/publicdata/&#39;</span>
-<span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mineral_properties.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_location</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/TUDelft-CITG/&quot;</span>
+                <span class="s2">&quot;learn-python/mike/book/06/Theory/&quot;</span><span class="p">)</span>
+<span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_location</span> <span class="o">+</span> <span class="s1">&#39;mineral_properties.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
                   <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">df4</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;../resource/lib/publicdata/&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mineral_properties.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                   <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">df4</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\util\_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py:678,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">663</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">665</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">674</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
-<span class="g g-Whitespace">    </span><span class="mi">675</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">676</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">678</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py:575,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">575</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py:932,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">929</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">931</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">--&gt; </span><span class="mi">932</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py:1216,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1212</span>     <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;rb&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1213</span> <span class="c1"># error: No overload variant of &quot;get_handle&quot; matches argument types</span>
-<span class="g g-Whitespace">   </span><span class="mi">1214</span> <span class="c1"># &quot;Union[str, PathLike[str], ReadCsvBuffer[bytes], ReadCsvBuffer[str]]&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1215</span> <span class="c1"># , &quot;str&quot;, &quot;bool&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1216</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>  <span class="c1"># type: ignore[call-overload]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1217</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1218</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1219</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1220</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1221</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1222</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1223</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1224</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1225</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1226</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1227</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\io\common.py:786,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">781</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">782</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">783</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">784</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">785</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">786</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">787</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../resource/lib/publicdata/mineral_properties.txt&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hardness</th>
+      <th>sp. gr.</th>
+      <th>cleavage</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Amphibole</th>
+      <td>5.50</td>
+      <td>2.800</td>
+      <td>Two</td>
+    </tr>
+    <tr>
+      <th>Biotite</th>
+      <td>2.75</td>
+      <td>3.000</td>
+      <td>One</td>
+    </tr>
+    <tr>
+      <th>Calcite</th>
+      <td>3.00</td>
+      <td>2.720</td>
+      <td>Three</td>
+    </tr>
+    <tr>
+      <th>Dolomite</th>
+      <td>3.00</td>
+      <td>2.850</td>
+      <td>Three</td>
+    </tr>
+    <tr>
+      <th>Feldspars</th>
+      <td>6.00</td>
+      <td>2.645</td>
+      <td>Two</td>
+    </tr>
+    <tr>
+      <th>Garnet</th>
+      <td>7.00</td>
+      <td>3.900</td>
+      <td>Fracture</td>
+    </tr>
+    <tr>
+      <th>Graphite</th>
+      <td>1.50</td>
+      <td>2.300</td>
+      <td>One</td>
+    </tr>
+    <tr>
+      <th>Kyanite</th>
+      <td>6.00</td>
+      <td>4.010</td>
+      <td>One</td>
+    </tr>
+    <tr>
+      <th>Muscovite</th>
+      <td>2.25</td>
+      <td>2.930</td>
+      <td>One</td>
+    </tr>
+    <tr>
+      <th>Pyroxene</th>
+      <td>5.50</td>
+      <td>3.325</td>
+      <td>Two</td>
+    </tr>
+    <tr>
+      <th>Quartz</th>
+      <td>7.00</td>
+      <td>2.650</td>
+      <td>Fracture</td>
+    </tr>
+    <tr>
+      <th>Sillimanite</th>
+      <td>6.50</td>
+      <td>3.230</td>
+      <td>One</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Note that if we try to call any of the columns from <code class="docutils literal notranslate"><span class="pre">df4</span></code> we will get an error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;hardness&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\core\indexes\base.py:3629,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3628</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3629</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3630</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\_libs\index.pyx:136,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\_libs\index.pyx:163,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas\_libs\hashtable_class_helper.pxi:5198,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas\_libs\hashtable_class_helper.pxi:5206,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;hardness&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df4</span><span class="p">[</span><span class="s1">&#39;hardness&#39;</span><span class="p">]</span>
+
+<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py:3505,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3503</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3504</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3505</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3506</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3507</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File c:\ProgramData\Anaconda3\lib\site-packages\pandas\core\indexes\base.py:3631,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3629</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3630</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3631</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3632</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3633</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3634</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3635</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3636</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;hardness&#39;
 </pre></div>
 </div>
 </div>
@@ -2153,13 +2260,23 @@ Name: hardness, dtype: object
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39; hardness&#39;, &#39; sp. gr.&#39;, &#39; cleavage&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <p>You see there are spaces at the beginning of each column name… this happens because that’s how people usually type, with commas followed by a space. We could use the <b><code>skipinitialspace = True</code></b> from the <b><code>pd.read_csv()</code></b> function to avoid this. Let’s try it out:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mineral_properties.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_location</span> <span class="o">+</span> <span class="s1">&#39;mineral_properties.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
                   <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df4</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;hardness&#39;, &#39;sp. gr.&#39;, &#39;cleavage&#39;], dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -2167,11 +2284,16 @@ Name: hardness, dtype: object
 <p>Ok, much better!</p>
 </section>
 <section id="statistics-with-code-pandas-code">
-<h2>6.5 Statistics with <code>pandas</code><a class="headerlink" href="#statistics-with-code-pandas-code" title="Permalink to this headline">#</a></h2>
+<h2>6.5 Statistics with <code>pandas</code><a class="headerlink" href="#statistics-with-code-pandas-code" title="Permalink to this heading">#</a></h2>
 <p>Recall some functions such as <code>np.mean()</code> and <code>np.max()</code>; these functions can be used to calculate a row’s or column’s statistics. Say you want to know what’s the average <i>hardness</i> of the different minerals:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;hardness&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.666666666666667
 </pre></div>
 </div>
 </div>
@@ -2186,6 +2308,16 @@ Name: hardness, dtype: object
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;hardness&#39;, &#39;sp. gr.&#39;, &#39;cleavage&#39;], dtype=&#39;object&#39;)
+----------------------
+Index([&#39;Amphibole&#39;, &#39;Biotite&#39;, &#39;Calcite&#39;, &#39;Dolomite&#39;, &#39;Feldspars&#39;, &#39;Garnet&#39;,
+       &#39;Graphite&#39;, &#39;Kyanite&#39;, &#39;Muscovite&#39;, &#39;Pyroxene&#39;, &#39;Quartz&#39;,
+       &#39;Sillimanite&#39;],
+      dtype=&#39;object&#39;, name=&#39;name&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">df4.info</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">print(df4.info)</span></code>.</p>
 <div class="cell docutils container">
@@ -2194,9 +2326,27 @@ Name: hardness, dtype: object
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method DataFrame.info of              hardness  sp. gr.  cleavage
+name                                    
+Amphibole        5.50    2.800       Two
+Biotite          2.75    3.000       One
+Calcite          3.00    2.720     Three
+Dolomite         3.00    2.850     Three
+Feldspars        6.00    2.645       Two
+Garnet           7.00    3.900  Fracture
+Graphite         1.50    2.300       One
+Kyanite          6.00    4.010       One
+Muscovite        2.25    2.930       One
+Pyroxene         5.50    3.325       Two
+Quartz           7.00    2.650  Fracture
+Sillimanite      6.50    3.230       One&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <section id="deep-copying-a-code-dataframe-code">
-<h3>Deep copying a <code>DataFrame</code><a class="headerlink" href="#deep-copying-a-code-dataframe-code" title="Permalink to this headline">#</a></h3>
+<h3>Deep copying a <code>DataFrame</code><a class="headerlink" href="#deep-copying-a-code-dataframe-code" title="Permalink to this heading">#</a></h3>
 <p>As you have seen in Notebook 4, shallow copies can be troublesome if you’re not aware of it. In <b><code>pandas</code></b>, it’s the same story.<br><br>To make a deep copy use the <b><code>DataFrame.copy(deep=True)</code></b> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2209,7 +2359,7 @@ Name: hardness, dtype: object
 </section>
 </section>
 <section id="additional-study-material">
-<h2>Additional study material:<a class="headerlink" href="#additional-study-material" title="Permalink to this headline">#</a></h2>
+<h2>Additional study material:<a class="headerlink" href="#additional-study-material" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series">Official pandas Documentation (Series)</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame">Official pandas Documentation (DataFrame)</a></p></li>
@@ -2276,7 +2426,7 @@ Name: hardness, dtype: object
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pandas Exercises</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

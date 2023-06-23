@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Advanced strings and functions. Files and debugging Exercises. &#8212; Learn Python for Civil Engineering and Geosciences</title>
+    <title>Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
   
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -69,9 +67,9 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4. Objects and References" href="../../04/Theory/01.html" />
-    <link rel="prev" title="3. Advanced strings and functions." href="../Theory/01.html" />
+    <link rel="prev" title="3. Advanced strings and functions, files and debugging." href="../Theory/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +111,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -156,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -164,36 +168,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory/01.html">3. Advanced strings and functions.</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -201,27 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -268,6 +253,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/03/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/03/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +327,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F03/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F03/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,7 +439,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Advanced strings and functions. Files and debugging Exercises.</h1>
+    <h1>Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,10 +450,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-1">Exercise 3.1.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-2">Exercise 3.1.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-2-1">Exercise 3.2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-2-2">Exercise 3.2.2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-3-1">(Fixing) Exercise 3.3.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-4-1">(Fixing) Exercise 3.4.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-4-2">(Fixing) Exercise 3.4.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-4-3">(Fixing) Exercise 3.4.3</a></li>
@@ -437,192 +469,141 @@ document.write(`
   <figure>
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
-<section class="tex2jax_ignore mathjax_ignore" id="advanced-strings-and-functions-files-and-debugging-exercises">
-<h1>Advanced strings and functions. Files and debugging Exercises.<a class="headerlink" href="#advanced-strings-and-functions-files-and-debugging-exercises" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<p>You can easily start a live Jupyter session in the cloud directly from this book. To do this, just click on the Launch Button (<span class="fa fa-rocket"></span>) located above on this page.</p>
+<p>You have a few options to choose from:</p>
+<ol class="arabic simple">
+<li><p>Launch on Binder: By selecting this option, you can instantly launch a live Jupyter session using Binder.</p></li>
+<li><p>Launch on Google Colab: This option allows you to launch a live Jupyter session using Google Colab.</p></li>
+</ol>
+<p>Alternatively, you can also click on the <em>Jupyter Lite session</em> link, which will open a new tab where you can freely write and run your code.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Lite session</p>
+<p>You can start a Jupiter lite session <a href="https://mike-mendoza.github.io/jupyter-lite-sandbox/repl/index.html?toolbar=1&kernel=python&code=import pandas as pd; import data.check_answers as check; print('You may begin!')" target="_blank">here</a></p>
+<p>Wait until the message “<tt>You may begin!</tt>” is printed.</p>
+</div>
 <section id="exercise-3-1-1">
-<h2>Exercise 3.1.1<a class="headerlink" href="#exercise-3-1-1" title="Permalink to this headline">#</a></h2>
+<h2>Exercise 3.1.1<a class="headerlink" href="#exercise-3-1-1" title="Permalink to this heading">#</a></h2>
 <p>Use the <code>print()</code> function and an f-string to make a statement about some car using all variables stored in the <code>car_info</code> dictionary.</p>
+<p><em>Type your code here where the three (<em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>) dots are placed. Do not change the name of the variables.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># you do not have to change anything in this cell</span>
-
-<span class="n">car_info</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car_info</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;top_speed&#39;</span> <span class="p">:</span> <span class="s1">&#39;229&#39;</span><span class="p">,</span> <span class="c1">#km/h</span>
     <span class="s1">&#39;type&#39;</span> <span class="p">:</span> <span class="s1">&#39;Opel Astra&#39;</span>
 <span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type your code here</span>
+
 <span class="n">message</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Car </span><span class="si">{</span><span class="n">car_info</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> can drive at max </span><span class="si">{</span><span class="n">car_info</span><span class="p">[</span><span class="s1">&#39;top_speed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> km per hour&quot;</span>
-<span class="c1">###END SOLUTION</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">car_info</span><span class="p">[</span><span class="s1">&#39;top_speed&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">car_info</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">message</span><span class="p">,</span> <span class="s1">&#39;3.1.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercise-3-1-2">
-<h2>Exercise 3.1.2<a class="headerlink" href="#exercise-3-1-2" title="Permalink to this headline">#</a></h2>
-<p>Print the value of <b>π</b> using <span class="math notranslate nohighlight">\(4\)</span> decimal places.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
-<span class="n">rounded_pi</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">rounded_pi</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="c1">###END SOLUTION</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">rounded_pi</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">rounded_pi</span> <span class="o">==</span> <span class="s2">&quot;3.1416&quot;</span><span class="p">,</span> <span class="s1">&#39;3.1.2 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_3</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">car_info</span><span class="p">,</span> <span class="n">message</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="exercise-3-2-1">
-<h2>Exercise 3.2.1<a class="headerlink" href="#exercise-3-2-1" title="Permalink to this headline">#</a></h2>
+<h2>Exercise 3.2.1<a class="headerlink" href="#exercise-3-2-1" title="Permalink to this heading">#</a></h2>
 <p>Write a lambda function that converts a number from degrees to radians.</p>
+<p><em>Type your code here where the three (<em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>) dots are placed. Do not change the name of the variables.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DegToRad</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span> 
 
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">DegToRad</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">theta</span> <span class="p">:</span> <span class="n">theta</span> <span class="o">*</span> <span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
-<span class="c1">###END SOLUTION</span>
+<span class="n">DegToRad</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="n">Angle</span> <span class="o">=</span> <span class="mi">180</span> <span class="c1"># Degrees</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;An angle of </span><span class="si">{</span><span class="n">Angle</span><span class="si">}</span><span class="s2"> Degrees is equal to </span><span class="si">{</span><span class="n">DegToRad</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> radians&quot;</span><span class="p">)</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Degrees</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;An angle of </span><span class="si">{</span><span class="n">angle</span><span class="si">}</span><span class="s2"> Degrees is equal to </span><span class="si">{</span><span class="n">DegToRad</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> radians&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">DegToRad</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">abs</span><span class="p">(</span><span class="n">DegToRad</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span> <span class="o">-</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="s1">&#39;3.2.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_3</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">angle</span><span class="p">,</span><span class="n">DegToRad</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="exercise-3-2-2">
-<h2>Exercise 3.2.2<a class="headerlink" href="#exercise-3-2-2" title="Permalink to this headline">#</a></h2>
+<h2>Exercise 3.2.2<a class="headerlink" href="#exercise-3-2-2" title="Permalink to this heading">#</a></h2>
 <p>Write a lambda function that takes four inputs: <span class="math notranslate nohighlight">\((x_1, y_1, x_2, y_2)\)</span> and computes the <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidian distance</a> between point 1 <span class="math notranslate nohighlight">\((x_1,y_1)\)</span> and point 2 <span class="math notranslate nohighlight">\((x_2,y_2)\)</span>.</p>
+<p><em>Type your code here where the three (<em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>) dots are placed. Do not change the name of the variables.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Distance</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
 
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">Distance</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">:</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y1</span> <span class="o">-</span> <span class="n">y2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-<span class="c1">###END SOLUTION</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="o">...</span>
+
 
 <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
-<span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance between points (</span><span class="si">{</span><span class="n">x1</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y1</span><span class="si">}</span><span class="s2">) and (</span><span class="si">{</span><span class="n">x2</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y2</span><span class="si">}</span><span class="s2">) is </span><span class="si">{</span><span class="n">Distance</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance between points (</span><span class="si">{</span><span class="n">x1</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y1</span><span class="si">}</span><span class="s2">) and (</span><span class="si">{</span><span class="n">x2</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y2</span><span class="si">}</span><span class="s2">) is </span><span class="si">{</span><span class="n">distance</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Distance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="s1">&#39;3.2.2 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="fixing-exercise-3-3-1">
-<h2>(Fixing) Exercise 3.3.1<a class="headerlink" href="#fixing-exercise-3-3-1" title="Permalink to this headline">#</a></h2>
-<p>An engineer from Shell wrote a piece of code to find the file with updated logs. The file has a <code>*.txt</code> extension. It is located in the Vocareum environment and can be accessed using a relative or absolute path. The engineer wrote a piece of code to read the file and print its contents but something went wrong.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FilePath</span> <span class="o">=</span> <span class="s2">&quot;./resource/lib/publicdata/UpdatedLogs.txt&quot;</span><span class="c1"># Path of the file + (filename.txt)</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">FilePath</span> <span class="o">=</span> <span class="s2">&quot;./resource/lib/publicdata/updated_logs.txt&quot;</span>
-<span class="c1">###END SOLUTION</span>
-
-
-<span class="n">txt_File</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">FilePath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>                         <span class="c1"># Open the file in read (r) mode</span>
-<span class="n">File_Contents</span> <span class="o">=</span> <span class="n">txt_File</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                             <span class="c1"># Read the contents of the file</span>
-<span class="n">txt_File</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                                            <span class="c1"># Close the file (good practice to do so!)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">File_Contents</span><span class="p">)</span>                                        <span class="c1"># Print the file</span>
-</pre></div>
-</div>
-</div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">FilePath</span> <span class="o">==</span> <span class="s2">&quot;./resource/lib/publicdata/updated_logs.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;3.3.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_3</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">distance</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="fixing-exercise-3-4-1">
-<h2>(Fixing) Exercise 3.4.1<a class="headerlink" href="#fixing-exercise-3-4-1" title="Permalink to this headline">#</a></h2>
+<h2>(Fixing) Exercise 3.4.1<a class="headerlink" href="#fixing-exercise-3-4-1" title="Permalink to this heading">#</a></h2>
 <p>Fix the syntax errors so it prints “AES” without removing the variable that holds it. You’ll need to fix 2 errors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_abbreviation</span><span class="p">():</span>
     <span class="n">my</span> <span class="n">abbreviation</span> <span class="o">=</span> <span class="s2">&quot;AES&quot;</span>
-     <span class="k">return</span> <span class="n">my_abbreviation</span>
-        
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">get_abbreviation</span><span class="p">():</span>
-    <span class="n">my_abbreviation</span> <span class="o">=</span> <span class="s2">&quot;AES&quot;</span>
-    <span class="k">return</span> <span class="n">my_abbreviation</span>
-<span class="c1">###END SOLUTION</span>
+     <span class="k">return</span> <span class="n">my</span> <span class="n">abbreviation</span>
         
 <span class="nb">print</span><span class="p">(</span><span class="n">get_abbreviation</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">get_abbreviation</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;AES&quot;</span><span class="p">,</span> <span class="s1">&#39;3.4.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_3</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">get_abbreviation</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="fixing-exercise-3-4-2">
-<h2>(Fixing) Exercise 3.4.2<a class="headerlink" href="#fixing-exercise-3-4-2" title="Permalink to this headline">#</a></h2>
+<h2>(Fixing) Exercise 3.4.2<a class="headerlink" href="#fixing-exercise-3-4-2" title="Permalink to this heading">#</a></h2>
 <p>Solve the runtime error so all values of <span class="math notranslate nohighlight">\(B\)</span> are printed. The output after running <code>create_string_from_lists()</code> should be the following:<br>
 <code>
 A[0] = 2
@@ -645,39 +626,27 @@ B[3] = 8
         <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;B[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">create_string_from_lists</span><span class="p">():</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    
-    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-    <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-        
-        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;A[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;B[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;B[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>   
-<span class="c1">###END SOLUTION</span>
 
 <span class="n">create_string_from_lists</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="s2">&quot;B[3] = 8&quot;</span> <span class="ow">in</span> <span class="n">create_string_from_lists</span><span class="p">(),</span> <span class="s1">&#39;3.4.2 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_3</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">create_string_from_lists</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="fixing-exercise-3-4-3">
-<h2>(Fixing) Exercise 3.4.3<a class="headerlink" href="#fixing-exercise-3-4-3" title="Permalink to this headline">#</a></h2>
+<h2>(Fixing) Exercise 3.4.3<a class="headerlink" href="#fixing-exercise-3-4-3" title="Permalink to this heading">#</a></h2>
 <p>Find the semantic error in this function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -688,25 +657,19 @@ B[3] = 8
     <span class="k">else</span><span class="p">:</span> 
         <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="s2">&quot;returns the factorial of x&quot;</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1">###END SOLUTION</span>
-
 <span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">120</span><span class="p">,</span> <span class="s1">&#39;3.4.3 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_3</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">factorial</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -726,13 +689,13 @@ B[3] = 8
             mode: "python"
         },
         kernelOptions: {
-            name: "python37",
+            name: "python3",
             path: "./03/Exercises"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python37'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -751,7 +714,7 @@ B[3] = 8
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">3. Advanced strings and functions.</p>
+        <p class="prev-next-title">3. Advanced strings and functions, files and debugging.</p>
       </div>
     </a>
     <a class="right-next"
@@ -782,10 +745,8 @@ B[3] = 8
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-1">Exercise 3.1.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-2">Exercise 3.1.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-2-1">Exercise 3.2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-2-2">Exercise 3.2.2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-3-1">(Fixing) Exercise 3.3.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-4-1">(Fixing) Exercise 3.4.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-4-2">(Fixing) Exercise 3.4.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-exercise-3-4-3">(Fixing) Exercise 3.4.3</a></li>

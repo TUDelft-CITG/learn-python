@@ -1,0 +1,1009 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Advanced strings and functions, files and debugging. &#8212; Learn Python for Civil Engineering and Geosciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03/In_a_Nutshell/01';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Objects and References" href="../../04/In_a_Nutshell/01.html" />
+    <link rel="prev" title="2. Modules, conditions, data structures and loops" href="../../02/In_a_Nutshell/01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/learn-python-logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/learn-python-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Python Course
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">In a Nutshell</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/03/In_a_Nutshell/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/03/In_a_Nutshell/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F03/In_a_Nutshell/01.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/03/In_a_Nutshell/01.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3. Advanced strings and functions, files and debugging.</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-strings">3.1 Advanced Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-numbers">Formatting numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-functions">3.2 Advanced Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-files">3.3 Working with files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-paths">File paths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pathlib-and-code-os-code-modules"><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> and <code>os</code> modules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">3.4 Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-errors">1. Syntax errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-errors">2. Runtime errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-errors">3. Semantic errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-strategies">Debugging strategies</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="advanced-strings-and-functions-files-and-debugging">
+<h1>3. Advanced strings and functions, files and debugging.<a class="headerlink" href="#advanced-strings-and-functions-files-and-debugging" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span> 
+<span class="kn">import</span> <span class="nn">os</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="advanced-strings">
+<h2>3.1 Advanced Strings<a class="headerlink" href="#advanced-strings" title="Permalink to this heading">#</a></h2>
+<p>In Python, <b><code>strings</code></b> are created using quotes (’’ or “”) and are immutable, while <b><code>f-strings</code></b> are formatted strings that allow embedding expressions inside curly braces { } for dynamic value substitution during runtime. Here is a couple of examples for strings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">profession</span> <span class="o">=</span> <span class="s2">&quot;engineer&quot;</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">profession</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Alice 25 engineer
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the same example made as a complete sentence using <b><code>f-strings</code></b>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intro</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, I&#39;m </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old, and I work as an </span><span class="si">{</span><span class="n">profession</span><span class="si">}</span><span class="s2">.&quot;</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">intro</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>My name is Alice, I&#39;m 25 years old, and I work as an engineer.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="formatting-numbers">
+<h3>Formatting numbers<a class="headerlink" href="#formatting-numbers" title="Permalink to this heading">#</a></h3>
+<p>Python’s f-strings provide a convenient way to format numbers by using the colon character and specifying the desired format. The following table demonstrates a couple of examples with the number <span class="math notranslate nohighlight">\(1\)</span> using <code>f-strings</code></b>:<br><br></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1:.2f</p></td>
+<td><p>1.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:.0f</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>1:.10f</p></td>
+<td><p>1.0000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:%</p></td>
+<td><p>100.000000%</p></td>
+</tr>
+<tr class="row-even"><td><p>1:.1%</p></td>
+<td><p>100.0%</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:e</p></td>
+<td><p>1.000000e+00</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the example below, the sleep() function from the time module is used to simulate the passage of time and provide a simple demonstration of a progress bar implementation. We define a function <b>simulate_long_running_algorithm()</b> that performs a loop with a sleep of 0.5 seconds between iterations. Within each iteration, the progress of the algorithm is calculated and used to construct a progress bar string. The progress bar consists of a series of equal signs (=) that visually represent the progress, followed by the percentage completion formatted to one decimal defined inside an <code>f-strings</code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">simulate_long_running_algorithm</span><span class="p">():</span>
+    <span class="n">total_iterations</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_iterations</span><span class="p">):</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Simulating processing time</span>
+        <span class="n">progress</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_iterations</span>
+        <span class="n">progress_bar</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">progress</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="si">:</span><span class="s2">20s</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">progress</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">progress_bar</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Print on the same line</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Algorithm complete!&quot;</span><span class="p">)</span>
+
+<span class="n">simulate_long_running_algorithm</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[====================] 100.0%
+Algorithm complete!
+</pre></div>
+</div>
+</div>
+</div>
+<h3>Escape characters</h3>
+<p><code>Escape characters</code> in programming are special characters that are used to represent certain non-printable or special characters within strings. They are typically represented by a backslash (’ \ ‘) followed by a specific character or sequence. We used two <code>escape characters</code> in the previous example, can you identify them?</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Result</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>'</p></td>
+<td><p>‘</p></td>
+<td><p>represents the escape sequence for a single quote (‘).</p></td>
+</tr>
+<tr class="row-odd"><td><p>\</p></td>
+<td><p>\</p></td>
+<td><p>represents the escape sequence for a backslash (’ \ ‘).</p></td>
+</tr>
+<tr class="row-even"><td><p>\n</p></td>
+<td><p>new line</p></td>
+<td><p>represents the escape sequence for a new line character, which moves the cursor to the beginning of the next line.</p></td>
+</tr>
+<tr class="row-odd"><td><p>\r</p></td>
+<td><p>carriage return</p></td>
+<td><p>represents the escape sequence for a carriage return character, which moves the cursor to the beginning of the current line.</p></td>
+</tr>
+<tr class="row-even"><td><p>\t</p></td>
+<td><p>tab</p></td>
+<td><p>represents the escape sequence for a tab character, which adds horizontal spacing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>\b</p></td>
+<td><p>backspace</p></td>
+<td><p>represents the escape sequence for a backspace character, which moves the cursor one position back.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="advanced-functions">
+<h2>3.2 Advanced Functions<a class="headerlink" href="#advanced-functions" title="Permalink to this heading">#</a></h2>
+<p>An example of an advanced fuction can be the  <code>lambda function</code>. It is an anonymous function in Python that can be defined in a single line using the <b>lambda</b> keyword. It is typically used for simple and concise operations without the need for a formal function definition.</p>
+<p>Here’s an example that showcases the difference between lambda functions and normal functions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normal function</span>
+<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 12</span>
+
+<span class="c1"># Lambda function</span>
+<span class="n">multiply_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="n">result_lambda</span> <span class="o">=</span> <span class="n">multiply_lambda</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_lambda</span><span class="p">)</span>  <span class="c1"># Output: 12</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Both the normal function and the <code>lambda function</code> are used to multiply 3 and 4. The results obtained from both approaches are identical (12). The key difference is that the normal function is defined with the def keyword, whereas the <code>lambda function</code> is defined using the lambda keyword without a formal function name.</p>
+<p><code>lambda functions</code> are particularly useful in scenarios where a small, one-time function is needed without the need for a full function definition and name.</p>
+</section>
+<section id="working-with-files">
+<h2>3.3 Working with files<a class="headerlink" href="#working-with-files" title="Permalink to this heading">#</a></h2>
+<p>A lot of the work you’ll do in Python will have the following structure:</p>
+<ol class="arabic simple">
+<li><p>Read data from a file</p></li>
+<li><p>Perform computations on the data</p></li>
+<li><p>Visualize the results and/or save the results to a file</p></li>
+</ol>
+<section id="file-paths">
+<h3>File paths<a class="headerlink" href="#file-paths" title="Permalink to this heading">#</a></h3>
+<p>File paths on computers work based on a hierarchical structure, often represented as a tree. The root directory serves as the starting point, typically represented by a drive letter (e.g., C: on Windows). From the root directory, you can navigate to other directories using a delimiter character (\ on Windows or / on Unix-based systems). Each directory can contain files and subdirectories, forming a hierarchical structure.</p>
+<p>Absolute paths specify the complete path from the root directory, while relative paths are relative to the current working directory. By understanding and manipulating file paths, you can effectively locate and access files and directories on a computer’s file system.</p>
+</section>
+<section id="pathlib-and-code-os-code-modules">
+<h3><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> and <code>os</code> modules<a class="headerlink" href="#pathlib-and-code-os-code-modules" title="Permalink to this heading">#</a></h3>
+<p>The <code>os</code> module in Python provides functions for interacting with the operating system, offering operations related to file management, directory handling, process management, and environment variables. It allows you to perform tasks such as creating, deleting, and modifying files and directories, launching external processes, accessing and modifying environment variables, and writing platform-independent code.</p>
+<p>On the other hand, the <code>pathlib</code> module introduced in Python 3.4 offers an object-oriented approach to working with file paths and directories. It provides the Path class, which represents paths as objects, allowing for more intuitive and expressive manipulation of paths compared to the traditional string-based operations in <code>os</code>. With <code>pathlib</code>, you can perform operations like joining paths, checking file existence, accessing file attributes, and creating directories in a more convenient and readable manner.</p>
+<p>The table below summuraizes some codes you can use for creating and adjusting your own file paths:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Result</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.join(path,</span> <span class="pre">*paths)</span></code></p></td>
+<td><p>Path string</p></td>
+<td><p>Joins one or more path components intelligently. It concatenates the arguments using the appropriate path delimiter for the operating system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.abspath(path)</span></code></p></td>
+<td><p>Absolute path string</p></td>
+<td><p>Returns the absolute path of the specified path. It resolves any symbolic links and references to parent directories.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.exists(path)</span></code></p></td>
+<td><p>Boolean</p></td>
+<td><p>Checks if the specified path exists in the file system. Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the path exists, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.isdir(path)</span></code></p></td>
+<td><p>Boolean</p></td>
+<td><p>Checks if the specified path is a directory. Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the path is a directory, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.isfile(path)</span></code></p></td>
+<td><p>Boolean</p></td>
+<td><p>Checks if the specified path is a regular file. Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the path is a file, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.splitext(path)</span></code></p></td>
+<td><p>Tuple (base, ext)</p></td>
+<td><p>Splits the specified path into its base name and extension. Returns a tuple where the first element is the base name and the second element is the extension (including the dot).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.basename(path)</span></code></p></td>
+<td><p>Base name string</p></td>
+<td><p>Returns the base name (the file or directory name) from the specified path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.path.dirname(path)</span></code></p></td>
+<td><p>Directory name string</p></td>
+<td><p>Returns the directory name from the specified path.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here are some examples of how to use these codes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="s1">&#39;subfolder&#39;</span><span class="p">,</span> <span class="s1">&#39;file.txt&#39;</span><span class="p">)</span>  <span class="c1"># Joining path components intelligently using appropriate delimiter.</span>
+<span class="n">absolute_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Getting the absolute path of the specified path.</span>
+<span class="n">exists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Checking if the specified path exists.</span>
+<span class="n">is_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Checking if the specified path is a directory.</span>
+<span class="n">is_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Checking if the specified path is a file.</span>
+<span class="n">base_name</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Splitting the path into base name and extension.</span>
+<span class="n">basename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Getting the base name (file or directory name) from the path.</span>
+<span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>  <span class="c1"># Getting the directory name from the path.</span>
+
+<span class="c1"># Printing the information</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Path:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>  <span class="c1"># Path string</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Absolute Path:&quot;</span><span class="p">,</span> <span class="n">absolute_path</span><span class="p">)</span>  <span class="c1"># Absolute path string</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exists:&quot;</span><span class="p">,</span> <span class="n">exists</span><span class="p">)</span>  <span class="c1"># Boolean indicating if path exists</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is Directory:&quot;</span><span class="p">,</span> <span class="n">is_directory</span><span class="p">)</span>  <span class="c1"># Boolean indicating if path is a directory</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is File:&quot;</span><span class="p">,</span> <span class="n">is_file</span><span class="p">)</span>  <span class="c1"># Boolean indicating if path is a file</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Base Name:&quot;</span><span class="p">,</span> <span class="n">basename</span><span class="p">)</span>  <span class="c1"># Base name of the file or directory</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Directory Name:&quot;</span><span class="p">,</span> <span class="n">dirname</span><span class="p">)</span>  <span class="c1"># Directory name of the path</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Extension:&quot;</span><span class="p">,</span> <span class="n">extension</span><span class="p">)</span>  <span class="c1"># File extension with the dot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Path: folder\subfolder\file.txt
+Absolute Path: c:\Users\ahmed\Documents\GitHub\learn-python\book\03\In_a_Nutshell\folder\subfolder\file.txt
+Exists: False
+Is Directory: False
+Is File: False
+Base Name: file.txt
+Directory Name: folder\subfolder
+Extension: .txt
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code demonstrates the usage of various <code>os.path</code> functions to perform operations on file paths, such as joining paths, obtaining absolute paths, checking existence, identifying directories or files, splitting paths into base names and extensions, and retrieving the base name and directory name from a path. The corresponding outputs are displayed to provide the relevant information.</p>
+</section>
+</section>
+<section id="debugging">
+<h2>3.4 Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">#</a></h2>
+<p>Debugging in Python refers to the process of identifying and resolving errors or issues in a program. It involves analyzing the code execution, tracking down bugs, and correcting them to ensure the program functions as intended.</p>
+<p>Python provides several built-in tools and techniques for debugging, including print statements, using a debugger, logging, and exception handling. Debugging allows developers to gain insights into the program’s flow, variable values, and identify the root cause of errors, ultimately improving the program’s reliability and performance.</p>
+<section id="syntax-errors">
+<h3>1. Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this heading">#</a></h3>
+<p><code>Syntax errors</code> in Python are mistakes in the structure or grammar of the code that violate the language’s syntax rules, resulting in the program failing to execute.</p>
+<p>Example with a <code>syntax error</code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span>
+                         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: incomplete input
+</pre></div>
+</div>
+</div>
+</div>
+<p>Could you spot and fix the syntax error? The error was missing to close the parenthesis,the solution is shown below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="runtime-errors">
+<h3>2. Runtime errors<a class="headerlink" href="#runtime-errors" title="Permalink to this heading">#</a></h3>
+<p><code>Runtime errors</code>, also known as exceptions, occur during the execution of a program when unexpected conditions or behaviors are encountered, leading to program termination or abnormal behavior.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Runtime error: accessing an index that is out of range</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Runtime error: accessing an index that is out of range</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+<p>Solution: Use a valid index within the range of the list. See the cell below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="semantic-errors">
+<h3>3. Semantic errors<a class="headerlink" href="#semantic-errors" title="Permalink to this heading">#</a></h3>
+<p><code>Semantic errors</code>, also known as logic errors, are mistakes in the program’s logic or algorithm that lead to undesired or incorrect behavior without causing the program to terminate or throw an error.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Semantic error: incorrect calculation of the average</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">average</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.8
+</pre></div>
+</div>
+</div>
+</div>
+<p>Solution: Move the addition after calculating the average. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">real_average</span> <span class="o">=</span> <span class="p">(</span><span class="n">total</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">real_average</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="debugging-strategies">
+<h3>Debugging strategies<a class="headerlink" href="#debugging-strategies" title="Permalink to this heading">#</a></h3>
+<p>Debugging strategies are a set of techniques and approaches used to identify and fix errors or issues in code during the software development process, ensuring the program functions correctly and as intended. Some debugging strategies that can be applied by you during your work could include:</p>
+<ol class="arabic simple">
+<li><p>Using print statements: Inserting print statements at critical points in the code to display the values of variables and track the program’s flow.</p></li>
+<li><p>Utilizing a debugger: Running the code in a debugger, setting breakpoints, and stepping through the code line by line to examine variable values and identify issues.</p></li>
+<li><p>Logging: Adding log statements to record the program’s execution and capture relevant information for analysis.</p></li>
+<li><p>Exception handling: Wrapping sections of code in try-except blocks to catch and handle specific exceptions, allowing for graceful error handling and troubleshooting.</p></li>
+<li><p>Code review: Having someone else review the code to spot potential errors or provide fresh insights.</p></li>
+</ol>
+<p>By employing these strategies, you can effectively identify and resolve issues in your code, enhancing program functionality and reliability.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./03/In_a_Nutshell"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../02/In_a_Nutshell/01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2. Modules, conditions, data structures and loops</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../04/In_a_Nutshell/01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4. Objects and References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-strings">3.1 Advanced Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-numbers">Formatting numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-functions">3.2 Advanced Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-files">3.3 Working with files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-paths">File paths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pathlib-and-code-os-code-modules"><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> and <code>os</code> modules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">3.4 Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-errors">1. Syntax errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-errors">2. Runtime errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-errors">3. Semantic errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-strategies">Debugging strategies</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Magic Mike!
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

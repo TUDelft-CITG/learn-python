@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Pandas Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
+    <title>Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
   
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -71,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="7. Matplotlib" href="../../07/Theory/01.html" />
     <link rel="prev" title="6. Pandas" href="../Theory/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +111,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -156,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -164,36 +168,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory/01.html">6. Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pandas Exercises</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Matplotlib Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -201,27 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -268,6 +253,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/06/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/06/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +327,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F06/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F06/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,7 +439,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pandas Exercises</h1>
+    <h1>Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -417,7 +451,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-2-1">Exercise 6.2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-3-1">(Searching) Exercise 6.3.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-3-2">(Searching) Exercise 6.3.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-fixing-exercise-6-3-3">(Searching/Fixing) Exercise 6.3.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-5-1">(Searching) Exercise 6.5.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-5-2">(Searching) Exercise 6.5.2</a></li>
@@ -433,14 +466,32 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pandas-exercises">
-<h1>Pandas Exercises<a class="headerlink" href="#pandas-exercises" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<p>You can easily start a live Jupyter session in the cloud directly from this book. To do this, just click on the Launch Button (<span class="fa fa-rocket"></span>) located above on this page.</p>
+<p>You have a few options to choose from:</p>
+<ol class="arabic simple">
+<li><p>Launch on Binder: By selecting this option, you can instantly launch a live Jupyter session using Binder.</p></li>
+<li><p>Launch on Google Colab: This option allows you to launch a live Jupyter session using Google Colab.</p></li>
+</ol>
+<p>Alternatively, you can also click on the <em>Jupyter Lite session</em> link, which will open a new tab where you can freely write and run your code.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Lite session</p>
+<p>You can start a Jupiter lite session <a href="https://mike-mendoza.github.io/jupyter-lite-sandbox/repl/index.html?toolbar=1&kernel=python&code=import pandas as pd; import data.check_answers as check; print('You may begin!')" target="_blank">here</a></p>
+<p>Wait until the message “<tt>You may begin!</tt>” is printed.</p>
+</div>
 <section id="exercise-6-2-1">
-<h2>Exercise 6.2.1<a class="headerlink" href="#exercise-6-2-1" title="Permalink to this headline">#</a></h2>
+<h2>Exercise 6.2.1<a class="headerlink" href="#exercise-6-2-1" title="Permalink to this heading">#</a></h2>
 <p>Finish a function, which with a <code>for</code> loop will get all types saved in series <code>my_series</code></p>
+<p><em>Type your code where the three (<em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>) dots are placed. Do not change the name of the variables.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;write your code here&#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;begin&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="p">]</span>
+<span class="n">my_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">my_list</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">list_types</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
     <span class="n">series_types</span> <span class="o">=</span> <span class="s2">&quot;Types inside series:</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -450,151 +501,85 @@ document.write(`
     
     <span class="k">return</span> <span class="n">series_types</span>
         
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">list_types</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
-    <span class="n">series_types</span> <span class="o">=</span> <span class="s2">&quot;Types inside series:</span><span class="se">\n</span><span class="s2">&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">)):</span>
-        <span class="n">item_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">series</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">series_types</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">item_type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
-    
-    <span class="k">return</span> <span class="n">series_types</span>
-<span class="c1">###END SOLUTION</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="n">list_types</span><span class="p">(</span><span class="n">my_series</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">def</span> <span class="nf">solution_6_2_1</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
-    <span class="n">series_types</span> <span class="o">=</span> <span class="s2">&quot;Types inside series:</span><span class="se">\n</span><span class="s2">&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">)):</span>
-        <span class="n">item_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">series</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">series_types</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">item_type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
-    
-    <span class="k">return</span> <span class="n">series_types</span>
-
-<span class="k">assert</span> <span class="n">list_types</span><span class="p">(</span><span class="n">my_series</span><span class="p">)</span> <span class="o">==</span> <span class="n">solution_6_2_1</span><span class="p">(</span><span class="n">my_series</span><span class="p">),</span> <span class="s1">&#39;6.2.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div style="text-align: justify">Note the above exercise could have been solved without a <b><code>for</code></b> loop:</div><div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">types</span> <span class="o">=</span> <span class="n">my_series</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">types</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_6</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">list_types</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="searching-exercise-6-3-1">
-<h2>(Searching) Exercise 6.3.1<a class="headerlink" href="#searching-exercise-6-3-1" title="Permalink to this headline">#</a></h2>
-<p>Complete the code below to print the total number of <i>’NaN’</i> values in <code>df3</code></p>
+<h2>(Searching) Exercise 6.3.1<a class="headerlink" href="#searching-exercise-6-3-1" title="Permalink to this heading">#</a></h2>
+<p>Complete the code below to print the total number of <i>’NaN’</i> values in <code>mineral_properties</code></p>
+<p><em>Change only the (<em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>) below, do not add any other lines to this cell</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; change only the ... below, do not add any other lines to this cell &#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">file_location</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/TUDelft-CITG/&quot;</span>
+                <span class="s2">&quot;learn-python/mike/book/06/Theory/&quot;</span><span class="p">)</span>
+<span class="n">mineral_properties</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_location</span> <span class="o">+</span> <span class="s1">&#39;mineral_properties.txt&#39;</span><span class="p">,</span> 
+                  <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mineral_properties</span><span class="p">[</span><span class="s1">&#39;new_column&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 
 <span class="k">def</span> <span class="nf">count_nans</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="n">nan_total</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">nan_total</span>
 
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">count_nans</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="n">nan_total</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">nan_total</span>
-<span class="c1">###END SOLUTION</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">df3</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">total amount of nans = </span><span class="si">{</span><span class="n">count_nans</span><span class="p">(</span><span class="n">df3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mineral_properties</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">total amount of nans = </span><span class="si">{</span><span class="n">count_nans</span><span class="p">(</span><span class="n">mineral_properties</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">count_nans</span><span class="p">(</span><span class="n">df3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;6.3.1 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="searching-exercise-6-3-2">
-<h2>(Searching) Exercise 6.3.2<a class="headerlink" href="#searching-exercise-6-3-2" title="Permalink to this headline">#</a></h2>
-<p>Alter <code>df_632</code> as follows:<br>1) Change the index of the rows to be the column ‘name’;<br>2) drop the column ‘name’;<br>3) drop the columns ‘test’ and ‘new_column’;<br>4) drop the row named ‘test’;<br>5) add a new column ‘% of Earth’s crust’ with values ‘TBD’.<br><br>For your easy reference, your final <code>df_632</code> should look like this:</p>
-<p><img alt="image.png" src="06/Exercises/attachment:image.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_632</span> <span class="o">=</span> <span class="n">df3</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="c1"># write your code here</span>
-<span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-
-<span class="n">df_632</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_632</span><span class="o">.</span><span class="n">name</span>
-<span class="n">df_632</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_632</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;new_column&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_632</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_632</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_632</span><span class="p">[</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f Earth&#39;s crust&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;TBD&#39;</span>
-<span class="c1">###END SOLUTION</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">df_632</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="n">df_sol</span> <span class="o">=</span> <span class="n">df3</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">df_sol</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_sol</span><span class="o">.</span><span class="n">name</span>
-<span class="n">df_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;new_column&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df_sol</span><span class="p">[</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f Earth&#39;s crust&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;TBD&#39;</span>
-
-<span class="k">assert</span> <span class="n">df_sol</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">df_632</span><span class="p">),</span> <span class="s1">&#39;6.3.2 - Incorrect answer.</span><span class="se">\</span>
-<span class="s1">Make sure to use inplace=True and axis=1 for removing columns&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_6</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">count_nans</span><span class="p">,</span> <span class="n">mineral_properties</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="searching-fixing-exercise-6-3-3">
-<h2>(Searching/Fixing) Exercise 6.3.3<a class="headerlink" href="#searching-fixing-exercise-6-3-3" title="Permalink to this headline">#</a></h2>
+<h2>(Searching/Fixing) Exercise 6.3.3<a class="headerlink" href="#searching-fixing-exercise-6-3-3" title="Permalink to this heading">#</a></h2>
 <p>A geologist wrote a line of code to know how many of the listed minerals have a hardness greater than or equal to <span class="math notranslate nohighlight">\(3\)</span>. However, something is not correct in his code… could you maybe fix it? There is a syntax error as well as a semantic error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_minerals</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">minimal_hardness</span><span class="p">):</span>
     <span class="n">amount_of_minerals</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">hardness</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">minimal_hardness</span><span class="p">)))</span>
     <span class="k">return</span> <span class="n">amount_of_minerals</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="k">def</span> <span class="nf">count_minerals</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">minimal_hardness</span><span class="p">):</span>
-    <span class="n">amount_of_minerals</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">hardness</span><span class="o">.</span><span class="n">ge</span><span class="p">(</span><span class="n">minimal_hardness</span><span class="p">)])</span>
-    <span class="k">return</span> <span class="n">amount_of_minerals</span>                           
-<span class="c1">###END SOLUTION            </span>
-      
-<span class="nb">print</span><span class="p">(</span><span class="n">df3_cleaned</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Amount of minerals with hardness &gt;= 3: </span><span class="si">{</span><span class="n">count_minerals</span><span class="p">(</span><span class="n">df3_cleaned</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+             
+<span class="nb">print</span><span class="p">(</span><span class="n">mineral_properties</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Amount of minerals with hardness &gt;= 3: </span><span class="si">{</span><span class="n">count_minerals</span><span class="p">(</span><span class="n">mineral_properties</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="k">assert</span> <span class="n">count_minerals</span><span class="p">(</span><span class="n">df3_cleaned</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;6.3.3 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_6</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">count_minerals</span><span class="p">,</span> <span class="n">mineral_properties</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -602,150 +587,123 @@ document.write(`
 <p>The above exercise might look like a silly one, but take some time to analyze it carefully… what is happening there? Break down each part of that line of code to understand it properly.</p>
 </section>
 <section id="searching-exercise-6-5-1">
-<h2>(Searching) Exercise 6.5.1<a class="headerlink" href="#searching-exercise-6-5-1" title="Permalink to this headline">#</a></h2>
-<p>A geologist is interested in the tallest mountain chains around Earth. For that, he created the <code>tallest_mountains.csv</code> table, containing information on all mountains above <span class="math notranslate nohighlight">\(8000\)</span> meters. Your task is to do the following <span class="math notranslate nohighlight">\(5\)</span> assignments.<br><br>1) Read the <code>tallest_mountains.csv</code> file.<br>2) What are the names of the columns?<br>3) What is the height of the tallest mountain?<br>4) What is the row number (or index) of this mountain?<br>5) What is the name of the tallest mountain in the dataset?<br><br><b>Hard-coded answers won’t be accepted. Use <code>pandas</code> functions to answer the questions.</b><br><br><i>Source for this and next exercises: <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">Wikipedia</p>
+<h2>(Searching) Exercise 6.5.1<a class="headerlink" href="#searching-exercise-6-5-1" title="Permalink to this heading">#</a></h2>
+<p>A geologist is interested in the tallest mountain chains around Earth. For that, he created the <code>tallest_mountains.csv</code> table, containing information on all mountains above <span class="math notranslate nohighlight">\(8000\)</span> meters. Your task is to do the following <span class="math notranslate nohighlight">\(5\)</span> assignments.</p>
+<ol class="arabic simple">
+<li><p>Read the <code>tallest_mountains.csv</code> file.</p></li>
+<li><p>What are the names of the columns?</p></li>
+<li><p>What is the height of the tallest mountain?</p></li>
+<li><p>What is the row number (or index) of this mountain?</p></li>
+<li><p>What is the name of the tallest mountain in the dataset?</p></li>
+</ol>
+<p>Use <code>pandas</code> functions to answer the questions.</p>
+<p>Source for this and next exercises: <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">Wikipedia</p>
+<p><em>Write your code here, do not change any variable name</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; write your code here, do not change any variable name &#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_location</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/TUDelft-CITG/&quot;</span>
+                <span class="s2">&quot;learn-python/mike/book/06/Exercises/&quot;</span><span class="p">)</span>
 
-<span class="n">df8000</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 1) read the file</span>
-<span class="n">cols</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 2) name of columns</span>
-<span class="n">max_height</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 3) height of tallest mountain</span>
-<span class="n">indxmax</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 4) index of the row containing &#39;max_height&#39;</span>
-<span class="n">tallest_mountain</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 5) name of the tallest mountain</span>
+<span class="n">mountains_8000</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#1 </span>
+<span class="n">cols</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#2 </span>
+<span class="n">max_height</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#3</span>
+<span class="n">index_max</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#4 </span>
+<span class="n">tallest_mountain</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#5 </span>
 
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">df8000</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;tallest_mountains.csv&#39;</span><span class="p">)</span>
-<span class="n">cols</span> <span class="o">=</span> <span class="n">df8000</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">max_height</span> <span class="o">=</span> <span class="n">df8000</span><span class="p">[</span><span class="s1">&#39;Metres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> 
-<span class="n">indxmax</span> <span class="o">=</span> <span class="n">df8000</span><span class="p">[</span><span class="s1">&#39;Metres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span> 
-<span class="n">tallest_mountain</span> <span class="o">=</span> <span class="n">df8000</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">indxmax</span><span class="p">,</span><span class="s1">&#39;Mountain&#39;</span><span class="p">]</span>
-<span class="c1">###END SOLUTION</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">df8000</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mountains_8000</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="n">df_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;tallest_mountains.csv&#39;</span><span class="p">)</span>
-<span class="n">cols_sol</span> <span class="o">=</span> <span class="n">df_sol</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">max_height_sol</span> <span class="o">=</span> <span class="n">df_sol</span><span class="p">[</span><span class="s1">&#39;Metres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> 
-<span class="n">indxmax_sol</span> <span class="o">=</span> <span class="n">df_sol</span><span class="p">[</span><span class="s1">&#39;Metres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span> 
-<span class="n">tallest_mountain_sol</span> <span class="o">=</span> <span class="n">df_sol</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">indxmax_sol</span><span class="p">,</span><span class="s1">&#39;Mountain&#39;</span><span class="p">]</span>
-
-<span class="k">assert</span> <span class="n">df_sol</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">df8000</span><span class="p">)</span> <span class="ow">and</span> <span class="n">cols_sol</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span> <span class="ow">and</span> <span class="n">max_height_sol</span> <span class="o">==</span> <span class="n">max_height</span> <span class="ow">and</span> \
-        <span class="n">indxmax_sol</span> <span class="o">==</span> <span class="n">indxmax</span> <span class="ow">and</span> <span class="n">tallest_mountain_sol</span> <span class="o">==</span> <span class="n">tallest_mountain</span><span class="p">,</span> \
-    <span class="s1">&#39;6.5.1 - Incorrect answer, did you use idxmax for the 4th problem?&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_6</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">,[</span><span class="n">mountains_8000</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">max_height</span><span class="p">,</span> <span class="n">index_max</span><span class="p">,</span> <span class="n">tallest_mountain</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="searching-exercise-6-5-2">
-<h2>(Searching) Exercise 6.5.2<a class="headerlink" href="#searching-exercise-6-5-2" title="Permalink to this headline">#</a></h2>
-<p>Now, our geologist friend got another table with all mountains above <span class="math notranslate nohighlight">\(7000\)</span> meters, it’s in the <code>mountains_above_7000m_copy.csv</code> file. Your task is to do the following <span class="math notranslate nohighlight">\(6\)</span> assignments.<br><br>1) Read the <code>mountains_above_7000m_copy.csv</code> file.<br>2) Remove the column describing the mountain range they belong.<br>3) Append <code>df8000</code> to this.<br>4) Fix the row-indexing issue.<br>5) Create a <code>Series</code> indicating which entries of ‘Feet’ are missing.<br><i>Hint: Use the <code>.isnull()</code> function</i><br>6) Add the values that are missing in the ‘Feet’ column, use <span class="math notranslate nohighlight">\(1\)</span> mtr = <span class="math notranslate nohighlight">\(3.28084\)</span> feet.<br><i>Hint2: Use the <code>.mask()</code> function, more info <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mask.html">here</a>, or the <code>.fillna()</code> function.</p>
+<h2>(Searching) Exercise 6.5.2<a class="headerlink" href="#searching-exercise-6-5-2" title="Permalink to this heading">#</a></h2>
+<p>Now, our geologist friend got another table with all mountains above <span class="math notranslate nohighlight">\(7000\)</span> meters, it’s in the <code>mountains_above_7000m.csv</code> file. Your task is to do the following <span class="math notranslate nohighlight">\(6\)</span> assignments.</p>
+<ol class="arabic">
+<li><p>Read the <code>mountains_above_7000m.csv</code> file.</p></li>
+<li><p>Append <code>mountains_8000</code> to this.</p></li>
+<li><p>Remove the column describing the mountain range they belong.</p></li>
+<li><p>Fix the row-indexing issue.</p></li>
+<li><p>Create a <code>Series</code> indicating which entries of ‘Feet’ are missing.</p>
+<p><em>Hint: Use the <code class="docutils literal notranslate"><span class="pre">.isnull()</span></code> function.</em></p>
+</li>
+<li><p>Add the values that are missing in the ‘Feet’ column, use <span class="math notranslate nohighlight">\(1\)</span> mtr = <span class="math notranslate nohighlight">\(3.28084\)</span> feet.</p>
+<p><em>Hint2: Use the <code class="docutils literal notranslate"><span class="pre">.mask()</span></code> function, more info <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mask.html">here</a>, or the <code>.fillna()</code> function.</em></p>
+</li>
+</ol>
+<p><em>Write your code for tasks 1,2 and 3 in teh cell below, do not change any variable name</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; write your code here, do not change any variable name &#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_location</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/TUDelft-CITG/&quot;</span>
+                <span class="s2">&quot;learn-python/mike/book/06/Exercises/&quot;</span><span class="p">)</span>
 
-<span class="n">df7000</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 1</span>
-<span class="n">df7000_norange</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 2</span>
-<span class="n">df_concat</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 3</span>
+<span class="n">mountains_7000</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 1</span>
+<span class="n">df_concat</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 2</span>
+<span class="n">df_concat_norange</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 3</span>
 
-<span class="c1">#check what you have now</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_concat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_concat_norange</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p><em>Write your code for the remaining tasks in teh cell below, do not change any variable name</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; write the rest of your code here, do not change any variable name &#39;&#39;&#39;</span>
-
-<span class="n">df_reset</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_reset</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 4</span>
 <span class="n">missing_feet_series</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 5</span>
 <span class="n">df_reset</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 6</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_reset</span><span class="p">)</span> 
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">df7000</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mountains_above_7000m_copy.csv&#39;</span><span class="p">,</span> <span class="n">encoding_errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1"># 1</span>
-<span class="n">df7000_norange</span> <span class="o">=</span> <span class="n">df7000</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 2</span>
-<span class="n">df_concat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df7000_norange</span><span class="p">,</span><span class="n">df8000</span><span class="p">])</span> <span class="c1"># 3</span>
-<span class="n">df_reset</span> <span class="o">=</span> <span class="n">df_concat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 4</span>
-<span class="n">missing_feet_series</span> <span class="o">=</span> <span class="n">df_reset</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span> <span class="c1"># 5</span>
-<span class="n">df_reset</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_reset</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">missing_feet_series</span><span class="p">,</span> <span class="n">df_reset</span><span class="p">[</span><span class="s2">&quot;Metres&quot;</span><span class="p">]</span><span class="o">*</span><span class="mf">3.28084</span><span class="p">)</span> <span class="c1"># 6</span>
-<span class="c1">###END SOLUTION</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="n">df_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;tallest_mountains.csv&#39;</span><span class="p">)</span>
-
-<span class="n">df7000_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mountains_above_7000m_copy.csv&#39;</span><span class="p">,</span> <span class="n">encoding_errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1"># 1</span>
-<span class="n">df7000_norange_sol</span> <span class="o">=</span> <span class="n">df7000_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 2</span>
-<span class="n">df_concat_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df7000_norange_sol</span><span class="p">,</span><span class="n">df_sol</span><span class="p">])</span> <span class="c1"># 3</span>
-<span class="n">df_reset_sol</span> <span class="o">=</span> <span class="n">df_concat_sol</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 4</span>
-<span class="n">missing_feet_series_sol</span> <span class="o">=</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span> <span class="c1"># 5</span>
-<span class="n">with_feet_series_sol</span> <span class="o">=</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">missing_feet_series_sol</span><span class="p">,</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Metres&quot;</span><span class="p">]</span><span class="o">*</span><span class="mf">3.28084</span><span class="p">)</span> <span class="c1"># 6</span>
-<span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">with_feet_series_sol</span>
-
-<span class="n">or_df7000_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mountains_above_7000m_copy.csv&#39;</span><span class="p">,</span> <span class="n">encoding_errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1"># 1</span>
-<span class="n">or_df7000_norange_sol</span> <span class="o">=</span> <span class="n">or_df7000_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 2</span>
-<span class="n">or_df_concat_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_sol</span><span class="p">,</span><span class="n">or_df7000_norange_sol</span><span class="p">])</span> <span class="c1"># 3</span>
-<span class="n">or_df_reset_sol</span> <span class="o">=</span> <span class="n">or_df_concat_sol</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 4</span>
-<span class="n">or_missing_feet_series_sol</span> <span class="o">=</span> <span class="n">or_df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span> <span class="c1"># 5</span>
-<span class="n">or_with_feet_series_sol</span> <span class="o">=</span> <span class="n">or_df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">or_missing_feet_series_sol</span><span class="p">,</span> <span class="n">or_df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Metres&quot;</span><span class="p">]</span><span class="o">*</span><span class="mf">3.28084</span><span class="p">)</span> <span class="c1"># 6</span>
-<span class="n">or_df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">or_with_feet_series_sol</span>
-
-<span class="k">assert</span> <span class="n">df_reset_sol</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">df_reset</span><span class="p">)</span> <span class="ow">or</span> <span class="n">or_df_reset_sol</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">df_reset</span><span class="p">),</span> <span class="s1">&#39;6.5.2 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_6</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">,[</span><span class="n">df_reset</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="searching-exercise-6-5-3">
-<h2>(Searching) Exercise 6.5.3<a class="headerlink" href="#searching-exercise-6-5-3" title="Permalink to this headline">#</a></h2>
-<p>Now that our geologist friend has all this information, he wants to know how many of these mountains are claimed by China. Can you help him out? <i><br><br>Hint: you need to find out which elements in the appropriate column contains the string ‘China’.</p>
+<h2>(Searching) Exercise 6.5.3<a class="headerlink" href="#searching-exercise-6-5-3" title="Permalink to this heading">#</a></h2>
+<p>Now that our geologist friend has all this information, he wants to know how many of these mountains are claimed by China. Can you help him out?</p>
+<p><em>Hint: you need to find out which elements in the appropriate column contains the string ‘China’.</em></p>
+<p><em>Type your code where the three (<em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>) dots are placed. Do not change the name of the variables</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; write your code here, do not change any variable name &#39;&#39;&#39;</span>
-
-<span class="c1"># you only need one line of code</span>
-<span class="n">china_mountains</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">china_mountains</span> <span class="o">=</span> <span class="n">df_reset</span><span class="p">[</span><span class="s2">&quot;Location and Notes&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;China&quot;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="c1">###END SOLUTION</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">china_mountains</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">china_mountains</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="admonition-check-your-answer admonition">
+<p class="admonition-title">check your answer!</p>
+<p>To check your answer in a <em>Jupyter Lite session</em>, simply run the following line of code immediately after your code implementation.</p>
+<p>If your are in <em>Google Colab</em> just run the cell bellow.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###BEGIN HIDDEN TESTS</span>
-<span class="n">df_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;tallest_mountains.csv&#39;</span><span class="p">)</span>
-
-<span class="n">df7000_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;mountains_above_7000m_copy.csv&#39;</span><span class="p">,</span> <span class="n">encoding_errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1"># 1</span>
-<span class="n">df7000_norange_sol</span> <span class="o">=</span> <span class="n">df7000_sol</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 2</span>
-<span class="n">df_concat_sol</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df7000_norange_sol</span><span class="p">,</span><span class="n">df_sol</span><span class="p">])</span> <span class="c1"># 3</span>
-<span class="n">df_reset_sol</span> <span class="o">=</span> <span class="n">df_concat_sol</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 4</span>
-<span class="n">missing_feet_series_sol</span> <span class="o">=</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span> <span class="c1"># 5</span>
-<span class="n">with_feet_series_sol</span> <span class="o">=</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">missing_feet_series_sol</span><span class="p">,</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Metres&quot;</span><span class="p">]</span><span class="o">*</span><span class="mf">3.28084</span><span class="p">)</span> <span class="c1"># 6</span>
-<span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Feet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">with_feet_series_sol</span>
-
-<span class="n">china_mountains_sol</span> <span class="o">=</span> <span class="n">df_reset_sol</span><span class="p">[</span><span class="s2">&quot;Location and Notes&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;China&quot;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="k">assert</span> <span class="n">china_mountains_sol</span> <span class="o">==</span> <span class="n">china_mountains</span><span class="p">,</span> <span class="s1">&#39;6.5.3 - Incorrect answer&#39;</span>
-<span class="c1">###END HIDDEN TESTS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check</span><span class="o">.</span><span class="n">notebook_6</span><span class="p">(</span><span class="n">question_number</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">,[</span><span class="n">china_mountains</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -822,7 +780,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-2-1">Exercise 6.2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-3-1">(Searching) Exercise 6.3.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-3-2">(Searching) Exercise 6.3.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-fixing-exercise-6-3-3">(Searching/Fixing) Exercise 6.3.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-5-1">(Searching) Exercise 6.5.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching-exercise-6-5-2">(Searching) Exercise 6.5.2</a></li>

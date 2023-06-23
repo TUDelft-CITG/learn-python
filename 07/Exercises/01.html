@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Matplotlib Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
+    <title>Exercises &#8212; Learn Python for Civil Engineering and Geosciences</title>
   
   
   
@@ -35,8 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,11 +44,11 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -63,15 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '07/Exercises/01';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Python Course in a nutshell" href="../../In_a_nutshell_intro.html" />
     <link rel="prev" title="7. Matplotlib" href="../Theory/01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +109,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book!⚠️</div>
+  </div>
+
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
@@ -156,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    UNDER CONSTRUCTION
+                    Welcome to your Python Course
                 </a>
             </li>
         </ul>
@@ -164,36 +166,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">Introduction to the Course</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Variables, operators and functions Exercises.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02/Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Modules, conditions, data structures and loops Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Advanced strings and functions. Files and debugging Exercises.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Objects and References Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Pandas Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory/01.html">7. Matplotlib</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Matplotlib Exercises</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -201,27 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Old Stuff</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/overview.html">Original Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook1.html">Python Notebook #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook2.html">Python Notebook #2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook3.html">Python Notebook #3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook4.html">Python Notebook #4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook5.html">Python Notebook #5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/PythonNotebook6.html">Python Notebook #6</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../originals/installations.html">Installations (MUDE)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../originals/mude/overview.html">MUDE Materials</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-student.html">Computations using Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-1-solution.html">Computations using Numpy: Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-student.html">Python data analysis with Pandas (and Matplotlib)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-solution.html">Python data analysis with Pandas (and Matplotlib): Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../originals/mude/1-2-Golden_Rules.html">Golden Rules</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02/In_a_Nutshell/01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../In_a_Nutshell/01.html">7. Matplotlib</a></li>
 </ul>
 
     </div>
@@ -268,6 +251,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/mike?urlpath=tree/book/07/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/mike/book/07/Exercises/01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F07/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F07/Exercises/01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,7 +437,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Matplotlib Exercises</h1>
+    <h1>Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,9 +447,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2-2">Exercise 5.2.2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2-3">Exercise 5.2.3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2-4">Exercise 5.2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram-of-mountain-heights">Histogram of mountain heights</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plot-of-number-of-mountains-per-country">Bar plot of number of mountains per country</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-two-variables">Plot of two variables</a></li>
 </ul>
             </nav>
         </div>
@@ -432,132 +464,110 @@ document.write(`
   <figure>
   <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
 </figure>
-<section class="tex2jax_ignore mathjax_ignore" id="matplotlib-exercises">
-<h1>Matplotlib Exercises<a class="headerlink" href="#matplotlib-exercises" title="Permalink to this headline">#</a></h1>
-<section id="exercise-5-2-2">
-<h2>Exercise 5.2.2<a class="headerlink" href="#exercise-5-2-2" title="Permalink to this headline">#</a></h2>
-<p>We will now read in a dataset with eruption data of the Old Faithful geyser in Yellowstone, in which <span class="math notranslate nohighlight">\(T\)</span> is the duration of an eruption, and <span class="math notranslate nohighlight">\(W\)</span> the time until the next eruption. Make a scatterplot of the two data arrays <code>T</code> and <code>W</code>, that are loaded below.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;DO NOT CHANGE THESE VARIABLES&#39;</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># You will learn about pandas in Notebook 6</span>
-
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;../resource/lib/publicdata/&#39;</span>
-
-<span class="n">DATA</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;OldFaithful.xlsx&#39;</span><span class="p">)</span>  
-<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">DATA</span><span class="p">[</span><span class="s1">&#39;eruption&#39;</span><span class="p">])</span>
-<span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">DATA</span><span class="p">[</span><span class="s1">&#39;waiting&#39;</span><span class="p">])</span>
-
-<span class="c1">#Start your code here</span>
-<span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Waiting Time [s]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Eruption Magnitude [-]&#39;</span><span class="p">)</span>
-<span class="c1">###END SOLUTION</span>
-</pre></div>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Lite session</p>
+<p>Start a Jupiter lite session <a href="https://mike-mendoza.github.io/jupyter-lite-sandbox/repl/index.html?toolbar=1&kernel=python&code=print('You may begin!')" target="_blank">here</a> to open a new tab where you can freely write and run your code.</p>
+<p>Wait until the message “<tt>You may begin!</tt>” is printed.</p>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">687749</span><span class="n">cebfd4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-
-<span class="g g-Whitespace">     </span><span class="mi">13</span> 
-
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-
-<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Waiting Time [s]&#39;</span><span class="p">)</span>
-
-
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
-</div>
-</div>
+<section id="histogram-of-mountain-heights">
+<h2>Histogram of mountain heights<a class="headerlink" href="#histogram-of-mountain-heights" title="Permalink to this heading">#</a></h2>
+<p>Your task is to reproduce the plot shown below using the dataset with all mountains above meters, <code class="docutils literal notranslate"><span class="pre">mountains_above_7000m.csv</span></code> file. The characteristics of the plot are the following:</p>
+<ul class="simple">
+<li><p>15 bins histogram of mountain heights in metres</p></li>
+<li><p>minimum and maximum values placed in text box</p></li>
+<li><p>vertical red line representing the median value</p></li>
+<li><p>title font size = 16</p></li>
+<li><p>x and y labels font size = 14</p></li>
+<li><p>legend font size = 10</p></li>
+<li><p>dashed grid placed behind the histogram</p></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/TUDelft-CITG/learn-python/mike/book/07/Exercises/01.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="312" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Toolbox</p>
+<p>Here are your tools to solve this exercise:</p>
+<ul class="simple">
+<li><p>Define the input variable.</p></li>
+<li><p>Get the maxim, min and median values of the input variable.</p></li>
+<li><p>The vertical line can be plotted using <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.vlines</span></code></p></li>
+<li><p>The min an max values can be plotted using <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.text</span></code></p></li>
+</ul>
+<p>You can use the following <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> functions (but not limited to):
+<code class="docutils literal notranslate"><span class="pre">plt.figure()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.title()</span></code>,<code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code>,<code class="docutils literal notranslate"><span class="pre">plt.rc()</span></code></p>
+<p>More information:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.vlines.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.vlines.html</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.text.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.text.html</a></p></li>
+</ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A scatterplot is a useful type of plot to gauge the correlation between two quantitative data. You will learn more about this in the course AESB1213 Probability and Statistics, in Q3.</p>
+<p>On <em>Jupyter lite</em> use the following line to load the data file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mountains_7000</span> <span class="pre">=</span> <span class="pre">pd.read_csv('/drive/data/mountains_above_7000m.csv')</span></code></p>
 </div>
 </section>
-<section id="exercise-5-2-3">
-<h2>Exercise 5.2.3<a class="headerlink" href="#exercise-5-2-3" title="Permalink to this headline">#</a></h2>
-<p>Create an array <code>x</code> consisting of <span class="math notranslate nohighlight">\(100\)</span> elements within the <span class="math notranslate nohighlight">\([0,20]\)</span> range. Compute <span class="math notranslate nohighlight">\(y = sin(x)\)</span> and plot <span class="math notranslate nohighlight">\(y\)</span> vs. <span class="math notranslate nohighlight">\(x\)</span> with a black line. Next, create a copy of <span class="math notranslate nohighlight">\(y\)</span> called <span class="math notranslate nohighlight">\(y_{copy}\)</span> and replace all values of <span class="math notranslate nohighlight">\(y_{copy}\)</span> that are larger than <span class="math notranslate nohighlight">\(0.5\)</span> to be <span class="math notranslate nohighlight">\(0.5\)</span>, and all values that are smaller than <span class="math notranslate nohighlight">\(-0.5\)</span> to be <span class="math notranslate nohighlight">\(-0.5\)</span>. Then, plot the modified <span class="math notranslate nohighlight">\(y_{copy}\)</span> in the same plot, using a red dotted line.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-<span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-
-<span class="n">y_copy</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">y_copy</span><span class="p">[</span><span class="n">y_copy</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">y_copy</span><span class="p">[</span><span class="n">y_copy</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_copy</span><span class="p">,</span> <span class="s1">&#39;r.&#39;</span><span class="p">)</span>
-<span class="c1">###END SOLUTION</span>
-</pre></div>
+<section id="bar-plot-of-number-of-mountains-per-country">
+<h2>Bar plot of number of mountains per country<a class="headerlink" href="#bar-plot-of-number-of-mountains-per-country" title="Permalink to this heading">#</a></h2>
+<p>Your task is to reproduce the plot shown below using the dataset with all mountains above 7000 meters, <code class="docutils literal notranslate"><span class="pre">mountains_above_7000m.csv</span></code> file. The characteristics of the plot are the following:</p>
+<ul class="simple">
+<li><p>Bar plot representing the number of  mountains above 7000 meters per country</p></li>
+<li><p>The countries to be included are: Bhutan, China, India and Pakistan</p></li>
+<li><p>The color <em>hex color codes</em> that represent each country are : #f1eef6, #bdc9e1, #74a9cf and #2b8cbe</p></li>
+<li><p>title font size = 14</p></li>
+<li><p>x and y labels font size = 12</p></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/TUDelft-CITG/learn-python/mike/book/07/Exercises/02.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="312" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Toolbox</p>
+<p>Here are your tools to solve this exercise:</p>
+<ul class="simple">
+<li><p>Define a list of the countries of interest.</p></li>
+<li><p>Compute the number of mountains per country (see Exercise 6.5.3 for example).</p></li>
+<li><p>Define a list of the given hex color codes.</p></li>
+<li><p>The bar plot can be plotted using <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar</span></code></p></li>
+<li><p>Use a for loop to place text representing the number of mountains above each bar</p></li>
+</ul>
+<p>You can use the following <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> functions (but not limited to):
+<code class="docutils literal notranslate"><span class="pre">plt.figure()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code>,<code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code></p>
+<p>More information:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.text.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.text.html</a></p></li>
+</ul>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f509dff1250&gt;]
-</pre></div>
-</div>
-<img alt="../../_images/146b18808febf2fe65917a7a29508e7880c7efed56e954bd400bbbd6413bc4f5.png" src="../../_images/146b18808febf2fe65917a7a29508e7880c7efed56e954bd400bbbd6413bc4f5.png" />
-</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On <em>Jupyter lite</em> use the following line to load the data file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mountains_7000</span> <span class="pre">=</span> <span class="pre">pd.read_csv('/drive/data/mountains_above_7000m.csv')</span></code></p>
 </div>
 </section>
-<section id="exercise-5-2-4">
-<h2>Exercise 5.2.4<a class="headerlink" href="#exercise-5-2-4" title="Permalink to this headline">#</a></h2>
-<p>The file <b>arr.txt</b> contains <span class="math notranslate nohighlight">\(1000\)</span> randomly chosen <span class="math notranslate nohighlight">\(x,y\)</span> locations of points; both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> vary between <span class="math notranslate nohighlight">\(-10\)</span> and <span class="math notranslate nohighlight">\(10\)</span>. Load the data using <code>np.loadtxt()</code>, and store the first row of the array in an array called <code>x</code> and the second row in an array called <code>y</code>. First, plot a red dot for all points. Then, on the same graph, plot a blue dot for all <span class="math notranslate nohighlight">\(x,y\)</span> points where <span class="math notranslate nohighlight">\(x&lt;-2\)</span> and <span class="math notranslate nohighlight">\(-5\le y \le 0\)</span>. Finally, plot a green dot for any point that lies in the circle with center <span class="math notranslate nohighlight">\((x_c,y_c)=(2.5,0)\)</span> and with radius <span class="math notranslate nohighlight">\(R=5.0\)</span>.<br><br><i>Hint: it may be useful to compute a new array for the radial distance <span class="math notranslate nohighlight">\(r\)</span> between any point and the center of the circle using the formula <span class="math notranslate nohighlight">\(r=\sqrt{(x-x_c)^2+(y-y_c)^2}\)</span>. Lastly, use the <code>plt.axis(‘equal’)</code> command to make sure the scales along the two axes are equal and the circular green area looks like a circle.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-<span class="o">...</span>
-
-<span class="c1">###BEGIN SOLUTION TEMPLATE=</span>
-<span class="n">file</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;arr.txt&#39;</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r.&#39;</span><span class="p">)</span>
-
-<span class="n">mask_blue</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">mask_blue</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">mask_blue</span><span class="p">],</span> <span class="s1">&#39;b.&#39;</span><span class="p">)</span>
-
-<span class="n">x_c</span><span class="p">,</span> <span class="n">y_c</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">0</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">mask_green</span> <span class="o">=</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="mi">5</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">mask_green</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">mask_green</span><span class="p">],</span> <span class="s1">&#39;g.&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-<span class="c1">###END SOLUTION</span>
-</pre></div>
+<section id="plot-of-two-variables">
+<h2>Plot of two variables<a class="headerlink" href="#plot-of-two-variables" title="Permalink to this heading">#</a></h2>
+<p>Your task is to reproduce the scatterplot with marginal histograms shown below. The dataset to be use is the sample of 100 vehicles corresponding to the 3-axle vehicle type 3C located in the file <code class="docutils literal notranslate"><span class="pre">02_01.csv</span></code>. The characteristics of the plot are the following:</p>
+<ul class="simple">
+<li><p>For this task you will use different Python data visualization library called <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a></p></li>
+<li><p>Scatter plot with marginal histograms representing the Axle 1 and Axle 2 measurements</p></li>
+<li><p>x and y labels font size = 14</p></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/TUDelft-CITG/learn-python/mike/book/07/Exercises/03.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="400" height="400" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Toolbox</p>
+<p>Here are your tools to solve this exercise:</p>
+<ul class="simple">
+<li><p>Get the variables of interest (Axle 1 and Axle 2).</p></li>
+<li><p>The scatter plot with marginal histograms can be plotted using <code class="docutils literal notranslate"><span class="pre">seaborn.jointplot</span></code></p></li>
+</ul>
+<p>More information:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.jointplot.html">https://seaborn.pydata.org/generated/seaborn.jointplot.html</a></p></li>
+</ul>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-10.97765827521957,
- 10.99069498806333,
- -10.984650819946767,
- 10.988163203275704)
-</pre></div>
-</div>
-<img alt="../../_images/c440a89945bb9acb9e1407d1895e5f51d27c0f1737a6edccda12aa89c32a015b.png" src="../../_images/c440a89945bb9acb9e1407d1895e5f51d27c0f1737a6edccda12aa89c32a015b.png" />
-</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On <em>Jupyter lite</em> use the following line to load the data file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dataset</span> <span class="pre">=</span> <span class="pre">pd.read_csv('/drive/data/02_01.csv')</span></code></p>
 </div>
 </section>
 </section>
@@ -629,9 +639,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2-2">Exercise 5.2.2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2-3">Exercise 5.2.3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2-4">Exercise 5.2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram-of-mountain-heights">Histogram of mountain heights</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plot-of-number-of-mountains-per-country">Bar plot of number of mountains per country</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-two-variables">Plot of two variables</a></li>
 </ul>
   </nav></div>
 
