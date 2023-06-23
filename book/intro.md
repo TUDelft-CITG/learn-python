@@ -17,5 +17,10 @@ We are excited to have you on board, and we look forward to witnessing your grow
 
 Let's get started!
 
-```{tableofcontents}
+```{eval-rst}
+.. replite::
+    :width: 100%
+    :height: 500px
+    :prompt: Click me!
+    :prompt_color: #00aa42
 ```

@@ -1,0 +1,38 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+    test-build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.10'
+            
+            - name: Install mamba
+              uses: mamba-org/provision-with-micromamba@main
+              with:
+                micromamba-version: '1.4.2'
+                environment-file: 'environment.yml'
+            
+            - name: Build book
+              shell: bash -el {0}
+              run: |
+                jupyter-book build book/

@@ -8,3 +8,4 @@ dependencies:
     - jupyter-book==0.15.1
     - sphinx-inline-tabs
     - learn_python_ceg_test
+
