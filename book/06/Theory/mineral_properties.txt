@@ -1,0 +1,14 @@
+My header
+name, hardness, sp. gr., cleavage
+Amphibole, 5.5, 2.8, Two
+Biotite, 2.75, 3.0, One
+Calcite, 3.0, 2.72, Three
+Dolomite, 3.0, 2.85, Three
+Feldspars, 6.0, 2.645, Two
+Garnet, 7.0, 3.9, Fracture
+Graphite, 1.5, 2.3, One
+Kyanite, 6, 4.01, One
+Muscovite, 2.25, 2.93, One
+Pyroxene, 5.5, 3.325 , Two
+Quartz, 7, 2.65, Fracture
+Sillimanite, 6.5, 3.23, One
