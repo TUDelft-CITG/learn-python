@@ -4,7 +4,12 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Python Course
+  - caption: Introduction
+    chapters:
+    - file: Intro_Placeholder.md
+      title: Course Overview
+    - file: Python_Toolbox.md
+  - caption: Course Contents
     chapters:
     - file: Theory_intro.md
     - file: 01/Theory/01.ipynb
