@@ -34,9 +34,10 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  home_page_in_navbar: false
   use_issues_button: true
   use_repository_button: true
-  announcement: "⚠️ This is not the final version of the book!⚠️"
+  announcement: "⚠️ This is not the final version of the book! The new version will be ready by July 1.⚠️"
 
 # Add thebe binder buttons to your book
 launch_buttons:

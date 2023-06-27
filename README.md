@@ -32,23 +32,67 @@ Things to be considered:
 
 
 
+Setup:
+- there are only interactive parts in the part where theory and exercises are introduced (Course Contents). THe Part "In a Nutshell" does not contain any interactive elements.
+- Each Chapter contains at least two parts: theory and exercises. For this edition on the chapter on `numpy` contains more than one Exercise section, but this may change in the future.
+
+
+Associated repositories: `learn-python-calculator` and `learn-python-package`.
+
+To use the REPL with a bit of front-end setup, use this [link](https://tudelft-citg.github.io/learn-python-calculator/repl/index.html?toolbar=1&kernel=python&code=print(%27You%20may%20begin!%27)), which adds the following to the URL: `?toolbar=1&kernel=python&code=print(%27You%20may%20begin!%27)`.
+
 
 ## Interactive Python Elements
 
-We decided that with the in-browser Python capabilities, there is no longer any need to provide separate notebooks for students to run locally (and consequently, no need to install any software!).
+We decided that with the in-browser Python capabilities, there is no longer a requirement to provide separate notebooks for students to run locally (and consequently, no need to install any software!). However, since it is nice to be able to run the cells in the theory and exercise pages, links to open each page with a working Python kernel via Binder and Colab are included (the rocket icon {fa}`rocket` at the top right). Colab initializes much faster and more reliably, but due to GDPR concerns with Google products, Binder is offerred as an alternative. Neither platform will save modifications to the notebook, unless they are downloaded or imported individually.
 ### Overview Interactive Elements, Summer 2023
 
+
+
+```
+# ##-On Google colab uncomment and run the following code
+# ## to install and import the function that will be used to check your answers.
+# !pip install learn-python-ceg-test
+
+# ##-On Binder just uncomment and run the following line
+# import learn_python_ceg_test.check_answers as check
+```
+
+
+**remember that the link is customized to initialize the REPL for that page.** The example below chooses the kernel, imports pandas and the answer-checker and gives a message to begin.
+```
+`````{admonition} Open the Python Calculator for this page
+:class: tip, dropdown
+Click this <a href="https://tudelft-citg.github.io/learn-python-calculator/repl/index.html?toolbar=1&kernel=python&code=import pandas as pd; import data.check_answers as check; print('You may begin!')" target="_blank">link</a> and wait until the message "<tt>You may begin!</tt>" is printed to start evaluating code. More information about this tool can be found [here](calculator). 
+
+Remember that all pages in this course can also be opened as an interactive notebook via Binder or Colab using the {fa}rocket icon above (read more about it [here](nb-links)).
+`````
+
+```
+
+
+
+
+
+
+
+
+
 JupyterLite Sandbox: `jupyter-lite-sandbox`
+
+
+
+
 
   - The function is also available on pypi as . 
   - The function is not available on conda-forge yet. 
 
 An overview of the interactive elements by Chapter is below:
 
-- Exercises in Chapters 1 and 2 are evaluated using jupyterquiz only
-- Exercises in Chapters 3, 4 and 6 can be evaluated using the answer-checking package function located at the JupyterLite Sandbox. 
-- Exercises in Chapter 5 are evaluated jupyterquiz and a jupyter-lite RPL link is given to make computations
-- Exercises in Chapter 7 are not evaluated, a jupyter-lite RPL link is given to make computations 
+- Exercises in Chapters 1 and 2 are evaluated using JupyterQuiz only; no execution of Python code is required
+- Exercises in Chapters 3, 4 and 6 use a JupyterLite REPL; the answer-checking package is used here
+- Exercises in Chapter 5 use a mix of JupyterQuiz and a JupyterLite REPL; the answer-checking package is used here
+- Exercises in Chapter 7 use a JupyterLite REPL (separate web page); the answer-checking package is *not* used here 
 
 ### Decision-making notes
 
