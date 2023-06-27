@@ -1,0 +1,1076 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Math &#8212; Learn Python for Civil Engineering and Geosciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02/In_a_Nutshell/02';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️ This is not the final version of the book! The new version will be ready by July 1.⚠️</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/learn-python-logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/learn-python-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Intro_Placeholder.html">Course Overview</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Toolbox.html">Python Toolbox</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Theory_intro.html">0. Python: what and why?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01/Theory/01.html">1. Variables, operators and functions.</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory/01.html">2. Modules, conditions, data structures and loops</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03/Theory/01.html">3. Advanced strings and functions, files and debugging.</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04/Theory/01.html">4. Objects and References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05/Theory/01.html">5. Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/01.html">Airplane velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05/Exercises/02.html">Maximum bending moment on a simply supported bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../06/Theory/01.html">6. Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../06/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07/Theory/01.html">7. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07/Exercises/01.html">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">In a Nutshell</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../In_a_nutshell_intro.html">Python Course in a nutshell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01/In_a_Nutshell/01.html">1. Variables, operators and functions.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.html">2. Modules, conditions, data structures and loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../03/In_a_Nutshell/01.html">3. Advanced strings and functions, files and debugging.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04/In_a_Nutshell/01.html">4. Objects and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../05/In_a_Nutshell/01.html">5. Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../06/In_a_Nutshell/01.html">6. Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../07/In_a_Nutshell/01.html">7. Matplotlib</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TUDelft-CITG/learn-python/main?urlpath=tree/book/02/In_a_Nutshell/02.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/TUDelft-CITG/learn-python/blob/main/book/02/In_a_Nutshell/02.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TUDelft-CITG/learn-python" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TUDelft-CITG/learn-python/issues/new?title=Issue%20on%20page%20%2F02/In_a_Nutshell/02.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/02/In_a_Nutshell/02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Math</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Math</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-all-functions">Listing all functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#python-third-party-modules">Python third-party modules</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">numpy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-python-files-as-modules">Loading Python files as modules</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-and-code-if-code-statements">2.2 Conditions and <code>if</code> statements</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">2.3 Data Structures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-tuple-code"><code>tuple</code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-dict-code"><code>Dict</code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2.4 Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-for-code-loop"><code>for</code> loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-while-code-loop"><code>while</code> loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-break-code-statement"><code>break</code> statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-continue-code-statement"><code>continue</code> statement</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="math">
+<h1>Math<a class="headerlink" href="#math" title="Permalink to this heading">#</a></h1>
+<p>Python’s <strong>math</strong> module provides a collection of mathematical functions and constants for various numerical operations. These functions are useful for performing mathematical calculations in Python. Here are some commonly used functions from the math module:</p>
+<ul class="simple">
+<li><p>The math.sqrt( ) function returns the square root of a number</p></li>
+<li><p>The math.ceil( ) function returns the smallest integer greater than or equal to a given number</p></li>
+<li><p>The math.floor( ) function returns the largest integer less than or equal to a given number</p></li>
+<li><p>The math.pow( ) function returns the value of the first argument raised to the power of the second argument</p></li>
+<li><p>The math.exp( ) function returns the exponential value of a number</p></li>
+<li><p>The math.log( ) function returns the natural logarithm of a number</p></li>
+<li><p>The math.sin( ) function returns the sine of an angle given in radians</p></li>
+<li><p>The math.cos( ) function returns the cosine of an angle given in radians</p></li>
+<li><p>The math.radians( ) function converts an angle from degrees to radians</p></li>
+</ul>
+<p><em>Note: to see what each input a functions can take, press <strong>shift+tab</strong> or <strong>crt+shift+space</strong> within function parentheses.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">result_sqrt</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span> <span class="p">)</span>
+<span class="n">result_ceil</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">3.2</span><span class="p">)</span>
+<span class="n">result_floor</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mf">3.9</span><span class="p">)</span>
+<span class="n">result_pow</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">result_exp</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">result_log</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">result_sin</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">result_cos</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">result_radians</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result_sqrt</span><span class="p">)</span>      <span class="c1"># Output: 4.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_ceil</span><span class="p">)</span>      <span class="c1"># Output: 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_floor</span><span class="p">)</span>     <span class="c1"># Output: 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_pow</span><span class="p">)</span>       <span class="c1"># Output: 8.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_exp</span><span class="p">)</span>       <span class="c1"># Output: 2.718281828459045</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_log</span><span class="p">)</span>       <span class="c1"># Output: 2.302585092994046</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_sin</span><span class="p">)</span>       <span class="c1"># Output: 1.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_cos</span><span class="p">)</span>       <span class="c1"># Output: 1.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_radians</span><span class="p">)</span>   <span class="c1"># Output: 3.141592653589793</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
+4
+3
+8.0
+2.718281828459045
+2.302585092994046
+1.0
+1.0
+3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="listing-all-functions">
+<h1>Listing all functions<a class="headerlink" href="#listing-all-functions" title="Permalink to this heading">#</a></h1>
+<p>A docstring tooltip (like a function explanation box) is like a special helper box that appears when you press a button. It tells you what a function does and how to use it correctly, just like a special box that explains what a magic toy does and how to play with it. The function explanation box helps programmers understand functions better, making programming easier and more enjoyable.There are two very common methods to use this tooltip:</p>
+<ol class="arabic simple">
+<li><p>Using the help() function: To access the docstring tooltip using the help() function, you can include it in your Python code followed by the name of the function you want to learn more about. When you run the code, the docstring tooltip will be displayed in the console or output window. For example:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function pow in module math:
+
+pow(x, y, /)
+    Return x**y (x to the power of y).
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Many popular Python IDEs offer built-in support for the docstring tooltip. Inside the parentheses of a function, you can press <strong>Shift+Tab</strong> or <strong>Ctrl+Shift+Space</strong>, and the tooltip will appear, providing the function’s documentation. This feature is available in IDEs like PyCharm, Visual Studio Code, and Jupyter Notebook.</p></li>
+</ol>
+</section>
+<section id="python-third-party-modules">
+<h1>Python third-party modules<a class="headerlink" href="#python-third-party-modules" title="Permalink to this heading">#</a></h1>
+<p>Besides built-in modules, there are also modules developed by other people and companies, which can be also used in your code.</p>
+<p>These modules are not installed by default in Python, they are usually installed by using the <i>’pip’</i> or <i>’conda’</i> package managers and accessed like any other Python module.<br><br> <a href="https://www.youtube.com/watch?v=Z_Kxg-EYvxM">This YouTube video</a> explains how to install Python Packages with <i>’pip’</i> and <i>’conda’</i>.</p>
+</section>
+<section id="numpy">
+<h1>numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h1>
+<p>The <b><code>numpy</code></b> module is one of the most popular Python modules for numerical applications. Due to its popularity, developers tend to skip using the whole module name and use a smaller version of it <b>(<code>np</code>)</b>. A different name to access a module can be done by using the <b><code>as</code></b> keyword, as shown below. The <strong>import numpy as np</strong> statement imports the NumPy module, allowing us to use its functionalities.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Creating Arrays</span>
+<span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="c1"># Array Operations</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="matplotlib">
+<h1>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h1>
+<p>Matplotlib is a Python library widely used for creating visualizations and plots. It provides a simple and flexible way to display data in the form of graphs, charts, and other visual representations. It is commonly used in scientific and data analysis applications.</p>
+<p>To use Matplotlib, you need to follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Importing Matplotlib: Start by importing the Matplotlib library in your Python program using the import statement. This makes the Matplotlib functions and classes available for use.</p></li>
+<li><p>Creating a Figure and Axes: Next, create a figure and axes objects. The figure represents the entire image or window where your plot will be displayed. The axes represent the coordinate system within the figure where your plot will be drawn.</p></li>
+<li><p>Plotting Data: Now, use the axes object to plot your data (plt.plot() function is the most commonly used type of plot). You can choose from various plot types like line plots, scatter plots, bar plots, etc., depending on the nature of your data.</p></li>
+<li><p>Customizing the Plot: You can customize the appearance of your plot by adding labels, titles, legends, adjusting colors, and more. This helps in making the plot more informative and visually appealing.</p></li>
+<li><p>Displaying the Plot: Finally, you can display your plot by using the plt.show() function.</p></li>
+</ol>
+<p>Here is a simple example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Creating data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+
+<span class="c1"># Creating figure and axes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># Plotting data</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="c1"># Customizing the plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X-axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y-axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cos (x) function&#39;</span><span class="p">)</span>
+
+<span class="c1"># Displaying the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2e1df2e00a6b1c9ebbbded2eab4f05b191728829f89cbd6ec743ed8ea67e974e.png" src="../../_images/2e1df2e00a6b1c9ebbbded2eab4f05b191728829f89cbd6ec743ed8ea67e974e.png" />
+</div>
+</div>
+</section>
+<section id="loading-python-files-as-modules">
+<h1>Loading Python files as modules<a class="headerlink" href="#loading-python-files-as-modules" title="Permalink to this heading">#</a></h1>
+<p>Finally, you can also load your own (or somebody else’s) Python files as modules. This is quite helpful, as it allows you to keep your code projects well-structured without the need to copy and paste everything.<br><br>In order to import another <b>*.py</b> file as a module, you only need to have that file and your Notebook file in the same directory and use the <code>import</code> keyword. More info on this <a href='https://csatlas.com/python-import-file-module/'>here</a>.</p>
+</section>
+<section id="conditions-and-code-if-code-statements">
+<h1>2.2 Conditions and <code>if</code> statements<a class="headerlink" href="#conditions-and-code-if-code-statements" title="Permalink to this heading">#</a></h1>
+<p>In previous sections, you have acquired essential skills in Python such as variable creation, operator utilization, and code analysis. These skills enable you to accomplish a wide range of tasks. However, there is still a need for increased flexibility. Manually modifying your code to accommodate different data and reverting those changes can be cumbersome. In this section, you will delve into the concept of code control, which allows you to navigate the execution of your code based on specific conditions. To achieve this, you will explore a fundamental programming construct called the <b><code>if</code></b> statement. Through this construct, you will gain the ability to selectively process data based on defined conditions, enhancing the adaptability and efficiency of your code.</p>
+<p>We have three sections:</p>
+<ul class="simple">
+<li><p><b><code>If</code></b> Statement: The if statement enables us to execute a block of code only if a specified condition is true. It provides a way to make decisions and selectively perform actions based on whether a condition evaluates to true or false.</p></li>
+<li><p><b><code>Elif</code></b> Statement: The elif statement allows us to consider multiple conditions one after another and execute different blocks of code based on the first condition that evaluates to true. It provides a means to handle various possibilities and choose the appropriate action based on the situation.</p></li>
+<li><p><b><code>If-else</code></b> Statement: The if-else statement combines the if and else statements to perform one action if a condition is true and a different action if the condition is false. It offers a way to provide alternative paths of execution, ensuring that the code responds differently based on whether a condition is met or not.</p></li>
+</ul>
+<p>These conditional statements allow you to make decisions and control the flow of your program based on specific conditions. For example like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># If Statement</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is positive&quot;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+
+<span class="c1"># If-else Statement</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is positive&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is non-positive&quot;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Elif Statement</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is positive&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is negative&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is zero&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x is positive
+x is non-positive
+x is zero
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-structures">
+<h1>2.3 Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this heading">#</a></h1>
+<p>Welcome to an exciting new adventure in data management! In the previous module, you learned how to create variables, which was just the tip of the iceberg. Now, imagine a scenario where you have numerous variables or want to organize and access them within a single entity. That’s where data structures come into play!</p>
+<p>Data structures are like superheroes that help us tackle complex data management challenges. They come in various forms, each with its unique purpose and complexity. Today, we’ll dive into some of the superheroes of Python’s built-in data structures: the mighty <b><code>list</code></b>, the versatile <b><code>dict</code></b>, and the steadfast <b><code>tuple</code></b>. These data structures provide us with powerful tools to store, organize, and manipulate data, enabling us to unleash the true potential of our code. Let’s dive in and unlock the secrets of organized data!</p>
+<section id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
+<p>A list is a powerful data structure in Python that allows you to store and manipulate an ordered collection of items. It’s like having a magic box where you can keep multiple things together and change them whenever you want. Let’s explore 4 different ways to create and use lists:</p>
+<ol class="arabic simple">
+<li><p>Creating an empty list:
+You can create an empty list by simply using empty square brackets [ ]. It’s like having a blank canvas ready to be filled with items.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 5, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Creating an empty list - using the class constructor: You can also use the list class constructor list() to create an empty list. It’s another way of preparing your container for future data.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Creating a list from existing data: To create a list with existing data, you can directly enclose the items within square brackets [ ], separating them with commas. It’s like assembling your collection of items in one go.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;kiwi&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Creating a list from existing data: You can use the list constructor list( ) with an iterable (such as a string or another list) to create a new list containing the elements of that iterable. It’s like transforming one collection into another.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># Creates a list [1, 2, 3, 4, 5]</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-tuple-code">
+<h2><code>tuple</code><a class="headerlink" href="#code-tuple-code" title="Permalink to this heading">#</a></h2>
+<p>A tuple is a data structure in Python that allows you to store an ordered collection of items. Unlike lists, tuples are immutable, meaning their elements cannot be modified once they are assigned. Let’s explore how to define tuples and create examples:</p>
+<ol class="arabic simple">
+<li><p>Defining a tuple using ( ) brackets or comma:
+You can define a tuple by enclosing the items within parentheses () or by simply separating them with commas. It’s like creating a fixed ensemble of elements.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">my_tuple2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_tuple1</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_tuple2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3)
+(1, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Creating a tuple using the tuple class constructor: You can also use the tuple class constructor tuple() to create a tuple. It accepts an iterable as an argument and generates a tuple with its elements. It’s like assembling data into a coordinated ensemble.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example 1:</span>
+<span class="n">my_tuple3</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># Example 2:</span>
+
+<span class="n">coordinates</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># A tuple representing coordinates</span>
+<span class="n">days_of_week</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="s1">&#39;Monday&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s1">&#39;Friday&#39;</span><span class="p">])</span>  <span class="c1"># A tuple containing days of the week</span>
+
+<span class="c1"># Example 3: </span>
+
+<span class="n">my_tuple4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1"># my_tuple[0] = 10  # This will throw an error since tuples are immutable</span>
+
+<span class="c1"># Trying to modify the tuple will result in a TypeError since tuples, like strings, cannot be changed once defined.</span>
+
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_tuple3</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_tuple4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">days_of_week</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 5, 6)
+(1, 2, 3)
+(3, 5)
+(&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-dict-code">
+<h2><code>Dict</code><a class="headerlink" href="#code-dict-code" title="Permalink to this heading">#</a></h2>
+<p>A dictionary is a versatile data structure in Python that allows you to store and retrieve data using a key-value pairing. It’s like having a real-life dictionary where you can quickly look up information using specific words. Let’s explore how to define dictionaries, we will explore 3 examples:</p>
+<ol class="arabic simple">
+<li><p>Creating a dictionary using { } brackets: You can create a dictionary by enclosing key-value pairs within curly braces { }, separating each pair with a colon ‘ : ‘  It’s like building a repository of information with quick access to specific entries.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;New York&quot;</span><span class="p">}</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 25, &#39;city&#39;: &#39;New York&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Creating an empty dictionary using the class constructor: You can also use the dict class constructor dict( ) to create an empty dictionary. It’s like preparing a blank canvas to populate with key-value pairs later.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Creating a non-empty dictionary by specifying pairs of key-value patterns: To create a dictionary with existing data, you can specify pairs of key-value patterns within the curly braces { }. Each key-value pair is separated by a colon : and pairs are separated by commas. It’s like defining relationships between different pieces of information.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">:</span> <span class="mi">78</span><span class="p">}</span>
+<span class="n">contacts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;John&quot;</span><span class="p">:</span> <span class="s2">&quot;+123456789&quot;</span><span class="p">,</span> <span class="s2">&quot;Emily&quot;</span><span class="p">:</span> <span class="s2">&quot;+987654321&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">:</span> <span class="s2">&quot;+345678912&quot;</span><span class="p">}</span>
+<span class="n">my_dict3</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">my_dict3</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">my_dict3</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">my_dict3</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;London&quot;</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_dict3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 30, &#39;city&#39;: &#39;London&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above code cell, we have created two dictionaries: student_scores and contacts, by specifying key-value pairs within the { } brackets. Additionally, we have also demonstrated how to create an empty dictionary my_dict3 using the dict( ) constructor and then added key-value pairs to it using the square bracket notation. These examples showcase the flexibility of dictionaries in storing and accessing data through key-value relationships.</p>
+</section>
+<section id="loops">
+<h2>2.4 Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="code-for-code-loop">
+<h2><code>for</code> loop<a class="headerlink" href="#code-for-code-loop" title="Permalink to this heading">#</a></h2>
+<p><code>for</code> Loop: A <code>for</code> loop is used to iterate over a sequence (such as a list, tuple, or string) or any iterable object. It allows you to perform a set of statements repeatedly for each item in the sequence. Here is a simple example of how to use a <code>for</code> loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>apple
+banana
+orange
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-while-code-loop">
+<h2><code>while</code> loop<a class="headerlink" href="#code-while-code-loop" title="Permalink to this heading">#</a></h2>
+<p><code>while</code> Loop: A <code>while</code> loop is used to repeatedly execute a block of code as long as a given condition is true. It allows you to keep looping until the condition becomes false. Here is a simple example of how to use a <code>while</code> loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-break-code-statement">
+<h2><code>break</code> statement<a class="headerlink" href="#code-break-code-statement" title="Permalink to this heading">#</a></h2>
+<p><code>break</code> Statement: The <code>break</code> statement is used to prematurely exit a loop. When encountered, it terminates the loop and resumes execution at the next statement outside the loop. Here is a simple example of how to use a <code>break</code> statement:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">fruit</span> <span class="o">==</span> <span class="s2">&quot;banana&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>apple
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-continue-code-statement">
+<h2><code>continue</code> statement<a class="headerlink" href="#code-continue-code-statement" title="Permalink to this heading">#</a></h2>
+<p><code>continue</code> Statement: The <code>continue</code> statement is used to skip the remaining code inside a loop for the current iteration and move to the next iteration. Here is a simple example of how to use a <code>continue</code> statement:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+4
+5
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Break down of all examples</strong>: In the first example, the <code>for</code> loop iterates over a list of fruits and prints each fruit. The <code>while</code> loop in the second example prints numbers from 0 to 4. The <code>break</code> statement in the third example terminates the loop when the condition is met. Lastly, the <code>continue</code> statement in the fourth example skips printing the number 3 and moves to the next iteration. These loop constructs provide powerful control flow mechanisms to repeat and control the execution of code blocks based on specific conditions.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02/In_a_Nutshell"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Math</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-all-functions">Listing all functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#python-third-party-modules">Python third-party modules</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">numpy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-python-files-as-modules">Loading Python files as modules</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-and-code-if-code-statements">2.2 Conditions and <code>if</code> statements</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">2.3 Data Structures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-tuple-code"><code>tuple</code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-dict-code"><code>Dict</code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2.4 Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-for-code-loop"><code>for</code> loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-while-code-loop"><code>while</code> loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-break-code-statement"><code>break</code> statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-continue-code-statement"><code>continue</code> statement</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Magic Mike!
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
