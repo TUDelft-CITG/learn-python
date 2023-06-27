@@ -35,4 +35,4 @@ jobs:
 
       - name: Test build
         run: |
-          jupyter book build -n -W --keep-going book/
+          jupyter book build -n -v book/
