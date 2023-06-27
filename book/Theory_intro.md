@@ -56,7 +56,7 @@ The features of Python are what make it so popular. From the definition availabl
     
 
 <ul>
-<li> <b>Interpreted</b> means that there is an interpreter, a software tool, which reads and performs instructions written in Python. If your laptop, phone, or refrigerator has the interpreter, it can run most of the Python scripts!
+<li> <b>Interpreted</b> means that there is an <b>interpreter</b>, a software tool, which reads and performs instructions written in Python. If your laptop, phone, or refrigerator has the interpreter, it can run most of the Python scripts!
 <li> <b>High-level</b> means that the programming language operates with abstract and more easily understandable concepts. In other words, you don't have to write or understand, code related to the hardware part of your machine (like binary code or assembly).
 <li> <b>General-purpose</b> means that the amount of Python application fields are endless. You can write Python scripts to manage and automate some primitive tasks for yourself, you can use it for data science, create your own machine / deep learning project, write your personal web application or even develop a game. 
 <li> <b> Programming language </b>means a set of specific predefined semantics, instructions, and syntax rules, which are used for writing necessary instructions. It is strictly defined, meaning that 99.99% of all errors in the code are made by the coder, not by the computer.
