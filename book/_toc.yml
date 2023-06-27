@@ -4,7 +4,12 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Python Course
+  - caption: Introduction
+    chapters:
+    - file: Intro_Placeholder.md
+      title: Course Overview
+    - file: Python_Toolbox.md
+  - caption: Course Contents
     chapters:
     - file: Theory_intro.md
     - file: 01/Theory/01.ipynb
@@ -15,7 +20,7 @@ parts:
       - file: 02/Exercises/01.ipynb      
     - file: 03/Theory/01.ipynb
       sections:
-      - file: 03/Exercises/01.ipynb          
+      - file: 03/Exercises/01.ipynb         
     - file: 04/Theory/01.ipynb
       sections:
       - file: 04/Exercises/01.ipynb
@@ -33,27 +38,9 @@ parts:
     chapters:
     - file: In_a_nutshell_intro.md
     - file: 01/In_a_Nutshell/01.ipynb
-    - file: 02/In_a_Nutshell/02.ipynb
-    - file: 03/In_a_Nutshell/03.ipynb
-    - file: 04/In_a_Nutshell/04.ipynb
-    - file: 05/In_a_Nutshell/05.ipynb
-    - file: 06/In_a_Nutshell/06.ipynb
-    - file: 07/In_a_Nutshell/07.ipynb
-  - caption: Old Stuff
-    chapters:
-    - file: originals/overview
-      sections:
-      - file: originals/PythonNotebook1
-      - file: originals/PythonNotebook2
-      - file: originals/PythonNotebook3
-      - file: originals/PythonNotebook4
-      - file: originals/PythonNotebook5
-      - file: originals/PythonNotebook6
-    - file: originals/installations
-    - file: originals/mude/overview.md
-      sections:
-      - file: originals/mude/1-1-student.ipynb
-      - file: originals/mude/1-1-solution.ipynb
-      - file: originals/mude/1-2-student.ipynb
-      - file: originals/mude/1-2-solution.ipynb
-      - file: originals/mude/1-2-Golden_Rules.ipynb
+    - file: 02/In_a_Nutshell/01.ipynb
+    - file: 03/In_a_Nutshell/01.ipynb
+    - file: 04/In_a_Nutshell/01.ipynb
+    - file: 05/In_a_Nutshell/01.ipynb
+    - file: 06/In_a_Nutshell/01.ipynb
+    - file: 07/In_a_Nutshell/01.ipynb

@@ -1,0 +1,7 @@
+jupytext
+jupyterlab
+matplotlib
+numpy
+pandas
+seaborn
+learn-python-ceg-test

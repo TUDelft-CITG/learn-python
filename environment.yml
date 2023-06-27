@@ -1,0 +1,11 @@
+name: jupyter-book-env
+
+dependencies:
+  - pip
+  - pip:
+    - jupyterlite-sphinx==0.8.0
+    - jupyterlite-xeus-python==0.8.1
+    - jupyter-book==0.15.1
+    - sphinx-inline-tabs
+    - learn_python_ceg_test
+
