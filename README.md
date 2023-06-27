@@ -1,8 +1,6 @@
 # learn-python archive
-This is the branch where files of the main branch till 21/06/2023 are available. 
 
-<s> - Caspar: add config files and recipe pages to our book on main </s>
-
+**This is the branch where files of the main branch till 21/06/2023 are available; mostly to preserve the "old files" part. Note that there are some updates to the nutshell sections that were not yet added from branch `Ahmed` branch.**
 
 option 1:
 - JupyterLite REPL to create iPython console in a frame on the page, supported by a Xeus kernel
