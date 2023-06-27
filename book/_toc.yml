@@ -6,12 +6,13 @@ root: intro
 parts:
   - caption: Introduction
     chapters:
-    - file: Intro_Placeholder.md
+    - file: Intro_in_ToC.md
       title: Course Overview
+    - file: Python_intro.md
+      title: Programming and Python
     - file: Python_Toolbox.md
   - caption: Course Contents
     chapters:
-    - file: Theory_intro.md
     - file: 01/Theory/01.ipynb
       sections:
       - file: 01/Exercises/01.ipynb

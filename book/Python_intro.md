@@ -1,15 +1,8 @@
-<figure>
-  <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=250 ALIGN="right">
-</figure>
-
-
-# 0. Python: what and why?
+# Introduction to Programming and Python
 
 ## Why do you need Python? 
     
-Python is a computer programming language that is widely used in both academia and industries related to Civil Engineering, Environmental Engineering and Applied Earth Sciences. Being skilled in Python will help you on multiple occasions, including in your master courses. With this set of notebooks we will guide you through the basics of Python programming. As an additional study material for learning Python basics, we advise the open source book <a href="https://greenteapress.com/wp/think-python-2e/">"Think Python 2nd Edition" by Allen B. Downey</a>. It describes in more detail what is covered in the Notebooks of this course.
-<br>
-Don't worry if you some concepts are not (completely) clear, you'll improve your skills along the way and can always use these notebooks to look things up later.
+Python is a computer programming language that is widely used in both academia and industries related to Civil Engineering, Environmental Engineering and Applied Earth Sciences. Being skilled in Python will help you on multiple occasions, including in your master courses. 
 
 ## What can computers do for us?
 As an engineer or scientist, you will deal with units of information which are called <b>data</b>. The most important tasks that a computer can do for us are:
@@ -50,10 +43,9 @@ There are five different kinds of instructions for computations you use. By orde
     Perform instructions repeatedly, usually with some variation.
 
 
-## Introduction to Python and Python Notebooks
+## Introduction to Python
     
 The features of Python are what make it so popular. From the definition available on the corresponding Wiki page: <i> "Python is an <b>interpreted</b> <b>high-level</b> <b>general-purpose</b> <b>programming language</b>. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs, as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."</i>. Quite a simple, yet concise description due to the meaning hidden behind each buzzword:
-    
 
 <ul>
 <li> <b>Interpreted</b> means that there is an <b>interpreter</b>, a software tool, which reads and performs instructions written in Python. If your laptop, phone, or refrigerator has the interpreter, it can run most of the Python scripts!
@@ -62,9 +54,7 @@ The features of Python are what make it so popular. From the definition availabl
 <li> <b> Programming language </b>means a set of specific predefined semantics, instructions, and syntax rules, which are used for writing necessary instructions. It is strictly defined, meaning that 99.99% of all errors in the code are made by the coder, not by the computer.
 </ul>
 
+Python scripts run with the help of a Python interpreter, but they can be written by using different software tools. Just like as you write your essay (you can type it in Word, Google Docs, Overleaf, or even on plain paper) you can write your Python code with different editors. You could use the default notepad, notepad++, find a proper website with an inbuilt code editor & interpreter (<a href="https://ideone.com/">IDEone</a>, for example), or use specialized Python code editors (Spyder, PyCharm, Visual Studio, etc). In all cases you will produce a set of instructions, which are stored in a file with the <b>*.py</b> extension and the interpreter will run it completely (from top to bottom).
 
-
-Python scripts run with the help of a Python interpreter, but they can be written by using different software tools. Just like as you write your essay (you can type it in Word, Google Docs, Overleaf, or even on plain paper) you can write your Python code with different editors. You can write your code in different editors. You could use the default notepad, notepad++, find a proper website with an inbuilt code editor & interpreter (<a href="https://ideone.com/">IDEone</a>, for example), or use specialized Python code editors (Spyder, PyCharm, Visual Studio, etc). In all cases you will produce a set of instructions, which are stored in a file with the <b>*.py</b> extension and the interpreter will run it completely (from top to bottom).
-
-For your bachelor program you are going to use a slightly different approach to developing a Python script — you are going to use <b> Python Notebooks </b> by using Vocareum, Google Colab, Jupyter Notebook, or Jupyter Lab. These notebooks allow you to run your script in parts, blocks, or in other words — in cells. Just select a cell with the code part you want to run and press the <b>'run cell'</b> button (or <b>shift + enter</b>). Running cell blocks is more convenient for data analysis since sometimes you just need to change a small part of your code or add some explanation, math formulas, or figures. Therefore, re-running only the corresponding cell is much more efficient.
+For this course we will use a slightly different approach to developing a Python script: <b>IPython</b> and <b>Jupyter Notebooks</b>. Think of these as two freely-available tools that add extra functionality to the basic Python programming language. As an example, imagine the camera built into your phone: on it's own it can take pictures, but there are many apps that add filters or sharing via social media that make the impact of your photos much more powerful. This is exactly what IPython and Jupyter Notebooks do for Python, and why they are such important tools in the toolbox of modern engineers. The next Chapter will introduce you to your Python Toolbox for this course!
 
