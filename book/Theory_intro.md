@@ -3,7 +3,7 @@
 </figure>
 
 
-# Introduction to the Course
+# 0. Python: what and why?
 
 ## Why do you need Python? 
     
