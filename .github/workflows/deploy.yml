@@ -6,9 +6,9 @@ on:
       - publish
     types: 
       - closed
-    paths:
-      - "book/**"
-      - ".github/workflows/**"
+    # paths:
+    #   - "book/**"
+    #   - ".github/workflows/**"
     
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
