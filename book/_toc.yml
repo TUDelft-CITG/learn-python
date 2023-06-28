@@ -37,7 +37,6 @@ parts:
       - file: 07/Exercises/01.ipynb
   - caption: In a Nutshell
     chapters:
-    - file: In_a_nutshell_intro.md
     - file: 01/In_a_Nutshell/01.ipynb
     - file: 02/In_a_Nutshell/01.ipynb
     - file: 03/In_a_Nutshell/01.ipynb
