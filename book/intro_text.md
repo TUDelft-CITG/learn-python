@@ -1,4 +1,4 @@
-Welcome to **Python for Civil Engineers**. We're excited to have you join us in this self-paced online course, which is designed to improve your Python skills as well as your understanding of computer programming---especially for applications in civil engineering and related fields. And believe it or not, as long as you are using a modern internet browser, you can take complete this course without installing a single piece of extra software!
+Welcome to **Python for Civil Engineers**. We're excited to have you join us in this self-paced online course, which is designed to improve your Python skills as well as your understanding of computer programming---especially for applications in civil engineering and related fields. Believe it or not, as long as you are using a modern internet browser, you can take complete this course without installing a single piece of extra software!
 <!-- Join us to automate tasks, analyze data, visualize information, and develop efficient algorithms. Embrace this opportunity to expand your horizons and unlock new possibilities in your academic and professional journey.  -->
 
 ```{admonition} The label "Civil Engineering" is an over-simplification!
@@ -6,7 +6,7 @@ Welcome to **Python for Civil Engineers**. We're excited to have you join us in 
 The field of civil engineering has changed significantly over the past decades. While we wish we could have included titles such as "environmental engineering," "construction management," "engineering geology" or similar fields, please forgive us for adopting the label "civil engineering" for the sake of simplicity.
 ```
 
-This course will be especially helpful if you have learned programming in another language before or if you would just like to do a refresher course. If you have never taken a programming course before and are completely new to programming, the course may still be useful, but it may require extra work. If you find this course difficult, we recommend you consider one of the many free online introduction to computer programming courses that uses the Python language (try searching on EdX or Udacity, for example, but note that we do not require you to pay for a certificate). The course material [Exploratory Computing with Python](https://mbakker7.github.io/exploratory_computing_with_python/) will illustrate pre-requisite topics, but, unlike EdX or Udacity, it is entirely self-study. As an additional study material for learning Python basics, we advise the open source book <a href="https://greenteapress.com/wp/think-python-2e/">"Think Python 2nd Edition" by Allen B. Downey</a>. It describes in more detail what is covered in this course.
+You will find this course especially helpful if you have learned programming in another language before or if you would just like to do a refresher course. If you have never taken a programming course and are completely new to programming, it may still be useful, but will also require some extra work. If you find the course difficult, we recommend you consider one of the many free online introduction to computer programming courses that uses the Python language (try searching on EdX or Udacity, for example, but note that we do not require you to pay for a certificate). The course material [Exploratory Computing with Python](https://mbakker7.github.io/exploratory_computing_with_python/) will illustrate pre-requisite topics, but, unlike EdX or Udacity, it is entirely self-study. As an additional study material for learning Python basics, we advise the open source book <a href="https://greenteapress.com/wp/think-python-2e/">"Think Python 2nd Edition" by Allen B. Downey</a>. It describes in more detail what is covered in this course.
 
 ```{admonition} Note to TU Delft Students (MSc programs)
 :class: dropdown
@@ -30,11 +30,7 @@ This online course is divided into 7 Chapters, each of which contains at least t
 
 ## How to take the course
 
-It's really quite simple: read through the 3 Chapters in the Introduction part, then get started with the Theory and Exercises! In particular, the [Python Toolbox Chapter](calculator) describes how you can run Python code to solve the exercises. In addition, the following elements are incorporated in the course to help guide you through your studies:
-- Quizzes with instant feedback to check simple calculations and facts
-- *Let's break it down*
-- answer-checker in Python Calculator
-- ...
+It's really quite simple: read through the 3 Chapters in the Introduction part, then get started with the Theory and Exercises! In particular, the [Python Toolbox Chapter](calculator) describes how you can run Python code to solve the exercises. The last part of this course is called *In a Nutshell;* these are very concise recaps of the content from the main chapters in Course Contents. The idea is that you use these as a quick reference and review of the concepts, before and after the course.
 
 ## Feedback and Corrections
 
