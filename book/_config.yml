@@ -33,7 +33,7 @@ repository:
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-HTML:
+html:
   google_analytics_id: G-8FZWSB5TQP
   home_page_in_navbar: false
   use_issues_button: true
