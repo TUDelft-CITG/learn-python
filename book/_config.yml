@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Learn Python for Civil Engineering and Geosciences
-author: Magic Mike!
+title: Python for Civil Engineers
+author: R. Lanzafame, S. Verhagen, M. Mendoza Lugo, A. Farahat
 logo: figures/learn-python-logo.png
 
 # Force re-execution of notebooks on each build.
@@ -33,13 +33,16 @@ repository:
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-
 html:
   google_analytics_id: G-8FZWSB5TQP
   home_page_in_navbar: false
   use_issues_button: true
   use_repository_button: true
   announcement: "⚠️ This is not the final version of the book! The new version will be ready by July 1.⚠️"
+  extra_navbar: |
+      <div>
+          <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=200 ALIGN="center">
+      </div>
 
 # Add thebe binder buttons to your book
 launch_buttons:
