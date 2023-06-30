@@ -16,25 +16,35 @@ parts:
     - file: 01/Theory/01.ipynb
       sections:
       - file: 01/Exercises/01.ipynb
+      - file: 01/Exercises/bug_report.md
     - file: 02/Theory/01.ipynb
       sections:
-      - file: 02/Exercises/01.ipynb      
+      - file: 02/Exercises/01.ipynb
+      - file: 02/Exercises/bug_report.md      
     - file: 03/Theory/01.ipynb
       sections:
-      - file: 03/Exercises/01.ipynb         
+      - file: 03/Exercises/01.ipynb
+      - file: 03/Exercises/bug_report.md          
     - file: 04/Theory/01.ipynb
       sections:
       - file: 04/Exercises/01.ipynb
+      - file: 04/Exercises/bug_report.md 
     - file: 05/Theory/01.ipynb
       sections:
       - file: 05/Exercises/01.ipynb
       - file: 05/Exercises/02.ipynb
+      - file: 05/Exercises/bug_report.md 
     - file: 06/Theory/01.ipynb
       sections:
       - file: 06/Exercises/01.ipynb
+      - file: 06/Exercises/bug_report.md 
     - file: 07/Theory/01.ipynb
       sections:
       - file: 07/Exercises/01.ipynb
+      - file: 07/Exercises/bug_report.md 
+  - caption: End of course survey
+    chapters:
+    - file: End-of-course-survey.md
   - caption: In a Nutshell
     chapters:
     - file: 01/In_a_Nutshell/01.ipynb
