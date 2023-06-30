@@ -6,7 +6,7 @@ root: intro
 parts:
   - caption: Introduction
     chapters:
-    - file: Intro_in_ToC.md
+    - file: intro_in_toc.md
       title: Course Overview
     - file: Python_intro.md
       title: Programming and Python
