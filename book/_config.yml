@@ -20,11 +20,6 @@ bibtex_bibfiles:
   - references.bib
 
 # Information about where the book exists on the web
-# repository:
-#   url: https://github.com/executablebooks/jupyter-book # Online location of your book
-#   path_to_book: docs  # Optional path to your book, relative to the repository root
-#   branch: master  # Which branch of the repository should be used when creating links (optional)
-
 repository:
   url: https://github.com/TUDelft-CITG/learn-python # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
@@ -36,8 +31,8 @@ repository:
 html:
   google_analytics_id: G-8FZWSB5TQP
   home_page_in_navbar: false
-  use_issues_button: true
-  use_repository_button: true
+  use_issues_button: false
+  use_repository_button: false
   announcement: "⚠️ This is not the final version of the book! The new version will be ready by July 1.⚠️"
   extra_navbar: |
       <div>
