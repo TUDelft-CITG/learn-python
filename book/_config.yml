@@ -3,7 +3,7 @@
 
 title: Python for Civil Engineers
 author: R. Lanzafame, S. Verhagen, M. Mendoza Lugo, A. Farahat
-logo: figures/learn-python-logo.png
+logo: figures/learn-python-logo-TUD-tight.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
